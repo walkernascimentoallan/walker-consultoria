@@ -79,7 +79,8 @@ def header(active):
     return f'''<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header><div class="bar">
 <a class="brand" href="/" aria-label="Walker Consultoria Educacional, página inicial">{MARK}<span>Walker Consultoria<small>Educacional</small></span></a>
-<button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="mb-ico" aria-hidden="true"></span>Menu</button>
+<button class="theme-btn" type="button" aria-label="Ativar modo noturno" title="Modo noturno"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg></button>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="mb-ico" aria-hidden="true"></span><span class="mb-txt">Menu</span></button>
 <nav id="mainnav" aria-label="Principal">{links}<a class="cta" href="/contato.html"{CUR if active == "contato.html" else ""}>Agendar conversa</a></nav>
 </div></header>'''
 
@@ -99,7 +100,7 @@ def footer():
 </div><div class="wrap foot-legal"><span>© {datetime.date.today().year} Walker Consultoria Educacional</span><a href="/politica-de-privacidade.html">Política de privacidade</a></div></footer>'''
 
 
-PAGE_JS = '''<script>(()=>{const b=document.querySelector('.menu-btn'),n=document.getElementById('mainnav');if(!b)return;
+PAGE_JS = '''<script>(()=>{const tb=document.querySelector('.theme-btn');if(!tb)return;const r=document.documentElement;const sync=()=>{const d=r.dataset.theme==='dark';tb.setAttribute('aria-pressed',d);tb.setAttribute('aria-label',d?'Ativar modo claro':'Ativar modo noturno');tb.title=d?'Modo claro':'Modo noturno'};sync();tb.addEventListener('click',()=>{r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('tema',r.dataset.theme)}catch(e){}sync()})})();(()=>{const b=document.querySelector('.menu-btn'),n=document.getElementById('mainnav');if(!b)return;
 b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&n.classList.contains('open')){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()}})})();</script>'''
 COUNT_JS = f'''<script>(()=>{{const start=new Date('{SITE['prazo_inicio']}T00:00:00'),end=new Date('{SITE['prazo_fim']}T00:00:00'),now=new Date();const d=document.getElementById('days');if(!d)return;
@@ -127,6 +128,7 @@ def page(fname, title, desc, body, active=None, tail='', head='', noindex=False)
 <link rel="apple-touch-icon" href="/foto-walker-quadrada.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<script>try{{var t=localStorage.getItem("tema");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}}catch(e){{}}</script>
 <link rel="stylesheet" href="/style.css">
 {head}
 </head>
@@ -511,13 +513,32 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
 
 
 EXTRA_CSS = '''
+.channels small{color:var(--soft)}
+.dark .channels small{color:#b4cfcc}
+.btn.gold,.btn.gold:visited,.book .btn.gold{color:#10292a}
+:root[data-theme=dark] form:not([method=dialog]){background:var(--panel);color:var(--ink);border:1px solid var(--line)}
+:root[data-theme=dark] form[method=dialog]{background:none;border:0}
+:root[data-theme=dark] form legend,:root[data-theme=dark] form label,:root[data-theme=dark] form b{color:var(--ink)}
+:root[data-theme=dark] input,:root[data-theme=dark] select,:root[data-theme=dark] textarea{background:#0f3436;color:var(--ink);border-color:#2b5c5e}
+:root[data-theme=dark] input::placeholder,:root[data-theme=dark] textarea::placeholder{color:#8fb0ad}
+:root[data-theme=dark] input:focus,:root[data-theme=dark] select:focus,:root[data-theme=dark] textarea:focus{border-color:var(--gold)}
+:root[data-theme=dark] img{opacity:.96}
+:root[data-theme=dark] form .fnote,:root[data-theme=dark] form .note,:root[data-theme=dark] form small{color:var(--soft)}
+.theme-btn{order:5;display:inline-grid;place-items:center;width:40px;height:40px;flex:none;border-radius:50%;border:1.5px solid #3f6d6f;background:transparent;color:#e6efee;cursor:pointer;padding:0}
+.theme-btn:hover{border-color:var(--gold);color:var(--gold)}
+.theme-btn svg{width:19px;height:19px}
+.theme-btn .ic-sun{display:none}
+:root[data-theme=dark] .theme-btn .ic-sun{display:block}:root[data-theme=dark] .theme-btn .ic-moon{display:none}
+@media(max-width:1260px){.theme-btn{order:0;margin-left:auto}.menu-btn{order:0}#mainnav{order:6}}
+@media(max-width:400px){.mb-txt{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}.menu-btn{padding:10px}}
+@media(max-width:480px){.bar{gap:8px}.theme-btn{width:38px;height:38px}.menu-btn{padding:8px 10px;gap:6px}}
 .pubs{list-style:none;margin:0;padding:0;display:grid;gap:0;max-width:900px}
-.pubs li{display:grid;grid-template-columns:72px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid #d9e4e2}
+.pubs li{display:grid;grid-template-columns:72px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid var(--line)}
 .band.dark .pubs li{border-color:#1f5254}
-.pub-ano{font-weight:800;color:#a8862f;font-size:17px;padding-top:2px}
+.pub-ano{font-weight:800;color:var(--goldtx);font-size:17px;padding-top:2px}
 .pubs b{display:block;font-size:17px;line-height:1.4;margin-bottom:4px}
 .pubs b a{color:inherit}
-.pubs li span:not(.pub-ano){color:#4d6664;font-size:15px;line-height:1.5}
+.pubs li span:not(.pub-ano){color:var(--soft);font-size:15px;line-height:1.5}
 @media(max-width:560px){.pubs li{grid-template-columns:1fr;gap:4px}}
 @media(min-width:1261px){.bar{flex-wrap:nowrap;max-width:1400px;padding-left:clamp(16px,3.5vw,48px);padding-right:clamp(16px,3.5vw,48px)}#mainnav a{padding:10px 10px}}
 @media(min-width:1261px) and (max-width:1380px){#mainnav a{padding:10px 7px;font-size:14.5px}.bar{gap:10px}}
