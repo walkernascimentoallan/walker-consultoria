@@ -7,7 +7,7 @@
       {"nome": "Legislação", "pagina": "legislacao.html"}
     ]},
     {"nome": "Conteúdos", "pagina": "radar.html", "mostrar": true, "subitens": [
-      {"nome": "Radar (artigos)", "pagina": "radar.html"},
+      {"nome": "Radar artigos", "pagina": "radar.html"},
       {"nome": "Cursos e e-book", "pagina": "cursos.html"},
       {"nome": "Eventos", "pagina": "eventos.html"}
     ]},
