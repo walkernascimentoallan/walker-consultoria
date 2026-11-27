@@ -1,0 +1,12 @@
+{
+  "abas": [
+    {"pagina": "sobre.html", "nome": "Sobre", "mostrar": true},
+    {"pagina": "onde-atuei.html", "nome": "Onde atuei", "mostrar": true},
+    {"pagina": "consultoria.html", "nome": "Consultoria", "mostrar": true},
+    {"pagina": "novo-marco.html", "nome": "Novo Marco", "mostrar": true},
+    {"pagina": "legislacao.html", "nome": "Legislação", "mostrar": true},
+    {"pagina": "cursos.html", "nome": "Cursos", "mostrar": true},
+    {"pagina": "eventos.html", "nome": "Eventos", "mostrar": true},
+    {"pagina": "radar.html", "nome": "Radar", "mostrar": true}
+  ]
+}
