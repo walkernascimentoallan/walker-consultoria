@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 700" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#06191a"/>
+      <stop offset="0.55" stop-color="#0e3b3d"/>
+      <stop offset="1" stop-color="#1d5a55"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.68" cy="0.62" r="0.55">
+      <stop offset="0" stop-color="#c9a24a" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#c9a24a" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="stone" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eae3d2"/>
+      <stop offset="1" stop-color="#bfb59c"/>
+    </linearGradient>
+    <linearGradient id="col" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#cfc6ae"/>
+      <stop offset="0.45" stop-color="#f4efe2"/>
+      <stop offset="1" stop-color="#b4aa90"/>
+    </linearGradient>
+    <linearGradient id="dome" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#7d6a3a"/>
+      <stop offset="0.45" stop-color="#d9b866"/>
+      <stop offset="1" stop-color="#6e5a2c"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f3d58b"/>
+      <stop offset="1" stop-color="#c9a24a"/>
+    </linearGradient>
+    <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b2c2d"/>
+      <stop offset="1" stop-color="#051516"/>
+    </linearGradient>
+  </defs>
+  <rect width="1400" height="700" fill="url(#sky)"/>
+  <rect width="1400" height="700" fill="url(#glow)"/>
+  <!-- estrelas -->
+  <g fill="#ffffff" opacity="0.55">
+    <circle cx="610" cy="60" r="1.4"/><circle cx="720" cy="40" r="1"/><circle cx="830" cy="90" r="1.6"/><circle cx="1010" cy="50" r="1.2"/>
+    <circle cx="1150" cy="80" r="1.5"/><circle cx="1290" cy="45" r="1"/><circle cx="1340" cy="120" r="1.3"/><circle cx="930" cy="130" r="1"/>
+    <circle cx="1230" cy="160" r="1"/><circle cx="560" cy="140" r="1"/><circle cx="1080" cy="150" r="0.9"/>
+  </g>
+  <circle cx="1240" cy="110" r="22" fill="#f4efe2" opacity="0.85"/><circle cx="1240" cy="110" r="40" fill="#f4efe2" opacity="0.08"/>
+  <!-- alas laterais -->
+  <g>
+    <rect x="560" y="360" width="190" height="210" fill="url(#stone)"/>
+    <rect x="1230" y="360" width="170" height="210" fill="url(#stone)"/>
+    <rect x="560" y="350" width="190" height="14" fill="#d8cfb8"/>
+    <rect x="1230" y="350" width="170" height="14" fill="#d8cfb8"/>
+    <g fill="url(#win)">
+      <rect x="585" y="395" width="26" height="46" rx="13"/><rect x="630" y="395" width="26" height="46" rx="13"/><rect x="675" y="395" width="26" height="46" rx="13"/>
+      <rect x="585" y="470" width="26" height="46" rx="13"/><rect x="630" y="470" width="26" height="46" rx="13" opacity=".55"/><rect x="675" y="470" width="26" height="46" rx="13"/>
+      <rect x="1255" y="395" width="26" height="46" rx="13"/><rect x="1300" y="395" width="26" height="46" rx="13" opacity=".55"/><rect x="1345" y="395" width="26" height="46" rx="13"/>
+      <rect x="1255" y="470" width="26" height="46" rx="13"/><rect x="1300" y="470" width="26" height="46" rx="13"/><rect x="1345" y="470" width="26" height="46" rx="13"/>
+    </g>
+  </g>
+  <!-- cúpula -->
+  <rect x="925" y="190" width="10" height="40" fill="#c9a24a"/>
+  <path d="M930 160 L942 176 L930 192 L918 176 Z" fill="#c9a24a"/>
+  <rect x="900" y="225" width="60" height="30" fill="url(#stone)"/>
+  <path d="M840 300 Q840 225 930 222 Q1020 225 1020 300 Z" fill="url(#dome)"/>
+  <g stroke="#5a4a22" stroke-width="2" opacity="0.6"><path d="M880 298 Q882 246 930 226"/><path d="M980 298 Q978 246 930 226"/><line x1="930" y1="226" x2="930" y2="298"/></g>
+  <rect x="820" y="296" width="220" height="22" fill="#d8cfb8"/>
+  <!-- tambor com janelas -->
+  <rect x="830" y="318" width="200" height="30" fill="url(#stone)"/>
+  <g fill="url(#win)"><rect x="850" y="324" width="14" height="18" rx="7"/><rect x="880" y="324" width="14" height="18" rx="7"/><rect x="910" y="324" width="14" height="18" rx="7"/><rect x="940" y="324" width="14" height="18" rx="7"/><rect x="970" y="324" width="14" height="18" rx="7"/><rect x="1000" y="324" width="14" height="18" rx="7"/></g>
+  <!-- frontão -->
+  <path d="M740 380 L930 310 L1120 380 Z" fill="url(#stone)"/>
+  <path d="M770 374 L930 318 L1090 374 Z" fill="#d6ccb2"/>
+  <circle cx="930" cy="354" r="14" fill="none" stroke="#c9a24a" stroke-width="3"/>
+  <path d="M930 344 L936 354 L930 364 L924 354 Z" fill="#c9a24a"/>
+  <rect x="730" y="378" width="400" height="18" fill="#efe8d6"/>
+  <rect x="740" y="396" width="380" height="8" fill="#c9a24a" opacity="0.85"/>
+  <!-- colunas -->
+  <rect x="750" y="404" width="360" height="166" fill="#27494a"/>
+  <g fill="url(#win)" opacity="0.95">
+    <rect x="790" y="430" width="28" height="120" rx="14"/><rect x="850" y="430" width="28" height="120" rx="14"/>
+    <rect x="982" y="430" width="28" height="120" rx="14"/><rect x="1042" y="430" width="28" height="120" rx="14"/>
+    <rect x="904" y="440" width="52" height="130" rx="26"/>
+  </g>
+  <g fill="url(#col)">
+    <rect x="752" y="404" width="22" height="166"/><rect x="822" y="404" width="22" height="166"/><rect x="884" y="404" width="22" height="166"/>
+    <rect x="954" y="404" width="22" height="166"/><rect x="1016" y="404" width="22" height="166"/><rect x="1086" y="404" width="22" height="166"/>
+  </g>
+  <g fill="#efe8d6">
+    <rect x="747" y="404" width="32" height="8"/><rect x="817" y="404" width="32" height="8"/><rect x="879" y="404" width="32" height="8"/>
+    <rect x="949" y="404" width="32" height="8"/><rect x="1011" y="404" width="32" height="8"/><rect x="1081" y="404" width="32" height="8"/>
+  </g>
+  <!-- escadaria -->
+  <rect x="720" y="570" width="420" height="14" fill="#d8cfb8"/>
+  <rect x="700" y="584" width="460" height="14" fill="#c7bda3"/>
+  <rect x="680" y="598" width="500" height="14" fill="#b6ac92"/>
+  <rect x="540" y="570" width="180" height="42" fill="#a59b82"/>
+  <rect x="1140" y="570" width="260" height="42" fill="#a59b82"/>
+  <!-- chão e árvores -->
+  <rect x="0" y="610" width="1400" height="90" fill="url(#ground)"/>
+  <g fill="#082223">
+    <ellipse cx="500" cy="560" rx="70" ry="90"/><rect x="494" y="600" width="12" height="30"/>
+    <ellipse cx="430" cy="585" rx="55" ry="70"/><rect x="425" y="610" width="10" height="25"/>
+    <ellipse cx="1385" cy="565" rx="60" ry="85"/>
+  </g>
+  <g fill="#f3d58b" opacity="0.9">
+    <circle cx="700" cy="560" r="5"/><circle cx="1160" cy="560" r="5"/>
+  </g>
+  <rect x="697" y="562" width="6" height="50" fill="#0b2c2d"/><rect x="1157" y="562" width="6" height="50" fill="#0b2c2d"/>
+  <!-- caminho de luz -->
+  <path d="M880 612 L980 612 L1060 700 L800 700 Z" fill="#c9a24a" opacity="0.18"/>
+</svg>
