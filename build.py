@@ -124,7 +124,7 @@ PAGE_JS = '''<script>'''+_BREVO_JS+'(()=>{const T=\'<svg viewBox="0 0 24 24" wid
 b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
 document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&n.classList.contains('open')){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()}})})();
 (()=>{const dds=[...document.querySelectorAll('#mainnav .dd')];const shut=x=>{dds.forEach(d=>{if(d!==x){d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false')}})};
-dds.forEach(d=>{const bt=d.querySelector('.dd-btn');bt.addEventListener('click',()=>{const o=d.classList.toggle('open');bt.setAttribute('aria-expanded',o);shut(d)});
+dds.forEach(d=>{const bt=d.querySelector('.dd-btn');d.addEventListener('mouseenter',()=>shut(d));bt.addEventListener('click',()=>{const o=d.classList.toggle('open');bt.setAttribute('aria-expanded',o);shut(d)});
 d.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&d.classList.contains('open')){d.classList.remove('open');bt.setAttribute('aria-expanded','false');bt.focus()}});
 d.addEventListener('focusout',ev=>{if(!d.contains(ev.relatedTarget)){d.classList.remove('open');bt.setAttribute('aria-expanded','false')}})});
 document.addEventListener('click',ev=>{if(!ev.target.closest('#mainnav .dd'))shut(null)})})();</script>'''
@@ -547,6 +547,8 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
 
 
 EXTRA_CSS = '''
+@media(min-width:1261px){nav:has(.dd:hover) .dd:not(:hover) .dd-menu{display:none!important}}
+
 .promo h1{font-size:clamp(26px,3.2vw,40px);line-height:1.12;margin:0 0 12px;color:#fff}
 
 .miss{outline:2px solid #d93025!important;outline-offset:3px;border-radius:8px}
