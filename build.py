@@ -8,6 +8,9 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, 'public')
 C = os.path.join(ROOT, 'content')
 FONTE = os.path.join(ROOT, '_fonte')
+CUR = ' aria-current="page"'
+NL = '\n'
+BS = '\\'
 URL = 'https://walkerconsultoria.com.br/'
 
 
@@ -65,12 +68,12 @@ SERV = J('servicos.json')
 
 
 def header(active):
-    links = ''.join(f'<a href="/{h}"{" aria-current=\"page\"" if h == active else ""}>{t}</a>' for h, t in NAV)
+    links = ''.join(f'<a href="/{h}"{CUR if h == active else ""}>{t}</a>' for h, t in NAV)
     return f'''<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header><div class="bar">
 <a class="brand" href="/" aria-label="Walker Consultoria Educacional, página inicial">{MARK}<span>Walker Consultoria<small>Educacional</small></span></a>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="mb-ico" aria-hidden="true"></span>Menu</button>
-<nav id="mainnav" aria-label="Principal">{links}<a class="cta" href="/contato.html"{" aria-current=\"page\"" if active == "contato.html" else ""}>Agendar conversa</a></nav>
+<nav id="mainnav" aria-label="Principal">{links}<a class="cta" href="/contato.html"{CUR if active == "contato.html" else ""}>Agendar conversa</a></nav>
 </div></header>'''
 
 
