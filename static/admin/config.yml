@@ -741,6 +741,36 @@ collections:
     - name: chamada_final
       label: Chamada final
       widget: string
+  - name: menu
+    label: Menu do topo (ordem das abas)
+    file: content/menu.json
+    fields:
+    - name: abas
+      label: Abas do menu (arraste pelo sinal = para mudar a ordem)
+      label_singular: aba
+      widget: list
+      summary: '{{fields.nome}}'
+      fields:
+      - name: nome
+        label: Nome que aparece no menu
+        widget: string
+      - name: pagina
+        label: Página que a aba abre
+        widget: select
+        options:
+        - {label: 'Sobre', value: 'sobre.html'}
+        - {label: 'Onde atuei (mapa)', value: 'onde-atuei.html'}
+        - {label: 'Consultoria', value: 'consultoria.html'}
+        - {label: 'Novo Marco (guia e diagnóstico)', value: 'novo-marco.html'}
+        - {label: 'Legislação', value: 'legislacao.html'}
+        - {label: 'Cursos e e-book', value: 'cursos.html'}
+        - {label: 'Eventos', value: 'eventos.html'}
+        - {label: 'Radar (artigos)', value: 'radar.html'}
+        - {label: 'Contato', value: 'contato.html'}
+      - name: mostrar
+        label: Mostrar esta aba
+        widget: boolean
+        default: true
   - name: site
     label: Contatos e dados gerais
     file: content/site.json
