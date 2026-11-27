@@ -80,6 +80,7 @@ collections:
     label: Banners rotativos (topo da página inicial)
     file: content/banners.json
     fields:
+    - {name: tempo_segundos, label: 'Tempo de cada banner na tela, em segundos (recomendado: 8 a 10)', widget: number, value_type: int, min: 4, max: 30, default: 9}
     - name: banners
       label: Banners
       widget: list
@@ -768,7 +769,7 @@ collections:
         - {name: coautores, label: 'Coautores (ex.: Com Fulano)', widget: string, required: false}
         - {name: link, label: 'Link (opcional, ex.: PDF ou DOI)', widget: string, required: false}
   - name: menu
-    label: Menu do topo (ordem das abas)
+    label: Menu do topo (abas e submenus)
     file: content/menu.json
     fields:
     - name: abas
@@ -781,19 +782,44 @@ collections:
         label: Nome que aparece no menu
         widget: string
       - name: pagina
-        label: Página que a aba abre
+        label: 'Página que a aba abre (se a aba tiver submenu, esta fica sem uso)'
         widget: select
+        required: false
         options:
-        - {label: 'Sobre', value: 'sobre.html'}
-        - {label: 'Publicações', value: 'publicacoes.html'}
-        - {label: 'Onde atuei (mapa)', value: 'onde-atuei.html'}
         - {label: 'Consultoria', value: 'consultoria.html'}
-        - {label: 'Novo Marco (guia e diagnóstico)', value: 'novo-marco.html'}
+        - {label: 'Novo Marco (guia)', value: 'novo-marco.html'}
+        - {label: 'Diagnóstico gratuito', value: 'novo-marco.html#diagnostico'}
         - {label: 'Legislação', value: 'legislacao.html'}
+        - {label: 'Radar (artigos)', value: 'radar.html'}
         - {label: 'Cursos e e-book', value: 'cursos.html'}
         - {label: 'Eventos', value: 'eventos.html'}
-        - {label: 'Radar (artigos)', value: 'radar.html'}
+        - {label: 'Sobre (trajetória)', value: 'sobre.html'}
+        - {label: 'Publicações', value: 'publicacoes.html'}
+        - {label: 'Onde atuei (mapa)', value: 'onde-atuei.html'}
         - {label: 'Contato', value: 'contato.html'}
+      - name: subitens
+        label: 'Submenu (deixe vazio para a aba ser um link direto)'
+        label_singular: item do submenu
+        widget: list
+        required: false
+        summary: '{{fields.nome}}'
+        fields:
+        - {name: nome, label: Nome no submenu, widget: string}
+        - name: pagina
+          label: Página
+          widget: select
+          options:
+          - {label: 'Consultoria', value: 'consultoria.html'}
+          - {label: 'Novo Marco (guia)', value: 'novo-marco.html'}
+          - {label: 'Diagnóstico gratuito', value: 'novo-marco.html#diagnostico'}
+          - {label: 'Legislação', value: 'legislacao.html'}
+          - {label: 'Radar (artigos)', value: 'radar.html'}
+          - {label: 'Cursos e e-book', value: 'cursos.html'}
+          - {label: 'Eventos', value: 'eventos.html'}
+          - {label: 'Sobre (trajetória)', value: 'sobre.html'}
+          - {label: 'Publicações', value: 'publicacoes.html'}
+          - {label: 'Onde atuei (mapa)', value: 'onde-atuei.html'}
+          - {label: 'Contato', value: 'contato.html'}
       - name: mostrar
         label: Mostrar esta aba
         widget: boolean
