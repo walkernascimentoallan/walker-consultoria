@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Walker Consultoria Educacional</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%22-16%20-16%20132%20132%22%20width%3D%22600%22%20height%3D%22600%22%3E%3Crect%20x%3D%22-16%22%20y%3D%22-16%22%20width%3D%22132%22%20height%3D%22132%22%20rx%3D%2224%22%20fill%3D%22%230e3b3d%22/%3E%3Cpath%20d%3D%22M1.50%2026L18.50%2026L38.50%2090L21.50%2090Z%22%20fill%3D%22%23ffffff%22/%3E%3Cpath%20d%3D%22M41.50%2040L47.70%2040L38.50%2090L32.30%2090Z%22%20fill%3D%22%23ffffff%22/%3E%3Cpath%20d%3D%22M41.50%2040L58.50%2040L78.50%2090L61.50%2090Z%22%20fill%3D%22%23ffffff%22/%3E%3Cpath%20d%3D%22M86.90%2026L93.10%2026L78.50%2090L72.30%2090Z%22%20fill%3D%22%23ffffff%22/%3E%3Crect%20x%3D%2249.1%22%20y%3D%2212%22%20width%3D%221.8%22%20height%3D%2228%22%20fill%3D%22%23c9a24a%22/%3E%3Cg%3E%3Crect%20x%3D%2244.5%22%20y%3D%221.5%22%20width%3D%2211%22%20height%3D%2211%22%20transform%3D%22rotate%2845%2050%207%29%22%20fill%3D%22%23c9a24a%22/%3E%3C/g%3E%3C/svg%3E">
+<link rel="canonical" href="https://walkerconsultoria.com.br/">
+<meta property="og:type" content="website"><meta property="og:site_name" content="Walker Consultoria Educacional"><meta property="og:title" content="Walker Consultoria Educacional"><meta property="og:description" content="Consultoria para faculdades, centros universitários e universidades se adequarem ao novo marco regulatório (Decreto nº 12.456/2025)."><meta property="og:url" content="https://walkerconsultoria.com.br/"><meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image"><link rel="apple-touch-icon" href="/foto-walker-quadrada.jpg"><meta property="og:image" content="https://walkerconsultoria.com.br/foto-walker.jpg">
+<meta name="description" content="Walker Nascimento: consultoria para faculdades, centros universitários e universidades na adequação ao novo marco regulatório da educação superior (Decreto nº 12.456/2025).">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<style>
+/* VOICE: sóbrio, autoral, de quem dirigiu faculdades; frases curtas, sem promessa.
+   IDEA: o diploma e a beca — verde-petróleo profundo com filete dourado, como capa de tese encadernada.
+   PICTURE: retrato do consultor em moldura dourada; depois o mapa do Brasil com os estados da trajetória.
+   COLOUR and TYPE: petróleo #0e3b3d dominante, branco de apoio, dourado #c9a24a só em destaques; Albert Sans.
+   LAYOUT: faixas petróleo de ponta a ponta no topo, no mapa e no contato; seções brancas entre elas; empilha abaixo de 600px. */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#081f20);--ink:light-dark(#10292a,#e6efee);--soft:light-dark(#4b6463,#a6bdbb);
+--pet:#0e3b3d;--pet2:#0a2c2e;--tint:light-dark(#f0f5f4,#0c2a2b);--line:light-dark(#d6e2e0,#1d4446);
+--gold:#c9a24a;--goldtx:light-dark(#8a6a1e,#d9b866);--panel:light-dark(#ffffff,#0b2627)}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Albert Sans",system-ui,sans-serif;overflow-x:clip}
+h1,h2,h3{line-height:1.08;text-wrap:balance;margin:0;font-weight:800}
+h1{font-size:clamp(36px,5vw,54px);letter-spacing:-.01em}
+h2{font-size:clamp(28px,3.6vw,40px)}
+h3{font-size:20px;font-weight:700;line-height:1.25}
+p{margin:0 0 1em;max-width:68ch}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding:clamp(44px,6vw,92px) max(5vw,16px)}
+.dark{background:var(--pet);color:#fff}
+.dark .soft{color:#b4cfcc}
+.soft{color:var(--soft)}
+.tint{background:var(--tint)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px 56px;align-items:end;margin-bottom:40px}
+.head p{margin:0}
+@media(max-width:800px){.head{grid-template-columns:minmax(0,1fr)}}
+
+/* topo */
+header{position:sticky;top:0;z-index:10;background:var(--pet2);color:#fff}
+.bar{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(5vw,16px);flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:18px;line-height:1.1}
+.brand small{display:block;font-weight:500;font-size:13px;color:#b4cfcc}
+.mark{width:38px;height:38px;flex:none}
+nav{display:flex;gap:2px;flex-wrap:wrap}
+nav a{text-decoration:none;font-size:15px;padding:10px 12px;border-radius:8px;color:#d6e6e4}
+nav a:hover{background:#134a4c;color:#fff}
+nav a.cta{background:var(--gold);color:#10292a;font-weight:700}
+nav a.cta:hover{background:#d8b45e}
+@media(max-width:900px){nav a:not(.cta){display:none}}
+@media(max-width:480px){.bar{flex-wrap:nowrap}nav a.cta{padding:9px 12px;font-size:14px;white-space:nowrap}.brand{font-size:16px}.mark{width:32px;height:32px}}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:clamp(32px,5vw,72px);align-items:center}
+.who-line{font-size:17px;color:var(--gold);font-weight:700;margin:0 0 14px}
+.hero p.lead{font-size:19px;color:#d6e6e4;margin-top:20px}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;border-radius:10px;font-weight:700;text-decoration:none;font-size:16px;border:2px solid transparent;cursor:pointer;font-family:inherit}
+.btn.gold{background:var(--gold);color:#10292a}.btn.gold:hover{background:#d8b45e}
+.btn.ghost{border-color:#3f7476;color:#fff}.btn.ghost:hover{border-color:#fff}
+.portrait{position:relative;aspect-ratio:4/5;max-width:440px;justify-self:end;width:100%}
+.portrait .frame{position:absolute;inset:18px -18px -18px 18px;border:2px solid var(--gold);border-radius:20px}
+.portrait .photo{position:absolute;inset:0;border-radius:20px;overflow:hidden;background:linear-gradient(160deg,#17585a,#0a2c2e)}
+.portrait .photo img,.portrait .photo svg{width:100%;height:100%;object-fit:cover;display:block}
+.portrait .tag{position:absolute;left:-14px;bottom:28px;background:#fff;color:#10292a;border-radius:12px;padding:12px 16px;box-shadow:0 18px 40px -18px #000b;line-height:1.25}
+.portrait .tag b{display:block;font-size:17px}
+.portrait .tag span{font-size:14px;color:#4b6463}
+@media(max-width:900px){.hero{grid-template-columns:minmax(0,1fr)}.portrait{justify-self:start;max-width:340px}}
+
+/* faixa do prazo */
+.deadline{display:grid;grid-template-columns:auto minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center;background:#fff;color:#10292a;border-radius:18px;padding:clamp(22px,3vw,32px);margin-top:clamp(40px,5vw,64px)}
+.deadline .lbl{font-size:15px;color:#4b6463;margin:0}
+.days{font-weight:800;font-size:clamp(56px,7vw,88px);line-height:1;color:var(--pet);font-variant-numeric:tabular-nums;margin:4px 0}
+.days span{font-size:.3em;color:#8a6a1e;margin-left:8px}
+.rule{position:relative;height:12px;background:#e3ecea;border-radius:6px;margin:6px 0 14px}
+.rule .fill{position:absolute;inset:0 auto 0 0;background:var(--pet);border-radius:6px;width:0;transition:width 1.4s ease-out}
+.rule .now{position:absolute;top:-7px;width:4px;height:26px;background:var(--gold);border-radius:2px;transform:translateX(-2px)}
+.marks{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.marks li{border-top:3px solid var(--pet);padding-top:8px;font-size:14px;line-height:1.35}
+.marks li.end{border-color:var(--gold)}
+.marks b{display:block;font-size:15px;white-space:nowrap}
+@media(max-width:820px){.deadline{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:560px){.marks{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* marco */
+.changes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid var(--ink)}
+.changes article{padding:24px 24px 28px;border-bottom:1px solid var(--line);border-left:1px solid var(--line)}
+.changes article:nth-child(3n+1){padding-left:0;border-left:0}
+.changes h3{margin-bottom:10px}
+.changes p{font-size:16px;color:var(--soft);margin:0}
+@media(max-width:860px){.changes{grid-template-columns:minmax(0,1fr)}.changes article{padding:22px 0;border-left:0}}
+
+/* serviços */
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.svc{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;padding:24px;border:1px solid var(--line);border-radius:14px;background:var(--panel)}
+.svc svg{width:44px;height:44px}
+.svc h3{margin-bottom:6px}
+.svc p{font-size:16px;color:var(--soft);margin:0}
+@media(max-width:760px){.services{grid-template-columns:minmax(0,1fr)}}
+
+/* método */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));counter-reset:s}
+.steps li{counter-increment:s;padding:0 22px 0 0;position:relative}
+.steps li::before{content:counter(s);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--pet);color:#fff;font-weight:800;font-size:18px;position:relative;z-index:1;margin-bottom:16px;box-shadow:0 0 0 3px var(--gold)}
+.steps li::after{content:"";position:absolute;top:21px;left:44px;right:0;height:2px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps h3{margin-bottom:8px}
+.steps p{font-size:16px;color:var(--soft);margin:0}
+@media(max-width:860px){.steps{grid-template-columns:minmax(0,1fr);gap:26px}.steps li{padding:0 0 0 64px}.steps li::before{position:absolute;left:0;top:0}.steps li::after{display:none}}
+
+/* titulação */
+.titles{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,72px)}
+.tl{list-style:none;margin:0;padding:0;position:relative}
+.tl::before{content:"";position:absolute;left:9px;top:8px;bottom:8px;width:2px;background:var(--line)}
+.tl li{position:relative;padding:0 0 22px 40px}
+.tl li::before{content:"";position:absolute;left:2px;top:6px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:3px solid var(--pet)}
+.tl li.top::before{background:var(--gold);border-color:var(--gold)}
+.tl b{display:block;font-size:18px;line-height:1.3}
+.tl span{font-size:15px;color:var(--soft)}
+.tl .yr{color:var(--goldtx);font-weight:700;font-size:14px}
+.roles{display:grid;gap:14px;align-content:start}
+.role{padding:18px 20px;border-radius:14px;background:var(--panel);border:1px solid var(--line)}
+.role b{display:block;font-size:17px}
+.role span{font-size:15px;color:var(--soft)}
+.titles h3{margin-bottom:20px}
+@media(max-width:820px){.titles{grid-template-columns:minmax(0,1fr)}}
+
+/* livros */
+.books{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,3vw,36px)}
+.book{display:grid;gap:14px}
+.cover{aspect-ratio:2/3;border-radius:4px 12px 12px 4px;position:relative;overflow:hidden;box-shadow:inset 10px 0 0 #0004,0 24px 40px -22px #000a;display:flex;flex-direction:column;justify-content:space-between;padding:22px 20px 20px 30px;color:#fff}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.cover .ct{font-weight:800;font-size:clamp(20px,2.2vw,26px);line-height:1.1}
+.cover .ca{font-size:14px;opacity:.85}
+.count+h2{margin-top:6px}
+.cover.has-img{padding:0}.cover.has-img::after{display:none}
+.books{max-width:980px}
+.books{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:clamp(16px,2vw,26px);max-width:none}
+@media(max-width:1100px){.books{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:600px){.books{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cover.has-img{background:var(--tint)!important;box-shadow:0 22px 38px -24px #000a;display:block}
+.cover.has-img img{object-fit:contain}
+.book>div:not(.cover) a{color:var(--goldtx);font-weight:700}
+.next-book{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:clamp(24px,4vw,48px);align-items:center;background:#15110d;color:#f1e6d2;border-radius:20px;padding:clamp(20px,3vw,36px);margin-bottom:40px}
+.next-book img{width:100%;height:auto;border-radius:6px;box-shadow:0 24px 40px -20px #000;display:block}
+.next-book .nb-tag{color:#d9a441;font-weight:700;margin:0 0 8px}
+.next-book h3{font-size:clamp(26px,3vw,36px);line-height:1.1;margin:0 0 10px}
+.next-book .nb-sub{color:#d9a441;font-size:18px;margin:0 0 16px}
+.next-book p{color:#e0d4bf}
+@media(max-width:640px){.next-book{grid-template-columns:minmax(0,1fr)}.next-book img{max-width:220px}}
+
+.lead-box{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(24px,4vw,56px);align-items:center}
+@media(max-width:820px){.lead-box{grid-template-columns:minmax(0,1fr)}}
+.wait{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px;display:grid;gap:12px;align-content:start}
+.wait b{font-size:17px}.wait p{font-size:15px;color:var(--soft);margin:0}
+.wait input,.wait select{font:16px "Albert Sans",sans-serif;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;min-height:48px;width:100%;background:var(--bg);color:var(--ink)}
+.hp{position:absolute;left:-9999px}
+.lib{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#fff}.lib iframe{display:block;width:100%;height:420px;border:0}
+.btn.buy{margin-top:12px;min-height:44px;padding:10px 14px;font-size:14px}
+.cover::after{content:"";position:absolute;left:30px;right:20px;top:50%;height:2px;background:var(--gold)}
+.book b{font-size:18px;line-height:1.3}
+.book>div:not(.cover) span{font-size:15px;color:var(--soft)}
+.cover span{color:#fff;position:relative}
+.sample{font-size:14px;color:var(--soft);margin-top:22px}
+@media(max-width:760px){.books{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:440px){.books{grid-template-columns:minmax(0,1fr)}.cover{max-width:240px}}
+
+/* mapa */
+.mapgrid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(28px,4vw,60px);align-items:center}
+.map{width:100%;max-width:620px;height:auto;display:block}
+.map path{fill:#185557;stroke:#0e3b3d;stroke-width:1;transition:fill .2s}
+.map path.on{fill:var(--gold);cursor:pointer}
+.map path.on:hover,.map path.sel{fill:#f1d58d}
+.map path.on:focus-visible{outline:none;fill:#f1d58d;stroke:#fff;stroke-width:2}
+.ufs{display:flex;flex-wrap:wrap;gap:8px;margin:22px 0}
+.ufs button{font:700 15px "Albert Sans",sans-serif;min-height:44px;padding:8px 14px;border-radius:999px;border:1.5px solid #3f7476;background:transparent;color:#fff;cursor:pointer}
+.ufs button[aria-pressed=true]{background:var(--gold);border-color:var(--gold);color:#10292a}
+.info{background:#0a2c2e;border-radius:14px;padding:22px;min-height:150px}
+.info b{display:block;font-size:22px;margin-bottom:8px}
+.info ul{margin:0;padding-left:18px;color:#d6e6e4}
+.info li{margin:4px 0}
+.count{font-weight:800;font-size:clamp(44px,5vw,64px);line-height:1;color:var(--gold)}
+@media(max-width:860px){.mapgrid{grid-template-columns:minmax(0,1fr)}}
+
+/* faq */
+.faq{max-width:860px}
+details{border-top:1px solid var(--line);padding:4px 0}
+details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;font-weight:700;font-size:19px;padding:16px 36px 16px 0;position:relative;min-height:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:26px;color:var(--goldtx);transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{color:var(--soft);font-size:16px}
+
+/* contato */
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start}
+.channels{list-style:none;padding:0;margin:28px 0 0}
+.channels li{padding:14px 0;border-top:1px solid #1f5658}
+.channels a{text-decoration:none;font-weight:700;font-size:18px;overflow-wrap:anywhere}
+.channels a:hover{text-decoration:underline}
+.channels small{display:block;color:#b4cfcc;font-size:14px}
+form{background:#fff;color:#10292a;border-radius:18px;padding:clamp(22px,3vw,32px);display:grid;gap:16px}
+label{font-weight:700;font-size:15px;display:grid;gap:6px}
+input,select,textarea{font:16px "Albert Sans",sans-serif;padding:12px 14px;border:1.5px solid #c3d3d1;border-radius:10px;background:#fff;color:#10292a;min-height:48px;width:100%}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--pet);outline:2px solid var(--pet);outline-offset:0}
+.fnote{font-size:13px;color:#4b6463;margin:0}
+.ok{display:none;background:#f0f5f4;border-radius:10px;padding:12px 14px;font-size:15px}
+.ok.show{display:block}
+@media(max-width:860px){.contact{grid-template-columns:minmax(0,1fr)}}
+footer{background:#061a1b;color:#a6bdbb;font-size:14px;padding:28px max(5vw,16px)}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+footer a{color:#d6e6e4}
+
+/* Banners rotativos: 3 espaços. Para trocar uma propaganda, edite o texto, a imagem e o link do slide. */
+.promo{padding:clamp(28px,4vw,48px) max(5vw,16px);background:var(--bg)}
+.promo .stage{position:relative;overflow:hidden;display:grid;border-radius:18px;background:var(--pet2);color:#fff;min-height:300px}
+.promo .slide{grid-area:1/1;display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:24px;padding:clamp(24px,4vw,48px) clamp(24px,5vw,64px);opacity:0;visibility:hidden;transition:opacity .6s ease,visibility .6s}
+.promo .slide.on{opacity:1;visibility:visible}
+.promo .kick{color:var(--gold);font-weight:700;font-size:15px;margin:0 0 8px}
+.promo h2{font-size:clamp(26px,3.2vw,40px);line-height:1.12;margin:0 0 12px;color:#fff}
+.promo p.txt{margin:0 0 20px;color:#cfe0de;max-width:52ch}
+.promo .art{display:flex;justify-content:center;align-items:center}
+.promo .art img{max-height:230px;width:auto;border-radius:6px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.promo .art img.round{border-radius:50%;width:210px;height:210px;object-fit:cover;border:3px solid var(--gold);box-shadow:none}
+.promo .doc{width:190px;background:#fbfaf6;color:#10292a;border-radius:8px;padding:18px 16px;box-shadow:0 18px 40px rgba(0,0,0,.35);font-size:13px;line-height:1.5}
+.promo .doc b{display:block;font-size:14px;border-bottom:2px solid var(--gold);padding-bottom:6px;margin-bottom:8px}
+.promo .doc span{display:block}.promo .doc span::before{content:"\2713";color:var(--pet);font-weight:800;margin-right:6px}
+.promo .s1{background:linear-gradient(120deg,var(--pet2),#12494b)}
+.promo .s2{background:linear-gradient(120deg,#0a2c2e,var(--pet))}
+.promo .s3{background:linear-gradient(120deg,#12494b,var(--pet2))}
+.promo .ctrl{display:flex;justify-content:center;align-items:center;gap:10px;margin-top:14px}
+.promo .ctrl button{font:inherit;cursor:pointer;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:50%;width:40px;height:40px;display:grid;place-items:center}
+.promo .dots{display:flex;gap:8px}
+.promo .dots button{width:12px;height:12px;padding:0;border-radius:6px;border:0;background:var(--line)}
+.promo .dots button[aria-current=true]{width:30px;background:var(--gold)}
+@media (max-width:760px){.promo .slide{grid-template-columns:1fr;text-align:left}.promo .art{order:-1}.promo .art img{max-height:150px}.promo .art img.round{width:130px;height:130px}.promo .doc{display:none}}
+@media (prefers-reduced-motion:reduce){.promo .slide{transition:none}}
+
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}@media (max-width:640px){.frow{grid-template-columns:1fr}}
+label small{font-weight:400;opacity:.75}
+.consent{display:flex!important;gap:10px;align-items:flex-start;font-weight:400!important;font-size:14px;line-height:1.45;margin:6px 0 14px}
+.consent input{width:20px!important;height:20px;min-height:0!important;flex:none;margin-top:2px;accent-color:var(--gold)}
+.wait .consent{color:inherit;font-size:13px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <a class="brand" href="#inicio" aria-label="Walker Consultoria Educacional, início">
+      <svg class="mark" viewBox="0 0 100 100" aria-hidden="true"><path d="M1.50 26L18.50 26L38.50 90L21.50 90Z" fill="#ffffff"/><path d="M41.50 40L47.70 40L38.50 90L32.30 90Z" fill="#ffffff"/><path d="M41.50 40L58.50 40L78.50 90L61.50 90Z" fill="#ffffff"/><path d="M86.90 26L93.10 26L78.50 90L72.30 90Z" fill="#ffffff"/><rect x="49.1" y="12" width="1.8" height="28" fill="#c9a24a"/><g><rect x="44.5" y="1.5" width="11" height="11" transform="rotate(45 50 7)" fill="#c9a24a"/></g></svg>
+      <span>Walker Consultoria<small>Educacional</small></span>
+    </a>
+    <nav aria-label="Principal">
+      <a href="#marco">O novo marco</a>
+      <a href="#servicos">Serviços</a>
+      <a href="sobre.html">Sobre mim</a>
+      <a href="#livros">Livros</a>
+      <a href="#mapa">Onde atuei</a>
+      <a href="cursos.html">Cursos</a>
+      <a class="cta" href="#contato">Agendar conversa</a>
+    </nav>
+  </div>
+</header>
+
+<main id="inicio">
+<section class="band dark">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <p class="who-line">Walker Nascimento, consultor em regulação do ensino superior</p>
+        <h1>Sua instituição pronta para o novo marco regulatório da educação superior</h1>
+        <p class="lead">Ex-reitor e diretor acadêmico, com mais de vinte anos na gestão do ensino superior, ajudo mantenedoras e direções a adequar cursos, polos, PPCs e operação acadêmica ao Decreto nº 12.456/2025 e às portarias do MEC que o regulamentam.</p>
+        <div class="btns">
+          <a class="btn gold" href="#contato">Agendar diagnóstico</a>
+          <a class="btn ghost" href="sobre.html">Conhecer minha trajetória</a>
+        </div>
+      </div>
+      <figure class="portrait" style="margin:0">
+        <div class="frame"></div>
+        <div class="photo" id="photo"><img src="foto-walker.jpg" alt="Walker Nascimento, consultor educacional" width="720" height="900"></div>
+        <figcaption class="tag"><b>Walker Nascimento</b><span>Doutorando e avaliador BASis/INEP</span></figcaption>
+      </figure>
+    </div>
+
+    <div class="deadline" aria-label="Prazo de adequação ao novo marco">
+      <div>
+        <p class="lbl">Faltam para o fim do prazo de adequação</p>
+        <p class="days" id="days">—<span>dias</span></p>
+        <p class="lbl">prazo de dois anos, até maio de 2027</p>
+      </div>
+      <div>
+        <div class="rule" role="img" id="rule" aria-label="Linha do tempo da transição"><div class="fill" id="fill"></div><div class="now" id="now"></div></div>
+        <ul class="marks">
+          <li><b>19 mai 2025</b>Decreto nº 12.456 publicado</li>
+          <li><b>20 mai 2025</b>Portarias MEC nº 378 e 381</li>
+          <li><b>jul 2025</b>Portaria MEC nº 506 regulamenta a oferta</li>
+          <li class="end"><b>mai 2027</b>Fim do prazo para IES já credenciadas</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="promo" aria-roledescription="carrossel" aria-label="Destaques">
+  <div class="wrap">
+    <div class="stage" id="promo">
+      <article class="slide s1 on" aria-roledescription="slide" aria-label="1 de 3">
+        <div>
+          <p class="kick">Novo e-book</p>
+          <h2>A Universidade do Futuro</h2>
+          <p class="txt">Novos modelos de gestão e captação de recursos no terceiro setor. Leitura direta, para quem decide.</p>
+          <a class="btn gold" href="https://pay.kiwify.com.br/eQv2T3t" target="_blank" rel="noopener" data-ev="ir_checkout">Comprar por R$ 39,90</a>
+        </div>
+        <div class="art"><img src="capa-universidade-do-futuro.jpg" alt="Capa do e-book A Universidade do Futuro" loading="lazy"></div>
+      </article>
+      <article class="slide s2" aria-roledescription="slide" aria-label="2 de 3">
+        <div>
+          <p class="kick">Diagnóstico regulatório</p>
+          <h2>Sua instituição está pronta para maio de 2027?</h2>
+          <p class="txt">Em uma conversa, eu mapeio o que precisa mudar em cursos, polos e PPCs para cumprir o Decreto nº 12.456/2025 dentro do prazo.</p>
+          <a class="btn gold" href="#contato" data-ev="clique_diagnostico">Agendar diagnóstico</a>
+        </div>
+        <div class="art"><img class="round" src="foto-walker-quadrada.jpg" alt="Prof. Walker Nascimento" loading="lazy"></div>
+      </article>
+      <article class="slide s3" aria-roledescription="slide" aria-label="3 de 3">
+        <div>
+          <p class="kick">Material gratuito</p>
+          <h2>Checklist do novo marco regulatório</h2>
+          <p class="txt">Os pontos que a sua IES precisa revisar, em uma página. Baixe grátis e use na próxima reunião de gestão.</p>
+          <a class="btn gold" href="#checklist" data-ev="baixar_checklist">Baixar o checklist</a>
+        </div>
+        <div class="art"><div class="doc" aria-hidden="true"><b>Novo marco: checklist</b><span>Oferta presencial e EAD</span><span>Polos de apoio</span><span>PPCs e carga horária</span><span>Corpo docente</span><span>Prazos do MEC</span></div></div>
+      </article>
+    </div>
+    <div class="ctrl">
+      <button type="button" id="pPrev" aria-label="Banner anterior">&#8249;</button>
+      <div class="dots" id="pDots"></div>
+      <button type="button" id="pNext" aria-label="Próximo banner">&#8250;</button>
+      <button type="button" id="pPause" aria-label="Pausar banners">&#10074;&#10074;</button>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="marco">
+  <div class="wrap">
+    <div class="head">
+      <h2>O que o novo marco muda na prática</h2>
+      <p class="soft">O Decreto nº 12.456/2025 revogou o Decreto nº 9.057/2017 e redesenhou a graduação a distância. Não é só uma questão de EAD: o desenho dos cursos, o papel dos docentes e a estrutura dos polos precisam ser revistos.</p>
+    </div>
+    <div class="changes">
+      <article><h3>Três formatos de oferta</h3><p>Presencial, semipresencial e a distância passam a ter definições próprias e limites de carga horária. Cursos precisam ser reenquadrados.</p></article>
+      <article><h3>Cursos vedados em EAD</h3><p>Algumas graduações deixam de poder ser ofertadas integralmente a distância e entram em extinção ou migram de formato.</p></article>
+      <article><h3>Mediador pedagógico</h3><p>Nova função exclusivamente pedagógica, com formação compatível com o curso, distinta da tutoria administrativa.</p></article>
+      <article><h3>Polos de apoio presencial</h3><p>Infraestrutura, responsabilidades e atividades presenciais dos polos ganham novas exigências, com impacto em parceiros e contratos.</p></article>
+      <article><h3>Atividades síncronas e presenciais</h3><p>Avaliações, encontros e atividades mediadas passam a ter regras próprias, que precisam aparecer no PPC e no calendário.</p></article>
+      <article><h3>Documentos institucionais</h3><p>PDI, regimento, PPCs, editais e contratos educacionais precisam conversar com a nova regra antes do próximo ato regulatório.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="band tint" id="servicos">
+  <div class="wrap">
+    <div class="head">
+      <h2>Serviços</h2>
+      <p class="soft">Cada frente pode ser contratada isoladamente ou como parte de um plano de adequação completo, com cronograma alinhado ao calendário do e-MEC.</p>
+    </div>
+    <div class="services" id="svcList"></div>
+  </div>
+</section>
+
+<section class="band" id="metodo">
+  <div class="wrap">
+    <div class="head">
+      <h2>Como o trabalho acontece</h2>
+      <p class="soft">Um percurso curto e documentado. Cada etapa termina com uma entrega que a direção pode levar ao conselho, à mantenedora ou ao procurador institucional.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Diagnóstico regulatório</h3><p>Leitura dos atos autorizativos, PPCs, PDI, regimento, polos e indicadores. Mapa de riscos por curso.</p></li>
+      <li><h3>Plano de adequação</h3><p>Decisão curso a curso sobre formato, cronograma, responsáveis e documentos a revisar.</p></li>
+      <li><h3>Implementação</h3><p>Reescrita de PPCs e regimento, novo modelo acadêmico, formação das equipes e ajustes nos polos.</p></li>
+      <li><h3>Acompanhamento</h3><p>Preparação para avaliações in loco, protocolos no e-MEC e revisão dos indicadores de qualidade.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="band tint" id="titulacao">
+  <div class="wrap">
+    <div class="head">
+      <h2>Titulação e trajetória</h2>
+      <p class="soft">Comecei na gestão do ensino superior em 2004. Desde então, alterno direção acadêmica, consultoria e pesquisa, sempre com um pé na regulação.</p>
+    </div>
+    <div class="titles">
+      <div>
+        <h3>Formação acadêmica</h3>
+        <ul class="tl">
+          <li class="top"><span class="yr">em andamento</span><b>Doutorado em Comunicação Social</b><span>Universidade Metodista de São Paulo (UMESP). Pesquisa sobre inteligência artificial e epistemologias do Sul Global.</span></li>
+          <li><span class="yr">2010</span><b>Mestrado em Economia de Empresas</b><span>FEAD, Belo Horizonte. Área de gestão estratégica das organizações.</span></li>
+          <li><b>Especialização em Gestão Educacional</b><span>Em curso: Pedagogia Empresarial e Metodologia e Gestão para EAD.</span></li>
+          <li><b>Licenciatura em História</b></li>
+          <li><b>Bacharelado em Administração de Empresas</b><span>IMIH, Minas Gerais.</span></li>
+        </ul>
+      </div>
+      <div class="roles">
+        <h3 style="margin-bottom:6px">Atuação</h3>
+        <div class="role"><b>Diretor da Faculdade Granbery</b><span>Rede Metodista de Educação, Juiz de Fora (MG)</span></div>
+        <div class="role"><b>Vice-Diretor Acadêmico da Faculdade Santa Marcelina</b><span>Minas Gerais, 2022 a 2026</span></div>
+        <div class="role"><b>Avaliador do BASis/INEP</b><span>Banco de Avaliadores do Sinaes</span></div>
+        <div class="role"><b>Pesquisador da Cátedra UNESCO Metodista</b><span>Parque Tecnológico de Santo André (SP)</span></div>
+        <div class="role"><b>Membro do Parlamento Mundial da Educação</b><span>Desde 2026</span></div>
+        <a class="btn gold" href="sobre.html" style="justify-self:start">Ver trajetória completa</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="livros">
+  <div class="wrap">
+    <div class="head">
+      <h2>Livros</h2>
+      <p class="soft">Seis obras publicadas, como autor, coautor e organizador, e a tese de doutorado a caminho do livro.</p>
+    </div>
+    <article class="next-book">
+      <img src="capa-entre-algoritmos.jpg" alt="Capa do livro Entre Algoritmos e Ancestralidades" width="600" height="900">
+      <div>
+        <p class="nb-tag">Próximo lançamento</p>
+        <h3>Entre Algoritmos e Ancestralidades</h3>
+        <p class="nb-sub">Interfaces comunicacionais entre a inteligência artificial e as epistemologias indígenas</p>
+        <p>O livro nasce da tese de doutorado em Comunicação Social na Universidade Metodista de São Paulo. Escuto o que os sistemas de inteligência artificial dizem, e calam, sobre os saberes indígenas do Sul Global, e pergunto que lugar a tecnologia reserva para outras formas de conhecer.</p>
+      </div>
+    </article>
+    <div class="books" id="bookList"></div>
+    <p class="sample"><a href="sobre.html#livros">Ver detalhes dos livros e a trajetória completa</a>.</p>
+  </div>
+</section>
+
+<section class="band" id="biblioteca" style="padding-top:0">
+  <div class="wrap">
+    <div class="head"><h2>Biblioteca: leituras recomendadas</h2><p class="soft">Textos e livros em PDF que indico para gestores do ensino superior. Clique no arquivo para ler ou baixar.</p></div>
+    <div class="lib"><iframe src="https://drive.google.com/embeddedfolderview?id=1e4q8lFrM0XI9UOtewbYyW3W5x3-MIeGa#list" title="Leituras recomendadas em PDF" loading="lazy"></iframe></div>
+    <p class="sample">Se a lista não aparecer, <a href="https://drive.google.com/drive/folders/1e4q8lFrM0XI9UOtewbYyW3W5x3-MIeGa" target="_blank" rel="noopener">abra a biblioteca no Google Drive</a>.</p>
+  </div>
+</section>
+<section class="band dark" id="mapa">
+  <div class="wrap mapgrid">
+    <svg class="map" viewBox="0 0 613 639" role="group" aria-label="Mapa do Brasil com os estados onde Walker atuou" id="map">
+<path id="uf-ac" data-uf="ac" d="m 30.73,238.03 -2.08,-0.04 0.54,-1.81 -0.21,-0.83 -0.25,-0.49 -1.25,-0.7 -0.14,-0.45 0.27,-1.15 -0.77,-1.95 -1.09,-0.64 -5.6,-1.25 -7.34,-0.19 0.27,-0.56 2.49,-2.26 0.89,-1.23 0.29,-1.2 -0.22,-1.23 -0.68,-0.91 -0.83,-0.44 -1.68,-2.95 -0.77,-0.44 -0.9,-0.19 -1.13,-1.13 -0.92,-2.38 -2,-1.53 -0.98,-3.62 -0.87,-1.64 -1.88,-1.08 -0.08,-1.17 0.81,0.1 0.42,-0.52 0.07,-0.67 -0.2,-0.42 -2.12,-0.93 -0.36,-0.66 -2.16,-1.89 0.04,-0.37 0.62,-0.05 0.49,-1.32 -0.01,-1.31 3.01,-0.39 0.5,-0.39 -0.22,-1.35 -1.17,-1.57 0,0 17.95,7.48 23.66,5.66 12.14,3.14 26.44,14.17 28.50,12.13 0,0 2.97,1.26 0,0 -0.3,0.48 -1.57,0.66 -2.09,1.59 -2.86,2.79 -1.65,0.86 -0.66,-0.18 -1.53,0.18 -0.05,0.56 -1.92,1.3 -2.08,0.99 -1.43,1.83 -0.44,1.18 -0.61,0.28 -1.17,-0.75 -0.76,-0.13 -2.37,0.05 -0.68,0.26 -0.63,0.45 -0.36,0.86 -2.44,3.48 -3.77,1.25 -0.84,0.69 -1.94,0.51 -1.03,0.03 0.08,-2.11 -1.36,0.2 -3.55,-0.77 -5.24,-0.47 -5.09,0.38 -0.66,-0.58 -2.27,-0.17 -3.56,1.83 -2.73,0.62 -1.68,-0.67 -1.4,-1.44 -1.64,1.16 0.04,-17.55 0.05,-1.1 0.47,-0.71 0.07,-2.35 -0.26,-0.88 0.97,-1.18 0.48,-1.14 -1.16,0.2 -2.97,2.59 -1.6,1.01 -2.06,2.38 -1.95,0.67 -0.65,1.08 -1.81,0.99 z"><title>Acre</title></path>
+<path id="uf-al" data-uf="al" d="m 562.17,230.56 -0.2,-0.73 -1.42,-0.78 -0.45,0.09 -1.02,-0.29 -0.54,-1.4 0,0 1.32,-1.07 0.64,-1.09 2.17,-0.76 2.38,-3.29 0.09,-0.69 0.82,-0.6 1,1.22 1.67,0.3 1.08,-0.12 2.55,2.02 1.9,2.12 1.78,1.05 1.91,0.48 2.5,-0.65 3.14,0.29 1.17,-0.11 1.86,-1.06 1.16,0.05 1.81,-1.11 2.18,-2.29 0.12,-0.45 1.55,-1.24 2,-0.24 2.24,0.85 2.56,-1.29 1.47,-0.19 1.92,0.81 2.9,0.27 0.27,0.21 0,0 -2.78,4.96 -4.55,5.13 -3.58,3.58 -3.04,4.58 -3.33,2.88 -1,2.03 -1.32,1.79 0,0 -0.6,-1.31 -3.59,-2.23 -0.46,-0.03 -1.66,-0.79 -1.76,-1.45 -1.3,-2.45 -5.42,-3.07 -3.68,-0.95 z"><title>Alagoas</title></path>
+<path id="uf-ap" data-uf="ap" d="m 345.24,99.96 -0.94,-0.06 -0.77,0.33 -1.3,0.12 -2.79,-0.67 -1.45,-1.03 -0.43,-1.5 -1.87,-1.39 -0.11,-1.3 0.21,-0.69 -0.31,-1.58 -0.33,-0.47 -0.95,-0.19 -0.41,-0.94 0.08,-2.43 -2.93,-3.28 -0.78,0.36 -0.82,-0.19 -1.5,-3.48 0.13,-1.58 -0.59,-1.81 -0.62,-0.56 -0.67,-1.51 -0.19,-2.11 0.43,-3.14 -0.17,-0.33 -2.57,-0.73 -2.02,-2.26 -0.76,-2.83 0.19,-0.72 0.68,-0.23 -0.49,-1.18 -0.68,0.03 -2.84,-2.66 -0.94,0.14 -0.38,0.42 -1.33,0.14 -0.84,-0.27 -0.8,-0.98 -1.14,-0.84 -1.19,-0.12 -0.49,-1.28 -0.67,-0.8 -1.93,-1.05 -1.29,-0.49 -3.39,-0.37 -1.08,0.29 -1.17,-0.02 -0.31,-0.54 -0.24,-1.44 0.25,-4.54 0.62,-1.3 -0.37,-2.3 -0.62,-0.57 0,0 0.35,-0.21 0.99,0.3 -0.01,0.81 -0.29,0.18 0.34,0.97 1.47,-0.06 0.82,0.23 0.35,0.9 0.84,0.71 2.25,0.78 3.29,0.75 2.76,-1.78 0.35,-0.76 1.73,-1.17 0.83,-0.29 0.69,0.94 2.71,0.94 1.08,-0.12 1.72,-1.01 0.12,-0.42 0.32,0.03 1.46,1.3 -0.2,0.87 2.37,-0.17 0.51,0.5 0.95,0.17 0.62,-0.01 0.91,-0.48 1.67,-1.5 1.78,-1.1 1.75,-2.3 0.37,-1 -0.2,-0.54 3.13,-6.5 0.11,-1.82 1.11,-1.3 0.73,-0.19 3.6,-5.79 0.23,-1.15 0.84,-1.2 1.79,-1.55 0.63,-1.66 2.11,-1.14 0.47,-0.92 1.04,-0.58 0.56,1.46 0.88,1.36 -1.67,-4.8 -0.07,-1.29 0.18,-0.33 3.37,2.42 1.14,1.21 0.91,1.22 0.52,1.19 0.03,1.58 0.44,0.31 0.32,-0.48 0.38,-0.1 0.21,0.4 0.21,7.89 0.66,3.87 2.71,6.05 2.66,8.94 3.32,5 1.01,0.35 3.27,-0.08 2.78,0.94 1.29,0.85 0.77,2.65 -0.16,3.33 -1.29,0.96 -1.73,0.43 -0.38,0.33 1.79,-0.15 1.04,-0.42 0.28,0.23 0.12,0.59 -0.17,0.73 -5.03,4.06 -1.17,2.1 -2.15,1.41 -1.94,3.72 -2.91,3.5 -0.7,0.46 -0.94,-0.09 -1.45,0.52 -2.08,2.98 0,0 -1.34,0.07 -0.75,0.9 0,0 -1.47,1.68 -0.97,2.22 -1.12,1.87 -0.84,0.65 -3.01,3.45 -0.36,2.4 0.17,1.8 -1.95,1.81 -0.98,0.12 z m 23.36,-46.99 -0.45,-0.33 -1.1,-1.86 0.07,-0.88 0.23,-0.41 1.66,-0.45 0.43,0.39 0.83,2.27 -0.99,1.1 -0.68,0.17 z m 2.49,17.61 -0.4,-0.25 -0.08,-0.71 1.11,-1.1 0.88,-0.15 1.25,0.24 0.46,-0.11 0.44,-0.64 0.05,0.59 -0.97,1.44 -0.99,0.5 -1.75,0.19 z m 3.44,-2.87 -0.78,-0.23 0,-0.56 0.72,-1.04 1.25,-0.1 0.18,0.35 -0.1,0.51 -1.27,1.07 z m -7.19,-18.42 -0.76,-0.5 0.26,-0.83 0.88,-0.17 0.86,0.32 0.01,0.73 -1.25,0.45 z"><title>Amapá</title></path>
+<path id="uf-am" data-uf="am" d="m 166.08,47.55 0.72,0.78 0.75,0.34 0.61,0.01 1.13,-0.42 0.63,0.11 0.06,0.96 1.21,1.17 0.97,0.37 0.88,-0.21 1.36,0.11 1.95,0.95 0.49,0.66 -0.91,3.32 -0.71,1.5 2.73,3.74 1.66,4.76 0.19,2.26 0.87,1.12 0.05,0.45 -1.62,1.46 0.36,1.59 0.66,1.58 -0.77,3.04 -0.57,0.96 0.29,4.98 0.88,2.17 1.22,0.84 0.58,0.9 1.13,4.33 -0.06,0.58 -1.14,1.32 -1.84,-0.33 -0.14,1.14 5.01,4.42 0.52,0.04 1.96,1.31 1.48,1.64 1.04,2.04 0.53,0.07 1.34,-0.42 2.36,1.04 -0.44,-2.11 0.75,-2.28 0.25,-1.73 -0.37,-1.8 0.82,-2.97 1.02,-1.26 1.28,-0.69 2.09,-0.71 0.55,-0.89 1.6,-0.06 2.83,0.93 1.87,2.04 0.92,2.51 1.82,0.23 1.25,-0.46 1.41,-1.41 2.03,-0.55 0.42,-0.39 0.02,-0.53 -1.14,-1.41 -0.23,-0.73 0.11,-0.66 1.15,-2.64 0.07,-1.13 1.66,-3.03 2.33,-3.26 -0.03,-0.68 18.49,0.07 0,0 0.4,4.86 -0.43,1.45 0.18,2.27 0.24,0.68 1.7,0.85 0.18,0.41 -0.35,0.69 -0.05,2.11 1.83,1.99 0.36,0.19 0.7,-0.18 1.84,1.23 0.55,1.83 0.04,0.93 0.3,0.45 4.64,3.76 4.58,2.54 0.63,0.9 1.35,1.09 1.88,0.67 2.37,1.31 2.26,0.65 1.36,0.15 1.32,0.82 0.08,0.61 1.27,1.34 2.7,1.44 1.1,2.17 1.87,0.79 0.85,-0.61 1.38,-0.35 0.19,0.48 -0.13,0.78 1.81,1.67 -29.9,64.24 -0.78,1.31 -1.45,1.13 -0.58,0.97 -0.03,1.13 0.82,2.33 0.38,0.57 1.07,0.58 1.58,1.56 0.64,1.26 0.15,1.96 0.57,0.57 0,0 -1.18,1.2 -0.2,0.61 -0.06,0.76 0.34,0.84 -0.27,1.01 -1.2,1.82 -0.86,0.64 -0.42,0.85 0.1,0.85 0.66,1.37 0.46,1.94 -1.38,4.22 -1.18,5.22 -1.21,0.73 -47.85,0.32 0,0 0.04,-0.7 -0.36,-0.38 -1.39,-0.28 -1.92,1.08 -0.54,1.74 -0.68,0.19 -3.24,-1.48 -0.68,-2.88 -0.62,-0.2 -0.98,0.13 -0.46,-0.21 -1.25,-3.27 -2.54,-0.98 -1.33,-1.27 -0.8,-1.91 -0.45,-0.49 -2.15,-1.13 -10.79,0.06 -1.38,2.56 -1.72,0.5 0.09,1.17 -0.26,0.22 -2.48,0.53 -1.19,1.59 -0.05,0.67 0.9,0.7 0.17,0.45 -0.36,1.02 -0.81,1.15 -2.06,1.21 -0.11,1.81 0.24,1.46 -3.87,-0.46 -2.13,0.38 -1.2,1.07 -1.79,-0.1 -0.84,-0.55 -0.46,-0.02 -1.75,1.26 -0.53,0.84 0.26,1.75 -2.54,3.16 -0.68,0.08 -0.68,-0.53 -0.64,-2.26 -0.38,-0.09 -1.84,1.02 -1.3,1.21 -1.37,0.39 -0.77,-0.13 -1.08,0.5 -0.41,0.53 -0.13,0.72 -1.22,0.79 -0.37,0.02 -2.31,-2.33 -0.72,-0.37 -2.87,0.33 -3.96,-0.26 0.16,1.29 -0.15,0.56 -1.55,1.81 -1.92,0.58 -3.26,2.56 0,0 -28.50,-12.13 -26.44,-14.17 -12.14,-3.14 -23.66,-5.66 -17.95,-7.48 0,0 -0.07,-0.65 0.7,-2.92 1.22,-1.4 4.92,-3.47 2.26,-0.24 0.47,-0.3 0.98,-1.56 0.08,-1.03 -1.74,-4.49 0.38,-1.19 1.18,-2.19 1.28,-1.32 0.92,-1.25 0.42,-0.98 0.3,-1.74 -0.29,-1.32 0.67,-2.04 0.31,-2.31 0.73,-0.75 3.66,-1.63 2.19,-1.23 1.15,-1.04 0.44,-1.4 0.78,-0.37 1.41,-0.11 1.65,-0.93 3.54,-2.73 2.42,-0.43 1.51,0.29 4.19,-1.22 1.5,-0.77 1.82,-0.36 3.33,0.38 1.3,-1.59 0.63,-1.45 1.09,-0.61 2.14,0.2 0.64,0.54 1.32,-0.24 1.1,-0.74 1.71,0.12 0.31,0.53 -0.02,1.18 1.61,1.29 2.83,0.08 0.58,-0.4 0.46,-0.78 -0.11,-0.39 1.17,-4.92 6.7,-37.17 1.16,-2.92 -0.99,-4.95 0.12,-0.26 -1.3,-1.05 -1.48,-2.75 -0.04,-0.49 0.65,-1.39 -0.52,-1.78 -0.37,-0.4 -1.7,-0.59 -3.03,-2.35 -1.94,-2.28 0.2,-11.51 3.89,-0.26 1.75,-1.17 3.5,-0.92 2.68,1.76 1.22,0.11 1.27,-0.43 -0.49,-1.69 0.3,-1.72 -1.37,-2.1 -0.57,-0.54 -1.15,-0.6 -1.51,0.53 -2.79,-0.61 -3.57,0.09 -0.06,-9.9 0.96,0.04 1.32,-0.58 2.28,-0.6 2.84,0.87 19.03,0.06 -0.46,-0.66 -0.79,-0.14 -0.38,-1.2 0.95,-1.93 1.43,0.4 0.61,1.52 0.87,1.32 0.66,0.35 0.83,0.01 1.61,-0.61 1.94,-2.09 0.32,-0.84 1.25,-1.24 2.55,-1.39 1.29,0.46 1.17,2.58 1.62,1.99 0.74,1.3 0.66,1.78 0.23,1.55 -0.49,3.63 0.2,1.76 3.2,-0.75 8.31,7.06 0.79,0.28 2.5,0.21 2.3,-1 1.7,-1.7 2.11,-1.16 2.19,-0.11 0.56,0.29 0.77,1.08 -0.02,0.97 -1.11,1.7 0.37,0.98 0.58,0.27 1.33,-0.72 0.56,-0.91 0.23,-1.29 1,-1.16 0.47,-0.23 1,0.18 0.55,-0.18 0.41,-0.66 0.46,-2.31 0.51,-0.37 1.51,-0.36 2.93,-1.77 0.97,0.55 0.93,-0.29 1.6,-1.04 1.02,-1.61 2.11,-1.21 2.03,0.55 2.36,-1.65 0.55,-0.82 0.44,-2.66 -0.03,-1.29 0.77,-0.92 1.03,-0.42 1.74,-0.02 1.34,-0.39 2.06,-1.6 0.96,-0.37 2.28,-0.3 z"><title>Amazonas</title></path>
+<path id="uf-ba" data-uf="ba" d="m 527.76,365.59 -0.36,-0.83 0.68,-1.35 -0.01,-0.53 -0.53,-1.04 -4.13,-3.05 -0.15,-0.51 0.22,-1.51 -0.57,-1.23 -0.65,0.24 -0.2,0.45 -0.34,0.18 -0.22,-0.25 0.53,-4.4 0.82,-3.3 0.82,-0.88 2.47,0.24 1.02,-0.71 0,-0.42 -0.56,-1.02 0.16,-2.65 4.96,-4.22 1.47,-3.08 -0.42,-1.17 -0.78,-1.02 -0.89,-0.06 -0.73,-0.38 -2.83,-2.47 -2.12,0.02 -2.19,-0.6 -2.27,-1.08 -2.73,-0.56 -1.98,-0.14 -1.32,0.99 -1.47,0.5 -2.61,-0.45 -0.57,0.21 -0.44,-3.96 -6.52,-6.2 -0.38,-0.18 -4.39,1.23 -1.53,-1.24 -0.51,0.21 -0.93,-0.22 -2.54,-1.22 -2.17,-1.62 -0.98,0.18 -4.35,-3.63 -1.1,-0.54 -2.73,-0.75 -1.77,0.25 -1.88,0.9 -0.81,1.12 -0.64,0.18 -5.33,-1.47 -0.61,-0.49 -0.26,-1.5 0.14,-0.89 1.29,-2.74 -0.86,-0.46 -2.28,-0.52 -2.18,-0.04 -1.2,-0.5 -1.79,-0.08 -3.83,1.58 -4.26,3.03 -0.64,1.11 -3.37,1.87 -2.02,0.4 -0.95,1.18 -1.81,1.55 -1.43,0.52 -1,-0.15 -1.85,2.58 -1.04,0.77 -2.13,-0.38 -0.72,0.13 -0.69,1 -1.34,0.92 -0.4,-0.24 1.43,-3.43 -0.51,-2.41 0,0 1.48,-1.97 0.25,-0.77 -0.23,-1.27 -0.67,-1.72 0.1,-0.67 0.71,-1.42 -0.05,-0.46 -3.21,-2.62 -1.69,-3.46 -0.62,-3.52 0.05,-1.55 1.2,-3.83 1.59,-1.03 0.23,-0.38 0.06,-0.94 -1.63,-0.84 -0.11,-0.33 0.48,-2.52 1.43,-1.06 -0.02,-0.37 -2.72,-2.46 0,0 -0.04,-0.93 1.36,-2.38 -0.04,-1.07 -0.17,-0.42 -1.46,-0.49 -0.94,-0.65 -0.35,-1.26 0.06,-2.92 0.19,-0.85 1.95,-1.67 1.14,-0.42 0.96,-0.72 -0.29,-0.63 -0.58,-0.52 -0.92,-0.29 -1.03,0.18 -0.35,-0.33 -0.09,-0.5 0.42,-0.96 2.04,-0.82 0.56,-0.45 -0.04,-0.76 -1.88,-0.98 -3.58,-0.67 -1.86,-1.96 -0.23,-0.92 0.5,-1.16 1.01,-0.73 1.52,-3.48 0.9,-0.61 1.01,-0.27 0.35,-0.38 -1.29,-1.8 0.19,-0.37 3.21,-2.62 3.82,-2.02 0.56,-0.47 0.22,-0.98 0.69,-0.65 0,0 2.33,-0.02 1.44,1.34 0.66,1.04 0.53,2.21 1.76,2.49 4.18,1.86 1.8,-0.52 2.11,0.18 0.33,-0.21 0.75,-1.45 1.14,-0.37 0.67,-0.87 1.17,-0.89 2.21,-0.75 1.33,0.17 1.48,0.53 1.35,-0.42 2.97,-2.42 2.95,-5.05 0.72,-0.86 0.24,-0.92 0.3,-2.56 -0.12,-1.16 -2.24,-4.43 0.05,-0.93 3.24,-1.65 1.95,-0.02 1.5,0.46 0.41,0.93 0.32,0.18 2.12,-0.43 1.39,-0.54 1.33,0.38 1.71,0.99 -0.13,0.65 0.19,0.29 0.82,0.28 3,-0.11 1.47,-0.64 1.7,-0.1 0.82,-1.22 1.51,-1.34 2.73,-0.34 0.77,-0.36 0.81,-0.98 2.17,0.01 0.62,0.63 0.31,0.05 1.86,-1.81 -0.1,-2.4 1.99,-0.38 0.79,0.18 1.05,-0.66 1.5,-2.31 0.46,-1.15 0,0 0.89,0.4 1.16,-0.27 2.2,0.29 2.82,1.39 0.44,0.51 -0.06,2.73 0.72,1.94 2.21,0.91 0.27,2 -0.92,1.68 1.83,0.62 0.96,-0.22 0.82,-0.92 2.87,-0.88 0.77,-3.58 0.5,-0.87 0.75,-0.16 0.78,0.53 0.63,0.05 2.39,-1.02 1.1,-1.24 0.17,-0.59 -0.25,-1.36 0.29,-0.25 2.24,-0.45 0.77,-2.05 1.65,-0.44 2.53,-1.46 0.59,-0.1 1.49,0.56 0.83,1.44 1.36,0.81 2.36,0.78 2.99,0.4 1.58,1.15 0.54,1.65 0.39,0.27 0.43,-0.15 0.29,-1.75 0.43,-0.44 1,-0.01 0.45,0.32 0.02,0.63 -0.62,0.88 0.45,0.83 0.5,0.37 2.1,0.86 0.02,0.94 1.22,3.05 0,0 0.54,1.4 1.02,0.29 0.45,-0.09 1.43,0.79 0.2,0.72 0,0 -0.67,1.16 0.21,2.14 1.28,2.5 1.99,1.95 0.75,1.15 -0.08,3.12 -0.66,1.62 -0.09,0.88 0.76,2.75 -0.3,0.58 -0.69,0.55 -2.55,1 -1.13,-0.75 -1.71,-0.01 -0.32,0.3 -0.59,1.58 0.02,0.77 0.95,1.6 1.1,0.66 0.52,1.49 1.43,1.51 0.15,0.39 -0.13,1.42 -0.34,0.39 0.12,0.42 0.59,0.52 1.93,0.92 0.48,0.71 0.54,0.34 1.55,0.64 2.89,-0.88 0,0 0.64,-0.02 0.36,0.41 -4.08,8.83 -3.83,5.19 -1.03,2.33 -5.03,5.74 -2.45,1.26 -0.87,-0.01 0.3,-1.43 0.37,-0.15 0.14,-1.1 -0.45,-1.93 -1.87,-0.25 -0.43,-1.3 -0.68,-0.75 -0.37,0.6 -0.46,2.33 -0.5,0.87 -0.55,0.38 -0.56,-0.29 -0.49,-1.74 0.11,-0.32 0.31,-0.13 -0.03,-0.39 -0.87,1.29 0.93,1.69 0.46,0.23 0.37,-0.15 1.15,0.26 -0.46,1.81 -1.21,1.15 -0.25,1.82 -1.25,0.97 -0.35,0.67 -0.2,0.84 0.18,0.85 -1.35,-0.39 -0.21,0.39 -0.36,2.52 0.36,-0.72 0.75,0.21 0.24,0.54 -0.23,0.41 0.06,0.62 0.3,0.3 0.33,1 -1.04,2.51 0.57,3.44 -0.55,0.49 -0.57,-0.22 -0.14,1.13 0.59,0.46 1.21,-1.72 -0.47,-2.21 0.82,-0.61 0.25,0.54 -0.06,1.76 -0.96,2.61 -0.74,5.43 -0.51,1.81 0.2,2.47 0.78,2.85 0.19,4.54 0.87,6.41 0.99,3.42 -2.21,6.66 -1.35,6.65 -0.47,1.01 -0.16,2.86 -1.06,3.72 -0.09,2.33 0.39,4.42 0.89,1.71 -2.24,2.98 -1.81,0.67 -0.94,0.64 -2.72,3.89 -0.57,2.04 0,0 -8.09,-5.14 -0.31,-0.53 z m 22.28,-78 -0.23,-1.2 0.74,-0.41 1.06,-1.04 0.16,-0.64 -0.37,-0.73 0.76,0.14 0.82,1.05 -0.05,0.53 -2.89,2.3 z m -2.53,6.85 -0.63,-0.03 0.01,-0.67 0.26,-0.36 -0.8,-0.22 -0.42,-0.4 0.13,-1.07 1.87,-0.15 0.16,0.2 0.11,1.13 -0.69,1.57 z"><title>Bahia</title></path>
+<path id="uf-ce" data-uf="ce" d="m 574.05,157.11 -4.89,1.59 -2.61,2.01 -3.3,6.69 -0.84,1.12 -0.87,0.57 -0.65,1.67 0.15,0.74 -1.4,2.44 -1.46,1.51 -0.57,1.1 -1.03,0.26 -0.78,-0.51 -0.51,0.07 -0.84,0.88 -1.41,2.25 -0.34,1.97 0.64,0.17 0.66,-0.38 0,0 -0.08,0.54 -0.84,1.15 -1.03,3 0.52,1.31 -0.66,1.31 -1.09,0.63 -0.17,0.38 -0.12,0.93 0.24,0.41 0.58,0.29 0.35,0.72 -0.02,1.66 1.24,0.89 0.69,0.08 0.34,1.19 -1.61,3.49 -1.19,1.12 0.17,0.25 0,0 -1.59,0.49 -1.07,0.83 -1.54,2.29 -1.65,0.05 -0.63,-1.64 -0.78,-0.57 -1.36,-0.48 -1.01,-1.07 -0.46,-0.99 -1.83,-0.83 -2.85,-1.9 -3.08,-0.42 -1.29,0.1 -2.14,0.8 -1.63,0.19 -0.89,-0.24 -4.93,-0.2 0,0 0.06,-1.32 -0.68,-0.68 -0.08,-0.97 1.14,-3.11 1.5,-2.25 0.01,-0.69 -0.77,-1.16 -2.56,-0.47 -1.31,-0.65 -1.01,-2.67 -1.05,-5.2 -0.76,-2.57 0.24,-0.45 -0.94,-8.16 -0.11,-0.38 -0.92,-0.69 0.8,-0.58 0.59,-1.58 -0.6,-2.99 -1,-2.01 0.48,-1.6 -0.79,-3.87 0.74,-1.36 0.02,-0.76 -1.36,-1.59 -0.44,-1.73 -3.15,-6.42 -1.8,-4.72 -0.29,-1.29 0.18,-1.46 1.58,-1.97 1.09,-1.85 0.11,-0.8 0,0 0.19,-0.14 -0.04,-0.62 -0.4,-0.66 0.65,-0.81 6.74,-0.22 2.89,-0.43 2.07,-0.66 7.4,0.79 2.12,1.12 1.94,1.5 4.12,2.18 1.46,0.52 4.82,3 1.21,0.2 2.22,2.29 2.99,2.11 2.57,0.72 2.44,2.91 1.22,0.61 2.96,3.81 4.16,3.08 1.46,2 1.04,0.99 1.5,0.82 1.15,0.03 2.37,0.92 0.79,0.67 z"><title>Ceará</title></path>
+<path id="uf-df" data-uf="df" d="m 416.97,334.13 -14.69,-0.02 -0.52,-3.26 0.92,-1.83 0.38,-3.73 11.95,0.01 1.83,1.98 0.06,2.21 -0.59,1.19 -0.21,2.44 z"><title>Distrito Federal</title></path>
+<path id="uf-es" data-uf="es" d="m 501.89,411.63 -0.29,-0.14 0.44,-2.34 0.57,-1.3 -0.59,-3.12 0.16,-0.42 1.72,-2.06 5.15,0.03 0.55,-0.32 0.97,-3.24 1.11,-1.27 0.88,-2.29 0.24,-1.72 0.26,-0.44 1.24,-0.86 1.71,-2.09 0.54,-2.97 -0.29,-2.43 -1.27,-2.81 -1.1,-1.27 -0.52,-0.09 -0.45,0.29 -0.76,-0.28 -0.49,-0.71 0.43,-0.55 1.48,-0.09 0.8,0.35 0.97,0.03 0.95,-0.24 0.32,-0.42 -0.17,-1.72 -1.31,-0.35 -0.21,-0.41 0.3,-1.54 0.03,-1.92 -0.52,-0.66 -1.33,-0.67 -0.3,-0.7 1.17,-1.93 2.17,-1.31 0.31,-0.02 1.05,0.74 1.13,0.11 0.02,-0.81 -1.67,-2.27 1.34,0.13 2.18,-0.29 0.84,-0.61 1.08,-0.32 1.58,-0.08 2.54,0.81 0.91,0.55 0,0 0,0 0,0 0.3,0.53 8.1,5.14 0,0 -0.93,3.35 -0.31,2.86 0.12,3.59 0.72,6.15 -0.31,2.47 -1.49,3.18 -2.75,1.39 -0.55,0.6 -1.67,3.33 -0.98,3.8 -0.77,1.47 -0.83,-0.68 -0.88,-0.13 -0.29,1.28 1.35,0.52 -1.94,4.24 -3.45,3.84 -0.24,-0.27 -1.86,0.66 -0.8,1.23 -0.06,1.39 -0.42,1.25 -1.59,2.02 -0.29,1.13 0,0 -1.62,-1.06 -2.99,0.37 -4.34,-1.01 -2.5,-1.13 -0.67,-4.71 z"><title>Espírito Santo</title></path>
+<path id="uf-go" data-uf="go" d="m 416.97,334.13 -0.87,-1.01 0.21,-2.44 0.59,-1.19 -0.06,-2.21 -1.83,-1.98 -11.95,-0.01 -0.38,3.73 -0.92,1.83 0.52,3.26 14.69,0.02 0,0 0,0 0,0 -0.53,1.52 0.31,1.57 -0.68,1.59 -1.04,1.25 -0.41,1.47 0.85,1.21 0.85,0.34 1.42,1.03 1.65,4.56 0,0.6 -2.32,2.71 -3.24,3.01 -0.43,2.14 1.09,1.11 0.9,-0.47 1.58,0.57 0.47,0.61 0.18,1 -0.17,0.71 -0.73,0.9 -0.51,1.89 1.19,3.46 -3.09,2.06 -1.16,0.2 -0.86,0.9 -0.48,1.12 -4.89,2.74 -0.7,-0.77 -4.35,-1.86 -0.55,0.48 -0.58,0.09 -1.75,0.01 -1.48,-0.28 -3.86,0.16 -2.01,-0.89 -4.13,2.64 -2.91,2.92 -0.33,0 -1.31,-1.42 -1.52,-0.3 -3.19,1.64 -3.71,-0.62 -2.48,0.96 -2.23,0.54 -1.41,2.1 -1.21,2.46 0.06,1 -0.84,1.3 -0.82,0.28 -0.84,-0.16 -0.45,0.14 -0.94,0.74 -1.64,2.1 -0.57,1.9 0.56,0.61 -0.01,0.34 -0.36,0.23 -0.86,-0.46 0,0 -0.24,-0.45 -2.66,-2.24 -3.15,-0.61 -1.62,-1.55 -1.9,-0.43 -1.49,-0.04 -3.35,-1.34 -0.68,-0.85 -3.07,-1.56 -0.67,-0.61 -1.44,-0.71 -1.14,-0.17 -2.7,-1.68 -2.78,0.16 -3.8,-0.7 -0.13,-0.33 0.26,-0.84 0.57,-1.17 1.31,-1.76 -0.08,-0.42 -2.25,-0.9 -1.14,0.67 -0.66,-0.19 -0.28,-0.41 -0.23,-1.11 0.26,-2.58 -0.19,-1.77 0,0 -0.95,-2.2 -0.18,-3.43 -1.41,-2.19 -0.16,-0.71 0.4,-3.41 2.55,-3.85 0.38,-2.91 0.7,-0.77 2.02,-0.84 1.92,-1.77 1.25,-2.02 0.33,-1.95 0.5,-1.01 1.28,-1.04 0.82,-1.43 0.08,-1.54 1.75,-0.97 1.4,-2.62 2.65,-0.13 2.72,-0.86 0.32,-0.28 1.98,-4.19 0.71,-0.96 0.64,-4.1 0.38,-0.74 1.92,-1.94 1.65,-1.01 1.07,-0.26 1.23,0.68 1.21,-0.73 1.39,-1.43 0.84,-2.93 1.17,-2.87 -0.01,-0.8 -0.48,-1.14 0.58,-2.74 1.6,-3.09 -0.12,-5.18 1.21,-0.78 1.03,-2.63 2,-3.17 0.39,-1.07 -0.16,-2.72 0.35,-0.9 0.97,-0.86 0.27,-1.13 -0.08,-0.63 0,0 0.34,-0.45 0.2,-1.88 0.66,-1.23 1.81,-2.09 0.56,-0.3 -0.03,1.71 -1.22,1.88 -0.52,2.34 2.4,0.4 2.2,1.03 3.93,0.4 3.09,1.71 4.07,1.43 0.63,-0.23 1.63,-5.94 1.47,-2.39 1.18,-0.97 1.15,1.31 1.04,1.88 1.11,3.71 0.61,3.1 1.14,0.05 0.75,-0.75 0.3,-1 0.56,-0.54 2.76,0.34 4.53,-0.53 0.22,0.74 -0.56,1.56 3.13,1.47 3.35,0.68 0.69,-0.08 0.51,-3.3 0.55,0.03 1.51,2.62 0.46,0.24 1.78,-0.9 2.52,-2.08 4.53,-1 1.55,0 2.56,-1.1 1.74,-1.34 5.36,-1.42 0,0 2.72,2.46 0.02,0.38 -1.43,1.06 -0.48,2.52 0.1,0.33 1.63,0.84 -0.06,0.94 -0.23,0.38 -1.59,1.03 -1.19,3.83 -0.05,1.55 0.62,3.52 1.7,3.46 3.21,2.62 0.05,0.47 -0.72,1.42 -0.1,0.67 0.67,1.72 0.23,1.28 -0.25,0.77 -1.48,1.97 0,0 -1,1.01 -3.23,-0.34 -0.9,-1.76 -2.42,-1.48 -1.17,1.49 0.58,3.77 -0.57,0.54 -0.4,0.13 -2.78,-1.14 -1.17,0.23 -0.37,0.28 -0.72,3.18 0.72,0.1 0.49,1.16 -0.57,0.94 -0.73,0.7 0.04,1.9 0.42,0.61 0.53,0.19 0.69,4.26 -0.53,0.53 -3.36,0.9 -2.29,1.51 z"><title>Goiás</title></path>
+<path id="uf-ma" data-uf="ma" d="m 458.83,129.18 -0.04,0.33 -2.04,2.15 -0.43,0.17 -0.04,1.44 1.97,-1.7 0.68,-1.21 2.12,-1.58 0.89,-1.14 1.03,-6.33 1.15,-0.7 1.11,-0.12 1.67,-0.92 0.65,-0.13 0.46,0.12 0.08,1.63 -0.2,0.45 -1.42,1.87 -3.21,1.75 -0.03,0.72 0.73,0.12 0.45,-0.81 1.15,-0.31 0.22,0.83 -0.59,0.51 0.25,0.3 4.21,-4.97 0.86,0.33 2.58,-0.93 4.04,0.43 -0.46,-2.41 0.61,-0.23 2.42,0.08 1.78,0.38 2.63,1.05 1.04,0.11 2.15,1.38 1.4,0.03 1.26,1.3 1.89,1.32 2.5,0.58 1.16,-0.19 0.56,0.76 0.34,0.05 1.59,-0.09 2.46,0.66 0.26,-0.9 -0.67,-0.47 1.67,-0.38 0.57,0.11 -0.09,0.42 0,0 -0.46,1.43 0.23,0.72 0.63,0.54 -0.38,1.53 -1.79,2.27 -4.13,3.97 -3.32,0.46 -0.8,-0.16 -2.92,3.4 0.04,1.8 -0.88,1.83 -1.89,1.85 -0.82,1.98 -0.64,0.17 -0.77,1.05 0.36,1.92 1.23,0.83 0.38,1.28 -0.28,1.46 -1.14,2.87 1.58,2.81 0.55,2.98 -0.11,2.43 -0.21,0.55 -4.1,4.42 -0.17,2.48 0.12,2.11 0.51,2.3 1.78,2.04 1.61,0.91 0.17,0.5 0.13,0.84 -0.39,2.2 -0.29,0.44 -0.12,1.21 -0.5,1.46 -1.21,1.31 -2.29,0.29 -0.65,-0.28 -0.83,0.04 -2.43,0.86 -1.52,0.11 -2.5,-1.82 -1.01,-0.21 -1.46,0.19 -1.01,0.6 -1.12,0.26 -0.23,-0.3 -0.84,0.24 -0.5,0.22 -1.9,1.91 0.01,0.46 -0.63,0.87 -2.01,2 -2.34,0.91 -2.87,2.56 -1.33,0.53 -1.05,0.04 -1.7,1.53 -1.08,0.36 -2.61,0.32 -2.72,0.76 -2.13,1.95 -0.98,2.97 -0.39,2.97 -0.63,2.32 -1.45,2.74 -0.3,0.22 -0.34,0.82 -0.13,1.52 -1.2,2.48 -1.7,1.4 -0.73,2 0.71,1.94 0.47,3.18 1.73,3.06 -0.04,0.52 -0.76,1.4 -0.13,6.36 -1.15,2.45 -0.26,1.06 -0.05,1.92 0,0 -1.28,-0.66 -0.61,-0.82 -0.82,-0.45 -0.99,-0.29 -1.78,0.2 -0.71,-0.18 -1.35,-2 -0.99,-2.86 -2.13,-1.62 -0.14,-1.65 1.64,-1.81 -0.08,-0.53 -3.88,-1.95 -0.62,-1.05 -0.06,-1.66 -0.75,-1.59 -0.94,-0.69 -2.08,-0.28 -0.2,-0.42 0.26,-0.71 2.63,-2.54 -0.37,-1.31 0.73,-2.68 0.69,-1.43 0.57,-0.55 1.34,-0.54 3.39,-0.35 -0.39,-1.35 0.64,-3.25 -0.08,-1.76 -1.8,-1.21 -4.27,0.94 -2.15,1.34 -2.27,-3.02 -0.91,-0.85 -3,-4.15 -0.88,0.07 -0.84,-1.44 0.61,-1.19 -0.11,-0.88 -0.25,-0.34 -1.37,-0.24 -0.42,0.27 -1.93,-1.33 0.18,-0.71 1.76,-0.66 1.75,-2.04 0.25,-1.59 -0.28,-1 0.31,-2.36 1.77,-6.16 0.01,-0.43 -0.68,-1.14 -0.23,-1.08 0.21,-3.72 -0.64,-1.5 -0.47,-3.49 -0.84,-1.03 -3.4,-1.44 -1.22,-0.02 -0.28,-0.32 -0.08,-1.03 -0.59,-0.69 -1.74,-0.29 -0.96,0.52 -1.4,-0.09 -2.78,-1.51 -0.86,-0.06 -1.96,0.53 -2.62,1.85 -0.53,0.64 0,0 -0.49,-0.08 14.71,-11.83 2.35,0.23 1.17,-0.92 1.55,-2.17 0.43,-1.15 1.55,-1.17 0.62,-2.88 1.12,-0.46 2.44,-2.32 0.47,-1.21 0.29,-1.9 1.6,-4.69 1.96,-1.54 1.48,-1.76 0.83,-1.45 0.46,-1.28 -0.18,-1.82 0.79,-0.81 -1.04,-1.58 3.68,-3.09 -0.13,-1.64 0.5,-2.38 1.74,-1.57 0.36,-0.71 0.9,-3.02 0.08,-1.61 -0.43,-0.53 -0.99,0.16 -0.27,-0.49 0.05,-0.62 1.14,-0.15 0.57,-0.74 0.71,-4.39 -0.16,-1.38 0.47,-1.03 0.77,-0.45 0,0 0.63,0 0.24,-0.24 -0.06,-0.54 0.34,-0.74 0.58,-0.53 1.34,0.98 0.45,1.83 1.19,0.12 0.77,-1.36 0.61,2.93 0.99,0.04 0.29,-0.49 0.07,-0.94 0.85,-0.04 1.69,0.53 0.5,0.69 -1.43,1.7 0.67,0.7 0.02,0.55 1.21,-2.04 0.49,-1.54 0.45,0 0.4,1.02 0,0.58 -0.87,0.92 -0.27,0.99 0.08,2.71 0.26,0.33 0.47,0.12 0.58,-0.14 0.96,-0.93 -0.47,-1 0.14,-0.6 1.32,-1.43 1.05,-0.25 2.13,0.59 1.5,-1.11 0.05,0.92 -0.36,0.21 -1.13,1.53 0.59,0.58 0.1,-0.37 1.25,-0.6 0.58,0.79 -0.14,1.21 1.63,1.75 0.86,-0.44 1.58,0.67 0.77,2.4 -0.11,0.95 -2.19,2.73 -0.38,0.89 0.1,0.66 0.6,-1.03 1.75,-1.68 0.83,-0.03 0.87,0.81 0.52,1.89 -0.27,1.23 -0.97,0.19 -1.03,0.91 -1.16,1.49 0.07,0.77 -1.16,2.35 -0.62,3.52 0.21,0.34 0.87,0.23 z m 0.52,0.45 -0.06,-0.79 0.53,-1.53 -0.41,-1.07 0.13,-0.66 0.91,-1.24 0.55,-0.19 0.05,2.35 -0.22,1.34 -0.8,0.6 -0.68,1.19 z m -6.3,-25.76 -0.44,-0.46 -0.08,-0.6 0.8,-1.12 0.84,-0.03 0.68,0.42 0.1,0.34 -0.19,0.36 -1.71,1.09 z m 3.5,4.18 -0.29,-0.3 0.06,-0.53 1.06,-0.89 0.48,0.07 0.5,0.85 -0.14,0.61 -0.4,-0.17 -1.27,0.36 z m -14.16,-4.81 -0.21,-0.05 0.95,-3.57 0.3,0.09 0.03,0.23 -0.41,3.05 -0.66,0.25 z"><title>Maranhão</title></path>
+<path id="uf-mt" data-uf="mt" d="m 207.22,296.31 1.47,-1.43 4.11,-2.57 0.52,-2.45 1.43,-3.78 0.93,-1.08 1.64,-0.53 0.43,-0.41 0.58,-0.84 0.52,-2.25 1.66,-2.01 0.56,-2.24 0.07,-1.71 -0.58,-1.49 0.04,-2.05 -1.53,-3.34 -0.9,0.03 -0.58,-0.51 -0.43,-3.25 0.14,-1.32 1.36,-1.08 1.4,-1.75 0.17,-0.75 -1.41,-3.59 -1.07,-0.43 -1.11,-0.11 -3.5,0.09 -1.22,-1.11 0.24,-0.56 -17.16,-0.05 0.9,-9 -1.5,-2.75 -0.27,-1.76 0.03,-0.8 1,-3.52 -0.38,-1.93 0.94,-1.67 -0.83,-2.27 -0.15,-1.39 -0.26,-0.61 -0.78,-0.47 -0.06,-0.35 1.29,-4.99 0.76,-1.42 -0.6,-1.24 -1.4,-0.97 0,0 47.85,-0.32 1.21,-0.73 1.18,-5.22 1.38,-4.22 -0.46,-1.94 -0.66,-1.37 -0.1,-0.85 0.42,-0.85 0.86,-0.64 1.2,-1.82 0.27,-1.01 -0.34,-0.84 0.06,-0.76 0.2,-0.61 1.18,-1.2 0,0 1.17,1.08 2.45,4.06 0.4,1.76 1.37,3.96 1.32,1.93 0.77,1.62 -0.23,2.44 0.48,2.4 0.73,2.2 1.53,1.11 3,2.75 3.38,1.7 0.23,0.94 -0.04,1.1 0.23,0.49 0.95,0.4 0.82,-0.17 1.63,0.45 0.54,0.72 0.2,1.08 0.35,0.32 1.37,-0.45 3.69,1.49 34.04,2.42 62.97,3.48 0,0 -0.65,1.02 -0.56,1.89 -1.1,1.25 -0.44,3.14 -0.43,0.85 -0.37,0.27 -1.94,5.29 -0.54,2.97 -0.04,2.95 -1.88,5.99 0.06,0.86 1.39,1.34 -0.16,0.87 -0.82,0.89 -0.05,0.5 1.1,2.25 -0.47,3.31 0.01,1.57 0.52,0.58 0.44,3.05 -0.74,2.76 0.98,3.34 0.96,0.51 0.8,0.02 0,0 0.08,0.63 -0.27,1.13 -0.97,0.86 -0.35,0.9 0.16,2.72 -0.39,1.07 -2,3.17 -1.03,2.63 -1.21,0.78 0.12,5.18 -1.6,3.09 -0.58,2.74 0.48,1.14 0.01,0.8 -1.17,2.87 -0.84,2.93 -1.39,1.43 -1.21,0.73 -1.23,-0.68 -1.07,0.26 -1.65,1.01 -1.92,1.94 -0.38,0.74 -0.64,4.1 -0.71,0.96 -1.98,4.19 -0.32,0.28 -2.72,0.86 -2.65,0.13 -1.4,2.62 -1.75,0.97 -0.08,1.54 -0.82,1.43 -1.28,1.04 -0.5,1.01 -0.33,1.95 -1.25,2.02 -1.92,1.77 -2.02,0.84 -0.7,0.77 -0.38,2.91 -2.55,3.85 -0.4,3.41 0.16,0.71 1.41,2.19 0.18,3.43 0.95,2.2 0,0 -1.55,0.31 -1.17,-0.57 -0.87,-0.08 -2.66,0.08 -0.57,0.57 -4.62,-0.27 -1.74,-1.27 -1.3,-0.11 -0.15,-0.53 0.19,-0.46 1.66,-2.83 1.8,-0.7 1.23,-6.61 -1.34,0.13 -5.62,6.01 -1.01,-0.06 -2.13,0.88 -0.99,-0.04 -0.24,-0.25 -0.3,-1.37 -1.59,-1.04 -2.44,-0.07 -1.43,0.61 -0.49,0.85 -1.26,0.8 -4.52,0.63 -1.24,-0.57 -1.26,-1.11 -3.03,-1.16 -0.78,-1.02 -0.27,-0.86 -0.65,-0.35 -2.62,-0.47 -2.79,-1.25 -0.76,-1.15 -1.27,-0.2 -2.02,0.49 -1.35,1.25 -1.66,0.51 -0.77,-0.34 -1.56,0.22 -2.59,-0.03 -1.4,1.45 -0.09,1.17 -2.02,2.95 -2.05,2 -5.62,1.97 -2.15,-1.52 -1.02,-1.1 -0.7,-0.2 0,0 -0.66,-0.67 -0.32,-0.8 0.54,-0.71 -2.44,-2.15 -1.28,0.63 -0.52,-0.05 -1.17,-0.68 -0.45,-0.7 -2.02,-1.41 -1.89,-0.76 -0.3,-0.32 -0.3,-1.12 -0.23,-2.93 -0.61,-1.77 -0.19,-3.66 0.88,-1.64 1.14,-1.09 0.34,-1.78 -0.05,-1.89 -0.96,0.06 -0.4,0.6 -0.38,0.16 -26.86,-1.08 -1.05,-12.65 -5.37,-6.13 4.88,-0.06 -0.35,-7.55 -2.64,-5.32 -0.49,-1.97 0.26,-1.06 0.61,-0.55 0.65,-1.28 -1.44,-2.93 -3.11,-1.04 z"><title>Mato Grosso</title></path>
+<path id="uf-ms" data-uf="ms" d="m 359.21,400.07 -0.4,2.46 -0.28,0.4 -1.5,0.78 -1.32,0.04 -0.47,0.22 -1.22,1.03 -1.99,2.68 -0.73,0.65 -1.01,0.3 -0.62,1.68 -0.16,2.93 -2.59,3.64 -0.96,0.52 -0.23,0.38 0.31,1.93 -0.08,0.95 -1.21,2.34 -2,2.26 0.35,0.85 -0.28,1.21 -1.44,1.03 -0.4,1.21 -1.73,1.69 -1.26,2.44 -1.95,1.87 -7.56,4.53 -1.26,1.14 -0.74,1.54 -0.84,1.08 0,0 -5.41,2.27 -1.11,0.82 -0.93,2.33 0.02,1.15 -1.45,3.56 -0.67,0.68 -1.66,1.01 -1.11,0.32 -0.33,0.35 -1.57,7.92 -0.36,0.82 -2.38,1.56 0,0 -2.55,-2.33 -3.41,-1.89 -3.99,1.97 -0.68,0.75 -1.66,0.49 -2.58,0.43 -2.36,-0.46 -1.01,-0.65 -0.47,-4.27 -0.32,-0.7 -0.9,-0.95 -0.23,-2.47 0.51,-1.34 -0.64,-0.79 -0.09,-0.44 0,-2.87 -0.89,-1.97 -0.6,-2.74 -0.05,-0.72 0.59,-1.36 0.02,-1.61 -1.57,-1.09 -0.38,-0.8 -0.16,-2.16 -1.65,-1.82 -2.17,-0.26 -1.51,0.31 -1.83,-0.29 -2.46,-1.96 -0.56,-1.49 -1.54,0.33 -2.17,2.74 -1,-0.6 -1.72,0.81 -1.08,0.16 -1.74,-0.69 -2.56,-0.49 -3.46,0.23 -3.66,-0.71 -0.48,-0.91 -1.99,-0.13 -0.89,0.52 -2.5,-0.88 0.91,-7.27 -0.43,-2.38 0.6,-1.42 0.98,-1.46 0.6,-6.03 -0.66,-2.33 -0.05,-1.73 -0.76,-0.96 -0.43,-0.09 -0.49,0.65 -0.64,-3.26 -0.79,-1.87 -1.21,-2.02 -0.35,-1.83 4.03,-2.3 0.76,-0.88 -4.2,-3.86 5.38,-11.42 1.12,-0.06 -0.28,-2.13 -0.74,-0.13 3.23,-10.33 0.66,-1.16 -3.09,-5.85 0.03,-1.91 0,0 0.7,0.2 1.02,1.1 2.15,1.52 5.62,-1.97 2.05,-2 2.02,-2.95 0.09,-1.17 1.4,-1.45 2.59,0.03 1.56,-0.22 0.77,0.34 1.66,-0.51 1.35,-1.25 2.02,-0.49 1.27,0.2 0.76,1.15 2.79,1.25 2.62,0.47 0.65,0.35 0.27,0.86 0.78,1.02 3.03,1.16 1.26,1.11 1.24,0.57 4.52,-0.63 1.26,-0.8 0.49,-0.85 1.43,-0.61 2.44,0.07 1.59,1.04 0.3,1.37 0.24,0.25 0.99,0.04 2.13,-0.88 1.01,0.06 5.62,-6.01 1.34,-0.13 -1.23,6.61 -1.8,0.7 -1.66,2.83 -0.19,0.46 0.15,0.53 1.3,0.11 1.74,1.27 4.62,0.27 0.57,-0.57 2.66,-0.08 0.87,0.08 1.17,0.57 1.55,-0.31 0,0 0.19,1.77 -0.26,2.58 0.23,1.11 0.28,0.41 0.66,0.19 1.14,-0.67 2.25,0.9 0.08,0.42 -1.31,1.76 -0.57,1.17 -0.26,0.84 0.13,0.33 3.8,0.7 2.78,-0.16 2.7,1.68 1.14,0.17 1.44,0.71 0.67,0.61 3.07,1.56 0.68,0.85 3.35,1.34 1.49,0.04 1.9,0.43 1.62,1.55 3.15,0.61 2.66,2.24 0.24,0.45 0,0 -0.58,0.25 -0.99,4.18 0.59,3.21 z"><title>Mato Grosso do Sul</title></path>
+<path id="uf-mg" data-uf="mg" d="m 527.76,365.59 -0.91,-0.55 -2.54,-0.81 -1.58,0.08 -1.08,0.32 -0.84,0.61 -2.18,0.29 -1.34,-0.13 1.67,2.27 -0.02,0.81 -1.13,-0.11 -1.05,-0.74 -0.31,0.02 -2.17,1.31 -1.17,1.93 0.3,0.7 1.33,0.67 0.52,0.66 -0.03,1.92 -0.3,1.54 0.21,0.41 1.31,0.35 0.17,1.72 -0.32,0.42 -0.95,0.24 -0.97,-0.03 -0.8,-0.35 -1.48,0.09 -0.43,0.55 0.49,0.71 0.76,0.28 0.45,-0.29 0.52,0.09 1.1,1.27 1.27,2.81 0.29,2.43 -0.54,2.97 -1.71,2.09 -1.24,0.86 -0.26,0.44 -0.24,1.72 -0.88,2.29 -1.11,1.27 -0.97,3.24 -0.55,0.32 -5.15,-0.03 -1.72,2.06 -0.16,0.42 0.59,3.12 -0.57,1.3 -0.44,2.34 0.29,0.14 0,0 -2.53,2.35 -1.24,0.27 -0.56,0.5 0.74,0.7 -2.36,6.05 -1.9,3.71 -0.09,0.75 1.44,0.13 0.29,0.61 -0.21,0.52 -2.53,0.98 -9.51,4.53 -1.37,0.2 0.02,-0.46 -0.49,-0.17 -2.53,-0.27 -0.57,0.06 -1.62,0.94 -1.25,0.16 -3.2,0.08 -0.36,-0.32 -0.51,0.08 -4.1,1.78 -1.05,0.77 -1.71,0.77 -0.5,-0.28 -2.59,0.17 -2.91,1.34 -2.42,0.74 -0.68,0.49 0,0 -1.25,0.73 -2.2,0.22 -1.93,1.02 -1.23,1.24 -1.79,0.67 -2.38,0.25 -2.34,-0.08 -0.01,-0.49 0.35,-0.49 -0.09,-0.35 -1.19,0.33 -0.18,2.3 0.24,0.23 -0.05,0.84 -0.75,0.98 -1.3,0.32 -0.57,-0.43 -3.61,1 -0.19,-0.53 -2.01,0.24 -1.12,-0.25 -2.03,-3.31 1.22,-0.71 -0.52,-1.71 -1.8,-0.83 -1.79,-1.23 -0.71,-1.61 0.53,-1.56 0.19,-3.45 -0.26,-2.94 1.86,-2.72 0.7,-2.18 0.05,-1.27 -0.23,-0.37 -3.7,-1.32 -1,0.05 -0.28,0.36 -0.78,0.31 -1.61,0.05 0.03,-0.85 -0.83,-1.99 -1.3,-1.79 -0.37,-2.21 -0.31,-0.62 -0.79,-0.74 0.19,-1.94 1.52,-2.03 0.06,-0.56 -0.4,-1.55 -1.88,-1.21 -0.58,-0.61 0.29,-2.37 0.57,-1.01 -0.2,-1.04 -3.27,-3.35 -1.3,0.29 -0.85,0.64 -1.65,-0.78 -2.38,0.11 -0.31,0.61 0.2,0.46 -0.44,0.99 -2.78,0.68 -1.11,-0.43 -1.51,-1.45 -1.01,1.25 -8.18,0.68 -0.46,0.48 -0.48,1.19 0.27,2.54 -0.41,0.44 -1.19,-0.52 -0.01,-2.78 -0.25,-0.96 -0.36,-0.39 -0.56,-0.05 -0.26,0.19 -0.41,1.13 -0.67,0.94 -0.54,0.32 -0.62,-0.02 -1.21,-2.1 -0.33,-1.42 0.14,-0.91 -1.68,-0.79 -2.18,-1.42 -1.99,0.59 -1.62,-0.22 -1.67,0.35 -4.29,-0.96 -2.55,-0.08 -1.73,-1.55 -0.75,-0.14 -1.5,0.61 -1.43,1.69 -1.92,0.37 -2.15,1.11 -1.22,1.13 0,0 0.31,-2.62 -0.59,-3.21 0.99,-4.18 0.58,-0.25 0,0 0.86,0.46 0.36,-0.23 0.01,-0.34 -0.56,-0.61 0.57,-1.9 1.64,-2.1 0.94,-0.74 0.45,-0.14 0.84,0.16 0.82,-0.28 0.84,-1.3 -0.06,-1 1.21,-2.46 1.41,-2.1 2.23,-0.54 2.48,-0.96 3.71,0.62 3.19,-1.64 1.52,0.3 1.31,1.42 0.33,0 2.91,-2.92 4.13,-2.64 2.01,0.89 3.86,-0.16 1.48,0.28 1.75,-0.01 0.58,-0.09 0.55,-0.48 4.35,1.86 0.7,0.77 4.89,-2.74 0.48,-1.12 0.86,-0.9 1.16,-0.2 3.09,-2.06 -1.19,-3.46 0.51,-1.89 0.73,-0.9 0.17,-0.71 -0.18,-1 -0.47,-0.61 -1.58,-0.57 -0.9,0.47 -1.09,-1.11 0.43,-2.14 3.24,-3.01 2.32,-2.71 0,-0.6 -1.65,-4.56 -1.42,-1.03 -0.85,-0.34 -0.85,-1.21 0.41,-1.47 1.04,-1.25 0.68,-1.59 -0.31,-1.57 0.53,-1.52 1.27,-0.12 2.29,-1.51 3.36,-0.9 0.53,-0.53 -0.69,-4.26 -0.53,-0.19 -0.42,-0.61 -0.04,-1.9 0.73,-0.7 0.57,-0.94 -0.49,-1.16 -0.72,-0.1 0.72,-3.18 0.37,-0.28 1.17,-0.23 2.78,1.14 0.4,-0.13 0.57,-0.54 -0.58,-3.77 1.17,-1.49 2.42,1.48 0.9,1.76 3.23,0.34 1,-1.01 0,0 0.51,2.41 -1.43,3.44 0.4,0.23 1.34,-0.91 0.7,-1 0.72,-0.13 2.13,0.38 1.04,-0.77 1.85,-2.57 0.99,0.15 1.43,-0.53 1.81,-1.55 0.95,-1.17 2.02,-0.41 3.37,-1.86 0.64,-1.11 4.27,-3.03 3.82,-1.58 1.8,0.09 1.2,0.5 2.18,0.03 2.28,0.53 0.85,0.46 -1.29,2.74 -0.15,0.89 0.26,1.49 0.61,0.5 5.33,1.46 0.64,-0.17 0.81,-1.12 1.88,-0.89 1.77,-0.26 2.73,0.75 1.1,0.54 4.35,3.64 0.98,-0.18 2.17,1.62 2.53,1.22 0.93,0.22 0.51,-0.21 1.53,1.24 4.39,-1.23 0.38,0.18 6.52,6.2 0.44,3.96 0.57,-0.21 2.61,0.45 1.47,-0.5 1.32,-0.99 1.99,0.15 2.73,0.56 2.26,1.08 2.19,0.61 2.12,-0.03 2.83,2.47 0.73,0.38 0.89,0.07 0.78,1.02 0.42,1.17 -1.47,3.08 -4.96,4.22 -0.15,2.65 0.56,1.02 0,0.42 -1.02,0.71 -2.48,-0.24 -0.82,0.88 -0.82,3.3 -0.53,4.4 0.22,0.25 0.35,-0.19 0.2,-0.45 0.64,-0.24 0.58,1.23 -0.22,1.51 0.15,0.51 4.14,3.06 0.53,1.04 0.01,0.53 -0.68,1.35 z"><title>Minas Gerais</title></path>
+<path id="uf-pa" data-uf="pa" d="m 371.29,235.50 -62.97,-3.48 -34.04,-2.42 -3.69,-1.49 -1.37,0.45 -0.35,-0.31 -0.2,-1.09 -0.55,-0.72 -1.63,-0.45 -0.82,0.17 -0.95,-0.39 -0.23,-0.5 0.04,-1.1 -0.23,-0.94 -3.38,-1.7 -3,-2.76 -1.54,-1.11 -0.72,-2.2 -0.48,-2.39 0.23,-2.44 -0.77,-1.63 -1.33,-1.93 -1.37,-3.95 -0.39,-1.76 -2.45,-4.06 -1.18,-1.08 0,0 -0.57,-0.56 -0.15,-1.96 -0.64,-1.26 -1.59,-1.56 -1.07,-0.58 -0.37,-0.57 -0.83,-2.34 0.03,-1.13 0.58,-0.97 1.45,-1.13 0.78,-1.31 29.9,-64.24 -1.81,-1.67 0.13,-0.78 -0.19,-0.48 -1.39,0.35 -0.85,0.61 -1.87,-0.78 -1.1,-2.17 -2.69,-1.45 -1.27,-1.34 -0.08,-0.6 -1.32,-0.82 -1.37,-0.15 -2.25,-0.65 -2.38,-1.31 -1.88,-0.67 -1.35,-1.09 -0.63,-0.9 -4.58,-2.54 -4.64,-3.76 -0.3,-0.44 -0.04,-0.93 -0.55,-1.83 -1.84,-1.23 -0.7,0.19 -0.36,-0.2 -1.83,-1.98 0.05,-2.11 0.35,-0.69 -0.18,-0.41 -1.69,-0.85 -0.24,-0.68 -0.18,-2.27 0.43,-1.45 -0.4,-4.86 0,0 -1.59,-16.97 0,0 0.75,0.32 0.43,0.58 -0.02,0.48 0.45,0.4 0.92,0.28 1.37,-0.71 0.47,-0.81 2.71,0.23 0.81,-1.05 -0.54,-1.81 1.79,-0.36 1.41,-1.63 2.64,1.01 1.88,0.03 0.54,-1.52 3.33,-1.62 1.97,0.39 1.16,-0.11 0.49,-0.25 1.2,-1.48 0.4,-1.4 1.46,-1.1 0.86,-0.11 0.65,0.46 2.11,-1.13 0.41,0.11 0.37,0.99 0.73,0.45 2.03,0.48 1.61,0.25 0.56,-0.6 1.67,-0.39 0.78,0.28 0.82,-0.01 0.86,-0.34 2.24,0.3 4.67,1.38 0.96,-0.14 1,-0.87 -0.03,-2.28 -2.07,-2.5 -1.24,-0.63 0.49,-1.68 1.31,-1.45 0.28,-1.11 0.31,-0.17 0.71,0.19 0.83,0.76 2.35,1.11 11.62,-2.33 1.57,1.69 1.02,0.06 0.44,-0.29 0,0 0.62,0.57 0.37,2.3 -0.62,1.3 -0.25,4.54 0.24,1.44 0.31,0.54 1.17,0.02 1.08,-0.29 3.39,0.37 1.29,0.49 1.93,1.05 0.67,0.8 0.49,1.28 1.19,0.12 1.14,0.84 0.8,0.98 0.84,0.27 1.33,-0.14 0.38,-0.42 0.94,-0.14 2.84,2.66 0.68,-0.03 0.49,1.18 -0.68,0.23 -0.19,0.72 0.76,2.83 2.02,2.26 2.57,0.73 0.17,0.33 -0.43,3.14 0.19,2.11 0.67,1.51 0.62,0.56 0.59,1.81 -0.13,1.58 1.5,3.48 0.82,0.19 0.78,-0.36 2.93,3.28 -0.08,2.43 0.41,0.94 0.95,0.19 0.33,0.47 0.31,1.58 -0.21,0.69 0.11,1.3 1.87,1.39 0.43,1.5 1.45,1.03 2.79,0.67 1.3,-0.12 0.77,-0.33 0.94,0.06 0,0 -0.53,0.73 0.29,1.59 -0.17,0.53 -1.29,1.11 -1.39,0.17 -0.5,-0.18 -0.84,-0.79 -0.66,-0.15 -3.38,1.58 -0.37,0.54 -1.6,0.72 -0.63,-0.02 -1.55,0.59 0.04,0.58 6.46,-1.06 0.88,0.66 0.13,0.46 0,0.66 -0.62,0.5 0.3,0.36 0.63,-0.2 0.86,-1 1.02,-0.01 0.53,-0.27 0.6,0.12 1.07,-0.42 1.14,-0.57 3.28,-2.34 1.5,-0.35 1.84,-0.81 3.16,-1.84 0.54,-0.99 0.67,-0.52 2.09,-1.01 0.66,-0.72 -0.25,-0.67 0.21,-0.41 1.13,-0.28 1.09,0.06 0.41,0.21 0.38,3.79 -0.52,2.58 0.33,1.62 0.81,1.6 1.31,1.35 0.3,1.64 -0.12,0.47 -1.84,1.84 -0.47,0.13 -0.87,-0.52 -1.82,-0.52 -1.26,-0.31 -0.93,0.14 -2.13,-1.04 -0.26,-1.12 -0.88,-0.53 -2.28,3.82 -0.61,2.37 0.68,2.97 0.48,0.64 0.92,0.62 -1.01,-1.14 -0.43,-2.69 0.12,-0.52 2.57,-4.22 2.31,1.18 0.11,0.45 2.53,2.45 -0.25,2.02 -0.74,0.55 0.4,2.33 0.52,1.13 1.12,0.75 0.74,0.15 0.52,0.49 -0.34,-0.64 -0.77,-0.24 -1.2,-1.04 -0.22,-0.68 0.34,-4.2 0.82,-1.19 1.43,0.73 0.83,1.2 -0.09,0.79 1.2,0.86 0.25,-0.29 -1,-1.26 -0.92,-2.1 0,-0.44 2.26,-2.32 1.62,0.09 1.93,0.64 0.34,0.56 -0.61,0.59 0.32,0.28 0.48,0.03 1.03,-0.17 1.33,-0.9 4.09,-0.96 0.77,0.2 1.74,1.06 3.17,-0.42 1.07,-0.41 1.02,-1.01 0.98,-0.59 1.74,-0.51 0.77,0.07 0.06,0.75 -2.04,4.02 -0.24,1.5 -0.46,1.07 -0.83,1.03 -0.01,0.88 0.58,1.42 -0.32,2.47 0.88,-1.19 0.01,-1.4 1.54,-3 1.13,-3.19 1.12,-1.56 0.27,-0.27 0.76,-0.05 0.58,-0.35 1.82,-0.23 0.88,-1.35 1.51,-1.69 1.36,-2.26 0.52,-0.46 0.79,0.49 0.62,-0.46 1.62,2.34 1.19,0.59 -0.05,-0.74 -0.35,-0.75 0.62,-1.01 3.51,-0.51 -1.03,-0.32 -3.51,0.46 -0.31,-0.21 0.29,-2.43 0.51,-0.29 0.67,0.38 1.02,0.11 1.07,-3.09 -0.68,-1.39 0.03,-0.68 1.17,-1.81 2.84,-2.48 0.36,-0.08 1.11,1.14 2.93,-2.09 0.46,-0.07 0.4,0.45 0.1,0.57 -0.32,0.67 1.07,-0.16 0.81,-0.58 0.36,-0.78 0.63,-0.19 0.28,0.15 0.74,1.39 1.33,1.2 0.2,-0.56 -0.11,-0.38 -0.96,-0.49 -0.14,-0.29 -0.13,-1.2 0.17,-0.42 0.44,-0.19 2.28,0.26 1.18,0.65 0.62,1.02 1.63,0.71 1.65,-0.78 0.53,2.14 -0.5,0.31 -0.03,0.59 0.92,-0.52 1.16,-2.35 0.38,0.23 -0.23,1.33 0.41,0.44 2.51,-0.26 0.45,0.65 0.46,1.68 -0.6,0.95 0.85,-0.5 0.26,0.37 1.89,0.14 3.53,-1.24 -0.31,1.58 -0.75,1.82 1.47,-0.48 0.59,-0.62 0.63,1.61 0,0 -0.77,0.45 -0.47,1.03 0.16,1.38 -0.71,4.39 -0.57,0.74 -1.14,0.15 -0.05,0.62 0.27,0.49 0.99,-0.16 0.43,0.53 -0.08,1.61 -0.9,3.02 -0.36,0.71 -1.74,1.57 -0.5,2.38 0.13,1.64 -3.68,3.09 1.04,1.58 -0.79,0.81 0.18,1.82 -0.46,1.28 -0.83,1.45 -1.48,1.76 -1.96,1.54 -1.6,4.69 -0.29,1.9 -0.47,1.21 -2.44,2.32 -1.12,0.46 -0.62,2.88 -1.55,1.17 -0.43,1.15 -1.55,2.17 -1.17,0.92 -2.35,-0.23 -14.71,11.83 0.49,0.08 0,0 2.29,0.81 1.87,-0.24 1.29,0.12 1.02,1.66 0.39,0.31 0.87,0.14 1.26,1.17 -0.04,0.63 -0.37,0.67 -0.72,0.37 -0.97,0.07 -0.29,0.28 0.09,1.41 1.01,1.34 -0.92,2.75 -0.64,0.48 -1.46,0.46 -0.25,0.46 0.29,1.2 -0.19,1.34 -1.3,0.15 -1.51,1.34 -0.85,1.27 0.15,1.51 -0.24,0.5 -2.5,1.2 -3.41,1.14 -2.47,1.78 -0.19,0.35 0.43,2.19 0.06,2.67 -1.28,2.1 -1.41,1.68 -0.15,0.57 0.17,0.88 0.59,0.96 1.67,1.74 0.75,0.32 0.15,0.3 -0.66,4.04 -1.76,5.15 -1.08,0.81 -1.7,3.24 -0.18,0.99 -0.94,1.54 -0.74,0.85 -1.05,0.16 -1.37,0.92 -1.03,1.92 -1.21,1.68 -1.18,1.09 -1.15,1.58 -1.13,4.46 -1.6,3.66 z m 21.16,-130.31 -4.52,1.96 -3.39,0.52 -2.02,-0.31 -0.65,1.13 -1.84,1.19 -0.72,-0.61 -0.61,-1.53 -0.23,0.28 0.42,1.23 -0.34,0.81 -0.71,0.41 -3.77,-1.64 -0.8,0.72 -4.19,1.26 -3.2,-0.57 -0.81,-0.61 -0.24,-1.85 -0.23,-0.41 -1.11,-1.02 -1.06,-1.6 -0.21,-1.78 0.52,-2.75 0.62,-0.37 1.76,0.35 0.93,-0.74 0.08,-0.56 -1.3,0.43 -1.22,-0.13 -0.94,-0.71 -0.18,-1.05 0.34,-5.08 0.73,-0.76 0.35,0.75 1.76,0.6 0.55,-0.06 -0.46,-0.42 -1.27,-0.22 -0.9,-2.16 0.36,-1.68 0.89,-1.97 1.33,-1.33 0.96,-0.57 1.34,-0.49 1.32,-0.13 3.46,0.52 7.21,1.77 3.7,-0.46 0.11,-0.3 1.14,-0.62 2.16,-0.37 2.89,0.29 2.8,0.82 6.48,0.85 0.63,0.47 -0.05,1.23 -0.7,0.74 -0.68,1.5 -0.36,2.65 -0.86,3.3 -1.29,0.68 -0.35,0.69 0.23,1.19 -1.98,2.57 -1.39,3.5 -0.49,0.45 z m -47.21,-0.17 -0.75,-0.51 1.1,-2.25 -0.09,-1.79 0.25,-0.21 2.33,-0.47 0.9,-0.86 0.15,-0.5 -0.2,-2.34 0.86,-2.58 1.26,-1.49 2.29,-1.47 2.87,-0.2 0.72,2.36 -1.1,2.19 -0.85,3.04 -1.1,0.67 -1.34,2.02 -0.78,0.72 -4.94,3.31 -1.58,0.36 z m 28.48,-22.89 -1.03,-0.25 -2.45,0.08 -0.79,-0.16 -0.29,-0.26 -0.38,-1.09 0.01,-1.24 1.51,-0.42 1.89,0.04 2.19,-1.29 4.81,-0.6 0.77,0.26 0.68,0.68 -0.18,1.02 -2.56,1.39 -1.78,2.48 -1.1,0.5 -1.3,-1.14 z m 4.79,0 1.86,-1.2 1.98,0.03 1.65,0.62 0.53,0.99 0.05,0.62 -0.88,0.77 -2.85,0.28 -1.17,0.32 -2.26,-0.89 -0.2,-0.53 1.29,-1.01 z m -16.98,4.39 -0.5,-0.26 -0.61,0.04 -1.54,-0.69 0.21,-1.16 0.64,-0.92 1.92,-0.4 2.36,-0.9 1.32,0.08 0.8,0.68 0.09,0.13 -1.93,1.61 -1.07,0.34 -1.69,1.45 z m 9.42,-9.69 -0.82,-0.3 -0.17,-1.66 0.15,-0.6 1.17,-1.31 2.45,-0.92 0.25,0.12 0.53,0.68 0.04,0.89 -1.95,1.99 -1.65,1.11 z m -13.83,20.22 -0.14,-0.41 0.19,-0.93 1.04,-2.81 2.59,-1.69 0.72,-0.28 0.69,0.14 -0.16,1.79 -1.56,0.44 -1.62,2.19 -1.75,1.56 z m 10.91,-17.57 -1.19,-0.31 -0.3,-0.48 0.88,-0.96 0.71,-3.95 0.89,-1.23 0.29,0.13 0.07,0.32 -0.02,2.48 0.6,1.87 -0.32,0.88 -1.03,0.4 -0.58,0.85 z m -14.81,10.19 -0.27,-0.19 0.12,-0.61 0.55,-0.36 1.19,-1.71 0.76,-1.54 0.73,-0.66 1.45,-0.54 -0.2,1.49 -0.4,1 -1.72,1.66 -2.21,1.46 z m 13.87,-7.03 -0.6,-0.15 -0.84,-0.71 -0.96,-1.64 -0.05,-0.38 0.23,-0.29 0.81,-0.58 1.85,0.84 0.29,0.43 0.24,2.09 -0.97,0.39 z m -5.38,30.55 -0.65,-0.11 -0.88,-0.52 -0.69,0.46 -0.75,-0.28 -1.68,-1.74 0,-0.61 1.28,-0.01 3.06,1.32 0.31,1.49 z m -21.15,-5.54 0.04,-1.03 -0.2,-0.3 0.6,-0.99 2.36,-0.88 0.78,0.38 0.87,0.86 -0.29,0.35 -1.03,0.47 -2.54,0.41 -0.59,0.73 z m 12.7,-6.69 -0.18,-0.03 0.01,-0.35 0.54,-0.93 1.79,-1.62 0.42,-1.24 0.05,-1.3 0.24,-0.3 0.32,0.44 0,1.51 -0.89,2.73 -0.62,0.64 -1.68,0.45 z m 6.3,-9.89 1.65,-2.96 0.88,-0.21 0.71,0.19 0.27,0.87 -0.58,0.71 -2.93,1.4 z m 31.42,18.96 -0.84,-0.35 -0.34,-1.06 1.04,-1.72 1.07,-0.33 0.19,0.1 -0.02,0.74 -0.74,2.24 -0.36,0.38 z m -33.48,-19.46 -0.54,-0.2 0.32,-2.04 1.33,-1.81 0.23,0.04 1.29,0.88 -0.01,0.25 -1.55,0.64 -1.07,2.24 z m 2.23,5.03 0.72,0.03 -0.4,0.45 -0.94,0.31 -0.11,1.12 -0.79,0.71 -1.69,0.84 -0.16,-0.18 0.27,-0.83 0.47,-0.63 1.73,-1.67 0.9,-0.15 z m -22.56,10.20 -0.55,-0.19 -0.07,-0.35 0.43,-0.4 3.56,-1.6 0.54,0.7 -0.01,0.2 -1.4,0.73 -2.5,0.91 z m 63.53,-4.78 -1.03,-0.19 -0.82,-0.79 0.87,-1.24 1.34,-0.01 0.19,1.19 -0.1,0.58 -0.45,0.46 z m -37.25,-18.89 -2.36,0.7 -0.59,0.01 -0.18,-0.21 1.03,-1.04 1.04,-0.51 1.04,0.17 0.44,0.34 0.15,0.23 -0.15,0.21 -0.42,0.1 z m -5.27,8.59 -0.08,-0.76 0.25,-0.5 2.48,-1.46 -0.9,2 -0.81,0.63 -0.94,0.09 z m 2.14,4.53 -0.45,-0.12 -0.07,-0.23 0.78,-1.5 1.19,0.02 -0.12,1.35 -1.33,0.48 z m 28.04,15.82 -0.28,-0.23 0.9,-1.6 0.68,-0.4 0.23,0.75 0.51,0.37 -0.26,0.52 -0.43,0.34 -0.63,-0.18 -0.72,0.43 z m -26.66,-23.31 -0.89,-0.07 0.02,-0.19 2.36,-1.84 0.04,0.96 -0.23,0.63 -0.25,0.34 -1.05,0.17 z m 67.46,10.22 -0.38,-0.53 0.19,-0.76 1.02,-0.91 0.25,0.15 0.23,1.75 -1.31,0.3 z"><title>Pará</title></path>
+<path id="uf-pb" data-uf="pb" d="m 610.69,199.41 -2.5,-2.06 -0.82,-0.26 -2.65,-0.21 -2.31,1.07 -1.48,1.28 -0.45,1.8 -1.9,1.03 -2.01,0.45 -1.14,-0.02 0,0.6 -0.8,0.53 -2.18,0.29 -3.88,-0.26 -1.61,0.88 -0.55,0.64 -1.82,0.1 -0.89,0.69 -0.54,0.76 0.39,0.73 0.01,0.54 -0.4,0.48 -1.78,1.53 -1.34,0.16 -1.65,0.84 -1.6,-0.79 -0.95,-0.94 -0.35,-2.24 0.24,-0.49 -0.18,-0.3 -1.14,-0.32 -0.44,0.29 -1.51,0.25 0.04,-0.45 2.53,-2.64 0.17,-0.43 -0.72,-1.87 -0.04,-0.47 0.37,-0.78 3,-1.07 0.11,-0.3 -0.5,-1.39 -3.5,-1.92 -1.48,0.41 -2.22,1.26 -0.93,1.51 -1.48,0.87 -1.05,0.31 -2.7,1.88 -1.52,1.64 -1.63,0.23 -2.63,0.97 -0.77,-0.33 0.05,-0.68 -0.63,-1.24 -0.38,-0.08 -0.93,0.73 -1.51,0.32 -0.99,-0.33 -1.4,-1.91 -0.4,-0.09 0,0 -0.17,-0.25 1.19,-1.12 1.61,-3.49 -0.34,-1.19 -0.69,-0.08 -1.24,-0.89 0.02,-1.66 -0.35,-0.72 -0.58,-0.29 -0.24,-0.41 0.12,-0.93 0.17,-0.38 1.09,-0.63 0.66,-1.31 -0.52,-1.31 1.03,-3 0.84,-1.15 0.08,-0.54 0,0 0.57,-0.46 1.93,1.64 0.9,0.42 2.88,0.61 1.16,-1.13 3.23,-1.66 0.82,-0.71 0.1,-1.04 0.41,-0.95 3.18,-1.21 1.43,-0.12 3.26,-1.04 0.64,0.08 0.53,0.44 0.01,1.19 -2.99,3.21 -0.44,0.96 -0.38,1.74 -0.41,0.38 -0.85,0.25 -0.21,0.31 -0.08,1.72 3.53,0.52 0.32,0.23 0.31,1.38 0.29,0.23 3.15,-1.26 1.77,-0.08 1.95,0.3 0.89,1.17 -0.52,1.54 0.83,0.74 2.35,-0.93 0.5,-0.74 0.55,-1.21 -0.47,-0.94 -0.16,-1.42 0.48,-0.59 1.01,0.32 -0.53,-1.53 -0.72,-0.78 0.31,-1.48 1.82,-1.35 1.38,-0.05 0.42,0.39 -0.1,1 0.62,0.49 3.42,0.4 0.53,0.35 5.83,-0.39 2.17,0.3 2.46,1.1 1.04,-0.4 3.5,0.21 0.93,-0.24 0,0 0.09,2.4 1.45,4.39 0.06,0.64 -0.18,0.94 -0.37,0.45 -0.03,0.88 0.58,-0.74 0.51,-1.5 0.01,1.98 0.59,1.01 -0.27,5.18 -0.36,0.6 z"><title>Paraíba</title></path>
+<path id="uf-pr" data-uf="pr" d="m 397.01,499.66 -5.24,-0.03 -0.33,0.44 -1.74,0.24 -0.76,-0.07 -0.11,-0.39 -1.57,0.57 -1.35,1.43 -3.35,2.13 -1.44,-0.16 -1.23,-0.62 -3.13,-2.6 -1.03,-0.39 -0.76,-0.01 -2.84,0.73 -2.33,0.17 -0.81,-0.03 -1.42,-0.76 -1.11,0.14 -1.53,0.65 -0.59,1.47 -0.73,0.87 -1.87,0.98 -3.57,-0.41 -2,1.15 -0.72,0.77 -0.69,1.59 0.85,2.99 -0.87,0.86 -0.92,0.02 -0.75,0.38 -0.17,0.49 -1.33,-1.89 -4.25,0.13 -3.76,-0.43 -1.58,-1.18 -0.16,-0.41 -1.03,-0.63 -4.26,-0.36 -5.29,-1.68 -2.34,0.57 -2.69,-0.03 -2.02,-1.41 -0.32,-0.51 -1.06,-0.24 -0.53,-0.01 -0.71,0.37 -3.63,-0.02 0,0 -0.22,-1.21 -2.53,-4.18 0.02,-2.59 -0.99,-2.88 -3.42,-2.37 -1.09,1.13 -2.12,-0.11 -1.1,0.43 -1.07,0.9 -1.46,-1.08 -0.82,0.06 -0.28,-2.2 0.66,-1.57 1.07,-1.27 1.22,-2.18 0.06,-0.34 -0.49,-0.75 0.02,-1.24 0.9,-3.64 1.26,-3.02 -0.25,-2.3 1.28,-2.38 -0.21,-1.02 -0.84,-0.88 -0.31,-1.6 0.66,-1.06 0.79,-0.54 0,0 2.38,-1.56 0.36,-0.82 1.57,-7.92 0.33,-0.35 1.11,-0.32 1.66,-1.01 0.67,-0.68 1.45,-3.56 -0.02,-1.15 0.93,-2.33 1.11,-0.82 5.41,-2.27 0,0 3.26,-2.29 3.83,0.65 4.01,-0.11 3.27,0.29 1.21,-0.62 0.35,-0.6 0.73,-0.37 1.17,0.29 1.48,0.78 2.52,0.46 2.64,1.09 1.31,0.13 1.07,-0.54 2.58,-0.01 0.78,1 1.75,0.84 3.51,0.8 0.63,0.51 0.71,1.32 1.73,0.07 0.42,-0.34 1.65,0.15 0.66,0.54 5.31,0.13 2.97,-0.85 1.13,1.55 3.59,2.83 0.89,1.76 0.01,2.74 -0.39,0.58 -0.16,0.81 0.38,1.84 1.3,1.51 -0.08,1.76 -0.36,0.56 1.49,3 1.21,1.15 0.67,0.28 0.5,0.68 -0.05,0.89 0.92,1.97 0.6,0.29 0.25,0.44 -0.25,1.05 -1.27,2.13 0.32,2.04 0.6,0.38 1.01,0.21 2.38,-0.12 3.42,-0.53 0.5,0.39 1.58,-0.19 1.59,0.13 1.61,1.26 -0.14,0.41 -0.89,0.65 -0.69,3.3 0.35,0.78 1.07,0.53 0.65,-0.85 1.1,-2.76 0.76,-0.17 2.14,0.58 -0.4,1.95 0.73,3.3 1.42,0.58 0.16,1.32 0,0 -1.35,1.02 -0.61,1.48 -0.55,-0.12 0.27,-1.94 1.44,-0.95 -1.41,0.28 -0.89,0.49 -0.87,-0.02 -0.34,-0.39 -0.57,-0.17 -0.54,0.37 -0.28,0.93 0.52,0.8 -0.73,0.96 -0.3,0.1 -2.48,-0.53 -0.79,-0.54 -0.45,0.12 -0.18,0.9 0.34,0.37 1.61,0.56 1.4,-0.25 2.13,0.6 0.27,0.48 -0.97,0.68 -1.54,2.78 -1.24,0.77 -2.42,0.57 -0.2,0.45 2.95,-0.2 0.15,1.19 z"><title>Paraná</title></path>
+<path id="uf-pe" data-uf="pe" d="m 558.54,227.45 -1.22,-3.04 -0.01,-0.94 -2.11,-0.86 -0.5,-0.37 -0.45,-0.83 0.61,-0.89 -0.02,-0.62 -0.45,-0.32 -1,0.01 -0.43,0.44 -0.29,1.74 -0.43,0.15 -0.39,-0.26 -0.54,-1.65 -1.58,-1.15 -2.99,-0.4 -2.36,-0.77 -1.35,-0.81 -0.83,-1.44 -1.49,-0.56 -0.59,0.11 -2.53,1.46 -1.65,0.44 -0.77,2.05 -2.23,0.45 -0.29,0.25 0.25,1.36 -0.17,0.59 -1.1,1.24 -2.39,1.03 -0.64,-0.06 -0.77,-0.53 -0.76,0.17 -0.5,0.87 -0.77,3.57 -2.87,0.88 -0.82,0.92 -0.96,0.23 -1.84,-0.62 0.92,-1.68 -0.26,-2 -2.21,-0.91 -0.72,-1.94 0.06,-2.73 -0.44,-0.51 -2.81,-1.38 -2.2,-0.29 -1.16,0.26 -0.9,-0.4 0,0 2.62,-1.27 1.97,-1.71 0.54,-0.87 2.29,-1.33 0.97,-0.28 3.89,-3.87 0.74,-1.76 0.06,-2.27 -0.29,-0.54 -1.62,-1.58 0.07,-2.19 -0.6,-1.13 -0.06,-0.95 0.11,-0.45 0.52,-0.33 1.79,-0.16 0,0 4.93,0.2 0.89,0.24 1.63,-0.19 2.14,-0.8 1.29,-0.1 3.08,0.42 2.85,1.9 1.83,0.83 0.46,0.99 1.01,1.07 1.36,0.48 0.78,0.57 0.63,1.64 1.65,-0.05 1.54,-2.29 1.07,-0.83 1.59,-0.49 0,0 0.4,0.09 1.4,1.91 0.99,0.33 1.51,-0.32 0.93,-0.73 0.38,0.08 0.63,1.24 -0.05,0.68 0.77,0.33 2.63,-0.97 1.63,-0.23 1.52,-1.64 2.7,-1.88 1.05,-0.31 1.48,-0.87 0.93,-1.51 2.22,-1.26 1.48,-0.41 3.5,1.92 0.5,1.39 -0.11,0.3 -3,1.07 -0.37,0.78 0.04,0.47 0.72,1.87 -0.17,0.43 -2.53,2.64 -0.04,0.45 1.51,-0.25 0.44,-0.29 1.14,0.32 0.18,0.3 -0.24,0.49 0.35,2.24 0.95,0.94 1.6,0.79 1.65,-0.84 1.34,-0.16 1.78,-1.53 0.4,-0.48 -0.01,-0.54 -0.39,-0.73 0.54,-0.76 0.89,-0.69 1.82,-0.1 0.55,-0.64 1.61,-0.88 3.88,0.26 2.18,-0.29 0.8,-0.53 0,-0.6 1.14,0.02 2.01,-0.45 1.9,-1.03 0.45,-1.8 1.48,-1.28 2.31,-1.07 2.65,0.21 0.82,0.26 2.5,2.06 0,0 0.88,0.23 0.55,1.22 -1.27,1.72 -0.11,0.55 0.01,0.48 0.7,0.37 0.27,0.5 0.19,1.06 -1.96,6.38 -3.25,8.95 0,0 -0.27,-0.21 -2.9,-0.27 -1.92,-0.81 -1.47,0.19 -2.56,1.29 -2.24,-0.85 -2,0.24 -1.55,1.24 -0.12,0.45 -2.18,2.29 -1.81,1.11 -1.16,-0.05 -1.86,1.06 -1.17,0.11 -3.14,-0.29 -2.5,0.65 -1.91,-0.48 -1.78,-1.05 -1.9,-2.12 -2.55,-2.02 -1.08,0.12 -1.67,-0.3 -1,-1.22 -0.82,0.6 -0.09,0.69 -2.38,3.29 -2.17,0.76 -0.64,1.09 z"><title>Pernambuco</title></path>
+<path id="uf-pi" data-uf="pi" d="m 505.96,127.17 1.31,0.12 0.69,-0.23 2.24,0.51 0.99,0.85 0.32,0.6 0,0 -0.11,0.8 -1.09,1.85 -1.58,1.97 -0.18,1.46 0.29,1.29 1.8,4.72 3.15,6.42 0.44,1.73 1.36,1.59 -0.02,0.76 -0.74,1.36 0.79,3.87 -0.48,1.6 1,2.01 0.6,2.99 -0.59,1.58 -0.8,0.58 0.92,0.69 0.11,0.38 0.94,8.16 -0.24,0.45 0.76,2.57 1.05,5.2 1.01,2.67 1.31,0.65 2.56,0.47 0.77,1.16 -0.01,0.69 -1.5,2.25 -1.14,3.11 0.08,0.97 0.68,0.68 -0.06,1.32 0,0 -1.79,0.16 -0.52,0.33 -0.11,0.45 0.06,0.95 0.6,1.13 -0.07,2.19 1.62,1.58 0.29,0.54 -0.06,2.27 -0.74,1.76 -3.89,3.87 -0.97,0.28 -2.29,1.33 -0.54,0.87 -1.97,1.71 -2.62,1.27 0,0 -0.45,1.16 -1.5,2.3 -1.05,0.67 -0.79,-0.18 -2,0.38 0.11,2.4 -1.86,1.8 -0.32,-0.05 -0.62,-0.62 -2.16,-0.01 -0.82,0.98 -0.77,0.36 -2.73,0.34 -1.51,1.34 -0.82,1.22 -1.7,0.1 -1.48,0.64 -3,0.11 -0.82,-0.28 -0.19,-0.28 0.13,-0.66 -1.71,-0.98 -1.33,-0.39 -1.39,0.55 -2.13,0.43 -0.32,-0.18 -0.41,-0.93 -1.5,-0.46 -1.95,0.02 -3.24,1.65 -0.06,0.93 2.24,4.44 0.12,1.15 -0.29,2.57 -0.25,0.91 -0.72,0.86 -2.95,5.05 -2.97,2.42 -1.35,0.42 -1.48,-0.53 -1.34,-0.17 -2.2,0.75 -1.17,0.89 -0.67,0.87 -1.14,0.38 -0.75,1.45 -0.33,0.21 -2.11,-0.18 -1.8,0.52 -4.18,-1.85 -1.77,-2.49 -0.53,-2.21 -0.66,-1.04 -1.44,-1.34 -2.33,0.02 0,0 -2.94,-0.21 0,0 0.05,-1.92 0.26,-1.06 1.15,-2.45 0.13,-6.36 0.76,-1.4 0.03,-0.51 -1.73,-3.06 -0.47,-3.19 -0.7,-1.94 0.73,-2 1.7,-1.4 1.2,-2.48 0.13,-1.51 0.34,-0.83 0.3,-0.21 1.44,-2.74 0.63,-2.32 0.39,-2.97 0.98,-2.98 2.13,-1.95 2.72,-0.76 2.61,-0.31 1.07,-0.37 1.7,-1.53 1.05,-0.04 1.34,-0.52 2.86,-2.57 2.34,-0.91 2.01,-2 0.63,-0.87 0,-0.46 1.9,-1.92 0.5,-0.22 0.84,-0.24 0.23,0.3 1.12,-0.26 1,-0.6 1.46,-0.19 1.01,0.21 2.51,1.82 1.51,-0.1 2.44,-0.86 0.83,-0.04 0.65,0.28 2.28,-0.29 1.21,-1.31 0.5,-1.46 0.12,-1.21 0.29,-0.44 0.39,-2.2 -0.13,-0.85 -0.17,-0.5 -1.61,-0.91 -1.78,-2.03 -0.51,-2.3 -0.11,-2.11 0.17,-2.48 4.1,-4.43 0.21,-0.55 0.1,-2.43 -0.55,-2.98 -1.58,-2.8 1.14,-2.87 0.28,-1.47 -0.38,-1.27 -1.23,-0.84 -0.35,-1.92 0.77,-1.05 0.64,-0.17 0.82,-1.98 1.89,-1.85 0.88,-1.83 -0.04,-1.79 2.92,-3.41 0.81,0.16 3.31,-0.46 4.13,-3.97 1.79,-2.27 0.39,-1.53 -0.64,-0.53 -0.22,-0.72 0.46,-1.44 0,0 0.73,0.12 1.47,0.87 0.51,0.51 -0.13,0.31 z"><title>Piauí</title></path>
+<path id="uf-rj" data-uf="rj" d="m 468.61,450.54 -0.07,-0.78 0.38,-0.27 3.19,0.22 2.59,-0.59 -2.53,-1.55 -1.4,-0.5 -2.81,0.68 -1.36,1.6 -1.03,0.32 -0.7,-0.05 -1.35,-2.15 -0.48,0 -0.9,0.42 -0.96,1.06 -3.15,0.8 -0.34,0.91 -0.19,1.9 2.19,0.13 1.07,1.01 -1.15,1.08 -0.94,-0.17 -1.42,0.17 0,0 -0.48,-0.26 -1.63,-1.73 -0.05,-0.41 1.09,-3.5 1.09,-1.15 2.35,-1.01 0.5,0.15 2.77,-0.36 1.5,-0.71 1.65,-2.15 -0.75,-1.64 -1.7,-0.01 -3.15,0.53 -1.77,-0.39 -1.23,-1.59 -0.56,-1.17 -1.27,-0.54 0,0 0.68,-0.49 2.42,-0.74 2.91,-1.34 2.58,-0.17 0.5,0.27 1.72,-0.77 1.05,-0.77 4.09,-1.79 0.52,-0.07 0.36,0.31 3.2,-0.07 1.25,-0.17 1.63,-0.94 0.57,-0.06 2.53,0.27 0.49,0.17 -0.02,0.47 1.38,-0.2 9.51,-4.53 2.53,-0.99 0.21,-0.52 -0.28,-0.61 -1.44,-0.13 0.09,-0.75 1.89,-3.71 2.36,-6.04 -0.73,-0.71 0.56,-0.49 1.24,-0.27 2.53,-2.36 0,0 1.93,0.76 0.67,4.71 2.5,1.13 4.33,1.01 2.99,-0.37 1.62,1.06 0,0 -0.08,1.27 -0.94,1.61 -0.22,2.13 1.14,6.78 -0.5,0.68 -3.08,1.75 -5.97,1.94 -2.83,1.72 -3.5,3.69 -0.11,1.66 0.31,1.19 -0.19,1.62 -0.73,1.48 -1.82,0.51 -6.55,-0.17 -5.79,0.7 -2.39,-0.46 -0.49,-0.38 -0.06,-0.68 1.03,-1.48 0.67,-1.45 -0.09,-0.62 -0.78,-0.18 -2.79,1.15 -0.26,0.69 0.31,0.79 1.38,1.17 0.25,0.97 -0.59,0.52 -1.63,0.51 -1.57,-0.03 -8.04,1.07 -1.46,0.45 z m -5.11,1.99 -0.67,-0.97 2.11,-1.55 1.86,0.94 0.43,0.7 -2.46,0.5 -0.41,-0.35 -0.47,0 -0.39,0.73 z"><title>Rio de Janeiro</title></path>
+<path id="uf-rn" data-uf="rn" d="m 609.55,183.17 -0.93,0.24 -3.5,-0.21 -1.04,0.4 -2.46,-1.1 -2.17,-0.3 -5.83,0.39 -0.53,-0.35 -3.42,-0.4 -0.62,-0.49 0.1,-1 -0.42,-0.39 -1.38,0.05 -1.82,1.35 -0.31,1.48 0.72,0.78 0.53,1.53 -1.01,-0.32 -0.48,0.59 0.16,1.42 0.47,0.94 -0.55,1.21 -0.5,0.74 -2.35,0.93 -0.83,-0.74 0.52,-1.54 -0.89,-1.17 -1.95,-0.3 -1.77,0.08 -3.15,1.26 -0.29,-0.23 -0.31,-1.38 -0.32,-0.23 -3.53,-0.52 0.08,-1.72 0.21,-0.31 0.85,-0.25 0.41,-0.38 0.38,-1.74 0.44,-0.96 2.99,-3.21 -0.01,-1.19 -0.53,-0.44 -0.64,-0.08 -3.26,1.04 -1.43,0.12 -3.18,1.21 -0.41,0.95 -0.1,1.04 -0.82,0.71 -3.23,1.66 -1.16,1.13 -2.88,-0.61 -0.9,-0.42 -1.93,-1.64 -0.57,0.46 0,0 -0.66,0.38 -0.64,-0.17 0.34,-1.97 1.41,-2.25 0.84,-0.88 0.51,-0.07 0.78,0.51 1.03,-0.26 0.57,-1.1 1.46,-1.51 1.4,-2.44 -0.15,-0.74 0.65,-1.67 0.87,-0.57 0.84,-1.12 3.3,-6.69 2.61,-2.01 4.89,-1.59 0,0 0.47,0.76 0.86,0.75 3.13,-0.01 1.22,0.41 1.69,1.75 1.32,0.5 3.33,-0.32 2.88,0.52 2.54,-0.24 2.33,-0.73 4.5,0.92 1.27,0.04 1.95,0.86 1.02,0.82 0.64,0.94 2.31,4.74 0.5,1.79 -0.04,0.75 1.48,5.38 0.21,1.68 0.72,0.54 0.96,2.69 z"><title>Rio Grande do Norte</title></path>
+<path id="uf-rs" data-uf="rs" d="m 322.25,638.78 -0.36,0.01 -1.94,-1.11 -0.2,-0.46 0.52,-4.27 -0.46,-4.25 0.15,-1.07 0.63,-1.24 2.84,-2.38 0.83,-1.56 2.3,-2.56 -1.46,-1.65 -1.07,-0.62 -2.25,-0.6 -2.32,-2.25 -1.21,-1.62 -0.1,-1.59 -0.43,-1.18 -1.23,-2.03 -2.06,-2.24 -0.67,-0.59 -2.39,-1.21 -1.45,0.21 -1.9,-1.51 -1.52,-1.63 -1.25,-0.78 -0.14,-1.7 -1.9,-2.16 -3.32,-0.46 -0.92,-0.47 -1.73,-1.66 -1.76,0.13 -2.17,-1.38 -1.91,-3.71 -1.11,-1.49 -2.53,-2.12 -0.7,0.08 -0.67,1.79 -2.59,2.24 -2.67,0.12 0.1,-2.86 0.4,-1.28 -0.39,-1 -3.65,-4.29 -2.37,-1.77 -2.18,-2.06 -1.75,-2.11 -2.69,-2.21 -1.9,-0.14 -2.15,0.21 -1.14,1.36 -0.06,0.96 -1.03,0.97 -1.11,0.02 -0.58,-0.48 -3.16,0.14 -0.65,-0.48 -0.16,-0.91 -0.49,-0.22 0.85,-0.22 1.04,-0.72 2.52,-2.77 0.11,-1.84 0.6,-1.25 0.82,-0.45 1.29,-0.07 0.64,-0.26 0.92,-1 5.45,-6.48 0.63,-1.42 0.17,-1.11 0.82,-1.07 1.2,-0.85 1.37,-0.41 1.96,-4.22 0.1,-0.61 0.31,-0.37 1.64,-0.86 1.63,-1.8 0.85,-1.15 0.51,-1.29 1.34,-2.1 0.93,-0.29 1.57,0.18 0.55,0.79 0.47,-1.28 -0.21,-0.58 -1.35,-0.82 -0.05,-0.36 0.35,-0.33 1.08,-0.38 0.82,-0.96 2.79,-0.95 1.05,-1.07 0.1,-0.92 0.82,-0.91 2.21,-1.15 2.47,-0.4 1.77,-1.81 0.15,-1.06 1.32,-2.36 0.33,-0.04 0.05,0.36 0.29,0.2 1.33,-0.17 2.44,-1.13 2.68,-0.59 1.21,-0.57 2.1,-2.35 0.5,0.01 0.67,-0.39 1.01,-1.35 2.31,-0.73 0.3,0.38 0,0 3.52,0.39 3.26,-1.15 0.56,-0.81 1.35,0.58 -0.15,0.92 3.08,-0.03 1.63,0.99 2.56,-0.37 1.92,1.15 2.58,-0.41 1.54,0.18 2.8,-0.16 2.26,0.92 2.48,1.4 1,2.44 1.59,0.19 0.09,-0.48 1.81,-0.35 5.56,3.54 1.37,1.55 0.71,-0.03 1.56,0.98 3.03,3.49 1.64,2.21 0.48,1.48 2.17,2.66 1.17,0.55 6.69,1.06 2.11,-0.4 3.35,0.34 0.88,2.34 -2.08,1.58 -1.27,0.41 -0.73,1.86 0.22,2.19 -0.38,1.56 -0.52,1.3 -1.18,0.2 -1.29,1.69 -0.03,1.41 1.8,1.17 0.27,-0.2 -0.28,-0.97 0.01,-0.96 1.49,-0.82 1.58,0.64 0.73,0.91 1.17,0.85 0.45,-0.03 0,0 -1.4,1.73 -3.9,7.04 -4.21,11.6 -6.3,10.48 -5.44,6.66 -6.51,5.96 -6.09,3.68 -3.1,4.31 -0.18,-0.43 0.65,-1.58 0.34,-2.18 -1.18,-1.71 0.1,-0.42 0.93,-0.17 1.01,0.4 0.56,0.58 1.02,0.04 2.58,-1.41 0.82,-0.68 2.85,-3.71 0.75,-0.69 0.45,0.19 1.02,-0.19 1.05,-0.84 0.93,-1.27 0.37,-1.48 0.18,-0.93 -0.23,-2.1 0.2,-1.37 1.57,-0.07 0.74,0.3 0.27,0.83 0.35,-0.26 -0.29,-1.4 0.51,-2.07 0.48,-0.57 2.74,-1.59 0.73,-1.08 0.47,-2.75 -0.21,-2.28 0.56,-0.68 0.5,0.8 0.37,0.03 0.43,-0.42 0.47,-3.08 -0.1,-0.44 -0.95,-1.22 -0.67,-0.03 -0.26,0.69 0.17,0.39 -0.14,0.57 -0.35,0.2 -1.51,-0.02 -2.01,0.4 -0.34,1.61 -0.53,0.05 -0.81,-0.44 0.1,-1.71 -0.82,-0.89 -1.04,0.33 -0.6,-0.48 -0.73,-1.26 -0.4,-1.45 0.12,-0.57 -0.64,-0.69 -0.61,2.71 0.44,2.25 1.25,2.11 -0.57,0.81 -0.74,2.54 0.38,3.03 -0.18,0.77 -0.48,-0.37 0.26,-0.24 -0.03,-0.71 -0.47,-1.28 -0.45,-0.39 -0.53,0.66 -0.03,1.37 -1.41,3.27 -0.05,1.89 0.22,0.52 -0.72,0.7 -1.61,0.64 -0.61,1.58 -4.09,1.57 -0.72,0.53 -0.53,1.59 -0.1,2.27 -0.97,2.27 -2.36,1.3 -0.11,1.76 0.48,0.83 0.25,1.02 -0.95,0.56 -0.25,1.51 0.43,0.6 0.68,-0.14 1.3,0.63 0.15,0.91 -2.13,1.65 -2.32,4.52 -1.93,6.88 -2.01,4.49 -1.68,2.52 -7.79,7.53 z"><title>Rio Grande do Sul</title></path>
+<path id="uf-ro" data-uf="ro" d="m 187.58,291.21 -1.29,-1.45 -0.44,-1.88 -1.56,-0.52 -0.86,0.32 -1.81,0.08 -4.07,-1.81 -0.01,-0.4 -0.66,-0.61 -1.27,0.59 -1.98,-1.68 -1.52,-0.97 -0.86,-1.46 -0.28,-1.39 -1.04,-0.39 -1.77,1.12 -1.22,-0.03 -1.41,-0.8 -0.87,-1.33 -3.13,-1.58 -1.96,-0.17 -1.14,0.54 -0.9,0.85 -1.43,-0.17 -0.31,-0.3 -2.14,-0.51 -3.06,-0.28 -0.76,-0.43 -1.18,-1.19 -0.3,-1.97 -1.58,-0.49 -1.89,-0.97 -0.82,-1.72 -0.29,-0.2 -2.72,-0.28 -0.38,-0.35 -0.84,-3.71 -0.88,-0.89 -0.48,1.16 -0.66,-0.32 -0.27,-0.64 0.62,-1.53 -0.84,-1.52 -1.36,-0.39 -1.26,-3.47 -0.17,-1.66 1.55,-2.91 -0.21,-1.66 -1.16,-1.97 -0.75,-2.16 -0.06,-2.29 0.62,-0.5 0.38,-1.37 1.04,-1.05 0.36,-1.47 -0.24,-1.49 -0.42,-0.89 -0.09,-1.53 0.54,-1.65 -1.17,-2.18 -1.02,-0.38 -1.09,0.98 -0.06,0.51 -0.84,0.96 -0.57,0 -2.18,-1.02 -5.18,0.08 -5.61,1.78 -1.69,-0.01 -1.48,0.48 0,0 -2.97,-1.26 0,0 3.26,-2.56 1.92,-0.58 1.55,-1.81 0.15,-0.56 -0.16,-1.29 3.96,0.26 2.87,-0.33 0.72,0.37 2.31,2.33 0.37,-0.02 1.22,-0.79 0.13,-0.72 0.41,-0.53 1.08,-0.5 0.77,0.13 1.37,-0.39 1.3,-1.21 1.84,-1.02 0.38,0.09 0.64,2.26 0.68,0.53 0.68,-0.08 2.54,-3.16 -0.26,-1.75 0.53,-0.84 1.75,-1.26 0.46,0.02 0.84,0.55 1.79,0.1 1.2,-1.07 2.13,-0.38 3.87,0.46 -0.24,-1.46 0.11,-1.81 2.06,-1.21 0.81,-1.15 0.36,-1.02 -0.17,-0.45 -0.9,-0.7 0.05,-0.67 1.19,-1.59 2.48,-0.53 0.26,-0.22 -0.09,-1.17 1.72,-0.5 1.38,-2.56 10.79,-0.06 2.15,1.13 0.45,0.49 0.8,1.91 1.33,1.27 2.54,0.98 1.25,3.27 0.46,0.21 0.98,-0.13 0.62,0.2 0.68,2.88 3.24,1.48 0.68,-0.19 0.54,-1.74 1.92,-1.08 1.39,0.28 0.36,0.38 -0.04,0.7 0,0 1.4,0.97 0.6,1.24 -0.76,1.42 -1.29,4.99 0.06,0.35 0.78,0.47 0.26,0.61 0.15,1.39 0.83,2.27 -0.94,1.67 0.38,1.93 -1,3.52 -0.03,0.8 0.27,1.76 1.5,2.75 -0.9,9 17.16,0.05 -0.24,0.56 1.22,1.11 3.5,-0.09 1.11,0.11 1.07,0.43 1.41,3.59 -0.17,0.75 -1.4,1.75 -1.36,1.08 -0.14,1.32 0.43,3.25 0.58,0.51 0.9,-0.03 1.53,3.34 -0.04,2.05 0.58,1.49 -0.07,1.71 -0.56,2.24 -1.66,2.01 -0.52,2.25 -0.58,0.84 -0.43,0.41 -1.64,0.53 -0.93,1.08 -1.43,3.78 -0.52,2.45 -4.11,2.57 -1.47,1.43 0,0 -0.74,-0.04 -2.59,-1.55 -1.27,-1.43 -7.08,0.96 -1.32,-0.43 -0.25,-0.3 -3.38,0.66 -0.48,-0.16 -0.52,-1.35 z"><title>Rondônia</title></path>
+<path id="uf-rr" data-uf="rr" d="m 234.87,61.66 1.6,16.97 0,0 -18.49,-0.07 0.03,0.68 -2.33,3.26 -1.66,3.03 -0.07,1.13 -1.15,2.64 -0.11,0.66 0.23,0.73 1.14,1.41 -0.02,0.53 -0.42,0.39 -2.03,0.55 -1.41,1.41 -1.25,0.46 -1.82,-0.23 -0.92,-2.51 -1.87,-2.04 -2.83,-0.93 -1.6,0.06 -0.55,0.89 -2.09,0.71 -1.28,0.69 -1.02,1.26 -0.82,2.97 0.37,1.8 -0.25,1.73 -0.75,2.28 0.44,2.11 -2.36,-1.04 -1.34,0.42 -0.53,-0.07 -1.04,-2.04 -1.48,-1.64 -1.96,-1.31 -0.52,-0.04 -5.01,-4.42 0.14,-1.14 1.84,0.33 1.14,-1.32 0.06,-0.58 -1.13,-4.33 -0.58,-0.9 -1.22,-0.84 -0.88,-2.17 -0.29,-4.98 0.57,-0.96 0.77,-3.04 -0.66,-1.58 -0.36,-1.59 1.62,-1.46 -0.05,-0.45 -0.87,-1.12 -0.19,-2.26 -1.66,-4.76 -2.73,-3.74 0.71,-1.5 0.91,-3.32 -0.49,-0.66 -1.95,-0.95 -1.36,-0.11 -0.88,0.21 -0.97,-0.37 -1.21,-1.17 -0.06,-0.96 -0.63,-0.11 -1.13,0.42 -0.61,-0.01 -0.75,-0.34 -0.72,-0.78 0,0 0.3,-0.46 0.23,-2.28 -0.3,-0.22 -3.37,-0.23 -3.75,0.14 -3.31,-0.7 -0.2,-0.6 0.8,-1.76 0.12,-1.48 -0.73,-1.77 -1.94,-3.54 -0.73,-2.06 -0.47,-3.72 0.79,-1.48 -0.08,-0.96 -1.84,-2 -2.16,-1.06 -2.81,-2.78 -1.06,-1.81 -0.29,-0.96 -1.14,-0.65 -0.25,-0.39 0.03,-0.84 0.29,-0.33 0.9,0.07 1.12,0.66 0.94,1.73 0.61,0.09 3.39,-0.5 1.35,0.1 1.91,0.59 0.61,1.2 0.55,1.93 0.54,0.35 0.96,-0.08 0.74,-0.65 0.95,-0.4 3.18,0.16 0.47,0.05 1.31,1.21 0.6,0.15 0.52,-0.14 0.61,-1.56 1.31,0.14 1.45,0.93 3.93,4.57 1.05,0.57 0.71,0.11 1.51,-0.68 0.74,-1.13 0.1,-0.84 -0.83,-2.76 0.36,-1.74 0.46,-0.28 1.93,-0.05 1.01,-1.1 1.55,-1.09 0.75,0.05 3.9,1.34 0.59,-0.17 0.8,-0.72 1.03,-0.3 1.13,0.35 1.03,-0.21 1.34,-1.28 1,-0.25 1.15,0.23 1.11,-0.07 0.68,-0.85 0.05,-1.35 3.03,-1.81 2.33,0.19 2.76,-0.39 0.89,-1.13 0.09,-0.71 0.59,-1.11 0.75,-0.13 1.85,-0.9 1.1,-1.04 1.11,-1.71 -1.2,-3.56 -1.17,-0.36 0.64,-0.18 1.43,0.07 0.8,0.32 3.57,-0.1 1.06,-0.95 0.74,-0.22 1.37,0.42 0.53,1.31 1.04,0.8 0.48,1.37 -0.67,4.9 -0.72,1.37 -1.25,0.7 0.06,0.83 1.61,0.41 1.62,-0.22 2.35,0.81 1.82,1.1 -0.88,1.43 -0.01,1.15 2.34,3.42 0.2,1.55 -1.51,2.92 -1.88,1.41 -0.72,1.5 0.27,0.39 0.06,2.17 -1.47,2.41 -0.9,2.77 -0.31,2.57 -0.09,2.67 0.98,1.87 0.51,1.76 -0.01,1.4 1.57,1.03 0.9,0.2 0.13,0.68 -0.46,5.15 0.12,0.74 1.81,0.29 -0.66,1.17 0.46,0.5 2.15,0.74 1.46,1.92 2.66,2.74 z"><title>Roraima</title></path>
+<path id="uf-sc" data-uf="sc" d="m 379.56,558.27 -0.45,0.03 -1.17,-0.85 -0.73,-0.92 -1.59,-0.63 -1.48,0.82 -0.01,0.96 0.28,0.97 -0.27,0.2 -1.8,-1.17 0.04,-1.41 1.28,-1.69 1.18,-0.2 0.53,-1.31 0.37,-1.55 -0.22,-2.19 0.73,-1.86 1.27,-0.42 2.08,-1.58 -0.88,-2.34 -3.35,-0.34 -2.11,0.4 -6.69,-1.06 -1.16,-0.54 -2.17,-2.66 -0.49,-1.48 -1.63,-2.21 -3.03,-3.49 -1.57,-0.99 -0.71,0.03 -1.37,-1.55 -5.56,-3.54 -1.81,0.34 -0.09,0.48 -1.6,-0.19 -1,-2.44 -2.47,-1.39 -2.27,-0.93 -2.79,0.16 -1.54,-0.18 -2.59,0.41 -1.91,-1.15 -2.57,0.36 -1.63,-0.98 -3.08,0.03 0.15,-0.93 -1.35,-0.58 -0.56,0.81 -3.26,1.16 -3.52,-0.39 0,0 1.45,-2.93 0.73,-2.09 -0.58,-3.25 0.41,-3.21 -0.04,-2.55 0.96,-1.75 0,0 3.63,0.02 0.71,-0.38 0.53,0.01 1.06,0.24 0.31,0.51 2.03,1.41 2.68,0.03 2.34,-0.58 5.29,1.68 4.26,0.36 1.02,0.63 0.17,0.41 1.57,1.18 3.77,0.42 4.25,-0.13 1.33,1.9 0.18,-0.5 0.74,-0.38 0.92,-0.02 0.87,-0.86 -0.85,-2.99 0.69,-1.58 0.72,-0.78 2,-1.14 3.57,0.4 1.87,-0.97 0.73,-0.87 0.59,-1.48 1.53,-0.65 1.11,-0.14 1.42,0.76 0.81,0.03 2.33,-0.17 2.84,-0.73 0.75,0.01 1.04,0.4 3.12,2.6 1.23,0.62 1.44,0.16 3.35,-2.13 1.35,-1.43 1.56,-0.57 0.12,0.39 0.76,0.07 1.74,-0.23 0.33,-0.44 5.24,0.03 0,0 -0.39,1.32 0.51,1.65 -0.07,0.39 -1.5,1.14 -0.98,-0.48 -0.82,-2.53 -0.02,1.12 0.59,2.72 1.71,1.66 0.56,0.95 -1.01,2.29 -0.16,2.32 0.1,0.43 0.76,0.73 0.26,5.86 0.31,0.55 0.43,0.2 0.77,-0.51 0.35,0.72 0.1,0.87 -0.47,0.06 -0.43,-0.28 -1.19,0.63 -0.34,3.84 0.57,2.59 -0.57,0.75 0.31,1.93 0.91,1.88 -0.86,2.34 -0.52,4.01 -1.71,4.68 -0.34,-0.1 -0.36,-0.76 0.21,-0.97 -0.92,-1.18 -0.26,0.33 0.18,2.43 1.16,0.83 -0.92,1.66 -1.64,0.65 -4.13,3.04 -2.8,2.56 -3.75,4.44 -1.04,1.88 z m 17.88,-26.55 -0.15,-0.47 0.25,-1.75 0.76,-2.4 -0.4,-1.18 0.16,-1.02 1.4,-0.76 0.22,0.06 0.66,0.94 -0.54,2.56 -0.82,0.86 -0.59,1.22 0.2,1.17 -1.15,0.77 z m -0.45,-24.37 -1.87,-2.02 2.55,-2.44 0.25,0.04 0.65,1.05 -0.86,1.32 -0.72,2.05 z"><title>Santa Catarina</title></path>
+<path id="uf-sp" data-uf="sp" d="m 404.84,488.18 -0.16,-1.33 -1.42,-0.57 -0.73,-3.3 0.4,-1.95 -2.14,-0.58 -0.76,0.17 -1.1,2.77 -0.66,0.85 -1.06,-0.53 -0.35,-0.78 0.69,-3.3 0.89,-0.66 0.14,-0.4 -1.61,-1.27 -1.59,-0.13 -1.58,0.19 -0.5,-0.38 -3.41,0.53 -2.38,0.12 -1.01,-0.21 -0.6,-0.39 -0.33,-2.04 1.28,-2.12 0.25,-1.05 -0.25,-0.44 -0.6,-0.3 -0.92,-1.97 0.06,-0.89 -0.5,-0.68 -0.67,-0.29 -1.21,-1.14 -1.49,-3.01 0.36,-0.55 0.08,-1.76 -1.3,-1.52 -0.38,-1.84 0.17,-0.81 0.39,-0.58 -0.02,-2.74 -0.89,-1.76 -3.59,-2.83 -1.13,-1.55 -2.97,0.86 -5.31,-0.13 -0.66,-0.54 -1.65,-0.14 -0.42,0.34 -1.72,-0.07 -0.72,-1.32 -0.63,-0.51 -3.51,-0.8 -1.75,-0.84 -0.78,-1 -2.58,0.01 -1.07,0.54 -1.32,-0.13 -2.64,-1.09 -2.53,-0.46 -1.48,-0.79 -1.17,-0.29 -0.73,0.37 -0.34,0.6 -1.21,0.62 -3.28,-0.29 -4.01,0.11 -3.83,-0.65 -3.25,2.29 0,0 0.84,-1.08 0.73,-1.54 1.26,-1.14 7.56,-4.54 1.95,-1.87 1.26,-2.43 1.73,-1.69 0.4,-1.21 1.44,-1.03 0.28,-1.22 -0.35,-0.84 2,-2.26 1.21,-2.34 0.07,-0.94 -0.31,-1.93 0.23,-0.39 0.96,-0.52 2.6,-3.64 0.16,-2.93 0.62,-1.68 1.01,-0.3 0.73,-0.64 1.99,-2.68 1.22,-1.02 0.47,-0.23 1.31,-0.04 1.5,-0.78 0.28,-0.4 0.4,-2.46 0,0 1.22,-1.13 2.15,-1.11 1.92,-0.37 1.43,-1.69 1.5,-0.61 0.75,0.14 1.73,1.55 2.55,0.08 4.29,0.96 1.67,-0.36 1.62,0.22 2,-0.59 2.18,1.42 1.67,0.79 -0.13,0.92 0.33,1.42 1.21,2.09 0.63,0.03 0.54,-0.32 0.67,-0.94 0.41,-1.13 0.26,-0.19 0.55,0.05 0.36,0.39 0.25,0.96 0.01,2.78 1.2,0.53 0.41,-0.45 -0.27,-2.54 0.49,-1.19 0.45,-0.48 8.18,-0.67 1.01,-1.25 1.5,1.46 1.12,0.43 2.78,-0.69 0.44,-0.99 -0.2,-0.46 0.31,-0.61 2.38,-0.11 1.66,0.78 0.85,-0.64 1.31,-0.29 3.26,3.35 0.2,1.04 -0.57,1.01 -0.29,2.37 0.58,0.61 1.89,1.21 0.4,1.55 -0.06,0.56 -1.52,2.03 -0.18,1.94 0.79,0.74 0.31,0.61 0.37,2.21 1.3,1.8 0.83,1.99 -0.03,0.85 1.61,-0.05 0.78,-0.31 0.28,-0.36 1,-0.05 3.7,1.32 0.23,0.37 -0.05,1.27 -0.7,2.18 -1.86,2.72 0.26,2.94 -0.19,3.45 -0.53,1.56 0.72,1.6 1.78,1.24 1.81,0.83 0.51,1.72 -1.21,0.7 2.02,3.31 1.13,0.25 2.01,-0.24 0.18,0.53 3.62,-1 0.56,0.42 1.31,-0.32 0.75,-0.98 0.05,-0.84 -0.24,-0.24 0.17,-2.3 1.19,-0.33 0.09,0.35 -0.35,0.49 0.01,0.48 2.34,0.08 2.39,-0.25 1.79,-0.67 1.23,-1.24 1.93,-1.02 2.21,-0.22 1.24,-0.73 0,0 1.27,0.54 0.56,1.17 1.23,1.59 1.77,0.39 3.15,-0.53 1.7,0.01 0.75,1.64 -1.65,2.15 -1.5,0.71 -2.77,0.36 -0.5,-0.15 -2.35,1.01 -1.09,1.15 -1.09,3.5 0.05,0.41 1.63,1.73 0.48,0.26 0,0 -0.06,0.2 -1.69,0.42 -1.06,-0.82 -1.48,1.11 -0.43,0.65 0.27,0.22 -0.76,0.64 -3.22,1.55 -2.25,0.7 -0.28,0.44 0.04,0.96 0.5,1.55 -0.32,0.42 -1.4,0.26 -0.7,-0.64 -1.34,-0.29 -3.12,-0.5 -0.86,0.15 -1.32,0.34 -1.73,0.82 -0.5,0.51 -1.21,2.15 -1.31,0.57 -0.5,-0.12 0.58,-0.47 -0.48,-1.22 -1.17,-0.85 -0.83,1.23 0.26,0.75 -0.3,0.61 -7.62,4.24 -0.95,0.82 -0.31,1.16 -3.27,3 -3.25,1.95 -1.92,0.53 -4.5,3.21 -2.33,1.96 -0.67,0.08 -0.44,0.62 0.9,0.43 0.66,0.06 0.93,-0.36 0,0.76 -0.62,1.31 -1.32,0.85 -1.06,1.48 z m 44.31,-23.01 -1.54,-0.65 -1.16,0.18 -0.49,-0.38 0.1,-0.78 0.95,-0.65 1.09,-1.85 0.72,0.25 0.66,0.65 0.13,2.91 -0.46,0.32 z"><title>São Paulo</title></path>
+<path id="uf-se" data-uf="se" d="m 570.20,261.95 -2.9,0.89 -1.55,-0.64 -0.54,-0.34 -0.48,-0.72 -1.92,-0.92 -0.6,-0.52 -0.12,-0.41 0.34,-0.39 0.13,-1.42 -0.15,-0.39 -1.43,-1.51 -0.52,-1.49 -1.09,-0.67 -0.96,-1.6 -0.02,-0.77 0.59,-1.58 0.32,-0.3 1.7,0.01 1.13,0.75 2.55,-0.99 0.69,-0.55 0.3,-0.58 -0.76,-2.75 0.08,-0.88 0.66,-1.62 0.08,-3.11 -0.75,-1.15 -1.99,-1.95 -1.27,-2.5 -0.22,-2.14 0.67,-1.15 0,0 6.46,2.98 3.68,0.95 5.42,3.07 1.3,2.45 1.76,1.45 1.66,0.79 0.46,0.03 3.59,2.23 0.6,1.31 0,0 -2.38,0.76 -4.57,2.94 -0.97,0.89 -1.55,2.21 -0.32,-0.02 0.11,-1.1 -1.05,-1.82 -0.99,0.16 0.34,1.16 1.24,0 0.23,0.24 -0.52,1.97 -1.27,2.09 -0.53,-0.35 -0.37,-0.67 -0.99,-0.16 0.2,0.68 1.13,0.62 -0.26,1.77 -0.86,1.15 -0.93,2.03 -0.78,0.15 -0.3,-0.46 0.48,-1.4 0.41,-0.13 0.31,-0.43 0.37,-1.04 -0.81,-0.37 0.1,0.68 -0.45,1.13 -0.48,0.5 -0.26,1.09 0.28,0.72 -0.26,0.52 z"><title>Sergipe</title></path>
+<path id="uf-to" data-uf="to" d="m 433.61,282.08 -5.36,1.42 -1.74,1.34 -2.56,1.1 -1.55,0 -4.53,1 -2.52,2.08 -1.78,0.9 -0.46,-0.24 -1.51,-2.62 -0.55,-0.03 -0.51,3.3 -0.69,0.08 -3.35,-0.68 -3.13,-1.47 0.56,-1.56 -0.22,-0.74 -4.53,0.53 -2.76,-0.34 -0.56,0.54 -0.3,1 -0.75,0.75 -1.14,-0.05 -0.61,-3.1 -1.11,-3.71 -1.04,-1.88 -1.15,-1.31 -1.18,0.97 -1.47,2.39 -1.63,5.94 -0.63,0.23 -4.07,-1.43 -3.09,-1.71 -3.93,-0.4 -2.2,-1.03 -2.4,-0.4 0.52,-2.34 1.22,-1.88 0.03,-1.71 -0.56,0.3 -1.81,2.09 -0.66,1.23 -0.2,1.88 -0.34,0.45 0,0 -0.8,-0.02 -0.96,-0.51 -0.98,-3.34 0.74,-2.76 -0.44,-3.05 -0.52,-0.58 -0.01,-1.57 0.47,-3.31 -1.1,-2.25 0.05,-0.5 0.82,-0.89 0.16,-0.87 -1.39,-1.34 -0.06,-0.86 1.88,-5.99 0.04,-2.95 0.54,-2.97 1.94,-5.29 0.37,-0.27 0.43,-0.85 0.44,-3.14 1.1,-1.25 0.56,-1.89 0.65,-1.02 0,0 1.62,-3.69 1.13,-4.45 1.15,-1.58 1.19,-1.1 1.21,-1.68 1.03,-1.92 1.37,-0.92 1.05,-0.16 0.73,-0.85 0.94,-1.54 0.18,-0.99 1.7,-3.24 1.09,-0.8 1.76,-5.15 0.66,-4.04 -0.15,-0.3 -0.74,-0.32 -1.67,-1.74 -0.6,-0.95 -0.16,-0.88 0.14,-0.57 1.41,-1.69 1.29,-2.1 -0.06,-2.67 -0.43,-2.18 0.19,-0.35 2.47,-1.78 3.41,-1.14 2.5,-1.21 0.24,-0.5 -0.15,-1.51 0.86,-1.27 1.51,-1.34 1.29,-0.15 0.19,-1.34 -0.29,-1.2 0.25,-0.46 1.46,-0.46 0.64,-0.48 0.93,-2.75 -1.02,-1.34 -0.09,-1.4 0.29,-0.28 0.97,-0.08 0.72,-0.37 0.37,-0.66 0.03,-0.64 -1.26,-1.17 -0.87,-0.14 -0.39,-0.31 -1.02,-1.66 -1.29,-0.12 -1.87,0.25 -2.29,-0.81 0,0 0.53,-0.64 2.62,-1.85 1.96,-0.53 0.87,0.05 2.78,1.52 1.4,0.08 0.95,-0.52 1.74,0.29 0.59,0.69 0.08,1.03 0.28,0.32 1.22,0.03 3.4,1.43 0.84,1.03 0.47,3.5 0.64,1.5 -0.21,3.72 0.23,1.08 0.67,1.13 -0.01,0.44 -1.77,6.15 -0.31,2.37 0.28,1 -0.25,1.59 -1.75,2.04 -1.76,0.67 -0.18,0.71 1.94,1.32 0.42,-0.27 1.37,0.24 0.25,0.35 0.11,0.88 -0.62,1.19 0.85,1.44 0.88,-0.07 3,4.16 0.91,0.85 2.28,3.02 2.14,-1.34 4.27,-0.94 1.8,1.22 0.08,1.75 -0.64,3.25 0.39,1.35 -3.39,0.35 -1.34,0.54 -0.57,0.55 -0.68,1.43 -0.73,2.68 0.37,1.3 -2.63,2.55 -0.26,0.7 0.2,0.42 2.08,0.29 0.94,0.69 0.74,1.59 0.06,1.66 0.62,1.04 3.88,1.95 0.09,0.53 -1.64,1.81 0.13,1.65 2.14,1.62 0.99,2.87 1.34,2 0.71,0.18 1.78,-0.21 1,0.3 0.82,0.44 0.61,0.82 1.28,0.66 0,0 2.94,0.21 0,0 -0.69,0.65 -0.22,0.98 -0.56,0.47 -3.82,2.02 -3.21,2.62 -0.19,0.37 1.29,1.8 -0.36,0.39 -1.01,0.27 -0.9,0.61 -1.52,3.49 -1.01,0.72 -0.5,1.16 0.23,0.92 1.86,1.95 3.59,0.67 1.87,0.99 0.05,0.76 -0.56,0.45 -2.04,0.81 -0.43,0.96 0.09,0.5 0.35,0.33 1.03,-0.18 0.92,0.29 0.58,0.51 0.29,0.64 -0.96,0.71 -1.15,0.42 -1.95,1.67 -0.19,0.85 -0.05,2.92 0.35,1.25 0.94,0.66 1.05,0.24 0.41,0.25 0.17,0.42 0.05,1.06 -1.36,2.38 z"><title>Tocantins</title></path>
+    </svg>
+    <div>
+      <p class="count" id="count">0</p>
+      <h2>estados na minha trajetória</h2>
+      <p class="soft" style="margin-top:14px">Direção, consultoria, pesquisa e eventos acadêmicos em diferentes regiões do país. Toque num estado para ver o que fiz lá.</p>
+      <div class="ufs" id="ufs"></div>
+      <div class="info" id="info" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="duvidas">
+  <div class="wrap faq">
+    <h2 style="margin-bottom:28px">Dúvidas frequentes</h2>
+    <details><summary>Minha instituição só oferece cursos presenciais. O novo marco me afeta?</summary><p>Sim. O decreto define limites de carga horária a distância também para cursos presenciais. Matrizes com componentes on-line precisam ser conferidas, e a IES pode avaliar a abertura de cursos semipresenciais.</p></details>
+    <details><summary>Até quando tenho para me adequar?</summary><p>As IES já credenciadas e com cursos autorizados têm até dois anos a partir da publicação do decreto, ou seja, até maio de 2027. Alguns pontos, como cursos vedados em EAD, tiveram prazos próprios mais curtos. O diagnóstico confirma o que vale para cada curso.</p></details>
+    <details><summary>Vocês protocolam processos no e-MEC?</summary><p>A consultoria prepara a documentação, orienta o procurador institucional e acompanha o processo. O protocolo é feito pela própria instituição, que mantém o controle dos seus atos.</p></details>
+    <details><summary>O atendimento é presencial ou remoto?</summary><p>Os dois. Diagnóstico e acompanhamento costumam ser remotos; visitas presenciais são combinadas para oficinas com NDE, coordenações e polos, e para a preparação de avaliações in loco.</p></details>
+    <details><summary>Quanto custa?</summary><p>Depende do porte da instituição, do número de cursos e das frentes contratadas. Depois de uma primeira conversa sem custo, você recebe uma proposta com escopo, prazo e valor fechados.</p></details>
+  </div>
+</section>
+
+<section class="band tint" id="checklist">
+  <div class="wrap lead-box">
+    <div>
+      <p class="who-line" style="color:var(--goldtx)">Material gratuito</p>
+      <h2>Checklist do Novo Marco Regulatório</h2>
+      <p class="soft" style="margin-top:14px">Dez pontos para conferir na sua instituição antes do prazo de maio de 2027. Um PDF de uma página para levar à reunião com a direção.</p>
+    </div>
+    <form class="wait" name="checklist" method="POST" action="/obrigado.html" data-netlify="true" netlify-honeypot="empresa-site">
+      <input type="hidden" name="form-name" value="checklist">
+      <p class="hp"><label>Não preencha: <input name="empresa-site"></label></p>
+      <b>Receba o checklist agora</b>
+      <input name="nome" placeholder="Seu nome" required autocomplete="name" aria-label="Seu nome">
+      <input name="email" type="email" placeholder="Seu e-mail" required autocomplete="email" aria-label="Seu e-mail">
+      <input name="whatsapp" placeholder="WhatsApp com DDD" autocomplete="tel" aria-label="WhatsApp com DDD">
+      <input name="instituicao" placeholder="Instituição" aria-label="Instituição">
+      <select name="cargo" aria-label="Cargo"><option value="">Seu cargo</option><option>Mantenedor ou reitor</option><option>Diretor</option><option>Coordenador de curso</option><option>Procurador institucional</option><option>Outro</option></select>
+      <label class="consent"><input type="checkbox" name="consentimento" value="sim" required> Autorizo receber o material e contatos por e-mail e WhatsApp, conforme a LGPD.</label>
+      <button class="btn gold" type="submit">Baixar o checklist</button>
+      <p style="font-size:13px">Seus dados ficam só com a Walker Consultoria e você pode pedir a exclusão a qualquer momento.</p>
+    </form>
+  </div>
+</section>
+<section class="band dark" id="contato">
+  <div class="wrap contact">
+    <div>
+      <h2>Vamos olhar a sua instituição</h2>
+      <p class="soft" style="margin-top:16px">Conte em poucas linhas onde está a dúvida. A primeira conversa serve para entender o cenário e dizer com franqueza se faz sentido trabalharmos juntos.</p>
+      <ul class="channels">
+        <li><a href="https://wa.me/5531984054927" target="_blank" rel="noopener">WhatsApp (31) 98405-4927</a><small>Resposta em dias úteis</small></li>
+        <li><a href="#checklist">Checklist gratuito do novo marco</a><small>PDF para baixar</small></li>
+        <li><a href="mailto:walkernascimento@gmail.com">walkernascimento@gmail.com</a><small>Propostas e envio de documentos</small></li>
+        <li><a href="https://www.linkedin.com/in/walker-nascimento/" target="_blank" rel="noopener">LinkedIn: walker-nascimento</a><small>Mais de 38 mil seguidores na gestão educacional</small></li>
+        <li><a href="https://www.instagram.com/walker.nascimento/" target="_blank" rel="noopener">Instagram: @walker.nascimento</a><small>167 mil seguidores</small></li>
+      </ul>
+    </div>
+    <form id="form" name="contato" method="POST" data-netlify="true" netlify-honeypot="empresa-site" novalidate>
+      <input type="hidden" name="form-name" value="contato">
+      <p class="hp"><label>Não preencha: <input name="empresa-site" tabindex="-1" autocomplete="off"></label></p>
+      <div class="frow"><label>Seu nome<input id="fNome" name="nome" autocomplete="name" required></label>
+      <label>Cargo<input id="fCargo" name="cargo" placeholder="Ex.: diretor acadêmico" autocomplete="organization-title"></label></div>
+      <div class="frow"><label>WhatsApp com DDD<input id="fWa" name="whatsapp" type="tel" inputmode="tel" placeholder="(00) 00000-0000" autocomplete="tel" required></label>
+      <label>E-mail<input id="fEmail" name="email" type="email" placeholder="Opcional" autocomplete="email"></label></div>
+      <div class="frow"><label>Instituição<input id="fInst" name="instituicao" autocomplete="organization" required></label>
+      <label>Cidade e estado<input id="fCid" name="cidade" placeholder="Ex.: Juiz de Fora, MG"></label></div>
+      <label>Tipo de instituição
+        <select id="fTipo" name="tipo"><option>Faculdade</option><option>Centro universitário</option><option>Universidade</option><option>Mantenedora ou grupo educacional</option></select>
+      </label>
+      <label>Principal preocupação
+        <select id="fTema" name="tema"><option>Diagnóstico geral do novo marco</option><option>Reenquadramento de cursos EAD e semipresenciais</option><option>Revisão de PPCs, PDI e regimento</option><option>Polos de apoio presencial</option><option>Preparação para avaliação in loco</option><option>Outro assunto</option></select>
+      </label>
+      <label>Quando precisa resolver
+        <select id="fPrazo" name="prazo"><option>Nos próximos 3 meses</option><option>Ainda em 2027, antes de maio</option><option>Estou só me informando</option></select>
+      </label>
+      <label>Mensagem<textarea id="fMsg" name="mensagem" placeholder="Ex.: temos 12 cursos EAD e queremos saber quais precisam migrar para semipresencial."></textarea></label>
+      <label class="consent"><input type="checkbox" id="fOk" name="consentimento" value="sim" required> Autorizo o contato por WhatsApp e e-mail sobre este assunto, conforme a LGPD. Posso cancelar quando quiser.</label>
+      <button class="btn gold" type="submit">Enviar pelo WhatsApp</button>
+      <p class="ok" id="ok" role="status"></p>
+      <p class="fnote">Sem compromisso de contratação. O botão abre o WhatsApp com a mensagem pronta, e uma cópia dos dados chega ao meu e-mail para eu retornar o contato.</p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Walker Consultoria Educacional, walkerconsultoria.com.br</span>
+    <span>Mapa: <a href="https://github.com/VictorCazanave/svg-maps" target="_blank" rel="noopener">SVG Maps</a>, licença CC BY 4.0</span>
+  </div>
+</footer>
+
+<script>
+{
+  const svcs=[
+    ['Diagnóstico de conformidade','Leitura curso a curso dos atos regulatórios, formatos de oferta, polos e documentos, com mapa de riscos e prioridades.','M8 30l8-8 6 6 14-16M8 38h32'],
+    ['Reenquadramento da oferta','Decisão técnica sobre quais cursos seguem presenciais, migram para semipresencial ou permanecem em EAD, com estudo de impacto.','M6 14h36M6 24h24M6 34h14M36 28l6 6-6 6'],
+    ['PPCs, PDI e regimento','Reescrita e atualização dos documentos institucionais à luz do decreto e das portarias, prontos para o próximo ato regulatório.','M12 6h18l8 8v28H12zM30 6v8h8M17 24h16M17 31h16'],
+    ['Modelo acadêmico e mediação','Desenho do modelo semipresencial e EAD: atividades síncronas, avaliações presenciais, papel de professores, mediadores e tutores.','M24 8a7 7 0 110 14 7 7 0 010-14zM10 40c2-8 8-12 14-12s12 4 14 12'],
+    ['Polos de apoio presencial','Revisão de infraestrutura, contratos e rotinas dos polos, com programa de mentoria e capacitação dos gestores parceiros.','M24 6c7 0 12 5 12 12 0 9-12 22-12 22S12 27 12 18c0-7 5-12 12-12zM24 14a4 4 0 110 8 4 4 0 010-8z'],
+    ['Avaliação e e-MEC','Preparação para avaliações in loco do INEP, organização de evidências, simulações com NDE e coordenações e calendário regulatório.','M10 10h28v28H10zM16 24l6 6 11-12']
+  ];
+  const ic=d=>`<svg viewBox="0 0 48 48" aria-hidden="true"><rect width="48" height="48" rx="12" fill="#0e3b3d"/><path d="${d}" fill="none" stroke="#c9a24a" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  document.getElementById('svcList').innerHTML=svcs.map(([t,p,d])=>`<article class="svc">${ic(d)}<div><h3>${t}</h3><p>${p}</p></div></article>`).join('');
+
+  /* Livros: troque título, detalhe e cor; para usar a capa real, preencha img com o arquivo ou data URI */
+  const books=[
+    {t:'A Universidade do Futuro',d:'Novos modelos de gestão e captação de recursos no terceiro setor. 2026.',c:'#111',img:'capa-universidade-do-futuro.jpg',buy:'https://pay.kiwify.com.br/eQv2T3t'},
+    {t:'Múltiplos Olhares para a Inclusão',d:'Organizador. E-book da Universidade Metodista e Cátedra UNESCO, 2025.',c:'#3b4fd8',img:'capa-multiplos-olhares.jpg'},
+    {t:'Habilidades Gerenciais',d:'Tudo que um gerente precisa saber, ter e fazer nas organizações. São Paulo, 2017.',c:'#0e3b3d',img:'capa-habilidades.jpg'},
+    {t:'Competências Profissionais',d:'Como se destacar no mercado corporativo. Editora In House, 2015.',c:'#5a3d12',img:'capa-competencias.jpg'},
+    {t:'Educação & Gestão',d:'Modelos educacionais e métodos de gestão aplicados à educação.',c:'#7a1f5c',img:'capa-educacao-gestao.jpg'},
+    {t:'Educação sem Fronteiras: Administração',d:'Capítulos sobre gerenciamento de projetos. Anhanguera, 2011.',c:'#1d7fc4',img:'capa-administracao.jpg'}
+  ];
+  document.getElementById('bookList').innerHTML=books.map(b=>`<article class="book"><div class="cover${b.img?' has-img':''}" style="background:${b.c}">${b.img?`<img src="${b.img}" alt="Capa do livro ${b.t}">`:`<span class="ct">${b.t}</span><span class="ca">Walker Nascimento</span>`}</div><div><b>${b.t}</b><br><span>${b.d}</span>${b.buy?`<br><a class="btn gold buy" href="${b.buy}" target="_blank" rel="noopener">Comprar o e-book, R$ 39,90</a>`:''}</div></article>`).join('');
+
+  /* Estados da trajetória */
+  const ufs={
+    mg:{n:'Minas Gerais',i:['Diretor da Faculdade Metodista Granbery (Juiz de Fora)','Vice-Diretor Acadêmico da Faculdade Santa Marcelina (Muriaé)','Gerente de novos negócios e coordenador no Izabela Hendrix (BH)','Consultoria para IPEMIG / Faculdade Batista','Mestrado na FEAD e graduação no IMIH']},
+    sp:{n:'São Paulo',i:['Coordenador de cursos na Anhanguera Campinas','Gerente de expansão de polos EAD da UMESP','Doutorado na UMESP e Cátedra UNESCO Metodista','Base da consultoria em São José do Rio Preto']},
+    rj:{n:'Rio de Janeiro',i:['Implantação de polo EAD da Metodista em Nova Friburgo']},
+    ac:{n:'Acre',i:['Atuação na UNAMA, em Rio Branco']},
+    sc:{n:'Santa Catarina',i:['Consultoria para a UNIASSELVI']},
+    rn:{n:'Rio Grande do Norte',i:['Apresentação de artigo acadêmico na UFRN']}
+  };
+  const keys=Object.keys(ufs),info=document.getElementById('info'),btnBox=document.getElementById('ufs');
+  btnBox.innerHTML=keys.map(k=>`<button type="button" data-uf="${k}" aria-pressed="false">${ufs[k].n}</button>`).join('');
+  const show=k=>{
+    document.querySelectorAll('#map path').forEach(p=>p.classList.toggle('sel',p.dataset.uf===k));
+    btnBox.querySelectorAll('button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.uf===k));
+    info.innerHTML=`<b>${ufs[k].n}</b><ul>${ufs[k].i.map(x=>`<li>${x}</li>`).join('')}</ul>`;
+  };
+  keys.forEach(k=>{const p=document.getElementById('uf-'+k);if(p){p.classList.add('on');p.setAttribute('tabindex','0');p.setAttribute('role','button');p.addEventListener('click',()=>show(k));p.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();show(k)}})}});
+  btnBox.addEventListener('click',e=>{const b=e.target.closest('button');if(b)show(b.dataset.uf)});
+  document.getElementById('count').textContent=keys.length;
+  show('mg');
+
+  const start=new Date(2025,4,19),end=new Date(2027,4,19),now=new Date();
+  const left=Math.max(0,Math.ceil((end-now)/864e5)),pct=Math.min(100,Math.max(0,(now-start)/(end-start)*100));
+  document.getElementById('days').innerHTML=left.toLocaleString('pt-BR')+'<span>dias</span>';
+  document.getElementById('now').style.left=pct+'%';
+  document.getElementById('rule').setAttribute('aria-label',`${Math.round(pct)}% do prazo de transição já decorrido`);
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{document.getElementById('fill').style.width=pct+'%'}));
+
+  const form=document.getElementById('form'),ok=document.getElementById('ok');
+  form.addEventListener('submit',e=>{
+    e.preventDefault();
+    const v=id=>document.getElementById(id).value.trim();
+    const miss=[];if(!v('fNome'))miss.push('seu nome');if(v('fWa').replace(/\D/g,'').length<10)miss.push('o WhatsApp com DDD');if(!v('fInst'))miss.push('a instituição');
+    if(miss.length){ok.textContent='Falta preencher '+(miss.length>1?miss.slice(0,-1).join(', ')+' e '+miss.at(-1):miss[0])+'.';ok.classList.add('show');return}
+    if(!document.getElementById('fOk').checked){ok.textContent='Marque a autorização de contato para continuar.';ok.classList.add('show');return}
+    const txt=`Olá, Prof. Walker. Sou ${v('fNome')}${v('fCargo')?', '+v('fCargo'):''}, da ${v('fInst')} (${v('fTipo')}${v('fCid')?', '+v('fCid'):''}).\nAssunto: ${v('fTema')}.\nPrazo: ${v('fPrazo')}.\n${v('fMsg')}`;
+    const url='https://wa.me/5531984054927?text='+encodeURIComponent(txt);
+    try{fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()}).catch(()=>{});gtag('event','generate_lead',{formulario:'contato'})}catch(_){}
+    const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
+    ok.innerHTML='Mensagem preparada. Se o WhatsApp não abriu, <a href="'+url+'" target="_blank" rel="noopener">toque aqui</a> ou escreva para (31) 98405-4927.';
+    ok.classList.add('show');
+  });
+}
+</script>
+<script>
+/* Funil e contador de visitas: Google Analytics 4. Cole o ID (G-XXXXXXX) em GA_ID para ativar. */
+{
+  const GA_ID='G-99CJHW8TKN';
+  window.dataLayer=window.dataLayer||[];
+  window.gtag=function(){dataLayer.push(arguments)};
+  if(GA_ID){const s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id='+GA_ID;document.head.appendChild(s);gtag('js',new Date());gtag('config',GA_ID);}
+  const ev=(n,p)=>{try{gtag('event',n,p||{})}catch(e){}};
+  document.addEventListener('click',e=>{
+    const a=e.target.closest('a');if(!a)return;
+    const h=a.getAttribute('href')||'';
+    if(h.includes('wa.me'))ev('clique_whatsapp');
+    else if(h.includes('cursos.html'))ev('ver_cursos');
+    else if(h.includes('kiwify'))ev('ir_checkout',{link:h});
+    else if(h.includes('checklist'))ev('baixar_checklist');
+  });
+  document.addEventListener('submit',e=>{const f=e.target;if(f.name)ev('generate_lead',{formulario:f.getAttribute('name')})},true);
+}
+</script>
+
+<script>
+(()=>{const st=document.getElementById('promo');if(!st)return;const sl=[...st.querySelectorAll('.slide')],dots=document.getElementById('pDots');let i=0,t=null,paused=matchMedia('(prefers-reduced-motion: reduce)').matches;
+sl.forEach((_,k)=>{const b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Ver banner '+(k+1));b.onclick=()=>{go(k);restart()};dots.appendChild(b)});
+function go(k){sl[i].classList.remove('on');i=(k+sl.length)%sl.length;sl[i].classList.add('on');[...dots.children].forEach((d,n)=>d.setAttribute('aria-current',n===i))}
+function restart(){clearInterval(t);if(!paused)t=setInterval(()=>go(i+1),6000)}
+document.getElementById('pPrev').onclick=()=>{go(i-1);restart()};document.getElementById('pNext').onclick=()=>{go(i+1);restart()};
+const pb=document.getElementById('pPause');const setP=()=>{pb.innerHTML=paused?'&#9654;':'&#10074;&#10074;';pb.setAttribute('aria-label',paused?'Retomar banners':'Pausar banners')};
+pb.onclick=()=>{paused=!paused;setP();restart()};
+st.addEventListener('mouseenter',()=>clearInterval(t));st.addEventListener('mouseleave',restart);st.addEventListener('focusin',()=>clearInterval(t));st.addEventListener('focusout',restart);
+st.querySelectorAll('[data-ev]').forEach(a=>a.addEventListener('click',()=>{try{gtag('event',a.dataset.ev,{origem:'banner'})}catch(e){}}));
+go(0);setP();restart()})();
+</script>
+<a class="wa-float" href="https://wa.me/5531984054927?text=Ol%C3%A1%2C%20Prof.%20Walker%2C%20vim%20pelo%20site" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp" data-ev="clique_whatsapp"><svg viewBox="0 0 32 32" width="28" height="28" aria-hidden="true"><path fill="#fff" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-3.9-.5-5.6-1.5l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6a1.2 1.2 0 0 0-.9.4 3.7 3.7 0 0 0-1.1 2.7 6.5 6.5 0 0 0 1.3 3.4 14.8 14.8 0 0 0 5.7 5c2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5l-.6-.4z"/></svg></a>
+<style>.wa-float{position:fixed;right:18px;bottom:18px;z-index:50;width:58px;height:58px;border-radius:50%;background:#1f8f4e;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}.wa-float:hover{background:#18763f}</style>
+<script>document.querySelector('.wa-float').addEventListener('click',()=>{try{gtag('event','clique_whatsapp',{origem:'botao_flutuante'})}catch(e){}})</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<dialog id="cursoModal" aria-labelledby="cmTitle">
+  <form method="dialog"><button class="x" aria-label="Fechar">&times;</button></form>
+  <p class="cm-kick">Detalhes do curso</p>
+  <h2 id="cmTitle"></h2>
+  <dl class="cm-grid">
+    <div><dt>Duração</dt><dd id="cmDur"></dd></div>
+    <div><dt>Formato</dt><dd id="cmFmt"></dd></div>
+    <div><dt>Início</dt><dd id="cmIni"></dd></div>
+    <div><dt>Para quem</dt><dd id="cmPub"></dd></div>
+  </dl>
+  <h3>O que você vai conseguir fazer na sua instituição</h3>
+  <ul id="cmUso"></ul>
+  <div class="btns"><a class="btn gold" id="cmCta" href="#">Tenho interesse neste curso</a></div>
+</dialog>
+<style>
+.course .more{font:inherit;font-weight:700;color:var(--goldtx);background:none;border:0;padding:0;margin-top:10px;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+#cursoModal{max-width:620px;width:calc(100% - 32px);border:0;border-radius:18px;padding:32px 30px 28px;background:var(--panel);color:var(--ink);box-shadow:0 30px 80px rgba(0,0,0,.35)}
+#cursoModal::backdrop{background:rgba(6,25,26,.65)}
+#cursoModal .x{position:absolute;top:12px;right:14px;font-size:30px;line-height:1;background:none;border:0;color:var(--soft);cursor:pointer;width:44px;height:44px}
+#cursoModal .cm-kick{color:var(--goldtx);font-weight:700;margin:0 0 6px;font-size:15px}
+#cursoModal h2{margin:0 40px 18px 0;font-size:clamp(22px,3vw,30px);line-height:1.15}
+#cursoModal h3{font-size:17px;margin:20px 0 8px}
+#cursoModal ul{margin:0;padding-left:20px}
+.cm-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px 20px;margin:0;padding:16px 0;border-top:2px solid var(--gold);border-bottom:1px solid var(--line)}
+.cm-grid dt{font-size:13px;font-weight:700;color:var(--soft)}.cm-grid dd{margin:2px 0 0;font-size:15px;line-height:1.4}
+@media (max-width:560px){.cm-grid{grid-template-columns:1fr}}
+.consent{display:flex;gap:10px;align-items:flex-start;font-size:13px;line-height:1.45;margin:4px 0 10px;text-align:left}
+.consent input{width:20px!important;height:20px;min-height:0!important;flex:none;margin-top:2px;accent-color:var(--gold)}
+.nocomp{font-size:13px;margin:8px 0 0;opacity:.8}
+</style>
+<script>
+(()=>{const D={"ebook": {"t": "E-book A Universidade do Futuro", "dur": "Leitura no seu ritmo, sem prazo de acesso", "fmt": "E-book em PDF", "ini": "Disponível agora, acesso imediato após o pagamento", "pub": "Mantenedores, diretores e gestores de instituições de ensino", "uso": ["Montar um plano de captação de recursos além da mensalidade", "Conversar com empresas e com a comunidade sobre parcerias", "Organizar a área de desenvolvimento institucional"], "cta": ["Comprar o e-book, R$ 39,90", "https://pay.kiwify.com.br/eQv2T3t"]}, "novo-marco": {"t": "Novo Marco Regulatório na Prática", "dur": "Carga horária divulgada na abertura das inscrições", "fmt": "Online, com aulas em vídeo, materiais em PDF e certificado", "ini": "Lançamento em breve. Quem está na lista de espera é avisado primeiro", "pub": "Diretores, coordenadores de curso, procuradores institucionais e mantenedores", "uso": ["Reenquadrar cada curso no formato de oferta correto", "Revisar PPC, PDI e regimento na ordem certa", "Montar o plano de adequação da instituição até maio de 2027"]}, "polos-ead": {"t": "Gestão de Polos EAD", "dur": "Carga horária divulgada na abertura das inscrições", "fmt": "Online, com aulas em vídeo, materiais em PDF e certificado", "ini": "Lançamento em breve. Quem está na lista de espera é avisado primeiro", "pub": "Gestores de EAD, coordenadores de polos e parceiros", "uso": ["Coordenar uma rede de polos dentro da nova regra", "Acompanhar indicadores de captação, permanência e qualidade", "Capacitar e orientar os gestores parceiros"]}, "captacao": {"t": "Captação de Recursos para Instituições de Ensino", "dur": "Carga horária divulgada na abertura das inscrições", "fmt": "Online, com aulas em vídeo, materiais em PDF e certificado", "ini": "Lançamento em breve. Quem está na lista de espera é avisado primeiro", "pub": "Mantenedores, diretores e gestores de instituições confessionais e comunitárias", "uso": ["Criar fontes de receita além da mensalidade", "Estruturar parcerias com empresas e com a comunidade", "Montar a equipe de desenvolvimento institucional"]}};const m=document.getElementById('cursoModal');const $=id=>document.getElementById(id);
+document.querySelectorAll('.course .more').forEach(b=>b.addEventListener('click',()=>{const k=b.dataset.curso,d=D[k];$('cmTitle').textContent=d.t;$('cmDur').textContent=d.dur;$('cmFmt').textContent=d.fmt;$('cmIni').textContent=d.ini;$('cmPub').textContent=d.pub;$('cmUso').innerHTML=d.uso.map(x=>'<li>'+x+'</li>').join('');
+const c=$('cmCta');if(d.cta){c.textContent=d.cta[0];c.href=d.cta[1];c.target='_blank';c.rel='noopener';c.onclick=()=>{try{gtag('event','ir_checkout',{origem:'modal'})}catch(e){}}}else{c.textContent='Tenho interesse neste curso';c.href='#'+k;c.removeAttribute('target');c.onclick=ev=>{ev.preventDefault();m.close();const f=document.querySelector('#'+k+' form input[name=nome]');document.getElementById(k).scrollIntoView({behavior:'smooth',block:'center'});setTimeout(()=>f&&f.focus({preventScroll:true}),500);try{gtag('event','interesse_curso',{curso:d.t})}catch(e){}}}
+m.showModal();try{gtag('event','ver_detalhes_curso',{curso:d.t})}catch(e){}}));
+m.addEventListener('click',e=>{if(e.target===m)m.close()});})();
+</script>
+
+
+
