@@ -44,6 +44,9 @@ MARK = re.search(r'<svg class="mark".*?</svg>', IX, re.S).group(0)
 GA = re.search(r'<script>\s*/\* Funil e contador.*?</script>', IX, re.S).group(0)
 PROMO_JS = re.search(r"<script>\s*\(\(\)=>\{const st=document.getElementById\('promo'\).*?</script>", IX, re.S).group(0)
 MAPA_SEC = re.search(r'<section class="band dark" id="mapa">.*?</section>', IX, re.S).group(0)
+MAPA_SEC = re.sub(r'(<path [^>]*?)>\s*<title>([^<]*)</title>\s*</path>', r'\1 data-nome="\2" aria-label="\2"></path>', MAPA_SEC)
+UF_TIP_JS = "(function(){var t=document.createElement('div');t.className='uf-tip';document.body.appendChild(t);document.querySelectorAll('#mapa path[data-nome]').forEach(function(p){p.addEventListener('mousemove',function(ev){t.textContent=p.getAttribute('data-nome');t.style.left=(ev.clientX+14)+'px';t.style.top=(ev.clientY+14)+'px';t.style.opacity='1'});p.addEventListener('mouseleave',function(){t.style.opacity='0'})})})();"
+
 DATA_JS = re.search(r'<script>\s*\{\s*const svcs=.*?</script>', IX, re.S).group(0)
 UFS_JS = re.search(r"/\* Estados da trajetória \*/.*?show\('mg'\);", DATA_JS, re.S).group(0)
 FORM_JS = re.search(r"const form=document.getElementById\('form'\).*?ok.classList.add\('show'\);\n  \}\);", DATA_JS, re.S).group(0)
@@ -57,7 +60,7 @@ WA = f'''<a class="wa-float" href="https://wa.me/{WA_NUM}?text=Ol%C3%A1%2C%20Pro
 <style>.wa-float{{position:fixed;right:18px;bottom:18px;z-index:50;width:58px;height:58px;border-radius:50%;background:#1f8f4e;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}}.wa-float:hover{{background:#18763f}}</style>
 <script>document.querySelector('.wa-float').addEventListener('click',()=>{{try{{gtag('event','clique_whatsapp',{{origem:'botao_flutuante'}})}}catch(e){{}}}})</script>'''
 
-NAV = [('sobre.html', 'Sobre'), ('consultoria.html', 'Consultoria'), ('novo-marco.html', 'Novo Marco'),
+NAV = [('sobre.html', 'Sobre'), ('onde-atuei.html', 'Onde atuei'), ('consultoria.html', 'Consultoria'), ('novo-marco.html', 'Novo Marco'),
        ('legislacao.html', 'Legislação'), ('cursos.html', 'Cursos'), ('eventos.html', 'Eventos'), ('radar.html', 'Radar')]
 
 NAME_FIX = [('Walker Soares do Nascimento', 'Prof. Walker Nascimento'), ('Prof. Me. Walker Nascimento', 'Prof. Walker Nascimento'),
@@ -439,10 +442,10 @@ document.getElementById('drAgain').addEventListener('click',()=>{f.reset();r.hid
 <section class="band" id="livros"><div class="wrap"><div class="head"><h2>{e(S["livros_titulo"])}</h2><p class="soft">{e(S["livros_texto"])}</p></div>{nbh}<div class="books">{books}</div>{fdh}</div></section>
 {mapa}
 <section class="band dark"><div class="wrap closing"><h2>{e(S["chamada_final"])}</h2><div class="btns" style="margin-top:0"><a class="btn gold" href="/contato.html">Agendar diagnóstico</a><a class="btn ghost" href="/onde-atuei.html">Ver onde já atuei</a></div></div></section>'''
-    page('sobre.html', 'Prof. Walker Nascimento, trajetória | Walker Consultoria Educacional', 'Reitor, diretor e vice-diretor acadêmico, avaliador do BASis/INEP, pesquisador da Cátedra UNESCO Metodista e autor de seis livros.', b, active='sobre.html', tail='<script>{' + UFS_JS + '}</script>')
+    page('sobre.html', 'Prof. Walker Nascimento, trajetória | Walker Consultoria Educacional', 'Reitor, diretor e vice-diretor acadêmico, avaliador do BASis/INEP, pesquisador da Cátedra UNESCO Metodista e autor de seis livros.', b, active='sobre.html', tail='<script>{' + UFS_JS + '}' + UF_TIP_JS + '</script>')
     b = hero([('/sobre.html', 'Sobre'), (None, 'Onde atuei')], 'Onde atuei', 'Faculdades, redes e polos em seis estados brasileiros. Toque em um estado no mapa para ver a atuação.',
              f'<a class="btn gold" href="/sobre.html">Voltar à trajetória</a><a class="btn ghost" href="{e(SITE["lattes"])}" target="_blank" rel="noopener">Currículo Lattes</a>') + mapa + cta_band('Vamos olhar a sua instituição?')
-    page('onde-atuei.html', 'Onde atuei | Prof. Walker Nascimento', 'Mapa dos estados onde o Prof. Walker Nascimento atuou na gestão do ensino superior.', b, active='sobre.html', tail='<script>{' + UFS_JS + '}</script>')
+    page('onde-atuei.html', 'Onde atuei | Prof. Walker Nascimento', 'Mapa dos estados onde o Prof. Walker Nascimento atuou na gestão do ensino superior.', b, active='onde-atuei.html', tail='<script>{' + UFS_JS + '}' + UF_TIP_JS + '</script>')
 
     # ----- cursos -----
     cards = ''
@@ -491,6 +494,9 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
 
 
 EXTRA_CSS = '''
+@media(min-width:1261px){.bar{flex-wrap:nowrap}#mainnav a{padding:10px 11px}}
+.uf-tip{position:fixed;z-index:60;pointer-events:none;background:#0a2c2e;color:#fff;font-size:14px;font-weight:600;padding:6px 10px;border-radius:8px;border:1px solid #c9a24a;opacity:0;transition:opacity .12s;white-space:nowrap}
+#mapa path[data-nome]{cursor:pointer}
 .promo .art img.plain{box-shadow:none!important;border-radius:0!important;max-height:300px}
 .art-cover{width:100%;height:auto;border-radius:14px;margin-bottom:24px}
 .ev-list{display:grid;gap:18px}
