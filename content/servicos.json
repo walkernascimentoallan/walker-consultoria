@@ -1,0 +1,313 @@
+{
+  "servicos": [
+    {
+      "slug": "consultoria-diagnostico",
+      "titulo": "Diagnóstico de conformidade",
+      "resumo": "Leitura curso a curso dos atos regulatórios, formatos de oferta, polos e documentos, com mapa de riscos e prioridades.",
+      "abertura": "Antes de mudar qualquer coisa, é preciso saber onde a instituição está. O diagnóstico mostra, curso a curso, o que já atende ao Decreto nº 12.456/2025 e o que precisa mudar até maio de 2027.",
+      "icone": "M8 30l8-8 6 6 14-16M8 38h32",
+      "quando": [
+        {
+          "texto": "A direção não tem certeza de quais cursos são afetados pelo decreto"
+        },
+        {
+          "texto": "A mantenedora pediu um plano e um orçamento de adequação"
+        },
+        {
+          "texto": "Há processo regulatório ou avaliação in loco no horizonte"
+        }
+      ],
+      "faco": [
+        {
+          "texto": "Leio os atos autorizativos, PPCs, PDI, regimento e a relação de polos"
+        },
+        {
+          "texto": "Classifico cada curso no formato de oferta que a regra permite"
+        },
+        {
+          "texto": "Identifico cursos vedados em EAD e o impacto nos alunos atuais"
+        },
+        {
+          "texto": "Converso com direção, procurador institucional e coordenações"
+        }
+      ],
+      "entregas": [
+        {
+          "texto": "Mapa de riscos por curso, em ordem de prioridade"
+        },
+        {
+          "texto": "Relatório executivo para a mantenedora e o conselho"
+        },
+        {
+          "texto": "Lista de documentos a revisar, com prazos"
+        },
+        {
+          "texto": "Reunião de apresentação dos resultados"
+        }
+      ]
+    },
+    {
+      "slug": "consultoria-reenquadramento",
+      "titulo": "Reenquadramento da oferta",
+      "resumo": "Decisão técnica sobre quais cursos seguem presenciais, migram para semipresencial ou permanecem em EAD, com estudo de impacto.",
+      "abertura": "Cada curso precisa caber em um dos três formatos do novo marco: presencial, semipresencial ou a distância. A escolha mexe com custos, polos, corpo docente e captação, e precisa ser feita com números na mesa.",
+      "icone": "M6 14h36M6 24h24M6 34h14M36 28l6 6-6 6",
+      "quando": [
+        {
+          "texto": "A IES oferta cursos EAD que passaram a ser vedados nesse formato"
+        },
+        {
+          "texto": "Há cursos com carga a distância acima do que a nova regra permite"
+        },
+        {
+          "texto": "A instituição quer abrir cursos semipresenciais"
+        }
+      ],
+      "faco": [
+        {
+          "texto": "Comparo a carga horária atual com os mínimos de cada formato"
+        },
+        {
+          "texto": "Simulo o impacto de cada opção em estrutura, pessoas e receita"
+        },
+        {
+          "texto": "Desenho a transição para alunos já matriculados"
+        },
+        {
+          "texto": "Oriento os protocolos no e-MEC junto ao procurador institucional"
+        }
+      ],
+      "entregas": [
+        {
+          "texto": "Matriz de decisão por curso"
+        },
+        {
+          "texto": "Estudo de impacto acadêmico e financeiro"
+        },
+        {
+          "texto": "Cronograma de migração"
+        },
+        {
+          "texto": "Minuta de comunicação para alunos e polos"
+        }
+      ]
+    },
+    {
+      "slug": "consultoria-documentos",
+      "titulo": "PPCs, PDI e regimento",
+      "resumo": "Reescrita e atualização dos documentos institucionais à luz do decreto e das portarias, prontos para o próximo ato regulatório.",
+      "abertura": "O avaliador do INEP vai ler os documentos. Se o PPC não mostra as atividades presenciais e síncronas mediadas, ou se o regimento ainda fala da regra antiga, o problema aparece na visita.",
+      "icone": "M12 6h18l8 8v28H12zM30 6v8h8M17 24h16M17 31h16",
+      "quando": [
+        {
+          "texto": "Os PPCs foram escritos antes de maio de 2025"
+        },
+        {
+          "texto": "O PDI está vencendo ou precisa de aditamento"
+        },
+        {
+          "texto": "Vem aí reconhecimento, renovação ou recredenciamento"
+        }
+      ],
+      "faco": [
+        {
+          "texto": "Reviso PPCs com o NDE: carga horária, atividades e avaliação"
+        },
+        {
+          "texto": "Atualizo regimento, PDI e regulamentos internos"
+        },
+        {
+          "texto": "Ajusto editais e contratos educacionais à nova regra"
+        },
+        {
+          "texto": "Preparo a coerência entre documentos e prática"
+        }
+      ],
+      "entregas": [
+        {
+          "texto": "PPCs revisados e prontos para protocolo"
+        },
+        {
+          "texto": "Regimento e PDI atualizados"
+        },
+        {
+          "texto": "Quadro de coerência entre documentos"
+        },
+        {
+          "texto": "Orientação ao NDE e às coordenações"
+        }
+      ]
+    },
+    {
+      "slug": "consultoria-modelo-academico",
+      "titulo": "Modelo acadêmico e mediação",
+      "resumo": "Desenho do modelo semipresencial e EAD: atividades síncronas, avaliações presenciais, papel de professores, mediadores e tutores.",
+      "abertura": "O decreto cria a figura do mediador pedagógico e separa o que é função acadêmica do que é atendimento administrativo. O modelo acadêmico precisa mostrar quem faz o quê, em que momento e com quantos alunos.",
+      "icone": "M24 8a7 7 0 110 14 7 7 0 010-14zM10 40c2-8 8-12 14-12s12 4 14 12",
+      "quando": [
+        {
+          "texto": "A IES vai ofertar cursos semipresenciais pela primeira vez"
+        },
+        {
+          "texto": "A tutoria atual mistura funções pedagógicas e administrativas"
+        },
+        {
+          "texto": "O calendário não prevê atividades síncronas mediadas"
+        }
+      ],
+      "faco": [
+        {
+          "texto": "Desenho o modelo de oferta de cada formato"
+        },
+        {
+          "texto": "Defino papéis de docentes, mediadores pedagógicos e tutores"
+        },
+        {
+          "texto": "Organizo atividades síncronas mediadas e avaliações presenciais"
+        },
+        {
+          "texto": "Ajusto calendário acadêmico e regras de frequência"
+        }
+      ],
+      "entregas": [
+        {
+          "texto": "Modelo acadêmico documentado"
+        },
+        {
+          "texto": "Matriz de papéis e atribuições"
+        },
+        {
+          "texto": "Calendário com atividades presenciais e síncronas"
+        },
+        {
+          "texto": "Formação das equipes"
+        }
+      ]
+    },
+    {
+      "slug": "consultoria-polos",
+      "titulo": "Polos de apoio presencial",
+      "resumo": "Revisão de infraestrutura, contratos e rotinas dos polos, com programa de mentoria e capacitação dos gestores parceiros.",
+      "abertura": "O polo deixou de ser só um ponto de apoio. Com o novo marco, ele recebe atividades presenciais obrigatórias e passa a ser olhado de perto pelo MEC. Cada polo precisa estar regular e vinculado no e-MEC até o fim da transição.",
+      "icone": "M24 6c7 0 12 5 12 12 0 9-12 22-12 22S12 27 12 18c0-7 5-12 12-12zM24 14a4 4 0 110 8 4 4 0 010-8z",
+      "quando": [
+        {
+          "texto": "A rede tem polos parceiros com contratos antigos"
+        },
+        {
+          "texto": "Há polos sem infraestrutura para as atividades presenciais"
+        },
+        {
+          "texto": "A IES não sabe quais polos manter, adequar ou desativar"
+        }
+      ],
+      "faco": [
+        {
+          "texto": "Avalio infraestrutura, responsável e rotina de cada polo"
+        },
+        {
+          "texto": "Reviso contratos e repasses com os parceiros"
+        },
+        {
+          "texto": "Organizo o cadastro e a vinculação no e-MEC"
+        },
+        {
+          "texto": "Monto um programa de mentoria para gestores de polo"
+        }
+      ],
+      "entregas": [
+        {
+          "texto": "Raio-x da rede de polos"
+        },
+        {
+          "texto": "Plano de manter, adequar ou desativar"
+        },
+        {
+          "texto": "Modelo de contrato revisado"
+        },
+        {
+          "texto": "Encontros de formação para gestores parceiros"
+        }
+      ]
+    },
+    {
+      "slug": "consultoria-avaliacao",
+      "titulo": "Avaliação e e-MEC",
+      "resumo": "Preparação para avaliações in loco do INEP, organização de evidências, simulações com NDE e coordenações e calendário regulatório.",
+      "abertura": "Como avaliador do BASis/INEP, conheço a visita pelo outro lado da mesa. A preparação começa meses antes: evidências organizadas, equipe ensaiada e documentos que conversam com a prática.",
+      "icone": "M10 10h28v28H10zM16 24l6 6 11-12",
+      "quando": [
+        {
+          "texto": "A IES tem visita in loco marcada ou prevista"
+        },
+        {
+          "texto": "O último conceito ficou abaixo do esperado"
+        },
+        {
+          "texto": "O calendário regulatório está desorganizado"
+        }
+      ],
+      "faco": [
+        {
+          "texto": "Monto o calendário regulatório da instituição"
+        },
+        {
+          "texto": "Organizo as evidências por indicador do instrumento"
+        },
+        {
+          "texto": "Faço simulações de visita com NDE, coordenações e CPA"
+        },
+        {
+          "texto": "Acompanho o processo até o relatório final"
+        }
+      ],
+      "entregas": [
+        {
+          "texto": "Calendário regulatório"
+        },
+        {
+          "texto": "Pasta de evidências por indicador"
+        },
+        {
+          "texto": "Simulação de visita com devolutiva"
+        },
+        {
+          "texto": "Plano de ação para os pontos fracos"
+        }
+      ]
+    }
+  ],
+  "metodo": [
+    {
+      "titulo": "Diagnóstico regulatório",
+      "texto": "Leitura dos atos autorizativos, PPCs, PDI, regimento, polos e indicadores. Mapa de riscos por curso."
+    },
+    {
+      "titulo": "Plano de adequação",
+      "texto": "Decisão curso a curso sobre formato, cronograma, responsáveis e documentos a revisar."
+    },
+    {
+      "titulo": "Implementação",
+      "texto": "Reescrita de PPCs e regimento, novo modelo acadêmico, formação das equipes e ajustes nos polos."
+    },
+    {
+      "titulo": "Acompanhamento",
+      "texto": "Preparação para avaliações in loco, protocolos no e-MEC e revisão dos indicadores de qualidade."
+    }
+  ],
+  "para_quem": [
+    {
+      "texto": "Faculdades, centros universitários e universidades privadas, confessionais e comunitárias"
+    },
+    {
+      "texto": "Mantenedoras e grupos educacionais com várias IES"
+    },
+    {
+      "texto": "Instituições com cursos EAD, semipresenciais ou rede de polos"
+    },
+    {
+      "texto": "Direções que precisam decidir com prazo e com número"
+    }
+  ],
+  "como_cobra": "O valor depende do porte da instituição, do número de cursos e das frentes contratadas. Depois de uma primeira conversa sem custo, você recebe uma proposta com escopo, prazo e valor fechados.\n\nO atendimento é remoto e presencial: diagnóstico e acompanhamento costumam ser on-line, e as visitas são combinadas para oficinas com NDE, coordenações e polos."
+}

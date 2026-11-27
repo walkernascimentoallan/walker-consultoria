@@ -1,0 +1,175 @@
+{
+  "banners": [
+    {
+      "ativo": true,
+      "modelo": "fundo",
+      "imagem": "/banner-governanca.jpg",
+      "selo": "Prof. Walker Nascimento",
+      "titulo": "Governança e Conformidade para o Novo Marco do Ensino Superior",
+      "texto": "Consultoria especializada em regulação e governança para o ensino superior. Apoio estratégico na adequação regulatória, revisão de PPCs e implementação do Novo Marco Regulatório.",
+      "botao1_texto": "Agendar uma conversa",
+      "botao1_link": "/contato.html",
+      "botao2_texto": "Conhecer minha trajetória",
+      "botao2_link": "/sobre.html",
+      "legenda_titulo": "",
+      "legenda_texto": "",
+      "numeros": [],
+      "itens": []
+    },
+    {
+      "ativo": false,
+      "modelo": "fundo",
+      "imagem": "/universidade.svg",
+      "selo": "Prof. Walker Nascimento, consultor em regulação do ensino superior",
+      "titulo": "Sua instituição pronta para o novo marco regulatório da educação superior",
+      "texto": "Ex-reitor e diretor acadêmico, com mais de vinte anos na gestão do ensino superior, ajudo mantenedoras e direções a adequar cursos, polos, PPCs e operação acadêmica ao Decreto nº 12.456/2025.",
+      "botao1_texto": "Agendar diagnóstico",
+      "botao1_link": "/contato.html",
+      "botao2_texto": "Conhecer minha trajetória",
+      "botao2_link": "/sobre.html",
+      "legenda_titulo": "",
+      "legenda_texto": "",
+      "numeros": [],
+      "itens": []
+    },
+    {
+      "ativo": true,
+      "modelo": "foto",
+      "imagem": "/foto-walker.jpg",
+      "selo": "Sobre o consultor",
+      "titulo": "Prof. Walker Nascimento",
+      "texto": "Gestor do ensino superior desde 2004. Fui reitor, pró-reitor, diretor e vice-diretor acadêmico de faculdades, além de coordenador de cursos presenciais e a distância e gerente de expansão de polos EAD.",
+      "botao1_texto": "Falar com o Prof. Walker",
+      "botao1_link": "/contato.html",
+      "botao2_texto": "Currículo Lattes",
+      "botao2_link": "http://lattes.cnpq.br/9556851389493511",
+      "legenda_titulo": "Prof. Walker Nascimento",
+      "legenda_texto": "Doutorando em Comunicação Social, UMESP",
+      "numeros": [
+        {
+          "valor": "20+",
+          "rotulo": "anos na gestão do ensino superior"
+        },
+        {
+          "valor": "6",
+          "rotulo": "livros publicados"
+        },
+        {
+          "valor": "200 mil+",
+          "rotulo": "seguidores no Instagram e no LinkedIn"
+        }
+      ],
+      "itens": []
+    },
+    {
+      "ativo": true,
+      "modelo": "capa",
+      "imagem": "/capa-universidade-do-futuro.jpg",
+      "selo": "Novo e-book",
+      "titulo": "A Universidade do Futuro",
+      "texto": "Novos modelos de gestão e captação de recursos no terceiro setor. Leitura direta, para quem decide.",
+      "botao1_texto": "Comprar por R$ 39,90",
+      "botao1_link": "https://pay.kiwify.com.br/eQv2T3t",
+      "botao2_texto": "",
+      "botao2_link": "",
+      "legenda_titulo": "",
+      "legenda_texto": "",
+      "numeros": [],
+      "itens": []
+    },
+    {
+      "ativo": true,
+      "modelo": "arte",
+      "imagem": "/arte-diagnostico.svg",
+      "selo": "Diagnóstico gratuito, em 3 minutos",
+      "titulo": "Sua instituição está pronta para maio de 2027?",
+      "texto": "Responda dez perguntas e veja na hora a nota da sua IES no novo marco, com os pontos que pedem atenção.",
+      "botao1_texto": "Começar o diagnóstico",
+      "botao1_link": "/novo-marco.html#q1",
+      "botao2_texto": "",
+      "botao2_link": "",
+      "legenda_titulo": "",
+      "legenda_texto": "",
+      "numeros": [],
+      "itens": []
+    },
+    {
+      "ativo": true,
+      "modelo": "lista",
+      "imagem": "",
+      "selo": "Material gratuito",
+      "titulo": "Checklist do novo marco regulatório",
+      "texto": "Os pontos que a sua IES precisa revisar, em uma página. Baixe grátis e use na próxima reunião de gestão.",
+      "botao1_texto": "Baixar o checklist",
+      "botao1_link": "/novo-marco.html#checklist",
+      "botao2_texto": "",
+      "botao2_link": "",
+      "legenda_titulo": "Novo marco: checklist",
+      "legenda_texto": "",
+      "numeros": [],
+      "itens": [
+        {
+          "texto": "Oferta presencial e EAD",
+          "link": ""
+        },
+        {
+          "texto": "Polos de apoio",
+          "link": ""
+        },
+        {
+          "texto": "PPCs e carga horária",
+          "link": ""
+        },
+        {
+          "texto": "Corpo docente",
+          "link": ""
+        },
+        {
+          "texto": "Prazos do MEC",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "ativo": true,
+      "modelo": "lista",
+      "imagem": "",
+      "selo": "Consultoria",
+      "titulo": "Serviços para cada frente do novo marco",
+      "texto": "Contrate uma frente isolada ou o plano completo de adequação, com cronograma alinhado ao e-MEC.",
+      "botao1_texto": "Ver todos os serviços",
+      "botao1_link": "/consultoria.html",
+      "botao2_texto": "",
+      "botao2_link": "",
+      "legenda_titulo": "",
+      "legenda_texto": "",
+      "numeros": [],
+      "itens": [
+        {
+          "texto": "Diagnóstico de conformidade",
+          "link": "/consultoria-diagnostico.html"
+        },
+        {
+          "texto": "Reenquadramento da oferta",
+          "link": "/consultoria-reenquadramento.html"
+        },
+        {
+          "texto": "PPCs, PDI e regimento",
+          "link": "/consultoria-documentos.html"
+        },
+        {
+          "texto": "Modelo acadêmico e mediação",
+          "link": "/consultoria-modelo-academico.html"
+        },
+        {
+          "texto": "Polos de apoio presencial",
+          "link": "/consultoria-polos.html"
+        },
+        {
+          "texto": "Avaliação e e-MEC",
+          "link": "/consultoria-avaliacao.html"
+        }
+      ]
+    }
+  ]
+}

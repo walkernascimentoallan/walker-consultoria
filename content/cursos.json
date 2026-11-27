@@ -1,0 +1,175 @@
+{
+  "titulo": "Formação para quem faz a gestão do ensino superior acontecer",
+  "texto": "Cursos online, objetivos e aplicados, com aulas em vídeo, materiais em PDF e certificado. Conteúdo de quem foi reitor, diretor e avaliador do INEP.",
+  "lista_texto": "As turmas abrem em breve. Entre na lista de espera do curso que interessa e receba o aviso em primeira mão.",
+  "cursos": [
+    {
+      "id": "ebook",
+      "selo": "Disponível agora",
+      "titulo": "E-book A Universidade do Futuro",
+      "texto": "Novos modelos de gestão e captação de recursos no terceiro setor, aplicados às instituições de ensino superior. Entrega imediata em PDF na área do aluno.",
+      "topicos": [],
+      "publico": "Para mantenedores, diretores e gestores.",
+      "status": "venda",
+      "preco": "R$ 39,90",
+      "link_compra": "https://pay.kiwify.com.br/eQv2T3t",
+      "duracao": "Leitura no seu ritmo, sem prazo de acesso",
+      "formato": "E-book em PDF",
+      "inicio": "Disponível agora, acesso imediato após o pagamento",
+      "para_quem": "Mantenedores, diretores e gestores de instituições de ensino",
+      "resultados": [
+        {
+          "texto": "Montar um plano de captação de recursos além da mensalidade"
+        },
+        {
+          "texto": "Conversar com empresas e com a comunidade sobre parcerias"
+        },
+        {
+          "texto": "Organizar a área de desenvolvimento institucional"
+        }
+      ]
+    },
+    {
+      "id": "novo-marco",
+      "selo": "Curso online · lançamento em breve",
+      "titulo": "Novo Marco Regulatório na Prática",
+      "texto": "O que o Decreto nº 12.456/2025 e as portarias do MEC mudam no dia a dia da instituição, e como adequar cursos, polos e documentos até maio de 2027.",
+      "topicos": [
+        {
+          "texto": "Os três formatos de oferta e como reenquadrar cada curso"
+        },
+        {
+          "texto": "Cursos vedados em EAD e caminhos de transição"
+        },
+        {
+          "texto": "Mediador pedagógico e a nova tutoria"
+        },
+        {
+          "texto": "Polos de apoio presencial: exigências e contratos"
+        },
+        {
+          "texto": "PPC, PDI e regimento: o que revisar primeiro"
+        },
+        {
+          "texto": "Plano de adequação com cronograma e responsáveis"
+        }
+      ],
+      "publico": "Para diretores, coordenadores de curso, procuradores institucionais e mantenedores.",
+      "status": "lista_espera",
+      "preco": "",
+      "link_compra": "",
+      "duracao": "Carga horária divulgada na abertura das inscrições",
+      "formato": "Online, com aulas em vídeo, materiais em PDF e certificado",
+      "inicio": "Lançamento em breve. Quem está na lista de espera é avisado primeiro",
+      "para_quem": "Diretores, coordenadores de curso, procuradores institucionais e mantenedores",
+      "resultados": [
+        {
+          "texto": "Reenquadrar cada curso no formato de oferta correto"
+        },
+        {
+          "texto": "Revisar PPC, PDI e regimento na ordem certa"
+        },
+        {
+          "texto": "Montar o plano de adequação da instituição até maio de 2027"
+        }
+      ]
+    },
+    {
+      "id": "polos-ead",
+      "selo": "Curso online · lançamento em breve",
+      "titulo": "Gestão de Polos EAD",
+      "texto": "Como estruturar, acompanhar e fazer crescer uma rede de polos de apoio presencial com qualidade e dentro da regra.",
+      "topicos": [
+        {
+          "texto": "Papel do polo no novo marco regulatório"
+        },
+        {
+          "texto": "Indicadores de captação, permanência e qualidade"
+        },
+        {
+          "texto": "Rotinas de atendimento e de atividades presenciais"
+        },
+        {
+          "texto": "Mentoria e capacitação dos gestores parceiros"
+        },
+        {
+          "texto": "Contratos e repasses"
+        }
+      ],
+      "publico": "Para gestores de EAD, coordenadores de polos e parceiros.",
+      "status": "lista_espera",
+      "preco": "",
+      "link_compra": "",
+      "duracao": "Carga horária divulgada na abertura das inscrições",
+      "formato": "Online, com aulas em vídeo, materiais em PDF e certificado",
+      "inicio": "Lançamento em breve. Quem está na lista de espera é avisado primeiro",
+      "para_quem": "Gestores de EAD, coordenadores de polos e parceiros",
+      "resultados": [
+        {
+          "texto": "Coordenar uma rede de polos dentro da nova regra"
+        },
+        {
+          "texto": "Acompanhar indicadores de captação, permanência e qualidade"
+        },
+        {
+          "texto": "Capacitar e orientar os gestores parceiros"
+        }
+      ]
+    },
+    {
+      "id": "captacao",
+      "selo": "Curso online · lançamento em breve",
+      "titulo": "Captação de Recursos para Instituições de Ensino",
+      "texto": "Fontes de receita além da mensalidade, com base no livro A Universidade do Futuro.",
+      "topicos": [
+        {
+          "texto": "Fundraising em instituições sem fins lucrativos"
+        },
+        {
+          "texto": "Parcerias com empresas e a comunidade"
+        },
+        {
+          "texto": "Comunicação institucional para captação"
+        },
+        {
+          "texto": "Estrutura e equipe de desenvolvimento institucional"
+        }
+      ],
+      "publico": "Para mantenedores, diretores e gestores de instituições confessionais e comunitárias.",
+      "status": "lista_espera",
+      "preco": "",
+      "link_compra": "",
+      "duracao": "Carga horária divulgada na abertura das inscrições",
+      "formato": "Online, com aulas em vídeo, materiais em PDF e certificado",
+      "inicio": "Lançamento em breve. Quem está na lista de espera é avisado primeiro",
+      "para_quem": "Mantenedores, diretores e gestores de instituições confessionais e comunitárias",
+      "resultados": [
+        {
+          "texto": "Criar fontes de receita além da mensalidade"
+        },
+        {
+          "texto": "Estruturar parcerias com empresas e com a comunidade"
+        },
+        {
+          "texto": "Montar a equipe de desenvolvimento institucional"
+        }
+      ]
+    }
+  ],
+  "aluno_texto": "As aulas ficam numa área exclusiva, com vídeos, PDFs para baixar, acompanhamento do progresso e certificado ao final.",
+  "passos": [
+    {
+      "titulo": "Escolha o curso e faça a inscrição",
+      "texto": "Pagamento por Pix, cartão parcelado ou boleto, em ambiente seguro."
+    },
+    {
+      "titulo": "Receba o acesso por e-mail",
+      "texto": "Logo após a confirmação do pagamento chegam seu login e o link das aulas."
+    },
+    {
+      "titulo": "Estude no seu ritmo",
+      "texto": "Assista pelo computador ou celular, baixe os materiais e emita o certificado."
+    }
+  ],
+  "chamada_final": "Prefere uma formação fechada para a sua equipe?"
+}

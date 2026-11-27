@@ -1,0 +1,226 @@
+{
+  "selo": "Sobre o consultor",
+  "nome": "Prof. Walker Nascimento",
+  "texto": "Gestor do ensino superior desde 2004. Fui reitor, pró-reitor, diretor e vice-diretor acadêmico de faculdades, além de coordenador de cursos presenciais e a distância e gerente de expansão de polos EAD. Hoje uno essa prática à pesquisa de doutorado e à consultoria em regulação.",
+  "foto": "/foto-walker.jpg",
+  "foto_legenda_titulo": "Prof. Walker Nascimento",
+  "foto_legenda_texto": "Doutorando em Comunicação Social, UMESP",
+  "numeros": [
+    {
+      "valor": "20+",
+      "rotulo": "anos na gestão do ensino superior"
+    },
+    {
+      "valor": "6",
+      "rotulo": "livros publicados"
+    },
+    {
+      "valor": "200 mil+",
+      "rotulo": "seguidores no Instagram e no LinkedIn"
+    }
+  ],
+  "formacao": [
+    {
+      "periodo": "desde 2021, qualificação aprovada em abril de 2026",
+      "titulo": "Doutorado em Comunicação Social",
+      "texto": "Universidade Metodista de São Paulo (UMESP), bolsista PROSUC/CAPES. Tese: \"Entre algoritmos e ancestralidades: interfaces comunicacionais entre a inteligência artificial e as epistemologias indígenas\", orientada pelo Prof. Dr. Dimas A. Künsch."
+    },
+    {
+      "periodo": "2008 a 2010",
+      "titulo": "Mestrado em Economia de Empresas",
+      "texto": "FEAD, Belo Horizonte. Dissertação sobre captação de recursos (fundraising) em instituições de ensino superior sem fins lucrativos."
+    },
+    {
+      "periodo": "2006",
+      "titulo": "Bacharelado em Administração de Empresas",
+      "texto": "Instituto Metodista Izabela Hendrix (IMIH), Belo Horizonte."
+    },
+    {
+      "periodo": "",
+      "titulo": "Licenciatura em História",
+      "texto": ""
+    },
+    {
+      "periodo": "",
+      "titulo": "Especialização em Gestão Educacional",
+      "texto": "Em curso: Pedagogia Empresarial e Metodologia e Gestão para EAD."
+    }
+  ],
+  "pesquisa": [
+    {
+      "titulo": "Cátedra UNESCO Metodista",
+      "texto": "Pesquisador, Parque Tecnológico de Santo André (SP)"
+    },
+    {
+      "titulo": "Grupo de pesquisa do Prof. Dr. Fábio B. Josgrilberg",
+      "texto": "UMESP, 2022 a 2023"
+    },
+    {
+      "titulo": "Linha de investigação",
+      "texto": "Inteligência artificial, epistemicídio digital e epistemologias indígenas do Sul Global"
+    },
+    {
+      "titulo": "Gestão estratégica das organizações",
+      "texto": "Captação de recursos e gestão de instituições de ensino superior"
+    }
+  ],
+  "carreira_titulo": "Carreira na gestão do ensino superior",
+  "carreira_texto": "Da sala de aula a distância à direção de faculdade, passando pela expansão de polos e pela coordenação de cursos presenciais e EAD.",
+  "carreira": [
+    {
+      "periodo": "2007 a 2010",
+      "instituicao": "Instituto Metodista Izabela Hendrix",
+      "texto": "Início na gestão institucional, na área de recursos humanos.",
+      "local": "Belo Horizonte, MG"
+    },
+    {
+      "periodo": "2010 a 2012",
+      "instituicao": "UNIDERP, educação a distância",
+      "texto": "Professor tutor a distância e coordenador adjunto do curso de Administração EAD.",
+      "local": "Rede Anhanguera"
+    },
+    {
+      "periodo": "2012 a 2015",
+      "instituicao": "Faculdade Anhanguera de Campinas",
+      "texto": "Coordenador dos cursos de Administração, Ciências Contábeis, Logística, Marketing e Processos Gerenciais.",
+      "local": "Campinas, SP"
+    },
+    {
+      "periodo": "2016",
+      "instituicao": "Faculdade Metodista Granbery",
+      "texto": "Diretor da faculdade, empossado em culto da Rede Metodista. Presidiu colações de grau.",
+      "local": "Juiz de Fora, MG"
+    },
+    {
+      "periodo": "2016 a 2018",
+      "instituicao": "Universidade Metodista de São Paulo",
+      "texto": "Gerente de expansão e desenvolvimento de polos EAD: reestruturação de polos próprios e parceiros e implantação do processo comercial.",
+      "local": "São Paulo e Rio de Janeiro"
+    },
+    {
+      "periodo": "2018 a 2020",
+      "instituicao": "Centro Universitário Metodista Izabela Hendrix",
+      "texto": "Gerente de novos negócios e coordenador do curso de Administração.",
+      "local": "Belo Horizonte, MG"
+    },
+    {
+      "periodo": "desde 2020",
+      "instituicao": "Walker Consultoria Educacional",
+      "texto": "Consultoria para IPEMIG / Faculdade Batista, UNIASSELVI e FASUL Educacional.",
+      "local": "Atendimento nacional"
+    },
+    {
+      "periodo": "",
+      "instituicao": "UNAMA",
+      "texto": "Atuação na gestão acadêmica do grupo Ser Educacional.",
+      "local": ""
+    },
+    {
+      "periodo": "2022 a 2026",
+      "instituicao": "Faculdade Santa Marcelina",
+      "texto": "Vice-Diretor Acadêmico.",
+      "local": "Muriaé, MG"
+    }
+  ],
+  "reconhecimentos_titulo": "Reconhecimentos e atuação institucional",
+  "reconhecimentos_texto": "Funções de avaliação, prêmios de desempenho e homenagens recebidas de alunos e instituições.",
+  "reconhecimentos": [
+    {
+      "titulo": "Avaliador do BASis/INEP",
+      "texto": "Banco de Avaliadores do Sinaes, habilitado para avaliações de cursos e instituições."
+    },
+    {
+      "titulo": "Parecerista do Guia do Estudante",
+      "texto": "Avaliação de cursos superiores para a Editora Abril, de 2015 a 2020."
+    },
+    {
+      "titulo": "Parlamento Mundial da Educação",
+      "texto": "Membro desde 2026."
+    },
+    {
+      "titulo": "Melhor desempenho docente",
+      "texto": "Maior índice no Programa de Avaliação Institucional da Anhanguera Campinas, 2014."
+    },
+    {
+      "titulo": "Paraninfo de Administração",
+      "texto": "Escolhido pela turma da Anhanguera Campinas, 2014."
+    },
+    {
+      "titulo": "Homenagem aos Mestres",
+      "texto": "Recebida de alunos da Anhanguera Campinas (2012 a 2014), dos polos UMESP de Guarulhos, Mauá e Guaratinguetá (2016) e do Izabela Hendrix (2019)."
+    }
+  ],
+  "livros_titulo": "Livros",
+  "livros_texto": "Seis obras publicadas, como autor, coautor e organizador, e a tese de doutorado a caminho do livro.",
+  "proximo_livro": {
+    "ativo": true,
+    "selo": "Próximo lançamento",
+    "titulo": "Entre Algoritmos e Ancestralidades",
+    "subtitulo": "Interfaces comunicacionais entre a inteligência artificial e as epistemologias indígenas",
+    "texto": "O livro nasce da tese de doutorado em Comunicação Social na Universidade Metodista de São Paulo. Escuto o que os sistemas de inteligência artificial dizem, e calam, sobre os saberes indígenas do Sul Global, e pergunto que lugar a tecnologia reserva para outras formas de conhecer.",
+    "capa": "/capa-entre-algoritmos.jpg"
+  },
+  "livros": [
+    {
+      "titulo": "A Universidade do Futuro",
+      "subtitulo": "Novos modelos de gestão e captação de recursos no terceiro setor",
+      "detalhes": "1ª edição, fevereiro de 2026. Publicação independente. Autor",
+      "capa": "/capa-universidade-do-futuro.jpg",
+      "link": "",
+      "link_compra": "https://pay.kiwify.com.br/eQv2T3t",
+      "texto_botao": "Comprar o e-book, R$ 39,90"
+    },
+    {
+      "titulo": "Múltiplos Olhares para a Inclusão",
+      "subtitulo": "Vivências, teoria e prática em diferentes espaços sociais",
+      "detalhes": "E-book, InterAção / Universidade Metodista e Cátedra UNESCO, 2025. Walker é um dos organizadores.",
+      "capa": "/capa-multiplos-olhares.jpg",
+      "link": "https://doi.org/10.15603/ina.vol.1.2059",
+      "link_compra": "",
+      "texto_botao": "Ler o livro"
+    },
+    {
+      "titulo": "Habilidades Gerenciais",
+      "subtitulo": "Tudo que um gerente precisa saber, ter e fazer nas organizações",
+      "detalhes": "1ª edição, São Paulo, 2017. Autor",
+      "capa": "/capa-habilidades.jpg",
+      "link": "",
+      "link_compra": "",
+      "texto_botao": ""
+    },
+    {
+      "titulo": "Competências Profissionais",
+      "subtitulo": "Como se destacar no mercado corporativo",
+      "detalhes": "Série Múltiplos Conhecimentos. Editora In House, Jundiaí (SP), 2015, 350 páginas. Organização de Cristiano A. Bredda; Walker é coautor",
+      "capa": "/capa-competencias.jpg",
+      "link": "",
+      "link_compra": "",
+      "texto_botao": ""
+    },
+    {
+      "titulo": "Educação & Gestão",
+      "subtitulo": "Modelos educacionais e métodos de gestão aplicados à educação",
+      "detalhes": "Organização de Cristiano A. Bredda. Walker é coautor",
+      "capa": "/capa-educacao-gestao.jpg",
+      "link": "",
+      "link_compra": "",
+      "texto_botao": ""
+    },
+    {
+      "titulo": "Educação sem Fronteiras: Administração",
+      "subtitulo": "Volume 8, com capítulos sobre gerenciamento de projetos",
+      "detalhes": "Anhanguera Publicações, Valinhos (SP), 2011, 164 páginas. Coautoria",
+      "capa": "/capa-administracao.jpg",
+      "link": "",
+      "link_compra": "",
+      "texto_botao": ""
+    }
+  ],
+  "foto_destaque": {
+    "ativo": true,
+    "imagem": "/foto-lancamento.jpg",
+    "titulo": "Lançamento de Competências Profissionais",
+    "texto": "Noite de autógrafos com os coautores do livro, organizado por Cristiano A. Bredda (Editora In House, 2015)."
+  },
+  "chamada_final": "Quer essa experiência a favor da sua instituição?"
+}

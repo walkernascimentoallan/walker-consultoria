@@ -1,0 +1,50 @@
+{
+  "numeros": [
+    {
+      "valor": "2004",
+      "rotulo": "início na gestão do ensino superior"
+    },
+    {
+      "valor": "6",
+      "rotulo": "livros publicados como autor, coautor e organizador"
+    },
+    {
+      "valor": "6",
+      "rotulo": "estados com atuação em faculdades e redes"
+    },
+    {
+      "valor": "38 mil",
+      "rotulo": "seguidores no LinkedIn, na gestão educacional"
+    }
+  ],
+  "consultoria_titulo": "Consultoria",
+  "consultoria_texto": "Frentes que podem ser contratadas isoladamente ou como plano completo de adequação.",
+  "radar_titulo": "Radar do Novo Marco",
+  "radar_texto": "Análises curtas para quem decide. Sem juridiquês.",
+  "quem_titulo": "Quem conduz o trabalho",
+  "quem_foto": "/foto-walker-quadrada.jpg",
+  "quem_texto": "Sou o Prof. Walker Nascimento. Fui reitor, pró-reitor, diretor e vice-diretor acadêmico, gerenciei expansão de polos EAD e sou avaliador do BASis/INEP. Hoje faço doutorado em Comunicação Social na UMESP e pesquiso na Cátedra UNESCO Metodista.\n\nAtendo pessoalmente cada instituição. Você fala com quem vai fazer o trabalho.",
+  "cursos_titulo": "Cursos e e-book",
+  "cursos_texto": "Formação para quem faz a gestão do ensino superior acontecer.",
+  "academia_titulo": "Na academia e nas redes de educação",
+  "academia_texto": "Onde o trabalho de consultoria encontra pesquisa e avaliação.",
+  "academia": [
+    {
+      "titulo": "Avaliador BASis/INEP",
+      "texto": "Banco de Avaliadores do Sinaes"
+    },
+    {
+      "titulo": "Cátedra UNESCO Metodista",
+      "texto": "Pesquisador, Parque Tecnológico de Santo André"
+    },
+    {
+      "titulo": "Parlamento Mundial da Educação",
+      "texto": "Membro desde 2026"
+    },
+    {
+      "titulo": "Doutorado na UMESP",
+      "texto": "Comunicação Social, IA e epistemologias do Sul Global"
+    }
+  ],
+  "chamada_final": "Vamos olhar a sua instituição?"
+}

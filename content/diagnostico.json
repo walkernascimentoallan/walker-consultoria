@@ -1,0 +1,36 @@
+{
+  "titulo": "Sua IES está pronta para maio de 2027?",
+  "texto": "Dez perguntas, três minutos. Responda com franqueza: o resultado aparece na hora, só para você.",
+  "perguntas": [
+    {
+      "texto": "Já fizemos o inventário de todos os cursos, com o formato de oferta atual de cada um."
+    },
+    {
+      "texto": "Cada curso foi conferido com os mínimos de carga presencial e síncrona do seu formato."
+    },
+    {
+      "texto": "Os cursos que passaram a ser vedados em EAD têm plano de transição para alunos e polos."
+    },
+    {
+      "texto": "Os PPCs já descrevem as atividades presenciais e síncronas mediadas, com carga horária."
+    },
+    {
+      "texto": "As atividades síncronas respeitam o limite de 70 estudantes por docente ou mediador, com controle de frequência."
+    },
+    {
+      "texto": "Existe a função de mediador pedagógico, separada da tutoria administrativa."
+    },
+    {
+      "texto": "Os polos foram revisados: responsável, infraestrutura e cadastro no e-MEC."
+    },
+    {
+      "texto": "Os contratos com parceiros de polo foram revistos para a nova regra."
+    },
+    {
+      "texto": "PDI e regimento já foram atualizados."
+    },
+    {
+      "texto": "Há um cronograma com responsáveis e datas até maio de 2027."
+    }
+  ]
+}

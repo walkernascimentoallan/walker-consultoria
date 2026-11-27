@@ -1,0 +1,38 @@
+{
+  "eventos": [
+    {
+      "ativo": true,
+      "data": "Em breve",
+      "data_detalhe": "data em definição",
+      "tipo": "Live gratuita · on-line",
+      "titulo": "O que fazer nos últimos meses do prazo do novo marco",
+      "texto": "Os pontos que ainda travam as instituições, o que o MEC deve olhar depois de maio de 2027 e um tempo aberto para perguntas.",
+      "itens": [
+        {
+          "texto": "Para diretores, coordenadores, procuradores institucionais e mantenedores"
+        },
+        {
+          "texto": "Duração prevista de 1 hora"
+        },
+        {
+          "texto": "Inscritos recebem o link e o material de apoio"
+        }
+      ],
+      "link_inscricao": ""
+    }
+  ],
+  "palestras": [
+    {
+      "titulo": "Palestra: o novo marco em uma hora",
+      "texto": "Para conselhos, mantenedoras e equipes amplas. O que muda, o prazo e as decisões que cabem à direção."
+    },
+    {
+      "titulo": "Oficina com NDE e coordenações",
+      "texto": "Trabalho prático sobre o PPC de cada curso: carga horária, atividades síncronas e avaliação."
+    },
+    {
+      "titulo": "Encontro com gestores de polo",
+      "texto": "O papel do polo no novo marco, rotinas, indicadores e preparação para visitas."
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "atualizado_em": "27 de novembro de 2026",
+  "normas": [
+    {
+      "ano": "2025",
+      "data": "19/05/2025",
+      "numero": "Decreto nº 12.456",
+      "tipo": "Decreto",
+      "assunto": "A base do novo marco",
+      "resumo": "Institui a nova política de educação a distância na graduação, cria o formato semipresencial, define atividades síncronas mediadas, lista os cursos vedados em EAD e dá dois anos de transição. Altera o Decreto nº 9.235/2017.",
+      "relacao": "Regulamentado pelas Portarias MEC nº 378, 381 e 506/2025.",
+      "link": "https://www.planalto.gov.br/ccivil_03/_ato2023-2026/2025/decreto/D12456.htm",
+      "fonte": "Planalto"
+    },
+    {
+      "ano": "2025",
+      "data": "19/05/2025",
+      "numero": "Portaria MEC nº 378",
+      "tipo": "Portaria MEC",
+      "assunto": "Formatos de oferta",
+      "resumo": "Define os formatos presencial, semipresencial e a distância por área de curso, com os percentuais mínimos de atividades presenciais e síncronas mediadas.",
+      "relacao": "Complementa o Decreto nº 12.456/2025.",
+      "link": "https://www.in.gov.br/en/web/dou/-/portaria-mec-n-378-de-19-de-maio-de-2025-630395302",
+      "fonte": "Diário Oficial"
+    },
+    {
+      "ano": "2025",
+      "data": "20/05/2025",
+      "numero": "Portaria MEC nº 381",
+      "tipo": "Portaria MEC",
+      "assunto": "Regras de transição",
+      "resumo": "Regras de transição para aplicar o decreto: cursos vedados em extinção, direito dos alunos já matriculados, processos em trâmite no e-MEC e calendário regulatório de 2025.",
+      "relacao": "Alterada pela Portaria MEC nº 795/2025. Complementada pela Portaria MEC nº 921/2025.",
+      "link": "https://www.in.gov.br/web/dou/-/portaria-mec-n-381-de-20-de-maio-de-2025-630693013",
+      "fonte": "Diário Oficial"
+    },
+    {
+      "ano": "2025",
+      "data": "maio de 2025",
+      "numero": "Referenciais de Qualidade",
+      "tipo": "Documento MEC",
+      "assunto": "Cursos de graduação com oferta a distância",
+      "resumo": "Princípios e critérios de qualidade para a oferta a distância, em substituição ao documento de 2007. Orienta plataformas, materiais, polos e avaliação.",
+      "relacao": "Base de leitura para avaliadores e para o PPC.",
+      "link": "https://www.gov.br/mec/pt-br/politica-regulacao-supervisao-educacao-superior/ead/legislacao",
+      "fonte": "MEC"
+    },
+    {
+      "ano": "2025",
+      "data": "10/07/2025",
+      "numero": "Portaria MEC nº 506",
+      "tipo": "Portaria MEC",
+      "assunto": "Docentes, mediadores, polos e avaliação",
+      "resumo": "Regulamenta a formação e as atribuições de docentes, mediadores pedagógicos, tutores e responsáveis por polo, as atividades presenciais, as avaliações, os materiais didáticos e a criação e extinção de polos. Publicada no DOU em 14/07/2025.",
+      "relacao": "Alterada pela Portaria MEC nº 794/2025.",
+      "link": "https://www.in.gov.br/en/web/dou/-/portaria-mec-n-506-de-10-de-julho-de-2025-641610361",
+      "fonte": "Diário Oficial"
+    },
+    {
+      "ano": "2025",
+      "data": "25/11/2025",
+      "numero": "Portaria MEC nº 794",
+      "tipo": "Portaria MEC",
+      "assunto": "Ajustes na Portaria 506",
+      "resumo": "Altera a Portaria nº 506/2025. Entre as mudanças, limita a dez os polos vinculados nos pedidos de credenciamento e recredenciamento com formatos a distância e semipresencial.",
+      "relacao": "Altera a Portaria MEC nº 506/2025.",
+      "link": "https://in.gov.br/en/web/dou/-/portaria-mec-n-794-de-25-de-novembro-de-2025-671023227",
+      "fonte": "Diário Oficial"
+    },
+    {
+      "ano": "2025",
+      "data": "25/11/2025",
+      "numero": "Portaria MEC nº 795",
+      "tipo": "Portaria MEC",
+      "assunto": "Ajustes nas regras de transição",
+      "resumo": "Altera a Portaria nº 381/2025 e reorganiza pontos das regras de transição e do ciclo regulatório.",
+      "relacao": "Altera a Portaria MEC nº 381/2025.",
+      "link": "https://abmes.org.br/legislacoes/detalhe/5329",
+      "fonte": "ABMES"
+    },
+    {
+      "ano": "2025",
+      "data": "24/12/2025",
+      "numero": "Portaria MEC nº 921",
+      "tipo": "Portaria MEC",
+      "assunto": "Transição de Enfermagem",
+      "resumo": "Cria um regime transitório para as mantenedoras que ofertavam Enfermagem a distância reorganizarem a oferta no formato presencial.",
+      "relacao": "Aplica, no que couber, a Portaria MEC nº 381/2025.",
+      "link": "https://abmes.org.br/arquivos/legislacoes/Portaria-mec-921-2025-12-24.pdf",
+      "fonte": "ABMES"
+    },
+    {
+      "ano": "2026",
+      "data": "01/04/2026",
+      "numero": "Portaria SERES/MEC nº 98",
+      "tipo": "Portaria SERES",
+      "assunto": "Agenda regulatória de 2026",
+      "resumo": "Institui a agenda regulatória da Secretaria de Regulação e Supervisão da Educação Superior para 2026.",
+      "relacao": "Contexto: próximos atos da SERES.",
+      "link": "https://www.gov.br/mec/pt-br/politica-regulacao-supervisao-educacao-superior/legislacao",
+      "fonte": "MEC"
+    }
+  ]
+}

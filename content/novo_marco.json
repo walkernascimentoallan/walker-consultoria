@@ -1,0 +1,77 @@
+{
+  "titulo": "Guia do novo marco regulatório da educação superior",
+  "texto": "O Decreto nº 12.456/2025 redesenhou a graduação presencial, semipresencial e a distância. Aqui está o essencial, o prazo e um diagnóstico para saber onde a sua instituição está.",
+  "muda_titulo": "O que muda na prática",
+  "muda_texto": "Não é só uma questão de EAD: o desenho dos cursos, o papel dos docentes e a estrutura dos polos precisam ser revistos.",
+  "mudancas": [
+    {
+      "titulo": "Três formatos de oferta",
+      "texto": "Presencial, semipresencial e a distância passam a ter definições próprias e limites de carga horária. Cursos precisam ser reenquadrados."
+    },
+    {
+      "titulo": "Cursos vedados em EAD",
+      "texto": "Algumas graduações deixam de poder ser ofertadas integralmente a distância e entram em extinção ou migram de formato."
+    },
+    {
+      "titulo": "Mediador pedagógico",
+      "texto": "Nova função exclusivamente pedagógica, com formação compatível com o curso, distinta da tutoria administrativa."
+    },
+    {
+      "titulo": "Polos de apoio presencial",
+      "texto": "Infraestrutura, responsabilidades e atividades presenciais dos polos ganham novas exigências, com impacto em parceiros e contratos."
+    },
+    {
+      "titulo": "Atividades síncronas e presenciais",
+      "texto": "Avaliações, encontros e atividades mediadas passam a ter regras próprias, que precisam aparecer no PPC e no calendário."
+    },
+    {
+      "titulo": "Documentos institucionais",
+      "texto": "PDI, regimento, PPCs, editais e contratos educacionais precisam conversar com a nova regra antes do próximo ato regulatório."
+    }
+  ],
+  "formatos_titulo": "Os três formatos, em números",
+  "formatos_texto": "Carga horária mínima exigida em cada formato pelo Decreto nº 12.456/2025 e pela Portaria MEC nº 378/2025.",
+  "formatos": [
+    {
+      "titulo": "Presencial",
+      "numero": "70%",
+      "texto": "da carga horária, no mínimo, em atividades presenciais."
+    },
+    {
+      "titulo": "Semipresencial",
+      "numero": "30% + 20%",
+      "texto": "30% presencial (40% em alguns cursos) e mais 20% presencial ou síncrona mediada."
+    },
+    {
+      "titulo": "A distância",
+      "numero": "10% + 10%",
+      "texto": "10% presencial e mais 10% em atividades síncronas mediadas."
+    }
+  ],
+  "formatos_nota": "Atividade síncrona mediada: grupos de até 70 estudantes por docente ou mediador pedagógico, com controle de frequência. Medicina, Direito, Odontologia, Psicologia e Enfermagem são somente presenciais.",
+  "checklist_titulo": "Checklist do Novo Marco Regulatório",
+  "checklist_texto": "Dez pontos para conferir na sua instituição antes do prazo de maio de 2027. Um PDF de uma página para levar à reunião com a direção.",
+  "checklist_pdf": "/checklist-novo-marco-regulatorio.pdf",
+  "faq": [
+    {
+      "pergunta": "Minha instituição só oferece cursos presenciais. O novo marco me afeta?",
+      "resposta": "Sim. O decreto define limites de carga horária a distância também para cursos presenciais. Matrizes com componentes on-line precisam ser conferidas, e a IES pode avaliar a abertura de cursos semipresenciais."
+    },
+    {
+      "pergunta": "Até quando tenho para me adequar?",
+      "resposta": "As IES já credenciadas e com cursos autorizados têm até dois anos a partir da publicação do decreto, ou seja, até maio de 2027. Alguns pontos, como cursos vedados em EAD, tiveram prazos próprios mais curtos. O diagnóstico confirma o que vale para cada curso."
+    },
+    {
+      "pergunta": "Vocês protocolam processos no e-MEC?",
+      "resposta": "A consultoria prepara a documentação, orienta o procurador institucional e acompanha o processo. O protocolo é feito pela própria instituição, que mantém o controle dos seus atos."
+    },
+    {
+      "pergunta": "O atendimento é presencial ou remoto?",
+      "resposta": "Os dois. Diagnóstico e acompanhamento costumam ser remotos; visitas presenciais são combinadas para oficinas com NDE, coordenações e polos, e para a preparação de avaliações in loco."
+    },
+    {
+      "pergunta": "Quanto custa?",
+      "resposta": "Depende do porte da instituição, do número de cursos e das frentes contratadas. Depois de uma primeira conversa sem custo, você recebe uma proposta com escopo, prazo e valor fechados."
+    }
+  ]
+}
