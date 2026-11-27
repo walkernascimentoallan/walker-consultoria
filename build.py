@@ -286,7 +286,7 @@ def banners():
                 art = f'<div class="doc" aria-hidden="true"><b>{e(b.get("legenda_titulo"))}</b>' + ''.join(f'<span>{e(x.get("texto"))}</span>' for x in its) + '</div>'
                 cls = bgs[i % 3]
         else:  # capa
-            art = f'<img src="{e(img)}" alt="{e(b.get("titulo"))}" loading="lazy">' if img else ''
+            art = f'<div class="bk3d"><span class="bk-glow" aria-hidden="true"></span><div class="bk-body"><img src="{e(img)}" alt="Capa do e-book {e(b.get("titulo"))}" loading="lazy"></div></div>' if img else ''
             cls = bgs[i % 3]
         out.append(f'<article class="slide {cls}{on}" aria-roledescription="slide" aria-label="{lbl}"><div>{text}</div><div class="art">{art}</div></article>')
     return f'''<section class="promo promo-top" aria-roledescription="carrossel" aria-label="Destaques"><div class="wrap"><div class="stage" id="promo">{''.join(out)}</div>
@@ -547,6 +547,15 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
 
 
 EXTRA_CSS = '''
+.slide .art .bk3d{position:relative;display:grid;place-items:center;perspective:1400px;padding:24px 0}
+.bk-glow{position:absolute;width:120%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(227,196,122,.28),rgba(227,196,122,.06) 45%,transparent 70%);z-index:0}
+.bk-body{position:relative;z-index:1;width:min(320px,62vw);transform:rotateY(-18deg) rotateX(3deg);transform-style:preserve-3d;transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.bk3d:hover .bk-body{transform:rotateY(-8deg) rotateX(2deg)}
+.slide .art .bk-body img{display:block;width:100%!important;max-width:none!important;max-height:none!important;height:auto;border-radius:2px 6px 6px 2px;box-shadow:inset 6px 0 10px rgba(0,0,0,.35),8px 0 0 -1px #e9e3d3,10px 1px 0 -1px #cfc8b6,12px 2px 0 -1px #e9e3d3,-24px 34px 60px rgba(0,0,0,.6),-6px 8px 14px rgba(0,0,0,.4)}
+.bk-body:before{content:"";position:absolute;inset:0 auto 0 0;width:14px;background:linear-gradient(90deg,rgba(255,255,255,.18),rgba(0,0,0,.25) 40%,transparent);z-index:2;border-radius:2px 0 0 2px}
+.bk-pages{position:absolute;top:4px;bottom:4px;right:-14px;width:14px;background:repeating-linear-gradient(90deg,#f3efe4 0 1px,#d9d3c3 1px 2px);transform:rotateY(90deg);transform-origin:left;border-radius:0 3px 3px 0}
+@media(prefers-reduced-motion:reduce){.bk-body{transition:none}}
+
 .brand img.wordmark{height:46px;width:auto;display:block}
 .site-foot .brand img.wordmark{height:56px}
 @media(max-width:480px){.brand img.wordmark{height:38px}}
