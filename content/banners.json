@@ -1,4 +1,5 @@
 {
+  "tempo_segundos": 9,
   "banners": [
     {
       "ativo": true,
@@ -33,7 +34,7 @@
       "itens": []
     },
     {
-      "ativo": true,
+      "ativo": false,
       "modelo": "foto",
       "imagem": "/foto-walker.jpg",
       "selo": "Sobre o consultor",
@@ -94,7 +95,7 @@
       "itens": []
     },
     {
-      "ativo": true,
+      "ativo": false,
       "modelo": "lista",
       "imagem": "",
       "selo": "Material gratuito",
@@ -131,7 +132,7 @@
       ]
     },
     {
-      "ativo": true,
+      "ativo": false,
       "modelo": "lista",
       "imagem": "",
       "selo": "Consultoria",

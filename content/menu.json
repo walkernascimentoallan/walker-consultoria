@@ -1,49 +1,20 @@
 {
   "abas": [
-    {
-      "pagina": "consultoria.html",
-      "nome": "Consultoria",
-      "mostrar": true
-    },
-    {
-      "pagina": "novo-marco.html",
-      "nome": "Novo Marco",
-      "mostrar": true
-    },
-    {
-      "pagina": "legislacao.html",
-      "nome": "Legislação",
-      "mostrar": true
-    },
-    {
-      "pagina": "radar.html",
-      "nome": "Radar",
-      "mostrar": true
-    },
-    {
-      "pagina": "cursos.html",
-      "nome": "Cursos",
-      "mostrar": true
-    },
-    {
-      "pagina": "eventos.html",
-      "nome": "Eventos",
-      "mostrar": true
-    },
-    {
-      "pagina": "sobre.html",
-      "nome": "Sobre",
-      "mostrar": true
-    },
-    {
-      "pagina": "publicacoes.html",
-      "nome": "Publicações",
-      "mostrar": true
-    },
-    {
-      "pagina": "onde-atuei.html",
-      "nome": "Onde atuei",
-      "mostrar": true
-    }
+    {"nome": "Consultoria", "pagina": "consultoria.html", "mostrar": true, "subitens": []},
+    {"nome": "Novo Marco", "pagina": "novo-marco.html", "mostrar": true, "subitens": [
+      {"nome": "Guia do Novo Marco", "pagina": "novo-marco.html"},
+      {"nome": "Diagnóstico gratuito", "pagina": "novo-marco.html#diagnostico"},
+      {"nome": "Legislação", "pagina": "legislacao.html"}
+    ]},
+    {"nome": "Conteúdos", "pagina": "radar.html", "mostrar": true, "subitens": [
+      {"nome": "Radar (artigos)", "pagina": "radar.html"},
+      {"nome": "Cursos e e-book", "pagina": "cursos.html"},
+      {"nome": "Eventos", "pagina": "eventos.html"}
+    ]},
+    {"nome": "Sobre", "pagina": "sobre.html", "mostrar": true, "subitens": [
+      {"nome": "Trajetória", "pagina": "sobre.html"},
+      {"nome": "Publicações", "pagina": "publicacoes.html"},
+      {"nome": "Onde atuei", "pagina": "onde-atuei.html"}
+    ]}
   ]
 }
