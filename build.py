@@ -60,7 +60,7 @@ WA = f'''<a class="wa-float" href="https://wa.me/{WA_NUM}?text=Ol%C3%A1%2C%20Pro
 <style>.wa-float{{position:fixed;right:18px;bottom:18px;z-index:50;width:58px;height:58px;border-radius:50%;background:#1f8f4e;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}}.wa-float:hover{{background:#18763f}}</style>
 <script>document.querySelector('.wa-float').addEventListener('click',()=>{{try{{gtag('event','clique_whatsapp',{{origem:'botao_flutuante'}})}}catch(e){{}}}})</script>'''
 
-_NAV_PADRAO = [('sobre.html', 'Sobre'), ('onde-atuei.html', 'Onde atuei'), ('consultoria.html', 'Consultoria'), ('novo-marco.html', 'Novo Marco'),
+_NAV_PADRAO = [('sobre.html', 'Sobre'), ('publicacoes.html', 'Publicações'), ('onde-atuei.html', 'Onde atuei'), ('consultoria.html', 'Consultoria'), ('novo-marco.html', 'Novo Marco'),
        ('legislacao.html', 'Legislação'), ('cursos.html', 'Cursos'), ('eventos.html', 'Eventos'), ('radar.html', 'Radar')]
 try:
     NAV = [(a['pagina'].strip().lstrip('/'), a.get('nome') or a['pagina']) for a in J('menu.json').get('abas', []) if a.get('pagina') and a.get('mostrar', True) is not False] or _NAV_PADRAO
@@ -94,7 +94,7 @@ def footer():
 <div class="fn-row"><input name="nome" placeholder="Seu nome" required autocomplete="name" aria-label="Seu nome"><input name="email" type="email" placeholder="Seu e-mail" required autocomplete="email" aria-label="Seu e-mail"></div>
 <label class="consent"><input type="checkbox" name="consentimento" value="sim" required> Autorizo o envio do boletim por e-mail, conforme a LGPD. Posso cancelar quando quiser.</label>
 <button class="btn gold" type="submit">Assinar o boletim</button></form>
-<div class="foot-col"><b>O site</b><a href="/sobre.html">Sobre o Prof. Walker</a><a href="/consultoria.html">Consultoria</a><a href="/novo-marco.html">Guia do Novo Marco</a><a href="/legislacao.html">Legislação do novo marco</a><a href="/novo-marco.html#diagnostico">Diagnóstico gratuito</a><a href="/onde-atuei.html">Onde atuei</a><a href="/cursos.html">Cursos e e-book</a><a href="/eventos.html">Eventos</a><a href="/radar.html">Radar e biblioteca</a></div>
+<div class="foot-col"><b>O site</b><a href="/sobre.html">Sobre o Prof. Walker</a><a href="/consultoria.html">Consultoria</a><a href="/novo-marco.html">Guia do Novo Marco</a><a href="/legislacao.html">Legislação do novo marco</a><a href="/novo-marco.html#diagnostico">Diagnóstico gratuito</a><a href="/onde-atuei.html">Onde atuei</a><a href="/publicacoes.html">Publicações</a><a href="/cursos.html">Cursos e e-book</a><a href="/eventos.html">Eventos</a><a href="/radar.html">Radar e biblioteca</a></div>
 <div class="foot-col"><b>Contato</b><a href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">WhatsApp {e(SITE['whatsapp_texto'])}</a><a href="mailto:{e(SITE['email'])}">{e(SITE['email'])}</a><a href="{e(SITE['linkedin'])}" target="_blank" rel="noopener">LinkedIn</a><a href="{e(SITE['instagram'])}" target="_blank" rel="noopener">Instagram</a><a href="/contato.html">Agendar conversa</a></div>
 </div><div class="wrap foot-legal"><span>© {datetime.date.today().year} Walker Consultoria Educacional</span><a href="/politica-de-privacidade.html">Política de privacidade</a></div></footer>'''
 
@@ -443,10 +443,23 @@ document.getElementById('drAgain').addEventListener('click',()=>{f.reset();r.hid
 <section class="band tint" id="carreira"><div class="wrap"><div class="head"><h2>{e(S["carreira_titulo"])}</h2><p class="soft">{e(S["carreira_texto"])}</p></div><ol class="career">{car}</ol></div></section>
 <section class="band tint" id="reconhecimentos" style="padding-top:0"><div class="wrap"><div class="head"><h2>{e(S["reconhecimentos_titulo"])}</h2><p class="soft">{e(S["reconhecimentos_texto"])}</p></div><div class="awards">{aw}</div>
 <div class="btns" style="margin-top:28px"><a class="btn gold" href="{e(SITE["lattes"])}" target="_blank" rel="noopener">Ver o Currículo Lattes completo</a><a class="btn line" href="/onde-atuei.html">Ver o mapa de onde atuei</a></div></div></section>
-<section class="band" id="livros"><div class="wrap"><div class="head"><h2>{e(S["livros_titulo"])}</h2><p class="soft">{e(S["livros_texto"])}</p></div>{nbh}<div class="books">{books}</div>{fdh}</div></section>
+<section class="band" id="livros"><div class="wrap"><div class="head"><h2>{e(S["livros_titulo"])}</h2><p class="soft">{e(S["livros_texto"])}</p></div>{nbh}<div class="books">{books}</div><div class="btns" style="margin-top:28px"><a class="btn line" href="/publicacoes.html">Ver todas as publicações</a></div>{fdh}</div></section>
 {mapa}
 <section class="band dark"><div class="wrap closing"><h2>{e(S["chamada_final"])}</h2><div class="btns" style="margin-top:0"><a class="btn gold" href="/contato.html">Agendar diagnóstico</a><a class="btn ghost" href="/onde-atuei.html">Ver onde já atuei</a></div></div></section>'''
     page('sobre.html', 'Prof. Walker Nascimento, trajetória | Walker Consultoria Educacional', 'Reitor, diretor e vice-diretor acadêmico, avaliador do BASis/INEP, pesquisador da Cátedra UNESCO Metodista e autor de seis livros.', b, active='sobre.html', tail='<script>{' + UFS_JS + '}' + UF_TIP_JS + '</script>')
+
+    # ----- publicações -----
+    PB = J('publicacoes.json')
+    grupos = ''
+    for gi, g in enumerate(PB.get('grupos', [])):
+        itens = ''.join(f'''<li><span class="pub-ano">{e(it.get("ano"))}</span><div><b>{f'<a href="{e(it["link"])}" target="_blank" rel="noopener">{e(it["titulo"])}</a>' if it.get("link") else e(it["titulo"])}</b><span>{e(it.get("onde"))}{(" " + e(it["coautores"]) + ".") if it.get("coautores") else ""}</span></div></li>''' for it in g.get('itens', []))
+        grupos += f'<section class="band{" tint" if gi % 2 == 0 else ""}"><div class="wrap"><div class="head"><h2>{e(g["titulo"])}</h2></div><ol class="pubs">{itens}</ol></div></section>'
+    b = hero([('/sobre.html', 'Sobre'), (None, PB.get('titulo') or 'Publicações')], PB.get('titulo') or 'Publicações', PB.get('texto'),
+             f'<a class="btn gold" href="#livros">Ver os livros</a><a class="btn ghost" href="{e(SITE["lattes"])}" target="_blank" rel="noopener">Currículo Lattes</a>')
+    b += f'<section class="band" id="livros"><div class="wrap"><div class="head"><h2>{e(PB.get("livros_titulo") or "Livros")}</h2><p class="soft">{e(PB.get("livros_texto"))}</p></div>{nbh}<div class="books">{books}</div></div></section>'
+    b += grupos + cta_band('Quer levar esse conteúdo para a sua instituição?')
+    page('publicacoes.html', 'Publicações do Prof. Walker Nascimento | Walker Consultoria Educacional',
+         'Livros, capítulos, trabalhos em anais de congressos e apresentações do Prof. Walker Nascimento sobre gestão do ensino superior, comunicação e captação de recursos.', b, active='publicacoes.html')
     b = hero([('/sobre.html', 'Sobre'), (None, 'Onde atuei')], 'Onde atuei', 'Faculdades, redes e polos em seis estados brasileiros. Toque em um estado no mapa para ver a atuação.',
              f'<a class="btn gold" href="/sobre.html">Voltar à trajetória</a><a class="btn ghost" href="{e(SITE["lattes"])}" target="_blank" rel="noopener">Currículo Lattes</a>') + mapa + cta_band('Vamos olhar a sua instituição?')
     page('onde-atuei.html', 'Onde atuei | Prof. Walker Nascimento', 'Mapa dos estados onde o Prof. Walker Nascimento atuou na gestão do ensino superior.', b, active='onde-atuei.html', tail='<script>{' + UFS_JS + '}' + UF_TIP_JS + '</script>')
@@ -498,7 +511,16 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
 
 
 EXTRA_CSS = '''
-@media(min-width:1261px){.bar{flex-wrap:nowrap}#mainnav a{padding:10px 11px}}
+.pubs{list-style:none;margin:0;padding:0;display:grid;gap:0;max-width:900px}
+.pubs li{display:grid;grid-template-columns:72px 1fr;gap:18px;padding:18px 0;border-bottom:1px solid #d9e4e2}
+.band.dark .pubs li{border-color:#1f5254}
+.pub-ano{font-weight:800;color:#a8862f;font-size:17px;padding-top:2px}
+.pubs b{display:block;font-size:17px;line-height:1.4;margin-bottom:4px}
+.pubs b a{color:inherit}
+.pubs li span:not(.pub-ano){color:#4d6664;font-size:15px;line-height:1.5}
+@media(max-width:560px){.pubs li{grid-template-columns:1fr;gap:4px}}
+@media(min-width:1261px){.bar{flex-wrap:nowrap;max-width:1400px;padding-left:clamp(16px,3.5vw,48px);padding-right:clamp(16px,3.5vw,48px)}#mainnav a{padding:10px 10px}}
+@media(min-width:1261px) and (max-width:1380px){#mainnav a{padding:10px 7px;font-size:14.5px}.bar{gap:10px}}
 .uf-tip{position:fixed;z-index:60;pointer-events:none;background:#0a2c2e;color:#fff;font-size:14px;font-weight:600;padding:6px 10px;border-radius:8px;border:1px solid #c9a24a;opacity:0;transition:opacity .12s;white-space:nowrap}
 #mapa path[data-nome]{cursor:pointer}
 .promo .art img.plain{box-shadow:none!important;border-radius:0!important;max-height:300px}
