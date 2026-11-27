@@ -96,7 +96,7 @@ def header(active):
                   f'<div class="dd-menu" id="dd{i}">{subs}</div></div>')
     return f'''<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header><div class="bar">
-<a class="brand" href="/" aria-label="Walker Consultoria Educacional, página inicial">{MARK}<img class="wordmark" src="/marca-walker-nome.svg" alt="" width="186" height="46"></a>
+<a class="brand" href="/" aria-label="Walker Consultoria Educacional, página inicial">{MARK}</a>
 <button class="theme-btn" type="button" aria-label="Ativar modo noturno" title="Modo noturno"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg></button>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="mb-ico" aria-hidden="true"></span><span class="mb-txt">Menu</span></button>
 <nav id="mainnav" aria-label="Principal">{links}<a class="cta" href="/contato.html"{CUR if active == "contato.html" else ""}>Agendar conversa</a></nav>
@@ -105,7 +105,7 @@ def header(active):
 
 def footer():
     return f'''<footer class="site-foot"><div class="wrap foot-grid">
-<div class="foot-brand"><a class="brand" href="/" aria-label="Walker Consultoria Educacional, página inicial">{MARK}<img class="wordmark" src="/marca-walker-nome.svg" alt="" width="186" height="46"></a>
+<div class="foot-brand"><a class="brand" href="/" aria-label="Walker Consultoria Educacional, página inicial">{MARK}</a>
 <p>{e(SITE['rodape'])}</p><p class="foot-loc">{e(SITE['cidade'])}</p></div>
 <form class="foot-news" name="radar" method="POST" action="/obrigado.html?f=radar" data-netlify="true" netlify-honeypot="empresa-site">
 <input type="hidden" name="form-name" value="radar"><p class="hp"><label>Não preencha: <input name="empresa-site" tabindex="-1" autocomplete="off"></label></p>
