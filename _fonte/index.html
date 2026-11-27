@@ -637,7 +637,7 @@ label small{font-weight:400;opacity:.75}
     const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
     ok.innerHTML='Mensagem preparada. Se o WhatsApp não abriu, <a href="'+url+'" target="_blank" rel="noopener">toque aqui</a> ou escreva para (31) 98405-4927.';
     form.reset();form.querySelectorAll('.miss').forEach(x=>x.classList.remove('miss'));form.querySelectorAll('.miss-msg').forEach(x=>x.remove());
-    setTimeout(()=>{ok.textContent='Mensagem enviada para o WhatsApp. Obrigado pelo contato.'},20000);
+    ok.textContent='Mensagem enviada para o WhatsApp. Obrigado pelo contato.';setTimeout(()=>{location.replace(location.pathname+'?enviado=1')},1500);
     ok.classList.add('show');
   });
 </script>
