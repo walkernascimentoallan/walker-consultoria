@@ -15,6 +15,8 @@ media_folder: static/uploads
 public_folder: /uploads
 collections:
 - name: radar
+  editor:
+    preview: false
   label: Artigos do Radar
   label_singular: Artigo
   folder: content/radar
@@ -70,6 +72,8 @@ collections:
       widget: string
     required: false
 - name: paginas
+  editor:
+    preview: false
   label: Páginas do site
   files:
   - name: banners
