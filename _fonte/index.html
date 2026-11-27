@@ -624,7 +624,7 @@ label small{font-weight:400;opacity:.75}
   document.getElementById('rule').setAttribute('aria-label',`${Math.round(pct)}% do prazo de transição já decorrido`);
   requestAnimationFrame(()=>requestAnimationFrame(()=>{document.getElementById('fill').style.width=pct+'%'}));
 
-  const form=document.getElementById('form'),ok=document.getElementById('ok');
+  const form=document.getElementById('form'),ok=document.getElementById('ok');addEventListener('pageshow',ev=>{if(ev.persisted)form.reset()});
   form.addEventListener('submit',e=>{
     e.preventDefault();
     const v=id=>document.getElementById(id).value.trim();
@@ -636,9 +636,10 @@ label small{font-weight:400;opacity:.75}
     try{fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()}).catch(()=>{});gtag('event','generate_lead',{formulario:'contato'})}catch(_){}
     const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';document.body.appendChild(a);a.click();a.remove();
     ok.innerHTML='Mensagem preparada. Se o WhatsApp não abriu, <a href="'+url+'" target="_blank" rel="noopener">toque aqui</a> ou escreva para (31) 98405-4927.';
+    form.reset();form.querySelectorAll('.miss').forEach(x=>x.classList.remove('miss'));form.querySelectorAll('.miss-msg').forEach(x=>x.remove());
+    setTimeout(()=>{ok.textContent='Mensagem enviada para o WhatsApp. Obrigado pelo contato.'},20000);
     ok.classList.add('show');
   });
-}
 </script>
 <script>
 /* Funil e contador de visitas: Google Analytics 4. Cole o ID (G-XXXXXXX) em GA_ID para ativar. */
