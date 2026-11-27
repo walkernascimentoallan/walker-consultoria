@@ -1,0 +1,782 @@
+backend:
+  name: github
+  repo: walkernascimentoallan/walker-consultoria
+  branch: main
+  commit_messages:
+    create: 'Painel: cria {{collection}} "{{slug}}"'
+    update: 'Painel: atualiza {{collection}} "{{slug}}"'
+    delete: 'Painel: apaga {{collection}} "{{slug}}"'
+    uploadMedia: 'Painel: envia "{{path}}"'
+    deleteMedia: 'Painel: apaga "{{path}}"'
+locale: pt
+site_url: https://walkerconsultoria.com.br
+display_url: https://walkerconsultoria.com.br
+media_folder: static/uploads
+public_folder: /uploads
+collections:
+- name: radar
+  label: Artigos do Radar
+  label_singular: Artigo
+  folder: content/radar
+  create: true
+  extension: md
+  format: frontmatter
+  slug: '{{slug}}'
+  summary: '{{titulo}} · {{data}}'
+  sortable_fields:
+  - data
+  - titulo
+  fields:
+  - name: titulo
+    label: Título
+    widget: string
+  - name: tema
+    label: 'Tema (ex.: Formatos de oferta)'
+    widget: string
+  - name: resumo
+    label: Resumo (aparece nos cartões e no Google)
+    widget: text
+  - name: data
+    label: Data
+    widget: datetime
+    format: YYYY-MM-DD
+    date_format: DD/MM/YYYY
+    time_format: false
+  - name: autor
+    label: Autor
+    widget: string
+    default: Prof. Walker Nascimento
+  - name: imagem
+    label: Imagem de capa (opcional)
+    widget: image
+    required: false
+  - name: rascunho
+    label: Rascunho (não publicar ainda)
+    widget: boolean
+    default: false
+    required: false
+  - name: body
+    label: Texto do artigo
+    widget: markdown
+  - name: fontes
+    label: Fontes
+    widget: list
+    fields:
+    - name: titulo
+      label: Nome da fonte
+      widget: string
+    - name: link
+      label: Link
+      widget: string
+    required: false
+- name: paginas
+  label: Páginas do site
+  files:
+  - name: banners
+    label: Banners rotativos (topo da página inicial)
+    file: content/banners.json
+    fields:
+    - name: banners
+      label: Banners
+      widget: list
+      fields:
+      - name: ativo
+        label: Mostrar este banner
+        widget: boolean
+        default: true
+      - name: modelo
+        label: Modelo
+        widget: select
+        options:
+        - label: 'Imagem de fundo grande (ex.: universidade)'
+          value: fundo
+        - label: Foto com moldura dourada e números
+          value: foto
+        - label: Imagem do lado (capa de livro)
+          value: capa
+        - label: Arte do lado, sem sombra
+          value: arte
+        - label: Foto redonda do lado
+          value: redonda
+        - label: Lista do lado (itens ou links)
+          value: lista
+      - name: imagem
+        label: Imagem (fundo, foto, capa ou arte)
+        widget: image
+        required: false
+      - name: selo
+        label: Texto pequeno dourado (acima do título)
+        widget: string
+        required: false
+      - name: titulo
+        label: Título
+        widget: string
+      - name: texto
+        label: Texto
+        widget: text
+        required: false
+      - name: botao1_texto
+        label: 'Botão principal: texto'
+        widget: string
+        required: false
+      - name: botao1_link
+        label: 'Botão principal: link (ex.: /contato.html)'
+        widget: string
+        required: false
+      - name: botao2_texto
+        label: 'Botão secundário: texto'
+        widget: string
+        required: false
+      - name: botao2_link
+        label: 'Botão secundário: link'
+        widget: string
+        required: false
+      - name: legenda_titulo
+        label: Legenda da foto ou título da lista
+        widget: string
+        required: false
+      - name: legenda_texto
+        label: 'Legenda da foto: segunda linha'
+        widget: string
+        required: false
+      - name: numeros
+        label: Números (modelo foto)
+        widget: list
+        fields: &id001
+        - name: valor
+          label: 'Número (ex.: 20+)'
+          widget: string
+        - name: rotulo
+          label: Legenda
+          widget: string
+        required: false
+      - name: itens
+        label: Itens da lista (modelo lista)
+        widget: list
+        fields:
+        - name: texto
+          label: Texto
+          widget: string
+        - name: link
+          label: Link (opcional)
+          widget: string
+          required: false
+        required: false
+      summary: '{{fields.titulo}}'
+      hint: Arraste para mudar a ordem. O primeiro é o que aparece ao abrir o site.
+  - name: inicio
+    label: Página inicial (demais seções)
+    file: content/inicio.json
+    fields:
+    - name: numeros
+      label: Faixa de números
+      widget: list
+      fields: *id001
+    - name: consultoria_titulo
+      label: 'Consultoria: título'
+      widget: string
+    - name: consultoria_texto
+      label: 'Consultoria: texto'
+      widget: text
+    - name: radar_titulo
+      label: 'Radar: título'
+      widget: string
+    - name: radar_texto
+      label: 'Radar: texto'
+      widget: text
+    - name: quem_titulo
+      label: 'Quem conduz: título'
+      widget: string
+    - name: quem_foto
+      label: 'Quem conduz: foto'
+      widget: image
+      required: false
+    - name: quem_texto
+      label: 'Quem conduz: texto (linha em branco separa parágrafos)'
+      widget: text
+    - name: cursos_titulo
+      label: 'Cursos: título'
+      widget: string
+    - name: cursos_texto
+      label: 'Cursos: texto'
+      widget: text
+    - name: academia_titulo
+      label: 'Academia: título'
+      widget: string
+    - name: academia_texto
+      label: 'Academia: texto'
+      widget: text
+    - name: academia
+      label: 'Academia: destaques'
+      widget: list
+      fields:
+      - name: titulo
+        label: Título
+        widget: string
+      - name: texto
+        label: Texto
+        widget: string
+    - name: chamada_final
+      label: Chamada final (faixa escura)
+      widget: string
+  - name: servicos
+    label: Consultoria e serviços
+    file: content/servicos.json
+    fields:
+    - name: servicos
+      label: Serviços
+      widget: list
+      fields:
+      - name: titulo
+        label: Nome do serviço
+        widget: string
+      - name: slug
+        label: 'Endereço da página (sem espaços, ex.: consultoria-polos)'
+        widget: string
+      - name: resumo
+        label: Resumo (aparece nos cartões)
+        widget: text
+      - name: abertura
+        label: Texto de abertura da página
+        widget: text
+      - name: quando
+        label: Quando faz sentido
+        widget: list
+        fields:
+        - name: texto
+          label: Texto
+          widget: string
+      - name: faco
+        label: O que eu faço
+        widget: list
+        fields:
+        - name: texto
+          label: Texto
+          widget: string
+      - name: entregas
+        label: O que você recebe
+        widget: list
+        fields:
+        - name: texto
+          label: Texto
+          widget: string
+      - name: icone
+        label: Ícone (não mexer)
+        widget: hidden
+      summary: '{{fields.titulo}}'
+    - name: metodo
+      label: Como o trabalho acontece (etapas)
+      widget: list
+      fields:
+      - name: titulo
+        label: Etapa
+        widget: string
+      - name: texto
+        label: Texto
+        widget: text
+    - name: para_quem
+      label: Para quem é
+      widget: list
+      fields:
+      - name: texto
+        label: Texto
+        widget: string
+    - name: como_cobra
+      label: Como é cobrado
+      widget: text
+  - name: novo_marco
+    label: Guia do Novo Marco
+    file: content/novo_marco.json
+    fields:
+    - name: titulo
+      label: Título da página
+      widget: string
+    - name: texto
+      label: Texto de abertura
+      widget: text
+    - name: muda_titulo
+      label: 'O que muda: título'
+      widget: string
+    - name: muda_texto
+      label: 'O que muda: texto'
+      widget: text
+    - name: mudancas
+      label: 'O que muda: cartões'
+      widget: list
+      fields:
+      - name: titulo
+        label: Título
+        widget: string
+      - name: texto
+        label: Texto
+        widget: text
+    - name: formatos_titulo
+      label: 'Formatos: título'
+      widget: string
+    - name: formatos_texto
+      label: 'Formatos: texto'
+      widget: text
+    - name: formatos
+      label: 'Formatos: cartões'
+      widget: list
+      fields:
+      - name: titulo
+        label: Formato
+        widget: string
+      - name: numero
+        label: Número grande
+        widget: string
+      - name: texto
+        label: Texto
+        widget: text
+    - name: formatos_nota
+      label: 'Formatos: nota'
+      widget: text
+    - name: checklist_titulo
+      label: 'Checklist: título'
+      widget: string
+    - name: checklist_texto
+      label: 'Checklist: texto'
+      widget: text
+    - name: checklist_pdf
+      label: 'Checklist: arquivo PDF'
+      widget: file
+    - name: faq
+      label: Dúvidas frequentes
+      widget: list
+      fields:
+      - name: pergunta
+        label: Pergunta
+        widget: string
+      - name: resposta
+        label: Resposta
+        widget: text
+      summary: '{{fields.pergunta}}'
+  - name: diagnostico
+    label: Diagnóstico (perguntas)
+    file: content/diagnostico.json
+    fields:
+    - name: titulo
+      label: Título
+      widget: string
+    - name: texto
+      label: Texto
+      widget: text
+    - name: perguntas
+      label: 'Perguntas (respostas: Sim, Em parte, Não)'
+      widget: list
+      fields:
+      - name: texto
+        label: Texto
+        widget: string
+  - name: legislacao
+    label: Legislação (portarias e decretos)
+    file: content/legislacao.json
+    fields:
+    - name: atualizado_em
+      label: 'Atualizado em (ex.: 27 de novembro de 2026)'
+      widget: string
+    - name: normas
+      label: Normas (em ordem de data)
+      widget: list
+      fields:
+      - name: ano
+        label: Ano (agrupa na página)
+        widget: string
+      - name: data
+        label: 'Data (ex.: 19/05/2025)'
+        widget: string
+      - name: numero
+        label: 'Número (ex.: Portaria MEC nº 506)'
+        widget: string
+      - name: tipo
+        label: 'Tipo (ex.: Portaria MEC)'
+        widget: string
+      - name: assunto
+        label: Assunto curto
+        widget: string
+      - name: resumo
+        label: Resumo
+        widget: text
+      - name: relacao
+        label: Altera ou é alterada por
+        widget: string
+        required: false
+      - name: link
+        label: Link para o texto oficial
+        widget: string
+        required: false
+      - name: fonte
+        label: 'Nome da fonte (ex.: Diário Oficial)'
+        widget: string
+        required: false
+      summary: '{{fields.numero}} · {{fields.data}}'
+  - name: eventos
+    label: Eventos e palestras
+    file: content/eventos.json
+    fields:
+    - name: eventos
+      label: Eventos
+      widget: list
+      fields:
+      - name: ativo
+        label: Mostrar no site
+        widget: boolean
+        default: true
+      - name: data
+        label: 'Data (ex.: 15 de janeiro)'
+        widget: string
+      - name: data_detalhe
+        label: 'Detalhe da data (ex.: 19h, on-line)'
+        widget: string
+        required: false
+      - name: tipo
+        label: 'Tipo (ex.: Live gratuita · on-line)'
+        widget: string
+      - name: titulo
+        label: Título
+        widget: string
+      - name: texto
+        label: Texto
+        widget: text
+      - name: itens
+        label: Destaques
+        widget: list
+        fields:
+        - name: texto
+          label: Texto
+          widget: string
+        required: false
+      - name: link_inscricao
+        label: Link de inscrição (se houver)
+        widget: string
+        required: false
+      summary: '{{fields.titulo}}'
+      hint: O primeiro evento ativo aparece na página inicial.
+    - name: palestras
+      label: Palestras e workshops
+      widget: list
+      fields:
+      - name: titulo
+        label: Título
+        widget: string
+      - name: texto
+        label: Texto
+        widget: text
+  - name: cursos
+    label: Cursos e e-book
+    file: content/cursos.json
+    fields:
+    - name: titulo
+      label: Título da página
+      widget: string
+    - name: texto
+      label: Texto de abertura
+      widget: text
+    - name: lista_texto
+      label: Texto acima dos cursos
+      widget: text
+    - name: cursos
+      label: Cursos
+      widget: list
+      fields:
+      - name: id
+        label: Identificador (sem espaços, não mudar depois de publicado)
+        widget: string
+      - name: selo
+        label: 'Selo (ex.: Disponível agora)'
+        widget: string
+      - name: titulo
+        label: Nome
+        widget: string
+      - name: texto
+        label: Descrição
+        widget: text
+      - name: topicos
+        label: Tópicos
+        widget: list
+        fields:
+        - name: texto
+          label: Texto
+          widget: string
+        required: false
+      - name: publico
+        label: Para quem (linha curta)
+        widget: string
+      - name: status
+        label: Situação
+        widget: select
+        options:
+        - label: À venda (botão de compra)
+          value: venda
+        - label: Lista de espera
+          value: lista_espera
+      - name: preco
+        label: 'Preço (ex.: R$ 39,90)'
+        widget: string
+        required: false
+      - name: link_compra
+        label: Link de compra (Kiwify)
+        widget: string
+        required: false
+      - name: duracao
+        label: 'Detalhes: duração'
+        widget: string
+        required: false
+      - name: formato
+        label: 'Detalhes: formato'
+        widget: string
+        required: false
+      - name: inicio
+        label: 'Detalhes: início'
+        widget: string
+        required: false
+      - name: para_quem
+        label: 'Detalhes: para quem'
+        widget: string
+        required: false
+      - name: resultados
+        label: 'Detalhes: o que vai conseguir fazer'
+        widget: list
+        fields:
+        - name: texto
+          label: Texto
+          widget: string
+        required: false
+      summary: '{{fields.titulo}}'
+    - name: aluno_texto
+      label: 'Área do aluno: texto'
+      widget: text
+    - name: passos
+      label: 'Área do aluno: passos'
+      widget: list
+      fields:
+      - name: titulo
+        label: Título
+        widget: string
+      - name: texto
+        label: Texto
+        widget: text
+    - name: chamada_final
+      label: Chamada final
+      widget: string
+  - name: sobre
+    label: Sobre (trajetória, livros, currículo)
+    file: content/sobre.json
+    fields:
+    - name: selo
+      label: Texto pequeno
+      widget: string
+    - name: nome
+      label: Nome
+      widget: string
+    - name: texto
+      label: Texto de abertura
+      widget: text
+    - name: foto
+      label: Foto
+      widget: image
+      required: false
+    - name: foto_legenda_titulo
+      label: Legenda da foto
+      widget: string
+    - name: foto_legenda_texto
+      label: 'Legenda: segunda linha'
+      widget: string
+    - name: numeros
+      label: Números
+      widget: list
+      fields: *id001
+    - name: formacao
+      label: Formação acadêmica
+      widget: list
+      fields:
+      - name: periodo
+        label: Período
+        widget: string
+        required: false
+      - name: titulo
+        label: Título
+        widget: string
+      - name: texto
+        label: Detalhes
+        widget: text
+        required: false
+      summary: '{{fields.titulo}}'
+    - name: pesquisa
+      label: Pesquisa
+      widget: list
+      fields:
+      - name: titulo
+        label: Título
+        widget: string
+      - name: texto
+        label: Texto
+        widget: string
+    - name: carreira_titulo
+      label: 'Carreira: título'
+      widget: string
+    - name: carreira_texto
+      label: 'Carreira: texto'
+      widget: text
+    - name: carreira
+      label: Carreira
+      widget: list
+      fields:
+      - name: periodo
+        label: Período
+        widget: string
+        required: false
+      - name: instituicao
+        label: Instituição
+        widget: string
+      - name: texto
+        label: O que fez
+        widget: text
+      - name: local
+        label: Local
+        widget: string
+        required: false
+      summary: '{{fields.periodo}} · {{fields.instituicao}}'
+    - name: reconhecimentos_titulo
+      label: 'Reconhecimentos: título'
+      widget: string
+    - name: reconhecimentos_texto
+      label: 'Reconhecimentos: texto'
+      widget: text
+    - name: reconhecimentos
+      label: Reconhecimentos
+      widget: list
+      fields:
+      - name: titulo
+        label: Título
+        widget: string
+      - name: texto
+        label: Texto
+        widget: text
+    - name: livros_titulo
+      label: 'Livros: título'
+      widget: string
+    - name: livros_texto
+      label: 'Livros: texto'
+      widget: text
+    - name: proximo_livro
+      label: Próximo lançamento
+      widget: object
+      fields:
+      - name: ativo
+        label: Mostrar
+        widget: boolean
+        default: true
+      - name: selo
+        label: Selo
+        widget: string
+      - name: titulo
+        label: Título
+        widget: string
+      - name: subtitulo
+        label: Subtítulo
+        widget: string
+      - name: texto
+        label: Texto
+        widget: text
+      - name: capa
+        label: Capa
+        widget: image
+        required: false
+    - name: livros
+      label: Livros
+      widget: list
+      fields:
+      - name: titulo
+        label: Título
+        widget: string
+      - name: subtitulo
+        label: Subtítulo
+        widget: string
+        required: false
+      - name: detalhes
+        label: Detalhes (editora, ano, autoria)
+        widget: text
+        required: false
+      - name: capa
+        label: Capa
+        widget: image
+        required: false
+      - name: link
+        label: Link para ler (opcional)
+        widget: string
+        required: false
+      - name: link_compra
+        label: Link de compra (opcional)
+        widget: string
+        required: false
+      - name: texto_botao
+        label: 'Texto do botão (ex.: Ler o livro)'
+        widget: string
+        required: false
+      summary: '{{fields.titulo}}'
+    - name: foto_destaque
+      label: Foto de destaque abaixo dos livros
+      widget: object
+      fields:
+      - name: ativo
+        label: Mostrar
+        widget: boolean
+        default: true
+      - name: imagem
+        label: Foto
+        widget: image
+        required: false
+      - name: titulo
+        label: Título
+        widget: string
+      - name: texto
+        label: Texto
+        widget: text
+    - name: chamada_final
+      label: Chamada final
+      widget: string
+  - name: site
+    label: Contatos e dados gerais
+    file: content/site.json
+    fields:
+    - name: whatsapp
+      label: 'WhatsApp só números com 55 e DDD (ex.: 5531984054927)'
+      widget: string
+    - name: whatsapp_texto
+      label: 'WhatsApp como aparece (ex.: (31) 98405-4927)'
+      widget: string
+    - name: email
+      label: E-mail
+      widget: string
+    - name: linkedin
+      label: Link do LinkedIn
+      widget: string
+    - name: instagram
+      label: Link do Instagram
+      widget: string
+    - name: lattes
+      label: Link do Currículo Lattes
+      widget: string
+    - name: cidade
+      label: Cidade (rodapé)
+      widget: string
+    - name: rodape
+      label: Texto do rodapé
+      widget: text
+    - name: prazo_inicio
+      label: Início do prazo do novo marco (AAAA-MM-DD)
+      widget: string
+    - name: prazo_fim
+      label: Fim do prazo (AAAA-MM-DD)
+      widget: string
+    - name: checkout_ebook
+      label: Link de compra do e-book
+      widget: string
+    - name: area_aluno
+      label: Link da área do aluno
+      widget: string
+    - name: nome
+      label: Nome
+      widget: hidden
