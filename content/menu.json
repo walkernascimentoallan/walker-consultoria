@@ -36,6 +36,11 @@
       "mostrar": true
     },
     {
+      "pagina": "publicacoes.html",
+      "nome": "Publicações",
+      "mostrar": true
+    },
+    {
       "pagina": "onde-atuei.html",
       "nome": "Onde atuei",
       "mostrar": true

@@ -1,0 +1,142 @@
+{
+  "titulo": "Publicações",
+  "texto": "Livros, capítulos, trabalhos publicados em anais de congressos e apresentações em eventos acadêmicos. A lista completa está no Currículo Lattes.",
+  "livros_titulo": "Livros",
+  "livros_texto": "Livros de que sou autor, coautor ou organizador.",
+  "grupos": [
+    {
+      "titulo": "Trabalhos completos em anais de congressos",
+      "itens": [
+        {
+          "ano": "2026",
+          "titulo": "Comunicação como escuta ancestral: a sabedoria indígena e as epistemologias do Sul, ecologia de saberes e epistemicídio digital",
+          "onde": "35º Encontro Anual da Compós, GT Comunicação e Cultura, Natal (RN). Anais do 35º Encontro Anual da Compós.",
+          "coautores": "Com Dimas A. Künsch",
+          "link": ""
+        },
+        {
+          "ano": "2023",
+          "titulo": "Captação de recursos alternativos para instituições do terceiro setor: o caso da universidade",
+          "onde": "Congresso Metodista, Piracicaba (SP).",
+          "coautores": "",
+          "link": ""
+        },
+        {
+          "ano": "2023",
+          "titulo": "Dos meios às mediações e das mediações aos meios",
+          "onde": "Congresso da Universidade Metodista de São Paulo, São Paulo (SP).",
+          "coautores": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "titulo": "Capítulos de livros",
+      "itens": [
+        {
+          "ano": "2011",
+          "titulo": "Análise de viabilidade de um projeto",
+          "onde": "Anhanguera Publicações, Valinhos (SP), p. 27-34.",
+          "coautores": "",
+          "link": ""
+        },
+        {
+          "ano": "2011",
+          "titulo": "Ciclo de vida e organização do projeto no processo de planejamento: conceitos",
+          "onde": "Anhanguera Publicações, Valinhos (SP), 2ª ed., p. 11-18.",
+          "coautores": "",
+          "link": ""
+        },
+        {
+          "ano": "2011",
+          "titulo": "Estruturação e etapas de um projeto",
+          "onde": "Anhanguera Publicações, Valinhos (SP), 2ª ed.",
+          "coautores": "",
+          "link": ""
+        },
+        {
+          "ano": "2011",
+          "titulo": "Gerenciamento de risco",
+          "onde": "Anhanguera Publicações, Valinhos (SP), p. 35-44.",
+          "coautores": "",
+          "link": ""
+        },
+        {
+          "ano": "2011",
+          "titulo": "Projetos e gerenciamento de projetos: conceitos",
+          "onde": "Anhanguera Publicações, Valinhos (SP), 2ª ed.",
+          "coautores": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "titulo": "Apresentações em congressos e eventos",
+      "itens": [
+        {
+          "ano": "2024",
+          "titulo": "A disputa comunicacional nos conflitos socioambientais",
+          "onde": "Congresso.",
+          "coautores": "Com C. Victor",
+          "link": ""
+        },
+        {
+          "ano": "2024",
+          "titulo": "Inovação tecnológica em enfermagem: um resgate da essência do cuidado",
+          "onde": "Congresso.",
+          "coautores": "",
+          "link": ""
+        },
+        {
+          "ano": "2024",
+          "titulo": "O uso da comunicação como força motriz para o desenvolvimento: clínica médica",
+          "onde": "Congresso.",
+          "coautores": "Com C. Escudero",
+          "link": ""
+        },
+        {
+          "ano": "2023",
+          "titulo": "Educação e novas tecnologias",
+          "onde": "Simpósio.",
+          "coautores": "Com Cristiano A. Bredda",
+          "link": ""
+        },
+        {
+          "ano": "2023",
+          "titulo": "Interculturalidade na implementação de uma cidade digital",
+          "onde": "Congresso.",
+          "coautores": "Com C. Escudero",
+          "link": ""
+        },
+        {
+          "ano": "2022",
+          "titulo": "Captação de recursos alternativos para instituições do terceiro setor: o caso da universidade",
+          "onde": "Conferência.",
+          "coautores": "",
+          "link": ""
+        },
+        {
+          "ano": "2016",
+          "titulo": "As escolas clássicas da administração até a era do conhecimento",
+          "onde": "Conferência.",
+          "coautores": "Com R. Morandi",
+          "link": ""
+        },
+        {
+          "ano": "2015",
+          "titulo": "Captação de recursos financeiros em organizações sem fins lucrativos: a utilização de gestão para doadores",
+          "onde": "Seminário.",
+          "coautores": "",
+          "link": ""
+        },
+        {
+          "ano": "2011",
+          "titulo": "Fundraising: modelo de captação de recursos para instituições sem fins lucrativos",
+          "onde": "Conferência.",
+          "coautores": "",
+          "link": ""
+        }
+      ]
+    }
+  ]
+}
