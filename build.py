@@ -39,8 +39,8 @@ def lk(u):
 SITE = J('site.json')
 IX = open(os.path.join(FONTE, 'index.html'), encoding='utf-8').read()
 CU = open(os.path.join(FONTE, 'cursos.html'), encoding='utf-8').read()
-FAVICON = re.search(r'<link rel="icon"[^>]*>', IX).group(0)
-MARK = re.search(r'<svg class="mark".*?</svg>', IX, re.S).group(0)
+FAVICON = '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">'
+MARK = '<img class="mark" src="/marca-wn-128.png" alt="" width="46" height="46">'
 GA = re.search(r'<script>\s*/\* Funil e contador.*?</script>', IX, re.S).group(0)
 PROMO_JS = re.search(r"<script>\s*\(\(\)=>\{const st=document.getElementById\('promo'\).*?</script>", IX, re.S).group(0).replace('go(i+1),6000)', 'go(i+1),' + str(int(float(J('banners.json').get('tempo_segundos') or 9) * 1000)) + ')')
 MAPA_SEC = re.search(r'<section class="band dark" id="mapa">.*?</section>', IX, re.S).group(0)
@@ -148,7 +148,7 @@ def page(fname, title, desc, body, active=None, tail='', head='', noindex=False)
 {'<meta name="robots" content="noindex">' if noindex else f'<link rel="canonical" href="{canon}">'}
 <meta name="description" content="{e(desc)}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Walker Consultoria Educacional"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}"><meta property="og:url" content="{canon}"><meta property="og:locale" content="pt_BR"><meta property="og:image" content="{URL}foto-walker.jpg"><meta name="twitter:card" content="summary_large_image">
-<link rel="apple-touch-icon" href="/foto-walker-quadrada.jpg">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
 <script>try{{var t=localStorage.getItem("tema");if(t==="dark"||t==="light")document.documentElement.dataset.theme=t}}catch(e){{}}</script>
@@ -545,6 +545,8 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
 
 
 EXTRA_CSS = '''
+.brand img.mark{width:46px;height:46px;flex:none;display:block}
+@media(max-width:480px){.brand img.mark{width:40px;height:40px}}
 @view-transition{navigation:auto}
 header{view-transition-name:topo}
 ::view-transition-old(root){animation:vt-out .18s ease-in both}
