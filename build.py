@@ -40,7 +40,7 @@ SITE = J('site.json')
 IX = open(os.path.join(FONTE, 'index.html'), encoding='utf-8').read()
 CU = open(os.path.join(FONTE, 'cursos.html'), encoding='utf-8').read()
 FAVICON = '<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="icon" type="image/png" sizes="64x64" href="/favicon-64.png">'
-MARK = '<img class="mark" src="/marca-wn-200.png" alt="" width="64" height="64">'
+MARK = '<img class="mark" src="/marca-wn-200.png" alt="" width="70" height="70">'
 GA = re.search(r'<script>\s*/\* Funil e contador.*?</script>', IX, re.S).group(0)
 PROMO_JS = re.search(r"<script>\s*\(\(\)=>\{const st=document.getElementById\('promo'\).*?</script>", IX, re.S).group(0).replace('go(i+1),6000)', 'go(i+1),' + str(int(float(J('banners.json').get('tempo_segundos') or 9) * 1000)) + ')')
 MAPA_SEC = re.search(r'<section class="band dark" id="mapa">.*?</section>', IX, re.S).group(0)
@@ -574,8 +574,8 @@ fieldset.dq.miss{background:rgba(217,48,37,.07)}
 .brand img.wordmark{height:46px;width:auto;display:block}
 .site-foot .brand img.wordmark{height:56px}
 @media(max-width:480px){.brand img.wordmark{height:38px}}
-.brand img.mark{width:64px;height:64px;flex:none;display:block}.site-foot .brand img.mark{width:88px;height:88px}
-@media(max-width:480px){.brand img.mark{width:52px;height:52px}}
+.brand img.mark{width:70px;height:70px;flex:none;display:block}.site-foot .brand img.mark{width:96px;height:96px}
+@media(max-width:480px){.brand img.mark{width:60px;height:60px}}
 @view-transition{navigation:auto}
 header{view-transition-name:topo}
 ::view-transition-old(root){animation:vt-out .18s ease-in both}
