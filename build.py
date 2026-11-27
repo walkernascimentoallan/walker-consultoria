@@ -42,7 +42,7 @@ CU = open(os.path.join(FONTE, 'cursos.html'), encoding='utf-8').read()
 FAVICON = re.search(r'<link rel="icon"[^>]*>', IX).group(0)
 MARK = re.search(r'<svg class="mark".*?</svg>', IX, re.S).group(0)
 GA = re.search(r'<script>\s*/\* Funil e contador.*?</script>', IX, re.S).group(0)
-PROMO_JS = re.search(r"<script>\s*\(\(\)=>\{const st=document.getElementById\('promo'\).*?</script>", IX, re.S).group(0)
+PROMO_JS = re.search(r"<script>\s*\(\(\)=>\{const st=document.getElementById\('promo'\).*?</script>", IX, re.S).group(0).replace('go(i+1),6000)', 'go(i+1),' + str(int(float(J('banners.json').get('tempo_segundos') or 9) * 1000)) + ')')
 MAPA_SEC = re.search(r'<section class="band dark" id="mapa">.*?</section>', IX, re.S).group(0)
 MAPA_SEC = re.sub(r'(<path [^>]*?)>\s*<title>([^<]*)</title>\s*</path>', r'\1 data-nome="\2" aria-label="\2"></path>', MAPA_SEC)
 UF_TIP_JS = "(function(){var t=document.createElement('div');t.className='uf-tip';document.body.appendChild(t);document.querySelectorAll('#mapa path[data-nome]').forEach(function(p){p.addEventListener('mousemove',function(ev){t.textContent=p.getAttribute('data-nome');t.style.left=(ev.clientX+14)+'px';t.style.top=(ev.clientY+14)+'px';t.style.opacity='1'});p.addEventListener('mouseleave',function(){t.style.opacity='0'})})})();"
@@ -62,10 +62,19 @@ WA = f'''<a class="wa-float" href="https://wa.me/{WA_NUM}?text=Ol%C3%A1%2C%20Pro
 
 _NAV_PADRAO = [('sobre.html', 'Sobre'), ('publicacoes.html', 'Publicações'), ('onde-atuei.html', 'Onde atuei'), ('consultoria.html', 'Consultoria'), ('novo-marco.html', 'Novo Marco'),
        ('legislacao.html', 'Legislação'), ('cursos.html', 'Cursos'), ('eventos.html', 'Eventos'), ('radar.html', 'Radar')]
+def _limpa(p):
+    return (p or '').strip().lstrip('/')
 try:
-    NAV = [(a['pagina'].strip().lstrip('/'), a.get('nome') or a['pagina']) for a in J('menu.json').get('abas', []) if a.get('pagina') and a.get('mostrar', True) is not False] or _NAV_PADRAO
+    NAV = []
+    for a in J('menu.json').get('abas', []):
+        if a.get('mostrar', True) is False:
+            continue
+        sub = [(_limpa(x['pagina']), x.get('nome') or x['pagina']) for x in (a.get('subitens') or []) if x.get('pagina')]
+        if sub or a.get('pagina'):
+            NAV.append({'nome': a.get('nome') or a.get('pagina'), 'pagina': _limpa(a.get('pagina')), 'sub': sub})
+    NAV = NAV or [{'nome': t, 'pagina': h, 'sub': []} for h, t in _NAV_PADRAO]
 except FileNotFoundError:
-    NAV = _NAV_PADRAO
+    NAV = [{'nome': t, 'pagina': h, 'sub': []} for h, t in _NAV_PADRAO]
 
 NAME_FIX = [('Walker Soares do Nascimento', 'Prof. Walker Nascimento'), ('Prof. Me. Walker Nascimento', 'Prof. Walker Nascimento'),
             ('>Falar com Walker<', '>Falar com o Prof. Walker<'), ('Walker é um dos organizadores', 'O Prof. Walker é um dos organizadores'),
@@ -75,7 +84,16 @@ SERV = J('servicos.json')
 
 
 def header(active):
-    links = ''.join(f'<a href="/{h}"{CUR if h == active else ""}>{e(t)}</a>' for h, t in NAV)
+    links = ''
+    for i, it in enumerate(NAV):
+        if not it['sub']:
+            links += f'<a href="/{e(it["pagina"])}"{CUR if it["pagina"] == active else ""}>{e(it["nome"])}</a>'
+            continue
+        hit = next((h for h, t in it['sub'] if h.split('#')[0] == active), None)
+        subs = ''.join(f'<a href="/{e(h)}"{CUR if h == hit else ""}>{e(t)}</a>' for h, t in it['sub'])
+        links += (f'<div class="dd"><button class="dd-btn{" is-current" if hit else ""}" type="button" aria-expanded="false" aria-controls="dd{i}">{e(it["nome"])}'
+                  f'<svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2.5 4.5 6 8l3.5-3.5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>'
+                  f'<div class="dd-menu" id="dd{i}">{subs}</div></div>')
     return f'''<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header><div class="bar">
 <a class="brand" href="/" aria-label="Walker Consultoria Educacional, página inicial">{MARK}<span>Walker Consultoria<small>Educacional</small></span></a>
@@ -102,7 +120,12 @@ def footer():
 
 PAGE_JS = '''<script>(()=>{const tb=document.querySelector('.theme-btn');if(!tb)return;const r=document.documentElement;const sync=()=>{const d=r.dataset.theme==='dark';tb.setAttribute('aria-pressed',d);tb.setAttribute('aria-label',d?'Ativar modo claro':'Ativar modo noturno');tb.title=d?'Modo claro':'Modo noturno'};sync();tb.addEventListener('click',()=>{r.dataset.theme=r.dataset.theme==='dark'?'light':'dark';try{localStorage.setItem('tema',r.dataset.theme)}catch(e){}sync()})})();(()=>{const b=document.querySelector('.menu-btn'),n=document.getElementById('mainnav');if(!b)return;
 b.addEventListener('click',()=>{const o=n.classList.toggle('open');b.setAttribute('aria-expanded',o)});
-document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&n.classList.contains('open')){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()}})})();</script>'''
+document.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&n.classList.contains('open')){n.classList.remove('open');b.setAttribute('aria-expanded','false');b.focus()}})})();
+(()=>{const dds=[...document.querySelectorAll('#mainnav .dd')];const shut=x=>{dds.forEach(d=>{if(d!==x){d.classList.remove('open');d.querySelector('.dd-btn').setAttribute('aria-expanded','false')}})};
+dds.forEach(d=>{const bt=d.querySelector('.dd-btn');bt.addEventListener('click',()=>{const o=d.classList.toggle('open');bt.setAttribute('aria-expanded',o);shut(d)});
+d.addEventListener('keydown',ev=>{if(ev.key==='Escape'&&d.classList.contains('open')){d.classList.remove('open');bt.setAttribute('aria-expanded','false');bt.focus()}});
+d.addEventListener('focusout',ev=>{if(!d.contains(ev.relatedTarget)){d.classList.remove('open');bt.setAttribute('aria-expanded','false')}})});
+document.addEventListener('click',ev=>{if(!ev.target.closest('#mainnav .dd'))shut(null)})})();</script>'''
 COUNT_JS = f'''<script>(()=>{{const start=new Date('{SITE['prazo_inicio']}T00:00:00'),end=new Date('{SITE['prazo_fim']}T00:00:00'),now=new Date();const d=document.getElementById('days');if(!d)return;
 const left=Math.max(0,Math.ceil((end-now)/864e5)),pct=Math.min(100,Math.max(0,(now-start)/(end-start)*100));
 d.innerHTML=left.toLocaleString('pt-BR')+'<span>dias</span>';document.getElementById('now').style.left=pct+'%';
@@ -148,6 +171,15 @@ def page(fname, title, desc, body, active=None, tail='', head='', noindex=False)
     for a, b in NAME_FIX:
         doc = doc.replace(a, b)
     doc = doc.replace('Prof. Prof. ', 'Prof. ').replace('index.html#contato', 'contato.html')
+    _m = doc.find('<main')
+    _n = [0]
+    def _lazy(mt):
+        _n[0] += 1
+        tag = mt.group(0)
+        if _n[0] <= 2 or 'loading=' in tag:
+            return tag
+        return tag[:-1].rstrip('/').rstrip() + ' loading="lazy" decoding="async">'
+    doc = doc[:_m] + re.sub(r'<img\b[^>]*>', _lazy, doc[_m:])
     open(os.path.join(OUT, fname), 'w', encoding='utf-8').write(doc)
     if not noindex:
         PAGES.append(fname)
@@ -513,6 +545,27 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
 
 
 EXTRA_CSS = '''
+@view-transition{navigation:auto}
+header{view-transition-name:topo}
+::view-transition-old(root){animation:vt-out .18s ease-in both}
+::view-transition-new(root){animation:vt-in .26s ease-out both}
+@keyframes vt-out{to{opacity:0}}
+@keyframes vt-in{from{opacity:0;transform:translateY(8px)}}
+@media(prefers-reduced-motion:reduce){@view-transition{navigation:none}}
+.dd{position:relative}
+.dd-btn{font:inherit;font-size:15px;color:#d6e6e4;background:transparent;border:0;border-radius:8px;padding:10px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.dd-btn:hover,.dd.open .dd-btn{color:#fff}
+.dd-btn svg{width:12px;height:12px;transition:transform .15s}
+.dd.open .dd-btn svg{transform:rotate(180deg)}
+.dd-btn.is-current{color:#fff;box-shadow:inset 0 -2px 0 var(--gold);border-radius:0}
+.dd-menu{display:none;position:absolute;top:calc(100% + 8px);left:0;min-width:230px;background:var(--pet2);border:1px solid #1f5254;border-radius:12px;padding:8px;box-shadow:0 18px 40px -12px rgba(0,0,0,.55);z-index:30}
+.dd-menu::before{content:"";position:absolute;left:0;right:0;top:-10px;height:10px}
+.dd.open .dd-menu{display:block}
+@media(hover:hover) and (min-width:1261px){.dd:hover .dd-menu{display:block}}
+#mainnav .dd-menu a{display:block;padding:10px 12px;border-radius:8px;white-space:nowrap}
+#mainnav .dd-menu a:hover{background:#123f41;color:#fff}
+#mainnav .dd-menu a[aria-current=page]{box-shadow:inset 3px 0 0 var(--gold);border-radius:0 8px 8px 0;color:#fff}
+@media(max-width:1260px){.dd-btn{display:block;width:100%;text-align:left;padding:16px 6px 4px;font-size:13px;color:#9fc1be;pointer-events:none;box-shadow:none!important}.dd-btn svg{display:none}.dd-menu{display:block;position:static;min-width:0;background:none;border:0;box-shadow:none;padding:0 0 0 12px}.dd-menu::before{display:none}}
 .channels small{color:var(--soft)}
 .dark .channels small{color:#b4cfcc}
 .btn.gold,.btn.gold:visited,.book .btn.gold{color:#10292a}
