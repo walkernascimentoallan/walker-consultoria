@@ -741,6 +741,32 @@ collections:
     - name: chamada_final
       label: Chamada final
       widget: string
+  - name: publicacoes
+    label: Publicações (livros, capítulos, congressos)
+    file: content/publicacoes.json
+    fields:
+    - {name: titulo, label: Título da página, widget: string}
+    - {name: texto, label: Texto de abertura, widget: text}
+    - {name: livros_titulo, label: 'Título da parte dos livros (os livros vêm da página Sobre)', widget: string}
+    - {name: livros_texto, label: Texto da parte dos livros, widget: text, required: false}
+    - name: grupos
+      label: Grupos de publicações (arraste pelo sinal = para mudar a ordem)
+      label_singular: grupo
+      widget: list
+      summary: '{{fields.titulo}}'
+      fields:
+      - {name: titulo, label: Título do grupo, widget: string}
+      - name: itens
+        label: Publicações deste grupo
+        label_singular: publicação
+        widget: list
+        summary: '{{fields.ano}} · {{fields.titulo}}'
+        fields:
+        - {name: ano, label: Ano, widget: string}
+        - {name: titulo, label: Título, widget: string}
+        - {name: onde, label: 'Onde foi publicado ou apresentado', widget: string, required: false}
+        - {name: coautores, label: 'Coautores (ex.: Com Fulano)', widget: string, required: false}
+        - {name: link, label: 'Link (opcional, ex.: PDF ou DOI)', widget: string, required: false}
   - name: menu
     label: Menu do topo (ordem das abas)
     file: content/menu.json
@@ -759,6 +785,7 @@ collections:
         widget: select
         options:
         - {label: 'Sobre', value: 'sobre.html'}
+        - {label: 'Publicações', value: 'publicacoes.html'}
         - {label: 'Onde atuei (mapa)', value: 'onde-atuei.html'}
         - {label: 'Consultoria', value: 'consultoria.html'}
         - {label: 'Novo Marco (guia e diagnóstico)', value: 'novo-marco.html'}
