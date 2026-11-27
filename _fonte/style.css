@@ -32,7 +32,7 @@ a{color:inherit}
 
 /* topo */
 header{position:sticky;top:0;z-index:10;background:var(--pet2);color:#fff}
-.bar{max-width:1240px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(5vw,16px);flex-wrap:wrap}
+.bar{max-width:1340px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px max(5vw,16px);flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:18px;line-height:1.1}
 .brand small{display:block;font-weight:500;font-size:13px;color:#b4cfcc}
 .mark{width:38px;height:38px;flex:none}
@@ -299,7 +299,7 @@ label small{font-weight:400;opacity:.75}
 .mb-ico::before,.mb-ico::after{content:"";position:absolute;left:0;width:18px;height:2px;background:currentColor}
 .mb-ico::before{top:-6px}.mb-ico::after{top:6px}
 #mainnav a[aria-current=page]:not(.cta){color:#fff;box-shadow:inset 0 -2px 0 var(--gold);border-radius:0}
-@media(max-width:1140px){
+@media(max-width:1260px){
   .bar{flex-wrap:wrap!important}
   .menu-btn{display:inline-flex}
   #mainnav{display:none;width:100%;flex-direction:column;gap:0;padding:8px 0 6px;border-top:1px solid #1f5254;margin-top:10px}
