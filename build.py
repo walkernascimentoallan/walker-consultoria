@@ -60,8 +60,12 @@ WA = f'''<a class="wa-float" href="https://wa.me/{WA_NUM}?text=Ol%C3%A1%2C%20Pro
 <style>.wa-float{{position:fixed;right:18px;bottom:18px;z-index:50;width:58px;height:58px;border-radius:50%;background:#1f8f4e;display:grid;place-items:center;box-shadow:0 8px 24px rgba(0,0,0,.25)}}.wa-float:hover{{background:#18763f}}</style>
 <script>document.querySelector('.wa-float').addEventListener('click',()=>{{try{{gtag('event','clique_whatsapp',{{origem:'botao_flutuante'}})}}catch(e){{}}}})</script>'''
 
-NAV = [('sobre.html', 'Sobre'), ('onde-atuei.html', 'Onde atuei'), ('consultoria.html', 'Consultoria'), ('novo-marco.html', 'Novo Marco'),
+_NAV_PADRAO = [('sobre.html', 'Sobre'), ('onde-atuei.html', 'Onde atuei'), ('consultoria.html', 'Consultoria'), ('novo-marco.html', 'Novo Marco'),
        ('legislacao.html', 'Legislação'), ('cursos.html', 'Cursos'), ('eventos.html', 'Eventos'), ('radar.html', 'Radar')]
+try:
+    NAV = [(a['pagina'].strip().lstrip('/'), a.get('nome') or a['pagina']) for a in J('menu.json').get('abas', []) if a.get('pagina') and a.get('mostrar', True) is not False] or _NAV_PADRAO
+except FileNotFoundError:
+    NAV = _NAV_PADRAO
 
 NAME_FIX = [('Walker Soares do Nascimento', 'Prof. Walker Nascimento'), ('Prof. Me. Walker Nascimento', 'Prof. Walker Nascimento'),
             ('>Falar com Walker<', '>Falar com o Prof. Walker<'), ('Walker é um dos organizadores', 'O Prof. Walker é um dos organizadores'),
@@ -71,7 +75,7 @@ SERV = J('servicos.json')
 
 
 def header(active):
-    links = ''.join(f'<a href="/{h}"{CUR if h == active else ""}>{t}</a>' for h, t in NAV)
+    links = ''.join(f'<a href="/{h}"{CUR if h == active else ""}>{e(t)}</a>' for h, t in NAV)
     return f'''<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header><div class="bar">
 <a class="brand" href="/" aria-label="Walker Consultoria Educacional, página inicial">{MARK}<span>Walker Consultoria<small>Educacional</small></span></a>
