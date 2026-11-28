@@ -5,6 +5,32 @@
   "livros_texto": "Livros de que sou autor, coautor ou organizador.",
   "grupos": [
     {
+      "titulo": "Artigos em periódicos",
+      "itens": [
+        {
+          "ano": "2024",
+          "titulo": "O uso da comunicação como força motriz para o desenvolvimento: clínica médica",
+          "onde": "Anuário Unesco/Umesp de Comunicação Regional, v. 25, n. 25, p. 23-34.",
+          "coautores": "Com C. Escudero",
+          "link": "https://doi.org/10.15603/2176-0934/aum.v25n25p23-34"
+        },
+        {
+          "ano": "2024",
+          "titulo": "Captação de recursos alternativos para instituições do terceiro setor: o caso da universidade",
+          "onde": "Revista Duc in Altum, v. 22.",
+          "coautores": "",
+          "link": ""
+        },
+        {
+          "ano": "2024",
+          "titulo": "Dos meios às mediações, das mediações aos meios: o uso das tecnologias para a transformação das mediações",
+          "onde": "Revista Duc in Altum, v. 22.",
+          "coautores": "",
+          "link": ""
+        }
+      ]
+    },
+    {
       "titulo": "Trabalhos completos em anais de congressos",
       "itens": [
         {
@@ -112,13 +138,6 @@
           "link": ""
         },
         {
-          "ano": "2024",
-          "titulo": "O uso da comunicação como força motriz para o desenvolvimento: clínica médica",
-          "onde": "Congresso.",
-          "coautores": "Com C. Escudero",
-          "link": ""
-        },
-        {
           "ano": "2023",
           "titulo": "Educação e novas tecnologias",
           "onde": "Simpósio.",
@@ -177,6 +196,39 @@
           "titulo": "Regressão linear simples: Vale do Jequitinhonha",
           "onde": "Artigo publicado no portal Artigonal.",
           "coautores": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "titulo": "Participação em bancas",
+      "itens": [
+        {
+          "ano": "2014",
+          "titulo": "Propaganda desleal: o plágio de marcas",
+          "onde": "Monografia de Juliana Carvalhais Smeers, MBA em Marketing e Vendas, Uniderp.",
+          "coautores": "Com A. S. Silva e F. C. Rossi",
+          "link": ""
+        },
+        {
+          "ano": "2014",
+          "titulo": "Hipertensão arterial e medidas preventivas",
+          "onde": "Monografia de Joyce Elias Paglione, Especialização em Enfermagem do Trabalho, Uniderp.",
+          "coautores": "Com A. S. Silva e F. C. Rossi",
+          "link": ""
+        },
+        {
+          "ano": "2013",
+          "titulo": "Plano de negócio: Spasso Ballonê",
+          "onde": "TCC de Gisele Mara Mellonari e Letícia Carla Alves Pereira, Graduação em Administração, Anhanguera Campinas.",
+          "coautores": "Com R. Morandi",
+          "link": ""
+        },
+        {
+          "ano": "2013",
+          "titulo": "Plano de negócio: Empresa Reciclo",
+          "onde": "TCC de Adner Loro Boscariol, Aline Cristine Longo e Bruna Pavani, Graduação em Administração, Anhanguera Campinas.",
+          "coautores": "Com R. Morandi",
           "link": ""
         }
       ]
