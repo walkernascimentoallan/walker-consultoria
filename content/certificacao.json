@@ -1,0 +1,132 @@
+{
+  "prefixo": "WCE",
+  "nota_minima": 7,
+  "carga_minima": 16,
+  "cursos": [
+    {
+      "id": "novo-marco",
+      "titulo": "Novo Marco Regulatório na Prática",
+      "kiwify_produto": "Novo Marco Regulatório",
+      "carga_horaria": 16,
+      "ativo": true,
+      "perguntas": [
+        {
+          "pergunta": "Qual norma instituiu o novo marco regulatório da educação superior a distância e semipresencial?",
+          "opcoes": [
+            "Decreto nº 9.057/2017",
+            "Decreto nº 12.456/2025",
+            "Lei nº 10.861/2004",
+            "Portaria MEC nº 2.117/2019"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Até quando as instituições já credenciadas, com cursos autorizados, têm para se adequar?",
+          "opcoes": [
+            "Dezembro de 2025",
+            "Maio de 2026",
+            "Maio de 2027",
+            "Dezembro de 2028"
+          ],
+          "resposta": 2
+        },
+        {
+          "pergunta": "Em um curso presencial, qual é o mínimo da carga horária em atividades presenciais?",
+          "opcoes": [
+            "50%",
+            "60%",
+            "70%",
+            "80%"
+          ],
+          "resposta": 2
+        },
+        {
+          "pergunta": "Em um curso a distância, qual é a exigência mínima de carga horária?",
+          "opcoes": [
+            "Nenhuma atividade presencial",
+            "10% presencial e mais 10% em atividades síncronas mediadas",
+            "30% presencial",
+            "20% presencial e mais 20% síncrona"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "No formato semipresencial, a regra geral é:",
+          "opcoes": [
+            "30% presencial (40% em alguns cursos) e mais 20% presencial ou síncrona mediada",
+            "10% presencial e mais 10% síncrona",
+            "50% presencial e 50% a distância",
+            "Livre definição pela instituição"
+          ],
+          "resposta": 0
+        },
+        {
+          "pergunta": "Nas atividades síncronas mediadas, qual é o limite de estudantes por docente ou mediador pedagógico?",
+          "opcoes": [
+            "30",
+            "50",
+            "70",
+            "100"
+          ],
+          "resposta": 2
+        },
+        {
+          "pergunta": "O que caracteriza o mediador pedagógico no novo marco?",
+          "opcoes": [
+            "É o mesmo que o tutor administrativo",
+            "Função exclusivamente pedagógica, com formação compatível com o curso, distinta da tutoria administrativa",
+            "Responsável apenas pela secretaria do polo",
+            "Cargo opcional sem exigência de formação"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Quais cursos passaram a ser somente presenciais?",
+          "opcoes": [
+            "Administração, Pedagogia e Direito",
+            "Medicina, Direito, Odontologia, Psicologia e Enfermagem",
+            "Todas as licenciaturas",
+            "Apenas Medicina"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Além do Decreto, qual portaria do MEC trata dos limites de carga horária de cada formato?",
+          "opcoes": [
+            "Portaria MEC nº 378/2025",
+            "Portaria MEC nº 40/2007",
+            "Portaria MEC nº 23/2017",
+            "Portaria MEC nº 1.428/2018"
+          ],
+          "resposta": 0
+        },
+        {
+          "pergunta": "Quais documentos precisam conversar com a nova regra antes do próximo ato regulatório?",
+          "opcoes": [
+            "Apenas o PPC",
+            "PDI, regimento, PPCs, editais e contratos educacionais",
+            "Somente o contrato com o polo",
+            "Nenhum, basta ajustar a matriz"
+          ],
+          "resposta": 1
+        }
+      ]
+    },
+    {
+      "id": "gestao-polos",
+      "titulo": "Gestão de Polos EAD",
+      "kiwify_produto": "Gestão de Polos",
+      "carga_horaria": 16,
+      "ativo": false,
+      "perguntas": []
+    },
+    {
+      "id": "captacao",
+      "titulo": "Captação de Recursos para Instituições de Ensino",
+      "kiwify_produto": "Captação de Recursos",
+      "carga_horaria": 16,
+      "ativo": false,
+      "perguntas": []
+    }
+  ]
+}
