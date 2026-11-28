@@ -513,6 +513,56 @@ document.getElementById('drAgain').addEventListener('click',()=>{f.reset();r.hid
         page('agendar.html', 'Agendar conversa | Walker Consultoria Educacional',
              'Agende uma conversa de 30 minutos, sem custo, com o Prof. Walker Nascimento sobre o novo marco regulatório da educação superior.', ag_body, active='agendar.html')
 
+    # ---- Certificados: registro, verificação e emissão ----
+    import hashlib
+    CERT = J('certificados.json') if os.path.exists(os.path.join(ROOT, 'content', 'certificados.json')) else {'registros': []}
+    _salt = 'wce-' + (SITE.get('dominio') or 'walkerconsultoria.com.br')
+    os.makedirs(os.path.join(OUT, 'c'), exist_ok=True)
+    for i, r in enumerate(CERT.get('registros') or []):
+        ano = str(r.get('data') or '')[:4] or str(datetime.date.today().year)
+        num = f"{CERT.get('prefixo') or 'WCE'}-{ano}-{i + 1:04d}"
+        cod = hashlib.sha256((num + '|' + (r.get('nome') or '') + '|' + _salt).encode()).hexdigest()[:6].upper()
+        _c = next((c for c in CUR.get('cursos', []) if (c.get('titulo') or '').strip().lower() == (r.get('curso') or '').strip().lower()), {})
+        _top = [x.strip() for x in str(r.get('conteudo') or '').split('\n') if x.strip()] or [t.get('texto') for t in (_c.get('topicos') or []) if t.get('texto')]
+        try: _ch = max(16, int(r.get('carga_horaria') or 16))
+        except Exception: _ch = 16
+        dado = {'numero': num, 'codigo': cod, 'nome': r.get('nome'), 'curso': r.get('curso'), 'carga': _ch,
+                'data': r.get('data'), 'conteudo': _top, 'ementa': r.get('ementa') or _c.get('texto') or '',
+                'publico': _c.get('publico') or '', 'formato': _c.get('formato') or '',
+                'situacao': r.get('situacao') or 'valido'}
+        with open(os.path.join(OUT, 'c', f'{num}-{cod}.json'), 'w', encoding='utf-8') as fh:
+            json.dump(dado, fh, ensure_ascii=False)
+    cert_body = hero([(None, 'Verificar certificado')], 'Verificar certificado',
+        'Digite o número de registro e o código de verificação impressos no verso do certificado.') + """<section class="band"><div class="wrap">
+<form id="cv" class="cv-form" novalidate><label>Número de registro<input name="n" required placeholder="WCE-2026-0001" autocomplete="off"></label>
+<label>Código de verificação<input name="c" required placeholder="A1B2C3" autocomplete="off" maxlength="6"></label><button class="btn gold" type="submit">Verificar</button></form>
+<div id="cv-res" class="cv-res" aria-live="polite"></div><div id="cv-doc"></div></div></section>
+<script src="/qrcode.js"></script><script>
+(()=>{const f=document.getElementById('cv'),R=document.getElementById('cv-res'),D=document.getElementById('cv-doc');
+const M=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
+const dt=s=>{const[a,m,d]=(s||'').split('-');return a?`${+d} de ${M[+m-1]} de ${a}`:''};const x=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function qr(t){const q=qrcode(0,'M');q.addData(t);q.make();return q.createSvgTag({cellSize:4,margin:0})}
+async function go(n,c,push){n=n.trim().toUpperCase();c=c.trim().toUpperCase();R.className='cv-res';D.innerHTML='';if(!n||!c){R.textContent='Preencha o número e o código.';R.classList.add('err');return}
+R.textContent='Consultando…';let d=null;try{const r=await fetch('/c/'+encodeURIComponent(n)+'-'+encodeURIComponent(c)+'.json',{cache:'no-store'});if(r.ok)d=await r.json()}catch(e){}
+if(push)history.replaceState(null,'','?n='+encodeURIComponent(n)+'&c='+encodeURIComponent(c));
+if(!d){R.innerHTML='<b>Certificado não encontrado.</b> Confira o número e o código no verso do certificado. Em caso de dúvida, fale pelo WhatsApp.';R.classList.add('err');return}
+if(d.situacao!=='valido'){R.innerHTML='<b>Este certificado foi cancelado</b> e não tem validade.';R.classList.add('err');return}
+R.innerHTML=`<b>Certificado válido.</b> ${x(d.nome)} concluiu o curso ${x(d.curso)}${d.carga?`, com ${x(d.carga)} horas`:''}, em ${dt(d.data)}. Registro ${x(d.numero)}.`;R.classList.add('ok');
+const url=location.origin+'/certificado.html?n='+encodeURIComponent(d.numero)+'&c='+d.codigo;
+D.innerHTML=`<div class="cv-actions"><button class="btn gold" type="button" onclick="print()">Baixar em PDF / imprimir</button></div>
+<div class="cert-sheet cert-front"><img class="cf-wm" src="/marca-wn-200.png" alt=""><div class="cf-in"><img class="cf-logo" src="/marca-wn-200.png" alt=""><div class="cf-br">WALKER CONSULTORIA EDUCACIONAL</div><h2>Certificado de conclusão</h2><p class="cf-sub">Certificamos que</p><div class="cf-nm">${x(d.nome)}</div><p class="cf-tx">concluiu, com aproveitamento, o curso livre de atualização profissional</p><div class="cf-curso">${x(d.curso)}</div><p class="cf-tx">promovido pela Walker Consultoria Educacional sob a coordenação do Prof. Walker Nascimento, com carga horária total de <b>${x(d.carga)} horas</b>, concluído em ${dt(d.data)}.</p>
+<div class="cf-ft"><div class="cf-sig"><img src="/assinatura.png" alt="Assinatura">Prof. Walker Nascimento<span>Walker Consultoria Educacional</span></div><div class="cf-reg">Registro nº <b>${x(d.numero)}</b><br>Curso livre de atualização profissional</div></div></div></div>
+<div class="cert-sheet cert-back"><div class="cb-in"><h3>Ementa</h3>${d.ementa?`<p class="cb-em">${x(d.ementa)}</p>`:''}<h4>Conteúdo programático</h4>${d.conteudo&&d.conteudo.length?'<ol>'+d.conteudo.map(t=>'<li>'+x(t)+'</li>').join('')+'</ol>':'<p>Conforme o programa do curso.</p>'}
+<div class="cb-grid"><div><span>Participante</span><b>${x(d.nome)}</b></div><div><span>Curso</span><b>${x(d.curso)}</b></div><div><span>Carga horária</span><b>${x(d.carga)} horas</b></div><div><span>Conclusão</span><b>${dt(d.data)}</b></div></div>
+<div class="cb-ver"><div class="cb-qr">${qr(url)}</div><div><span>Registro nº</span><b class="cb-num">${x(d.numero)}</b><span>Código de verificação</span><b class="cb-num">${x(d.codigo)}</b><p>Confira a autenticidade em <b>walkerconsultoria.com.br/certificado</b> ou pelo QR code.</p></div></div>
+<p class="cb-leg">Curso livre amparado pela Lei nº 9.394/1996 e pelo Decreto nº 5.154/2004. Por ser de livre oferta, não exige credenciamento no MEC. Destina-se ao aperfeiçoamento profissional e não confere grau acadêmico ou técnico.</p></div></div>`}
+f.addEventListener('submit',e=>{e.preventDefault();e.stopImmediatePropagation();go(f.n.value,f.c.value,true)},true);
+const q=new URLSearchParams(location.search);if(q.get('n')&&q.get('c')){f.n.value=q.get('n');f.c.value=q.get('c');go(q.get('n'),q.get('c'),false)}})();
+</script>"""
+    page('certificado.html', 'Verificar certificado | Walker Consultoria Educacional',
+         'Confira a autenticidade de um certificado emitido pela Walker Consultoria Educacional pelo número de registro.', cert_body, active='certificado.html')
+
+
 
     # ----- cursos -----
     cards = ''
@@ -560,7 +610,40 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
     print('ok', len(PAGES), 'páginas')
 
 
-EXTRA_CSS = '''
+EXTRA_CSS = '''.cf-curso{margin:.35em 0 .2em;font-size:2.1em;font-weight:800;color:#0e3b3d;max-width:85%;line-height:1.15}
+.cert-front .cf-tx{margin-top:.5em}.cert-front .cf-nm{margin-top:.5em}.cert-sheet h2{font-size:3em}
+.cb-em{margin:0 0 .9em;font-size:1.02em;line-height:1.55;max-width:95%}.cert-back h4{margin:0 0 .4em;font-size:1.15em;color:#8a6a1f}
+
+.cv-form{display:grid;grid-template-columns:1fr 1fr auto;gap:16px;align-items:end;max-width:900px}
+.cv-form label{display:flex;flex-direction:column;gap:6px;font-weight:700;font-size:.95rem}
+.cv-form input{padding:12px 14px;border:1px solid #c9d6d4;border-radius:10px;font:inherit;text-transform:uppercase}
+.cv-res{margin-top:22px;max-width:900px;padding:0;border-radius:12px}
+.cv-res.ok{padding:16px 20px;background:#e6f2ea;color:#14532d;border:1px solid #9ccfae}.cv-res.err{padding:16px 20px;background:#fdecea;color:#8a1c12;border:1px solid #f0b4ad}
+:root[data-theme=dark] .cv-res.ok{background:#12362a;color:#bfe8cd;border-color:#2f6b4c}:root[data-theme=dark] .cv-res.err{background:#3a1715;color:#ffc9c3;border-color:#7a2e27}
+.cv-actions{margin:26px 0 16px}
+.cert-sheet{width:100%;max-width:1100px;aspect-ratio:297/210;background:#fff;color:#1d2b2c;margin:0 auto 26px;position:relative;box-shadow:0 18px 40px rgba(14,59,61,.18);border-radius:6px;overflow:hidden;font-size:clamp(9px,1.25vw,15px)}
+.cert-sheet:before{content:"";position:absolute;inset:3.2%;border:.35em solid #0e3b3d;border-radius:.6em}
+.cert-sheet:after{content:"";position:absolute;inset:4.6%;border:.12em solid #c6a25a;border-radius:.4em}
+.cf-wm{position:absolute;right:7%;bottom:9%;width:30%;opacity:.07;z-index:0}
+.cert-front .cf-in{position:absolute;inset:8% 10%;display:flex;flex-direction:column;align-items:center;text-align:center;z-index:1}
+.cf-logo{width:10%}.cf-br{margin-top:.6em;font-size:.95em;letter-spacing:.3em;color:#8a6a1f;font-weight:700}
+.cert-sheet h2{margin:.8em 0 0;font-size:3.4em;color:#0e3b3d;line-height:1.05}.cf-sub{margin:.6em 0 0;color:#4b5b5c;font-size:1.15em}
+.cf-nm{margin-top:.7em;font-size:2.7em;font-weight:700;color:#8a6a1f;border-bottom:.08em solid #c6a25a;padding:0 1.2em .2em;min-width:55%}
+.cf-tx{margin:.9em auto 0;max-width:80%;font-size:1.2em;line-height:1.5}
+.cf-ft{margin-top:auto;width:100%;display:flex;justify-content:space-between;align-items:flex-end}
+.cf-sig{width:38%;border-top:.1em solid #0e3b3d;padding-top:.4em;font-weight:700;color:#0e3b3d;position:relative;font-size:1.05em}
+.cf-sig img{position:absolute;left:50%;bottom:100%;transform:translateX(-50%);width:95%}.cf-sig span{display:block;font-weight:400;color:#4b5b5c;font-size:.85em}
+.cf-reg{text-align:right;font-size:.85em;color:#4b5b5c;line-height:1.5}.cf-reg b{color:#0e3b3d}
+.cert-back .cb-in{position:absolute;inset:8% 9%;display:flex;flex-direction:column}
+.cert-back h3{margin:0 0 .5em;font-size:1.7em;color:#0e3b3d}.cert-back ol{margin:0;padding-left:1.4em;columns:2;column-gap:2.4em;font-size:1.02em;line-height:1.55}
+.cb-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1em;margin-top:auto;padding-top:1em;border-top:.08em solid #c6a25a}
+.cb-grid span,.cb-ver span{display:block;font-size:.78em;color:#6b7b7c}.cb-grid b{font-size:.98em;color:#0e3b3d}
+.cb-ver{display:flex;gap:1.4em;align-items:center;margin-top:1.1em}.cb-qr svg{width:7.5em;height:7.5em;display:block}
+.cb-num{display:block;font-size:1.3em;color:#0e3b3d;letter-spacing:.06em;margin-bottom:.3em}.cb-ver p{margin:0;font-size:.9em}
+.cb-leg{margin:.9em 0 0;font-size:.72em;color:#6b7b7c}
+@media(max-width:700px){.cv-form{grid-template-columns:1fr}}
+@media print{@page{size:A4 landscape;margin:0}body *{visibility:hidden}#cv-doc,#cv-doc *{visibility:visible}#cv-doc{position:absolute;left:0;top:0;width:100%}.cv-actions{display:none}.cert-sheet{width:297mm;height:210mm;max-width:none;margin:0;box-shadow:none;border-radius:0;font-size:4.2mm;page-break-after:always;-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
 .ag-grid{display:grid;grid-template-columns:300px 1fr;gap:32px;align-items:start}
 .ag-side{background:#0e3b3d;color:#e8efee;border-radius:16px;padding:28px;position:relative;overflow:hidden}
 .ag-side:after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;background:url(/marca-wn-200.png) center/contain no-repeat;opacity:.08}
