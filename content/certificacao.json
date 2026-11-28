@@ -117,16 +117,218 @@
       "titulo": "Gestão de Polos EAD",
       "kiwify_produto": "Gestão de Polos",
       "carga_horaria": 16,
-      "ativo": false,
-      "perguntas": []
+      "ativo": true,
+      "perguntas": [
+        {
+          "pergunta": "Com o novo marco, o que o polo passa a receber além do atendimento?",
+          "opcoes": [
+            "Apenas matrículas",
+            "Atividades presenciais obrigatórias e avaliações",
+            "Somente eventos de captação",
+            "Nada muda"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Quem responde perante o MEC pelo que acontece no polo de um parceiro?",
+          "opcoes": [
+            "O parceiro",
+            "A prefeitura",
+            "A instituição de ensino",
+            "O aluno"
+          ],
+          "resposta": 2
+        },
+        {
+          "pergunta": "Qual falha é uma das mais comuns no e-MEC?",
+          "opcoes": [
+            "Excesso de cursos",
+            "Cadastro do polo diferente da realidade",
+            "Falta de logotipo",
+            "Preço desatualizado"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Por que registrar a frequência nas atividades síncronas?",
+          "opcoes": [
+            "Por estética",
+            "Porque sem registro a carga horária não é comprovada",
+            "Para enviar ao parceiro",
+            "Não é necessário"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Quais são as etapas do funil de matrículas?",
+          "opcoes": [
+            "Visita, prova e diploma",
+            "Interessados, inscritos, matriculados e primeira mensalidade paga",
+            "Inscrição e formatura",
+            "Contato e cobrança"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Qual combinação de sinais pede contato imediato com o aluno?",
+          "opcoes": [
+            "Boas notas e presença",
+            "Dois sinais de risco juntos, como faltas e atraso no pagamento",
+            "Pedido de declaração",
+            "Elogio ao polo"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Como permanência e inadimplência se relacionam?",
+          "opcoes": [
+            "Não se relacionam",
+            "O aluno inadimplente tende a evadir",
+            "Inadimplência aumenta a permanência",
+            "Só importam em cursos presenciais"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "A que o repasse ao polo parceiro deve estar ligado?",
+          "opcoes": [
+            "Somente ao número de matrículas",
+            "A metas de captação, permanência e qualidade",
+            "Ao tamanho do imóvel",
+            "Ao número de funcionários"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "O que o contrato deve prever em caso de fechamento do polo?",
+          "opcoes": [
+            "Nada",
+            "A continuidade dos alunos e a guarda dos documentos",
+            "Apenas multa",
+            "A devolução das mensalidades"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Como devem ser as reuniões com os gestores de polo?",
+          "opcoes": [
+            "Longas e raras",
+            "Curtas, regulares e com pauta fixa",
+            "Somente quando há problema",
+            "Apenas por e-mail"
+          ],
+          "resposta": 1
+        }
+      ]
     },
     {
       "id": "captacao",
       "titulo": "Captação de Recursos para Instituições de Ensino",
       "kiwify_produto": "Captação de Recursos",
       "carga_horaria": 16,
-      "ativo": false,
-      "perguntas": []
+      "ativo": true,
+      "perguntas": [
+        {
+          "pergunta": "O que a mensalidade raramente financia?",
+          "opcoes": [
+            "A operação básica",
+            "Bolsas, pesquisa, extensão e infraestrutura nova",
+            "O salário da secretaria",
+            "A conta de luz"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "O que é fundraising?",
+          "opcoes": [
+            "Venda de cursos",
+            "Processo organizado de captar recursos para uma causa",
+            "Cobrança de inadimplentes",
+            "Empréstimo bancário"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "O que caracteriza o modelo norte-americano de captação?",
+          "opcoes": [
+            "Ausência de doações",
+            "Equipes profissionais, ex-alunos ativos e fundos patrimoniais",
+            "Apenas recursos públicos",
+            "Somente mensalidades"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Por que, no Brasil, a captação depende mais de relacionamento?",
+          "opcoes": [
+            "Porque os incentivos fiscais são modestos",
+            "Porque é proibido doar",
+            "Porque não há empresas",
+            "Porque o MEC exige"
+          ],
+          "resposta": 0
+        },
+        {
+          "pergunta": "Qual é o primeiro passo para envolver ex-alunos?",
+          "opcoes": [
+            "Pedir doação imediatamente",
+            "Ter um cadastro atualizado",
+            "Criar um fundo patrimonial",
+            "Contratar uma agência"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Por onde começa uma boa parceria com empresas?",
+          "opcoes": [
+            "Pelo pedido de dinheiro",
+            "Por uma necessidade real da empresa que a instituição pode atender",
+            "Pelo contrato padrão",
+            "Pelo desconto em mensalidade"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Como funciona um projeto incentivado?",
+          "opcoes": [
+            "A empresa destina parte do imposto a projetos aprovados",
+            "O governo paga a mensalidade",
+            "O aluno doa ao governo",
+            "Não existe no Brasil"
+          ],
+          "resposta": 0
+        },
+        {
+          "pergunta": "O que mantém a confiança do doador?",
+          "opcoes": [
+            "Silêncio sobre o uso do recurso",
+            "Relatórios com números e histórias",
+            "Novos pedidos frequentes",
+            "Sorteios"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "O que o caso para doação explica?",
+          "opcoes": [
+            "Apenas o valor pedido",
+            "A causa, o problema, a ação, o custo e o impacto",
+            "O histórico dos diretores",
+            "O regimento interno"
+          ],
+          "resposta": 1
+        },
+        {
+          "pergunta": "Qual indicador mede a eficiência da captação?",
+          "opcoes": [
+            "Número de cursos",
+            "Retorno por real investido na captação",
+            "Quantidade de polos",
+            "Nota do ENADE"
+          ],
+          "resposta": 1
+        }
+      ]
     }
   ]
 }
