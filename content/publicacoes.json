@@ -10,8 +10,8 @@
         {
           "ano": "2026",
           "titulo": "Comunicação como escuta ancestral: a sabedoria indígena e as epistemologias do Sul, ecologia de saberes e epistemicídio digital",
-          "onde": "35º Encontro Anual da Compós, GT Comunicação e Cultura, Natal (RN). Anais do 35º Encontro Anual da Compós.",
-          "coautores": "Com Dimas A. Künsch",
+          "onde": "35º Encontro Anual da Compós, GT Comunicação e Cultura, Universidade Federal do Rio Grande do Norte (UFRN), Natal (RN). Anais do 35º Encontro Anual da Compós. Recorte da tese de doutorado “Entre Algoritmos e Ancestralidade” (UMESP).",
+          "coautores": "Com Prof. Dr. Dimas A. Künsch",
           "link": ""
         },
         {
@@ -27,6 +27,30 @@
           "onde": "Congresso da Universidade Metodista de São Paulo, São Paulo (SP).",
           "coautores": "",
           "link": ""
+        }
+      ]
+    },
+    {
+      "titulo": "Organização de obras",
+      "itens": [
+        {
+          "ano": "2026",
+          "titulo": "Múltiplos Olhares para a Inclusão: vivências, teoria e prática em diferentes espaços sociais",
+          "onde": "Revista Interação, Universidade Metodista de São Paulo. Participação como um dos organizadores.",
+          "coautores": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "titulo": "Na imprensa",
+      "itens": [
+        {
+          "ano": "2026",
+          "titulo": "Estudar menos, aprender mais: os hábitos que podem turbinar sua nota no Enem",
+          "onde": "Revista Exame, seção Carreira. Entrevista como diretor acadêmico do Grupo MoveEdu.",
+          "coautores": "",
+          "link": "https://exame.com/carreira/estudar-menos-aprender-mais-os-habitos-que-podem-turbinar-sua-nota-no-enem/"
         }
       ]
     },
@@ -133,6 +157,25 @@
           "ano": "2011",
           "titulo": "Fundraising: modelo de captação de recursos para instituições sem fins lucrativos",
           "onde": "Conferência.",
+          "coautores": "",
+          "link": ""
+        }
+      ]
+    },
+    {
+      "titulo": "Material didático e outros textos",
+      "itens": [
+        {
+          "ano": "2013",
+          "titulo": "Manual do Estágio Supervisionado I e II",
+          "onde": "Curso de Administração, Faculdade Anhanguera. Modelo adotado para as atividades de estágio do 5º e 6º semestres.",
+          "coautores": "",
+          "link": ""
+        },
+        {
+          "ano": "2012",
+          "titulo": "Regressão linear simples: Vale do Jequitinhonha",
+          "onde": "Artigo publicado no portal Artigonal.",
           "coautores": "",
           "link": ""
         }
