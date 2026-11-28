@@ -76,23 +76,6 @@ collections:
     preview: false
   label: Páginas do site
   files:
-  - name: certificados
-    label: Certificados (registro e verificação)
-    file: content/certificados.json
-    fields:
-    - {name: prefixo, label: Prefixo do número de registro, widget: string, default: WCE}
-    - name: registros
-      label: 'Certificados emitidos (sempre adicione no fim da lista; para invalidar, mude a situação para cancelado, nunca apague)'
-      label_singular: Certificado
-      widget: list
-      summary: '{{fields.nome}} · {{fields.curso}}'
-      fields:
-      - {name: nome, label: Nome completo do participante, widget: string}
-      - {name: curso, label: Curso, widget: string}
-      - {name: carga_horaria, label: Carga horária (horas), widget: number, value_type: int}
-      - {name: data, label: Data de conclusão, widget: datetime, format: 'YYYY-MM-DD', date_format: 'DD/MM/YYYY', time_format: false}
-      - {name: conteudo, label: 'Conteúdo programático (um tópico por linha)', widget: text, required: false}
-      - {name: situacao, label: Situação, widget: select, options: [{label: Válido, value: valido}, {label: Cancelado, value: cancelado}], default: valido}
   - name: banners
     label: Banners rotativos (topo da página inicial)
     file: content/banners.json
