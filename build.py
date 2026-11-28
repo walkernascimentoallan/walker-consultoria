@@ -99,7 +99,7 @@ def header(active):
 <a class="brand" href="/" aria-label="Walker Consultoria Educacional, página inicial">{MARK}</a>
 <button class="theme-btn" type="button" aria-label="Ativar modo noturno" title="Modo noturno"><svg class="ic-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5z" fill="currentColor"/></svg><svg class="ic-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></g></svg></button>
 <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mainnav"><span class="mb-ico" aria-hidden="true"></span><span class="mb-txt">Menu</span></button>
-<nav id="mainnav" aria-label="Principal">{links}<a class="cta" href="/contato.html"{CUR if active == "contato.html" else ""}>Agendar conversa</a></nav>
+<nav id="mainnav" aria-label="Principal">{links}<a class="cta" href="/agendar.html"{CUR if active == "contato.html" else ""}>Agendar conversa</a></nav>
 </div></header>'''
 
 
@@ -114,7 +114,7 @@ def footer():
 <label class="consent"><input type="checkbox" name="consentimento" value="sim" required> Autorizo o envio do boletim por e-mail, conforme a LGPD. Posso cancelar quando quiser.</label>
 <button class="btn gold" type="submit">Assinar o boletim</button></form>
 <div class="foot-col"><b>O site</b><a href="/sobre.html">Sobre o Prof. Walker</a><a href="/consultoria.html">Consultoria</a><a href="/novo-marco.html">Guia do Novo Marco</a><a href="/legislacao.html">Legislação do novo marco</a><a href="/novo-marco.html#diagnostico">Diagnóstico gratuito</a><a href="/onde-atuei.html">Onde atuei</a><a href="/publicacoes.html">Publicações</a><a href="/cursos.html">Cursos e e-book</a><a href="/eventos.html">Eventos</a><a href="/radar.html">Radar e biblioteca</a></div>
-<div class="foot-col"><b>Contato</b><a href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">WhatsApp {e(SITE['whatsapp_texto'])}</a><a href="mailto:{e(SITE['email'])}">{e(SITE['email'])}</a><a href="{e(SITE['linkedin'])}" target="_blank" rel="noopener">LinkedIn</a><a href="{e(SITE['instagram'])}" target="_blank" rel="noopener">Instagram</a><a href="/contato.html">Agendar conversa</a></div>
+<div class="foot-col"><b>Contato</b><a href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">WhatsApp {e(SITE['whatsapp_texto'])}</a><a href="mailto:{e(SITE['email'])}">{e(SITE['email'])}</a><a href="{e(SITE['linkedin'])}" target="_blank" rel="noopener">LinkedIn</a><a href="{e(SITE['instagram'])}" target="_blank" rel="noopener">Instagram</a><a href="/agendar.html">Agendar conversa</a></div>
 </div><div class="wrap foot-legal"><span>© {datetime.date.today().year} Walker Consultoria Educacional</span><a href="/politica-de-privacidade.html">Política de privacidade</a><span class="visitas" id="visitas" hidden><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 5C6.5 5 2.7 9.4 1.5 12c1.2 2.6 5 7 10.5 7s9.3-4.4 10.5-7C21.3 9.4 17.5 5 12 5zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8z" fill="currentColor"/></svg><b id="visitasN"></b> visitas</span></div></footer>'''
 
 
@@ -204,7 +204,7 @@ def icon(d):
 
 
 def cta_band(h):
-    return f'<section class="band dark"><div class="wrap cta-band"><h2>{e(h)}</h2><div class="btns" style="margin:0"><a class="btn gold" href="/contato.html">Agendar conversa</a><a class="btn ghost" href="/novo-marco.html#diagnostico">Fazer o diagnóstico gratuito</a></div></div></section>'
+    return f'<section class="band dark"><div class="wrap cta-band"><h2>{e(h)}</h2><div class="btns" style="margin:0"><a class="btn gold" href="/agendar.html">Agendar conversa</a><a class="btn ghost" href="/novo-marco.html#diagnostico">Fazer o diagnóstico gratuito</a></div></div></section>'
 
 
 def steps(items):
@@ -335,7 +335,7 @@ def main():
 
     # ----- consultoria -----
     b = hero([(None, 'Consultoria')], 'Consultoria em regulação e gestão do ensino superior', 'Cada frente pode ser contratada sozinha ou como parte de um plano de adequação completo, com cronograma alinhado ao calendário do e-MEC.',
-             '<a class="btn gold" href="/contato.html">Agendar conversa</a><a class="btn ghost" href="/novo-marco.html#diagnostico">Fazer o diagnóstico gratuito</a>')
+             '<a class="btn gold" href="/agendar.html">Agendar conversa</a><a class="btn ghost" href="/novo-marco.html#diagnostico">Fazer o diagnóstico gratuito</a>')
     b += f'''<section class="band"><div class="wrap"><div class="sec-head"><div><h2>Serviços</h2></div></div>{svc_cards()}</div></section>
 <section class="band tint"><div class="wrap"><div class="sec-head"><div><h2>Como o trabalho acontece</h2><p class="soft">Um percurso curto e documentado. Cada etapa termina com uma entrega que a direção pode levar ao conselho, à mantenedora ou ao procurador institucional.</p></div></div>{steps(SERV["metodo"])}</div></section>
 <section class="band"><div class="wrap for-who"><div><h2>Para quem é</h2><ul class="checks">{li(SERV["para_quem"])}</ul></div><div><h2>Como é cobrado</h2><div class="soft">{paras(SERV["como_cobra"])}</div></div></div></section>{cta_band("Vamos olhar a sua instituição?")}'''
@@ -347,7 +347,7 @@ def main():
 <div class="svc-block"><h2>Quando faz sentido</h2><ul class="checks">{li(s["quando"])}</ul></div>
 <div class="svc-block"><h2>O que eu faço</h2><ul class="checks">{li(s["faco"])}</ul></div>
 <div class="svc-block"><h2>O que você recebe</h2><ul class="deliver">{li(s["entregas"])}</ul></div></div>
-<aside class="svc-side"><div class="side-box"><b>Conversa inicial sem custo</b><p>Em 30 minutos, entendo o cenário e digo com franqueza se este serviço resolve o seu caso.</p><a class="btn gold" href="/contato.html">Agendar conversa</a></div>
+<aside class="svc-side"><div class="side-box"><b>Conversa inicial sem custo</b><p>Em 30 minutos, entendo o cenário e digo com franqueza se este serviço resolve o seu caso.</p><a class="btn gold" href="/agendar.html">Agendar conversa</a></div>
 <div class="side-box plain"><b>Outros serviços</b><ul>{others}</ul></div></aside></div></section>
 <section class="band tint"><div class="wrap"><div class="sec-head"><div><h2>Como o trabalho acontece</h2></div></div>{steps(SERV["metodo"])}</div></section>{cta_band("Vamos olhar a sua instituição?")}'''
         page(s['slug'] + '.html', f'{s["titulo"]} | Walker Consultoria Educacional', s['resumo'], b, active='consultoria.html')
@@ -429,7 +429,7 @@ document.getElementById('drAgain').addEventListener('click',()=>{f.reset();r.hid
 <section class="band"><div class="wrap"><div class="prose">{f'<img class="art-cover" src="{e(a["imagem"])}" alt="">' if a.get("imagem") else ''}{a["body"]}
 <p class="note">Este texto é informativo e não substitui a leitura das normas nem a análise do caso concreto da sua instituição.</p>
 {f'<h2 style="font-size:20px">Fontes</h2><ul class="sources">{srcl}</ul>' if srcl else ''}
-<div class="art-cta"><b>Quer saber como isso se aplica à sua IES?</b><p>Faça o diagnóstico gratuito ou agende uma conversa de 30 minutos.</p><div class="btns" style="margin:0"><a class="btn gold" href="/novo-marco.html#diagnostico">Fazer o diagnóstico</a><a class="btn line" href="/contato.html">Agendar conversa</a></div></div>
+<div class="art-cta"><b>Quer saber como isso se aplica à sua IES?</b><p>Faça o diagnóstico gratuito ou agende uma conversa de 30 minutos.</p><div class="btns" style="margin:0"><a class="btn gold" href="/novo-marco.html#diagnostico">Fazer o diagnóstico</a><a class="btn line" href="/agendar.html">Agendar conversa</a></div></div>
 </div></div></section></article>
 <section class="band tint"><div class="wrap"><div class="sec-head"><div><h2>Leia também</h2></div><a class="more-link" href="/radar.html">Todos os artigos</a></div>{art_cards(3, a["slug"])}</div></section>'''
         ld = json.dumps({"@context": "https://schema.org", "@type": "Article", "headline": a['titulo'], "description": a.get('resumo', ''), "author": {"@type": "Person", "name": "Walker Nascimento"}, "datePublished": a['data'], "inLanguage": "pt-BR"}, ensure_ascii=False)
@@ -481,7 +481,7 @@ document.getElementById('drAgain').addEventListener('click',()=>{f.reset();r.hid
 <div class="btns" style="margin-top:28px"><a class="btn gold" href="{e(SITE["lattes"])}" target="_blank" rel="noopener">Ver o Currículo Lattes completo</a><a class="btn line" href="/onde-atuei.html">Ver o mapa de onde atuei</a></div></div></section>
 <section class="band" id="livros"><div class="wrap"><div class="head"><h2>{e(S["livros_titulo"])}</h2><p class="soft">{e(S["livros_texto"])}</p></div>{nbh}<div class="books">{books}</div><div class="btns" style="margin-top:28px"><a class="btn line" href="/publicacoes.html">Ver todas as publicações</a></div>{fdh}</div></section>
 {mapa}
-<section class="band dark"><div class="wrap closing"><h2>{e(S["chamada_final"])}</h2><div class="btns" style="margin-top:0"><a class="btn gold" href="/contato.html">Agendar diagnóstico</a><a class="btn ghost" href="/onde-atuei.html">Ver onde já atuei</a></div></div></section>'''
+<section class="band dark"><div class="wrap closing"><h2>{e(S["chamada_final"])}</h2><div class="btns" style="margin-top:0"><a class="btn gold" href="/agendar.html">Agendar diagnóstico</a><a class="btn ghost" href="/onde-atuei.html">Ver onde já atuei</a></div></div></section>'''
     page('sobre.html', 'Prof. Walker Nascimento, trajetória | Walker Consultoria Educacional', 'Reitor, diretor e vice-diretor acadêmico, avaliador do BASis/INEP, pesquisador da Cátedra UNESCO Metodista e autor de seis livros.', b, active='sobre.html', tail='<script>{' + UFS_JS + '}' + UF_TIP_JS + '</script>')
 
     # ----- publicações -----
@@ -499,6 +499,20 @@ document.getElementById('drAgain').addEventListener('click',()=>{f.reset();r.hid
     b = hero([('/sobre.html', 'Sobre'), (None, 'Onde atuei')], 'Onde atuei', 'Faculdades, redes e polos em seis estados brasileiros. Toque em um estado no mapa para ver a atuação.',
              f'<a class="btn gold" href="/sobre.html">Voltar à trajetória</a><a class="btn ghost" href="{e(SITE["lattes"])}" target="_blank" rel="noopener">Currículo Lattes</a>') + mapa + cta_band('Vamos olhar a sua instituição?')
     page('onde-atuei.html', 'Onde atuei | Prof. Walker Nascimento', 'Mapa dos estados onde o Prof. Walker Nascimento atuou na gestão do ensino superior.', b, active='onde-atuei.html', tail='<script>{' + UFS_JS + '}' + UF_TIP_JS + '</script>')
+
+    # ---- Página de agendamento ----
+    _AG = (SITE.get('agenda_url') or '').strip()
+    if _AG:
+        ag_body = hero([(None, 'Agendar conversa')], 'Agende uma conversa', 'Trinta minutos por videochamada, sem custo. Você conta como está a sua instituição e eu digo com franqueza o que priorizaria até maio de 2027.') + f"""<section class="band"><div class="wrap ag-grid">
+<aside class="ag-side"><img src="/marca-wn-200.png" alt="" width="96" height="96" class="ag-mark"><b>Walker Consultoria Educacional</b><span>Prof. Walker Nascimento</span>
+<ul><li>30 minutos pelo Google Meet</li><li>Segunda a sexta, das 18h às 20h</li><li>O link da reunião chega no seu e-mail</li><li>Sem compromisso de contratação</li></ul>
+<p class="ag-alt">Prefere outro horário? <a href="https://wa.me/{WA_NUM}" target="_blank" rel="noopener">Chame no WhatsApp</a>.</p></aside>
+<div class="ag-frame"><iframe src="{e(_AG)}?gv=true" title="Escolha um horário" loading="lazy"></iframe>
+<p class="ag-open"><a href="{e(_AG)}" target="_blank" rel="noopener">Abrir a agenda em outra aba</a></p></div>
+</div></section>"""
+        page('agendar.html', 'Agendar conversa | Walker Consultoria Educacional',
+             'Agende uma conversa de 30 minutos, sem custo, com o Prof. Walker Nascimento sobre o novo marco regulatório da educação superior.', ag_body, active='agendar.html')
+
 
     # ----- cursos -----
     cards = ''
@@ -547,6 +561,17 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
 
 
 EXTRA_CSS = '''
+.ag-grid{display:grid;grid-template-columns:300px 1fr;gap:32px;align-items:start}
+.ag-side{background:#0e3b3d;color:#e8efee;border-radius:16px;padding:28px;position:relative;overflow:hidden}
+.ag-side:after{content:"";position:absolute;right:-60px;bottom:-60px;width:220px;height:220px;background:url(/marca-wn-200.png) center/contain no-repeat;opacity:.08}
+.ag-mark{display:block;margin-bottom:14px}.ag-side b{display:block;color:#e3c47a;font-size:1.05rem}.ag-side>span{display:block;margin-bottom:16px;color:#cfe0de}
+.ag-side ul{margin:0 0 16px;padding-left:18px;line-height:1.9}.ag-alt{font-size:.92rem;color:#cfe0de}.ag-alt a{color:#e3c47a}
+.ag-frame{border:1px solid rgba(198,162,90,.45);border-radius:16px;overflow:hidden;background:#fff;box-shadow:0 18px 40px rgba(14,59,61,.12)}
+.ag-frame iframe{display:block;width:100%;height:760px;border:0}
+.ag-open{margin:0;padding:10px 16px;font-size:.9rem;background:#f6f4ee;text-align:right}.ag-open a{color:#0e3b3d;font-weight:700}
+:root[data-theme=dark] .ag-open{background:#12292a}:root[data-theme=dark] .ag-open a{color:#e3c47a}
+@media(max-width:900px){.ag-grid{grid-template-columns:1fr}.ag-frame iframe{height:900px}}
+
 .pub-pdf{display:flex;align-items:center;gap:6px;margin-top:8px;padding:6px 12px;border:1px solid var(--gold);border-radius:999px;color:#7a5a14;font-size:.85rem;font-weight:700;text-decoration:none;width:max-content}:root[data-theme=dark] .pub-pdf{color:var(--gold)}.pub-pdf:hover{background:var(--gold);color:#0e3b3d}
 
 .foot-legal .visitas{display:inline-flex;align-items:center;gap:6px;margin-left:auto}.foot-legal .visitas[hidden]{display:none}.foot-legal .visitas b{color:var(--gold);font-weight:700}
