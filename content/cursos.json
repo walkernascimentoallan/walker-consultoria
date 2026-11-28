@@ -4,19 +4,8 @@
   "lista_texto": "As turmas abrem em breve. Entre na lista de espera do curso que interessa e receba o aviso em primeira mão.",
   "cursos": [
     {
-      "id": "ebook",
-      "selo": "Disponível agora",
-      "titulo": "E-book A Universidade do Futuro",
       "texto": "Novos modelos de gestão e captação de recursos no terceiro setor, aplicados às instituições de ensino superior. Entrega imediata em PDF na área do aluno.",
-      "topicos": [],
-      "publico": "Para mantenedores, diretores e gestores.",
-      "status": "venda",
-      "preco": "R$ 39,90",
       "link_compra": "https://pay.kiwify.com.br/eQv2T3t",
-      "duracao": "Leitura no seu ritmo, sem prazo de acesso",
-      "formato": "E-book em PDF",
-      "inicio": "Disponível agora, acesso imediato após o pagamento",
-      "para_quem": "Mantenedores, diretores e gestores de instituições de ensino",
       "resultados": [
         {
           "texto": "Montar um plano de captação de recursos além da mensalidade"
@@ -27,13 +16,39 @@
         {
           "texto": "Organizar a área de desenvolvimento institucional"
         }
-      ]
+      ],
+      "inicio": "Disponível agora, acesso imediato após o pagamento",
+      "publico": "Para mantenedores, diretores e gestores.",
+      "para_quem": "Mantenedores, diretores e gestores de instituições de ensino",
+      "preco": "R$ 39,90",
+      "duracao": "Leitura no seu ritmo, sem prazo de acesso",
+      "status": "venda",
+      "topicos": [],
+      "selo": "Disponível agora",
+      "formato": "E-book em PDF",
+      "titulo": "E-book A Universidade do Futuro",
+      "id": "ebook"
     },
     {
-      "id": "novo-marco",
-      "selo": "Curso online · lançamento em breve",
-      "titulo": "Novo Marco Regulatório na Prática",
       "texto": "O que o Decreto nº 12.456/2025 e as portarias do MEC mudam no dia a dia da instituição, e como adequar cursos, polos e documentos até maio de 2027.",
+      "link_compra": "",
+      "resultados": [
+        {
+          "texto": "Reenquadrar cada curso no formato de oferta correto"
+        },
+        {
+          "texto": "Revisar PPC, PDI e regimento na ordem certa"
+        },
+        {
+          "texto": "Montar o plano de adequação da instituição até maio de 2027"
+        }
+      ],
+      "inicio": "Lançamento em breve. Quem está na lista de espera é avisado primeiro",
+      "publico": "Para diretores, coordenadores de curso, procuradores institucionais e mantenedores.",
+      "para_quem": "Diretores, coordenadores de curso, procuradores institucionais e mantenedores",
+      "preco": "R$ 29,90",
+      "duracao": "Carga horária divulgada na abertura das inscrições",
+      "status": "lista_espera",
       "topicos": [
         {
           "texto": "Os três formatos de oferta e como reenquadrar cada curso"
@@ -54,31 +69,31 @@
           "texto": "Plano de adequação com cronograma e responsáveis"
         }
       ],
-      "publico": "Para diretores, coordenadores de curso, procuradores institucionais e mantenedores.",
-      "status": "lista_espera",
-      "preco": "",
-      "link_compra": "",
-      "duracao": "Carga horária divulgada na abertura das inscrições",
+      "selo": "Curso online · lançamento em breve",
       "formato": "Online, com aulas em vídeo, materiais em PDF e certificado",
-      "inicio": "Lançamento em breve. Quem está na lista de espera é avisado primeiro",
-      "para_quem": "Diretores, coordenadores de curso, procuradores institucionais e mantenedores",
-      "resultados": [
-        {
-          "texto": "Reenquadrar cada curso no formato de oferta correto"
-        },
-        {
-          "texto": "Revisar PPC, PDI e regimento na ordem certa"
-        },
-        {
-          "texto": "Montar o plano de adequação da instituição até maio de 2027"
-        }
-      ]
+      "titulo": "Novo Marco Regulatório na Prática",
+      "id": "novo-marco"
     },
     {
-      "id": "polos-ead",
-      "selo": "Curso online · lançamento em breve",
-      "titulo": "Gestão de Polos EAD",
       "texto": "Como estruturar, acompanhar e fazer crescer uma rede de polos de apoio presencial com qualidade e dentro da regra.",
+      "link_compra": "",
+      "resultados": [
+        {
+          "texto": "Coordenar uma rede de polos dentro da nova regra"
+        },
+        {
+          "texto": "Acompanhar indicadores de captação, permanência e qualidade"
+        },
+        {
+          "texto": "Capacitar e orientar os gestores parceiros"
+        }
+      ],
+      "inicio": "Lançamento em breve. Quem está na lista de espera é avisado primeiro",
+      "publico": "Para gestores de EAD, coordenadores de polos e parceiros.",
+      "para_quem": "Gestores de EAD, coordenadores de polos e parceiros",
+      "preco": "R$ 29,90",
+      "duracao": "Carga horária divulgada na abertura das inscrições",
+      "status": "lista_espera",
       "topicos": [
         {
           "texto": "Papel do polo no novo marco regulatório"
@@ -96,31 +111,31 @@
           "texto": "Contratos e repasses"
         }
       ],
-      "publico": "Para gestores de EAD, coordenadores de polos e parceiros.",
-      "status": "lista_espera",
-      "preco": "",
-      "link_compra": "",
-      "duracao": "Carga horária divulgada na abertura das inscrições",
+      "selo": "Curso online · lançamento em breve",
       "formato": "Online, com aulas em vídeo, materiais em PDF e certificado",
-      "inicio": "Lançamento em breve. Quem está na lista de espera é avisado primeiro",
-      "para_quem": "Gestores de EAD, coordenadores de polos e parceiros",
-      "resultados": [
-        {
-          "texto": "Coordenar uma rede de polos dentro da nova regra"
-        },
-        {
-          "texto": "Acompanhar indicadores de captação, permanência e qualidade"
-        },
-        {
-          "texto": "Capacitar e orientar os gestores parceiros"
-        }
-      ]
+      "titulo": "Gestão de Polos EAD",
+      "id": "polos-ead"
     },
     {
-      "id": "captacao",
-      "selo": "Curso online · lançamento em breve",
-      "titulo": "Captação de Recursos para Instituições de Ensino",
       "texto": "Fontes de receita além da mensalidade, com base no livro A Universidade do Futuro.",
+      "link_compra": "",
+      "resultados": [
+        {
+          "texto": "Criar fontes de receita além da mensalidade"
+        },
+        {
+          "texto": "Estruturar parcerias com empresas e com a comunidade"
+        },
+        {
+          "texto": "Montar a equipe de desenvolvimento institucional"
+        }
+      ],
+      "inicio": "Lançamento em breve. Quem está na lista de espera é avisado primeiro",
+      "publico": "Para mantenedores, diretores e gestores de instituições confessionais e comunitárias.",
+      "para_quem": "Mantenedores, diretores e gestores de instituições confessionais e comunitárias",
+      "preco": "R$ 29,90",
+      "duracao": "Carga horária divulgada na abertura das inscrições",
+      "status": "lista_espera",
       "topicos": [
         {
           "texto": "Fundraising em instituições sem fins lucrativos"
@@ -135,25 +150,10 @@
           "texto": "Estrutura e equipe de desenvolvimento institucional"
         }
       ],
-      "publico": "Para mantenedores, diretores e gestores de instituições confessionais e comunitárias.",
-      "status": "lista_espera",
-      "preco": "",
-      "link_compra": "",
-      "duracao": "Carga horária divulgada na abertura das inscrições",
+      "selo": "Curso online · lançamento em breve",
       "formato": "Online, com aulas em vídeo, materiais em PDF e certificado",
-      "inicio": "Lançamento em breve. Quem está na lista de espera é avisado primeiro",
-      "para_quem": "Mantenedores, diretores e gestores de instituições confessionais e comunitárias",
-      "resultados": [
-        {
-          "texto": "Criar fontes de receita além da mensalidade"
-        },
-        {
-          "texto": "Estruturar parcerias com empresas e com a comunidade"
-        },
-        {
-          "texto": "Montar a equipe de desenvolvimento institucional"
-        }
-      ]
+      "titulo": "Captação de Recursos para Instituições de Ensino",
+      "id": "captacao"
     }
   ],
   "aluno_texto": "As aulas ficam numa área exclusiva, com vídeos, PDFs para baixar, acompanhamento do progresso e certificado ao final.",
