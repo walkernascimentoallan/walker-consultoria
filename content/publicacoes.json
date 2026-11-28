@@ -16,13 +16,6 @@
         },
         {
           "ano": "2024",
-          "titulo": "O uso da comunicação como força motriz para o desenvolvimento: clínica médica",
-          "onde": "Anuário Unesco/Umesp de Comunicação Regional, v. 25, n. 25, p. 23-34.",
-          "coautores": "Com C. Escudero",
-          "link": ""
-        },
-        {
-          "ano": "2024",
           "titulo": "Captação de recursos alternativos para instituições do terceiro setor: o caso da universidade",
           "onde": "Revista Duc in Altum, v. 22.",
           "coautores": "",
@@ -34,6 +27,13 @@
           "onde": "Revista Duc in Altum, v. 22.",
           "coautores": "Com Rafael Sad Assis Corrêa",
           "link": "/artigos/dos-meios-as-mediacoes.pdf"
+        },
+        {
+          "ano": "2021",
+          "titulo": "O uso da comunicação como força motriz para o desenvolvimento: clínica médica",
+          "onde": "Anuário Unesco/Metodista de Comunicação Regional, ano 25, n. 25, p. 23-34.",
+          "coautores": "Com Camila Escudero",
+          "link": "/artigos/comunicacao-forca-motriz-clinica-medica.pdf"
         }
       ]
     },
