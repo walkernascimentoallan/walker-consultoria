@@ -488,7 +488,7 @@ document.getElementById('drAgain').addEventListener('click',()=>{f.reset();r.hid
     PB = J('publicacoes.json')
     grupos = ''
     for gi, g in enumerate(PB.get('grupos', [])):
-        itens = ''.join(f'''<li><span class="pub-ano">{e(it.get("ano"))}</span><div><b>{f'<a href="{e(it["link"])}" target="_blank" rel="noopener">{e(it["titulo"])}</a>' if it.get("link") else e(it["titulo"])}</b><span>{e(it.get("onde"))}{(" " + e(it["coautores"]) + ".") if it.get("coautores") else ""}</span></div></li>''' for it in g.get('itens', []))
+        itens = ''.join(f'''<li><span class="pub-ano">{e(it.get("ano"))}</span><div><b>{f'<a href="{e(it["link"])}" target="_blank" rel="noopener">{e(it["titulo"])}</a>' if it.get("link") else e(it["titulo"])}</b><span>{e(it.get("onde"))}{(" " + e(it["coautores"]) + ".") if it.get("coautores") else ""}</span>{f'<a class="pub-pdf" href="{e(it["link"])}" target="_blank" rel="noopener" download><svg viewBox="0 0 24 24" width="15" height="15" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 19h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Baixar PDF</a>' if str(it.get("link","")).endswith(".pdf") else ""}</div></li>''' for it in g.get('itens', []))
         grupos += f'<section class="band{" tint" if gi % 2 == 0 else ""}"><div class="wrap"><div class="head"><h2>{e(g["titulo"])}</h2></div><ol class="pubs">{itens}</ol></div></section>'
     b = hero([('/sobre.html', 'Sobre'), (None, PB.get('titulo') or 'Publicações')], PB.get('titulo') or 'Publicações', PB.get('texto'),
              f'<a class="btn gold" href="#livros">Ver os livros</a><a class="btn ghost" href="{e(SITE["lattes"])}" target="_blank" rel="noopener">Currículo Lattes</a>')
@@ -547,6 +547,8 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
 
 
 EXTRA_CSS = '''
+.pub-pdf{display:flex;align-items:center;gap:6px;margin-top:8px;padding:6px 12px;border:1px solid var(--gold);border-radius:999px;color:#7a5a14;font-size:.85rem;font-weight:700;text-decoration:none;width:max-content}:root[data-theme=dark] .pub-pdf{color:var(--gold)}.pub-pdf:hover{background:var(--gold);color:#0e3b3d}
+
 .foot-legal .visitas{display:inline-flex;align-items:center;gap:6px;margin-left:auto}.foot-legal .visitas[hidden]{display:none}.foot-legal .visitas b{color:var(--gold);font-weight:700}
 
 @media(min-width:1261px){nav:has(.dd:hover) .dd:not(:hover) .dd-menu{display:none!important}}
