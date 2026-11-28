@@ -513,49 +513,72 @@ document.getElementById('drAgain').addEventListener('click',()=>{f.reset();r.hid
         page('agendar.html', 'Agendar conversa | Walker Consultoria Educacional',
              'Agende uma conversa de 30 minutos, sem custo, com o Prof. Walker Nascimento sobre o novo marco regulatório da educação superior.', ag_body, active='agendar.html')
 
-    # ---- Certificados: registro, verificação e emissão ----
-    import hashlib
-    CERT = J('certificados.json') if os.path.exists(os.path.join(ROOT, 'content', 'certificados.json')) else {'registros': []}
-    _salt = 'wce-' + (SITE.get('dominio') or 'walkerconsultoria.com.br')
-    os.makedirs(os.path.join(OUT, 'c'), exist_ok=True)
-    for i, r in enumerate(CERT.get('registros') or []):
-        ano = str(r.get('data') or '')[:4] or str(datetime.date.today().year)
-        num = f"{CERT.get('prefixo') or 'WCE'}-{ano}-{i + 1:04d}"
-        cod = hashlib.sha256((num + '|' + (r.get('nome') or '') + '|' + _salt).encode()).hexdigest()[:6].upper()
-        _c = next((c for c in CUR.get('cursos', []) if (c.get('titulo') or '').strip().lower() == (r.get('curso') or '').strip().lower()), {})
-        _top = [x.strip() for x in str(r.get('conteudo') or '').split('\n') if x.strip()] or [t.get('texto') for t in (_c.get('topicos') or []) if t.get('texto')]
-        try: _ch = max(16, int(r.get('carga_horaria') or 16))
-        except Exception: _ch = 16
-        dado = {'numero': num, 'codigo': cod, 'nome': r.get('nome'), 'curso': r.get('curso'), 'carga': _ch,
-                'data': r.get('data'), 'conteudo': _top, 'ementa': r.get('ementa') or _c.get('texto') or '',
-                'publico': _c.get('publico') or '', 'formato': _c.get('formato') or '',
-                'situacao': r.get('situacao') or 'valido'}
-        with open(os.path.join(OUT, 'c', f'{num}-{cod}.json'), 'w', encoding='utf-8') as fh:
-            json.dump(dado, fh, ensure_ascii=False)
-    cert_body = hero([(None, 'Verificar certificado')], 'Verificar certificado',
+    # ---- Certificados: emissão automática e verificação ----
+    CERTCFG = J('certificacao.json')
+    os.makedirs(os.path.join(OUT, 'avaliacoes'), exist_ok=True)
+    cursos_ativos = []
+    for c in CERTCFG.get('cursos', []):
+        if not c.get('ativo') or not c.get('perguntas'):
+            continue
+        cursos_ativos.append({'id': c['id'], 'titulo': c['titulo']})
+        with open(os.path.join(OUT, 'avaliacoes', c['id'] + '.json'), 'w', encoding='utf-8') as fh:
+            json.dump({'id': c['id'], 'titulo': c['titulo'], 'nota_minima': CERTCFG.get('nota_minima', 7),
+                       'perguntas': [{'pergunta': q['pergunta'], 'opcoes': q['opcoes']} for q in c['perguntas']]}, fh, ensure_ascii=False)
+    opts = ''.join(f'<option value="{e(c["id"])}">{e(c["titulo"])}</option>' for c in cursos_ativos)
+    em_body = hero([(None, 'Certificados'), (None, 'Emitir certificado')], 'Emitir certificado',
+        'Terminou o curso? Use o mesmo e-mail e CPF da compra, responda a avaliação final e baixe o seu certificado na hora.') + f"""<section class="band"><div class="wrap em-wrap">
+<div class="em-stats" id="em-stats" hidden><div><b id="st-total">0</b><span>certificados emitidos</span></div><div class="em-rank"><span>Cursos mais procurados</span><ol id="st-rank"></ol></div></div>
+<ol class="em-steps" aria-label="Etapas"><li class="on">Seus dados</li><li>Avaliação final</li><li>Certificado</li></ol>
+<form id="em" class="em-form" novalidate>
+<fieldset id="em-1"><legend class="sr">Seus dados</legend>
+<label>Curso<select name="curso" required>{opts or '<option value="">Nenhum curso com certificado disponível</option>'}</select></label>
+<label>E-mail usado na compra<input name="email" type="email" required autocomplete="email"></label>
+<label>CPF<input name="cpf" required inputmode="numeric" maxlength="14" placeholder="000.000.000-00" autocomplete="off"></label>
+<label>Nome completo, como deve sair no certificado<input name="nome" required autocomplete="name" maxlength="90"></label>
+<label class="em-ok"><input type="checkbox" name="ok" required> Autorizo o uso do meu nome e CPF para emitir e verificar este certificado, conforme a <a href="/politica-de-privacidade.html">política de privacidade</a>.</label>
+<button class="btn gold" type="button" id="em-go">Continuar para a avaliação</button></fieldset>
+<fieldset id="em-2" hidden><legend class="em-leg">Avaliação final</legend><p class="soft" id="em-info"></p><div id="em-qs"></div>
+<div class="btns"><button class="btn em-back" type="button" id="em-back">Voltar</button><button class="btn gold" type="submit">Enviar respostas e emitir</button></div></fieldset>
+<div id="em-msg" class="cv-res" aria-live="polite"></div></form>
+<div id="cv-doc"></div></div></section>
+<script src="/qrcode.js"></script><script src="/cert-render.js"></script><script>
+(()=>{{const f=document.getElementById('em'),M=document.getElementById('em-msg'),S=[...document.querySelectorAll('.em-steps li')];let Q=null;fetch('/api/certificado?stats=1',{{cache:'no-store'}}).then(r=>r.json()).then(st=>{{const N={{}};[...f.curso.options].forEach(o=>N[o.value]=o.textContent);const L=Object.entries(st.cursos||{{}}).map(([k,v])=>[N[k]||k,(v.alunos||0)+(v.emitidos||0),v.emitidos||0]).sort((a,b)=>b[1]-a[1]).slice(0,3);if(!st.total&&!L.length)return;document.getElementById('st-total').textContent=(st.total||0).toLocaleString('pt-BR');document.getElementById('st-rank').innerHTML=L.map(r=>`<li>${{CR.x(r[0])}} <small>${{r[2]}} certificados</small></li>`).join('');document.getElementById('em-stats').hidden=false}}).catch(()=>{{}});
+
+const step=i=>S.forEach((l,k)=>l.classList.toggle('on',k<=i));const msg=(t,ok)=>{{M.className='cv-res '+(ok?'ok':'err');M.innerHTML=t}};
+const cpfOk=c=>{{c=c.replace(/\\D/g,'');if(c.length!==11||/^(\\d)\\1{{10}}$/.test(c))return false;const dv=n=>{{let s=0;for(let i=0;i<n;i++)s+=+c[i]*(n+1-i);const r=s*10%11;return r===10?0:r}};return dv(9)==+c[9]&&dv(10)==+c[10]}};
+f.cpf.addEventListener('input',()=>{{let v=f.cpf.value.replace(/\\D/g,'').slice(0,11);f.cpf.value=v.replace(/(\\d{{3}})(\\d)/,'$1.$2').replace(/(\\d{{3}})\\.(\\d{{3}})(\\d)/,'$1.$2.$3').replace(/(\\d{{3}})(\\d{{1,2}})$/,'$1-$2')}});
+document.getElementById('em-go').onclick=async()=>{{M.className='cv-res';M.textContent='';
+if(!f.curso.value)return msg('Ainda não há curso com certificado disponível.');
+if(!/^\\S+@\\S+\\.\\S+$/.test(f.email.value))return msg('Confira o e-mail.');if(!cpfOk(f.cpf.value))return msg('Confira o CPF.');
+if(f.nome.value.trim().split(/\\s+/).length<2)return msg('Escreva o nome completo.');if(!f.ok.checked)return msg('Marque a autorização para continuar.');
+try{{Q=await (await fetch('/avaliacoes/'+f.curso.value+'.json',{{cache:'no-store'}})).json()}}catch(e){{return msg('Não foi possível carregar a avaliação. Tente de novo.')}}
+document.getElementById('em-info').textContent=Q.perguntas.length+' perguntas. Para emitir, acerte pelo menos '+Q.nota_minima+'.';
+document.getElementById('em-qs').innerHTML=Q.perguntas.map((q,i)=>`<fieldset class="dq"><legend><b>${{i+1}}.</b> ${{CR.x(q.pergunta)}}</legend><div class="dq-opts">${{q.opcoes.map((o,j)=>`<label><input type="radio" name="q${{i}}" value="${{j}}" required> ${{CR.x(o)}}</label>`).join('')}}</div></fieldset>`).join('');
+document.getElementById('em-1').hidden=true;document.getElementById('em-2').hidden=false;step(1);f.scrollIntoView({{behavior:'smooth'}})}};
+document.getElementById('em-back').onclick=()=>{{document.getElementById('em-2').hidden=true;document.getElementById('em-1').hidden=false;step(0)}};
+f.addEventListener('submit',async e=>{{e.preventDefault();if(document.getElementById('em-2').hidden)return;
+const resp=Q.perguntas.map((_,i)=>{{const r=f.querySelector(`input[name=q${{i}}]:checked`);return r?+r.value:-1}});if(resp.includes(-1))return;
+msg('Emitindo…',true);const btn=f.querySelector('[type=submit]');btn.disabled=true;
+let d;try{{d=await (await fetch('/api/certificado',{{method:'POST',headers:{{'content-type':'application/json'}},body:JSON.stringify({{curso:f.curso.value,email:f.email.value,cpf:f.cpf.value,nome:f.nome.value,respostas:resp}})}})).json()}}catch(_){{d={{erro:'Falha de conexão. Tente de novo.'}}}}
+btn.disabled=false;if(!d||!d.ok){{msg(CR.x((d&&d.erro)||'Não foi possível emitir.'));return}}
+step(2);f.hidden=true;msg(`<b>${{d.jaEmitido?'Você já tinha emitido este certificado.':'Parabéns! Certificado emitido.'}}</b> Registro ${{CR.x(d.certificado.numero)}}, código ${{CR.x(d.certificado.codigo)}}. Guarde o link: <a href="/certificado?n=${{encodeURIComponent(d.certificado.numero)}}&c=${{d.certificado.codigo}}">walkerconsultoria.com.br/certificado</a>`,true);
+f.after(M);CR.render(d.certificado,document.getElementById('cv-doc'));try{{gtag('event','certificado_emitido',{{curso:f.curso.value}})}}catch(_){{}}}},true)}})();
+</script>"""
+    page('emitir-certificado.html', 'Emitir certificado | Walker Consultoria Educacional',
+         'Emita o certificado do seu curso com a Walker Consultoria Educacional: e-mail e CPF da compra, avaliação final e download na hora.', em_body, active='emitir-certificado.html')
+    cert_body = hero([(None, 'Certificados'), (None, 'Verificar certificado')], 'Verificar certificado',
         'Digite o número de registro e o código de verificação impressos no verso do certificado.') + """<section class="band"><div class="wrap">
 <form id="cv" class="cv-form" novalidate><label>Número de registro<input name="n" required placeholder="WCE-2026-0001" autocomplete="off"></label>
 <label>Código de verificação<input name="c" required placeholder="A1B2C3" autocomplete="off" maxlength="6"></label><button class="btn gold" type="submit">Verificar</button></form>
 <div id="cv-res" class="cv-res" aria-live="polite"></div><div id="cv-doc"></div></div></section>
-<script src="/qrcode.js"></script><script>
+<script src="/qrcode.js"></script><script src="/cert-render.js"></script><script>
 (()=>{const f=document.getElementById('cv'),R=document.getElementById('cv-res'),D=document.getElementById('cv-doc');
-const M=['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro'];
-const dt=s=>{const[a,m,d]=(s||'').split('-');return a?`${+d} de ${M[+m-1]} de ${a}`:''};const x=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-function qr(t){const q=qrcode(0,'M');q.addData(t);q.make();return q.createSvgTag({cellSize:4,margin:0})}
 async function go(n,c,push){n=n.trim().toUpperCase();c=c.trim().toUpperCase();R.className='cv-res';D.innerHTML='';if(!n||!c){R.textContent='Preencha o número e o código.';R.classList.add('err');return}
-R.textContent='Consultando…';let d=null;try{const r=await fetch('/c/'+encodeURIComponent(n)+'-'+encodeURIComponent(c)+'.json',{cache:'no-store'});if(r.ok)d=await r.json()}catch(e){}
+R.textContent='Consultando…';let d=null;try{const r=await fetch('/api/certificado?n='+encodeURIComponent(n)+'&c='+encodeURIComponent(c),{cache:'no-store'});if(r.ok)d=(await r.json()).certificado}catch(e){}
 if(push)history.replaceState(null,'','?n='+encodeURIComponent(n)+'&c='+encodeURIComponent(c));
 if(!d){R.innerHTML='<b>Certificado não encontrado.</b> Confira o número e o código no verso do certificado. Em caso de dúvida, fale pelo WhatsApp.';R.classList.add('err');return}
 if(d.situacao!=='valido'){R.innerHTML='<b>Este certificado foi cancelado</b> e não tem validade.';R.classList.add('err');return}
-R.innerHTML=`<b>Certificado válido.</b> ${x(d.nome)} concluiu o curso ${x(d.curso)}${d.carga?`, com ${x(d.carga)} horas`:''}, em ${dt(d.data)}. Registro ${x(d.numero)}.`;R.classList.add('ok');
-const url=location.origin+'/certificado.html?n='+encodeURIComponent(d.numero)+'&c='+d.codigo;
-D.innerHTML=`<div class="cv-actions"><button class="btn gold" type="button" onclick="print()">Baixar em PDF / imprimir</button></div>
-<div class="cert-sheet cert-front"><img class="cf-wm" src="/marca-wn-200.png" alt=""><div class="cf-in"><img class="cf-logo" src="/marca-wn-200.png" alt=""><div class="cf-br">WALKER CONSULTORIA EDUCACIONAL</div><h2>Certificado de conclusão</h2><p class="cf-sub">Certificamos que</p><div class="cf-nm">${x(d.nome)}</div><p class="cf-tx">concluiu, com aproveitamento, o curso livre de atualização profissional</p><div class="cf-curso">${x(d.curso)}</div><p class="cf-tx">promovido pela Walker Consultoria Educacional sob a coordenação do Prof. Walker Nascimento, com carga horária total de <b>${x(d.carga)} horas</b>, concluído em ${dt(d.data)}.</p>
-<div class="cf-ft"><div class="cf-sig"><img src="/assinatura.png" alt="Assinatura">Prof. Walker Nascimento<span>Walker Consultoria Educacional</span></div><div class="cf-reg">Registro nº <b>${x(d.numero)}</b><br>Curso livre de atualização profissional</div></div></div></div>
-<div class="cert-sheet cert-back"><div class="cb-in"><h3>Ementa</h3>${d.ementa?`<p class="cb-em">${x(d.ementa)}</p>`:''}<h4>Conteúdo programático</h4>${d.conteudo&&d.conteudo.length?'<ol>'+d.conteudo.map(t=>'<li>'+x(t)+'</li>').join('')+'</ol>':'<p>Conforme o programa do curso.</p>'}
-<div class="cb-grid"><div><span>Participante</span><b>${x(d.nome)}</b></div><div><span>Curso</span><b>${x(d.curso)}</b></div><div><span>Carga horária</span><b>${x(d.carga)} horas</b></div><div><span>Conclusão</span><b>${dt(d.data)}</b></div></div>
-<div class="cb-ver"><div class="cb-qr">${qr(url)}</div><div><span>Registro nº</span><b class="cb-num">${x(d.numero)}</b><span>Código de verificação</span><b class="cb-num">${x(d.codigo)}</b><p>Confira a autenticidade em <b>walkerconsultoria.com.br/certificado</b> ou pelo QR code.</p></div></div>
-<p class="cb-leg">Curso livre amparado pela Lei nº 9.394/1996 e pelo Decreto nº 5.154/2004. Por ser de livre oferta, não exige credenciamento no MEC. Destina-se ao aperfeiçoamento profissional e não confere grau acadêmico ou técnico.</p></div></div>`}
+R.innerHTML=`<b>Certificado válido.</b> ${CR.x(d.nome)} (CPF ${CR.x(d.cpf)}) concluiu o curso ${CR.x(d.curso)}, com ${CR.x(d.carga)} horas, em ${CR.dt(d.data)}. Registro ${CR.x(d.numero)}.`;R.classList.add('ok');CR.render(d,D)}
 f.addEventListener('submit',e=>{e.preventDefault();e.stopImmediatePropagation();go(f.n.value,f.c.value,true)},true);
 const q=new URLSearchParams(location.search);if(q.get('n')&&q.get('c')){f.n.value=q.get('n');f.c.value=q.get('c');go(q.get('n'),q.get('c'),false)}})();
 </script>"""
@@ -610,7 +633,17 @@ else if(f==='eventos'){T.textContent='Inscrição recebida.';L.textContent='Assi
     print('ok', len(PAGES), 'páginas')
 
 
-EXTRA_CSS = '''.cf-curso{margin:.35em 0 .2em;font-size:2.1em;font-weight:800;color:#0e3b3d;max-width:85%;line-height:1.15}
+EXTRA_CSS = '''
+.em-back{background:transparent;border:1px solid #0e3b3d;color:#0e3b3d}:root[data-theme=dark] .em-back{border-color:#c6a25a;color:#e3c47a}
+
+.em-stats{display:flex;gap:28px;align-items:center;margin:0 0 26px;padding:18px 22px;border-radius:14px;background:#0e3b3d;color:#e8efee}.em-stats[hidden]{display:none}.em-stats b{display:block;font-size:2.2rem;color:#e3c47a;line-height:1}.em-stats span{font-size:.9rem;color:#cfe0de}.em-rank ol{margin:6px 0 0;padding-left:18px}.em-rank small{color:#9fc1be}
+
+.em-wrap{max-width:860px}.em-steps{display:flex;gap:10px;list-style:none;padding:0;margin:0 0 26px;counter-reset:st}.em-steps li{flex:1;padding:10px 12px;border-radius:10px;background:#eef3f2;color:#5b6b6c;font-weight:700;font-size:.92rem;counter-increment:st}.em-steps li:before{content:counter(st) '. '}.em-steps li.on{background:#0e3b3d;color:#e3c47a}
+:root[data-theme=dark] .em-steps li{background:#16302f;color:#9fb5b3}:root[data-theme=dark] .em-steps li.on{background:#c6a25a;color:#0e3b3d}
+.em-form fieldset{border:0;padding:0;margin:0;display:grid;gap:16px}.em-form label{display:flex;flex-direction:column;gap:6px;font-weight:700}.em-form input:not([type=checkbox]):not([type=radio]),.em-form select{padding:12px 14px;border:1px solid #c9d6d4;border-radius:10px;font:inherit}
+.em-form .em-ok{flex-direction:row;gap:10px;font-weight:400;align-items:flex-start}.em-form .em-ok input{margin-top:5px}.em-leg{font-size:1.4rem;font-weight:800}.sr{position:absolute;left:-9999px}
+.em-form .dq{border:1px solid #d9e2e1;border-radius:12px;padding:16px 18px}.em-form .dq legend{font-weight:400;padding:0 6px}.em-form .dq-opts{display:grid;gap:8px;margin-top:8px}.em-form .dq-opts label{flex-direction:row;gap:10px;font-weight:400;align-items:flex-start}
+.cf-curso{margin:.35em 0 .2em;font-size:2.1em;font-weight:800;color:#0e3b3d;max-width:85%;line-height:1.15}
 .cert-front .cf-tx{margin-top:.5em}.cert-front .cf-nm{margin-top:.5em}.cert-sheet h2{font-size:3em}
 .cb-em{margin:0 0 .9em;font-size:1.02em;line-height:1.55;max-width:95%}.cert-back h4{margin:0 0 .4em;font-size:1.15em;color:#8a6a1f}
 
@@ -621,7 +654,7 @@ EXTRA_CSS = '''.cf-curso{margin:.35em 0 .2em;font-size:2.1em;font-weight:800;col
 .cv-res.ok{padding:16px 20px;background:#e6f2ea;color:#14532d;border:1px solid #9ccfae}.cv-res.err{padding:16px 20px;background:#fdecea;color:#8a1c12;border:1px solid #f0b4ad}
 :root[data-theme=dark] .cv-res.ok{background:#12362a;color:#bfe8cd;border-color:#2f6b4c}:root[data-theme=dark] .cv-res.err{background:#3a1715;color:#ffc9c3;border-color:#7a2e27}
 .cv-actions{margin:26px 0 16px}
-.cert-sheet{width:100%;max-width:1100px;aspect-ratio:297/210;background:#fff;color:#1d2b2c;margin:0 auto 26px;position:relative;box-shadow:0 18px 40px rgba(14,59,61,.18);border-radius:6px;overflow:hidden;font-size:clamp(9px,1.25vw,15px)}
+.cert-sheet{width:100%;max-width:1100px;aspect-ratio:297/210;background:#fff;color:#1d2b2c;margin:0 auto 26px;position:relative;box-shadow:0 18px 40px rgba(14,59,61,.18);border-radius:6px;overflow:hidden;font-size:1.36cqw}#cv-doc{container-type:inline-size}
 .cert-sheet:before{content:"";position:absolute;inset:3.2%;border:.35em solid #0e3b3d;border-radius:.6em}
 .cert-sheet:after{content:"";position:absolute;inset:4.6%;border:.12em solid #c6a25a;border-radius:.4em}
 .cf-wm{position:absolute;right:7%;bottom:9%;width:30%;opacity:.07;z-index:0}
